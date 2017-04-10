@@ -1,0 +1,296 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head prefix="og: http://ogp.me/ns#">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="description" content="猎人, 今天你愉快吗?">
+    <title>Mybatis整合redis实现缓存 | $t/^Cipher_?\n</title>
+
+    <!-- Open Graph -->
+    <meta name="description" content="&amp;#x6982;&amp;#x8FF0;Mybatis&amp;#x9ED8;&amp;#x8BA4;&amp;#x7F13;&amp;#x5B58;&amp;#x662F;PerpetualCache&amp;#xFF0C;&amp;#x5B83;&amp;#x5B9E;&amp;#x73B0;&amp;#x4E86;Cache&amp;#x63A5;&amp;#x53E3;&amp;#x3002;Mybatis&amp;#x4E3A;&amp;#x4E86;&amp;#x65B9;&amp;#x4FBF;&amp;#x6211;&amp;#x4EEC">
+<meta name="keywords" content="MyBatis,redis">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mybatis整合redis实现缓存">
+<meta property="og:url" content="http://yoursite.com/2017/04/10/Mybatis整合redis实现缓存/index.html">
+<meta property="og:site_name" content="$t/^Cipher_?\n">
+<meta property="og:description" content="&amp;#x6982;&amp;#x8FF0;Mybatis&amp;#x9ED8;&amp;#x8BA4;&amp;#x7F13;&amp;#x5B58;&amp;#x662F;PerpetualCache&amp;#xFF0C;&amp;#x5B83;&amp;#x5B9E;&amp;#x73B0;&amp;#x4E86;Cache&amp;#x63A5;&amp;#x53E3;&amp;#x3002;Mybatis&amp;#x4E3A;&amp;#x4E86;&amp;#x65B9;&amp;#x4FBF;&amp;#x6211;&amp;#x4EEC">
+<meta property="og:updated_time" content="2017-04-10T12:09:19.651Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mybatis整合redis实现缓存">
+<meta name="twitter:description" content="&amp;#x6982;&amp;#x8FF0;Mybatis&amp;#x9ED8;&amp;#x8BA4;&amp;#x7F13;&amp;#x5B58;&amp;#x662F;PerpetualCache&amp;#xFF0C;&amp;#x5B83;&amp;#x5B9E;&amp;#x73B0;&amp;#x4E86;Cache&amp;#x63A5;&amp;#x53E3;&amp;#x3002;Mybatis&amp;#x4E3A;&amp;#x4E86;&amp;#x65B9;&amp;#x4FBF;&amp;#x6211;&amp;#x4EEC">
+
+    <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Person",
+  "email": "mailto:undefined",
+  "image": "undefined",
+  "name": "cipher",
+  "url": "http://yoursite.com"
+}
+</script>
+    <script>
+    var algoliaEnabled = false;
+    
+</script>
+
+    
+
+    
+    
+        <!-- <link href="//fonts.useso.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css"> -->
+    
+    
+    
+        <!-- stylesheets list from config.yml -->
+        
+        <link rel="stylesheet" href="/css/aloha.css">
+        
+        <link rel="stylesheet" href="//cdn.bootcss.com/semantic-ui/2.2.4/semantic.min.css">
+        
+        <link rel="stylesheet" href="//cdn.bootcss.com/magnific-popup.js/1.1.0/magnific-popup.min.css">
+        
+    
+
+</head>
+<body id="body" style="margin-bottom: 0;" class="pushable">
+
+    <div class="ui top fixed menu">
+        <a class="item" id="menu-icon"><i class="sidebar icon"></i></a>
+    </div>
+
+    <div id="menu-sidebar" class="ui left vertical sidebar menu">
+
+    <div id="sidebar-top">
+        <div class="content">
+            <h3>$t/^Cipher_?\n</h3>
+        </div>
+    </div>
+    <div class="ui container sidebar-card">
+    <div class="ui people shape content">
+        <div class="active side">
+            <div class="ui card">
+                <div class="image">
+                    <img class="ui medium bordered image" src="/images/avatar.jpg">
+                </div>
+                <div class="content">
+                    <a class="header">cipher</a>
+                    
+                        <div class="meta">
+                            Java Developer / Player
+                        </div>
+                    
+                </div>
+                <div class="extra content">
+                    <div class="ui list">
+                        
+                        <div class="item">
+                            <i class="marker icon" style="float: left"></i>
+                            <div class="content">GuangZhou</div>
+                        </div>
+                        
+                        
+                    </div>
+
+                </div>
+                <div class="extra content">
+                    <div class="ui list">
+                        
+
+                                <a href="https://github.com/ciphermagic"><i class="large github icon" style="float: left"></i></a>
+
+                            
+
+                                <a href="http://weibo.com/ciphermagic"><i class="large weibo icon" style="float: left"></i></a>
+
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+    
+    
+
+    
+
+    
+    <a href="/index.html" class="item" >
+        <i class="home icon"></i>
+        首页
+    </a>
+
+    
+
+    
+</div>
+
+    <div class="pusher body-content">
+        <div id="content" class="ui main container">
+            <!--<div class="ui one column grid">-->
+                <!--<div class="column">-->
+                    <!--<div class="ui main container">-->
+                        <div id="post-Mybatis整合redis实现缓存" class="ui main container article-type-post">
+
+    
+
+    <div class="ui divided grid">
+
+        <div class="two column row" id="article-content">
+
+            <div class="thirteen wide computer thirteen wide tablet sixteen wide mobile column">
+                
+
+<h1 class="ui header">
+    
+    Mybatis整合redis实现缓存
+</h1>
+
+
+
+                <div class="article-inner">
+
+                    <div class="article-entry" itemprop="articleBody">
+                        
+                        <h2 id="&#x6982;&#x8FF0;"><a href="#&#x6982;&#x8FF0;" class="headerlink" title="&#x6982;&#x8FF0;"></a>&#x6982;&#x8FF0;</h2><p>Mybatis&#x9ED8;&#x8BA4;&#x7F13;&#x5B58;&#x662F;PerpetualCache&#xFF0C;&#x5B83;&#x5B9E;&#x73B0;&#x4E86;Cache&#x63A5;&#x53E3;&#x3002;Mybatis&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#x6211;&#x4EEC;&#x6269;&#x5C55;&#x7F13;&#x5B58;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;Cache&#x63A5;&#x53E3;&#xFF0C;&#x56E0;&#x6B64;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x53C2;&#x8003;&#x6E90;&#x7801;&#x81EA;&#x5DF1;&#x4F7F;&#x7528;redis&#x5B9E;&#x73B0;Cache&#x63A5;&#x53E3;&#xFF0C;&#x5373;&#x53EF;&#x8FBE;&#x5230;Mybatis&#x6574;&#x5408;redis&#x7BA1;&#x7406;&#x7F13;&#x5B58;&#x7684;&#x76EE;&#x7684;&#x3002;</p>
+<h2 id="&#x5F00;&#x59CB;"><a href="#&#x5F00;&#x59CB;" class="headerlink" title="&#x5F00;&#x59CB;"></a>&#x5F00;&#x59CB;</h2><p>&#x672C;&#x6587;&#x4ECB;&#x7ECD;&#x5728;spring-mvc&#x7684;&#x9879;&#x76EE;&#x4E2D;&#xFF0C;&#x5982;&#x4F55;&#x5B9E;&#x73B0;&#x4F7F;&#x7528;redis&#x4F5C;&#x4E3A;Mybatis&#x7684;&#x4E8C;&#x7EA7;&#x7F13;&#x5B58;&#x3002;&#x91CD;&#x70B9;&#x662F;&#x5B9E;&#x73B0;Cache&#x63A5;&#x53E3;&#xFF0C;&#x800C;&#x5982;&#x4F55;&#x5F15;&#x5165;redis&#x6709;&#x591A;&#x79CD;&#x65B9;&#x5F0F;&#xFF0C;&#x672C;&#x6587;&#x4F7F;&#x7528;&#x5176;&#x4E2D;&#x4E00;&#x79CD;&#x3002;</p>
+<h3 id="&#x73AF;&#x5883;"><a href="#&#x73AF;&#x5883;" class="headerlink" title="&#x73AF;&#x5883;"></a>&#x73AF;&#x5883;</h3><ul class="ui list">
+<li>jdk&#xFF1A;1.7</li>
+<li>redis&#xFF1A;2.8.12</li>
+<li>spring&#xFF1A;4.1.1.RELEASE</li>
+</ul>
+<h3 id="&#x65B0;&#x5EFA;redis-properties&#x6587;&#x4EF6;"><a href="#&#x65B0;&#x5EFA;redis-properties&#x6587;&#x4EF6;" class="headerlink" title="&#x65B0;&#x5EFA;redis.properties&#x6587;&#x4EF6;"></a>&#x65B0;&#x5EFA;redis.properties&#x6587;&#x4EF6;</h3><p>&#x7528;&#x4E8E;&#x8BB0;&#x5F55;redis&#x7684;&#x57FA;&#x672C;&#x4FE1;&#x606F;<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"># ====================================================</div><div class="line">#                redis settings</div><div class="line"># ====================================================</div><div class="line"></div><div class="line">redis.host=127.0.0.1</div><div class="line">redis.port=6379</div><div class="line">redis.pass=</div><div class="line">redis.maxIdle=300</div><div class="line">redis.maxActive=600</div><div class="line">redis.maxWait=1000</div><div class="line">redis.testOnBorrow=false</div></pre></td></tr></table></figure></p>
+<h3 id="&#x65B0;&#x5EFA;RedisConfig-java&#x7C7B;"><a href="#&#x65B0;&#x5EFA;RedisConfig-java&#x7C7B;" class="headerlink" title="&#x65B0;&#x5EFA;RedisConfig.java&#x7C7B;"></a>&#x65B0;&#x5EFA;RedisConfig.java&#x7C7B;</h3><p>&#x7528;&#x4E8E;&#x83B7;&#x53D6;redis&#x914D;&#x7F6E;&#x4FE1;&#x606F;<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RedisConfig</span> </span>{</div><div class="line"></div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> String host;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> String port;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> String pass;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> String maxIdle;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> String maxActive;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> String maxWait;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> String testOnBorrow;   </div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">RedisConfig</span><span class="params">(String host, String port, String pass, String maxIdle,</span></span></div><div class="line">            String maxActive, String maxWait, String testOnBorrow) {</div><div class="line">        <span class="keyword">super</span>();</div><div class="line">        RedisConfig.host = host;</div><div class="line">        RedisConfig.port = port;</div><div class="line">        RedisConfig.pass = pass;</div><div class="line">        RedisConfig.maxIdle = maxIdle;</div><div class="line">        RedisConfig.maxActive = maxActive;</div><div class="line">        RedisConfig.maxWait = maxWait;</div><div class="line">        RedisConfig.testOnBorrow = testOnBorrow;</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">getHost</span><span class="params">()</span> </span>{</div><div class="line">        <span class="keyword">return</span> host;</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">getPort</span><span class="params">()</span> </span>{</div><div class="line">        <span class="keyword">return</span> port;</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">getPass</span><span class="params">()</span> </span>{</div><div class="line">        <span class="keyword">return</span> pass;</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">getMaxIdle</span><span class="params">()</span> </span>{</div><div class="line">        <span class="keyword">return</span> maxIdle;</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">getMaxActive</span><span class="params">()</span> </span>{</div><div class="line">        <span class="keyword">return</span> maxActive;</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">getMaxWait</span><span class="params">()</span> </span>{</div><div class="line">        <span class="keyword">return</span> maxWait;</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">getTestOnBorrow</span><span class="params">()</span> </span>{</div><div class="line">        <span class="keyword">return</span> testOnBorrow;</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setHost</span><span class="params">(String host)</span> </span>{</div><div class="line">        RedisConfig.host = host;</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setPort</span><span class="params">(String port)</span> </span>{</div><div class="line">        RedisConfig.port = port;</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setPass</span><span class="params">(String pass)</span> </span>{</div><div class="line">        RedisConfig.pass = pass;</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setMaxIdle</span><span class="params">(String maxIdle)</span> </span>{</div><div class="line">        RedisConfig.maxIdle = maxIdle;</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setMaxActive</span><span class="params">(String maxActive)</span> </span>{</div><div class="line">        RedisConfig.maxActive = maxActive;</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setMaxWait</span><span class="params">(String maxWait)</span> </span>{</div><div class="line">        RedisConfig.maxWait = maxWait;</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setTestOnBorrow</span><span class="params">(String testOnBorrow)</span> </span>{</div><div class="line">        RedisConfig.testOnBorrow = testOnBorrow;</div><div class="line">    }</div><div class="line"></div><div class="line">}</div></pre></td></tr></table></figure></p>
+<h3 id="spring&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x6784;&#x9020;RedisConfig"><a href="#spring&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x6784;&#x9020;RedisConfig" class="headerlink" title="spring&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x6784;&#x9020;RedisConfig"></a>spring&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x6784;&#x9020;RedisConfig</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">context:property-placeholder</span></span></div><div class="line">    <span class="attr">location</span>=<span class="string">&quot;classpath:redis.properties&quot;</span></div><div class="line">    <span class="attr">ignore-unresolvable</span>=<span class="string">&quot;true&quot;</span> <span class="attr">ignore-resource-not-found</span>=<span class="string">&quot;true&quot;</span> /&gt;</div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;redisConfig&quot;</span> <span class="attr">class</span>=<span class="string">&quot;cn.essa.component.privilege.util.RedisConfig&quot;</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">constructor-arg</span> <span class="attr">index</span>=<span class="string">&quot;0&quot;</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">value</span>&gt;</span>${redis.host}<span class="tag">&lt;/<span class="name">value</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">constructor-arg</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">constructor-arg</span> <span class="attr">index</span>=<span class="string">&quot;1&quot;</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">value</span>&gt;</span>${redis.port}<span class="tag">&lt;/<span class="name">value</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">constructor-arg</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">constructor-arg</span> <span class="attr">index</span>=<span class="string">&quot;2&quot;</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">value</span>&gt;</span>${redis.pass}<span class="tag">&lt;/<span class="name">value</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">constructor-arg</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">constructor-arg</span> <span class="attr">index</span>=<span class="string">&quot;3&quot;</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">value</span>&gt;</span>${redis.maxIdle}<span class="tag">&lt;/<span class="name">value</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">constructor-arg</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">constructor-arg</span> <span class="attr">index</span>=<span class="string">&quot;4&quot;</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">value</span>&gt;</span>${redis.maxActive}<span class="tag">&lt;/<span class="name">value</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">constructor-arg</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">constructor-arg</span> <span class="attr">index</span>=<span class="string">&quot;5&quot;</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">value</span>&gt;</span>${redis.maxWait}<span class="tag">&lt;/<span class="name">value</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">constructor-arg</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">constructor-arg</span> <span class="attr">index</span>=<span class="string">&quot;6&quot;</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">value</span>&gt;</span>${redis.testOnBorrow}<span class="tag">&lt;/<span class="name">value</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">constructor-arg</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>&#x5982;&#x6B64;&#x5373;&#x53EF;&#x5728;&#x666E;&#x901A;&#x7C7B;&#x4E2D;&#x4F7F;&#x7528;RedisConfig&#xFF0C;&#x5F97;&#x5230;redis&#x914D;&#x7F6E;&#x4FE1;&#x606F;</p>
+<h3 id="&#x65B0;&#x5EFA;RedisCache-java&#x7C7B;"><a href="#&#x65B0;&#x5EFA;RedisCache-java&#x7C7B;" class="headerlink" title="&#x65B0;&#x5EFA;RedisCache.java&#x7C7B;"></a>&#x65B0;&#x5EFA;RedisCache.java&#x7C7B;</h3><p>&#x8BE5;&#x7C7B;&#x5B9E;&#x73B0;&#x4E86;<code>org.apache.ibatis.cache.Cache</code>&#x63A5;&#x53E3;<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div><div class="line">212</div><div class="line">213</div><div class="line">214</div><div class="line">215</div><div class="line">216</div><div class="line">217</div><div class="line">218</div><div class="line">219</div><div class="line">220</div><div class="line">221</div><div class="line">222</div><div class="line">223</div><div class="line">224</div><div class="line">225</div><div class="line">226</div><div class="line">227</div><div class="line">228</div><div class="line">229</div><div class="line">230</div><div class="line">231</div><div class="line">232</div><div class="line">233</div><div class="line">234</div><div class="line">235</div><div class="line">236</div><div class="line">237</div><div class="line">238</div><div class="line">239</div><div class="line">240</div><div class="line">241</div><div class="line">242</div><div class="line">243</div><div class="line">244</div><div class="line">245</div><div class="line">246</div><div class="line">247</div><div class="line">248</div><div class="line">249</div><div class="line">250</div><div class="line">251</div><div class="line">252</div><div class="line">253</div><div class="line">254</div><div class="line">255</div><div class="line">256</div><div class="line">257</div><div class="line">258</div><div class="line">259</div><div class="line">260</div><div class="line">261</div><div class="line">262</div><div class="line">263</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * <span class="doctag">@ClassName</span>: RedisCache</div><div class="line"> * <span class="doctag">@Description</span>: &#x4F7F;&#x7528;&#x7B2C;&#x4E09;&#x65B9;&#x7F13;&#x5B58;&#x670D;&#x52A1;&#x5668;redis&#xFF0C;&#x5904;&#x7406;&#x4E8C;&#x7EA7;&#x7F13;&#x5B58;</div><div class="line"> * <span class="doctag">@author</span> cipher</div><div class="line"> *</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RedisCache</span> <span class="keyword">implements</span> <span class="title">Cache</span> </span>{</div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Log LOG = LogFactory.getLog(RedisCache.class);</div><div class="line">    <span class="comment">/** The ReadWriteLock. */</span></div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> ReadWriteLock readWriteLock = <span class="keyword">new</span> ReentrantReadWriteLock();</div><div class="line"></div><div class="line">    <span class="keyword">private</span> String id;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">RedisCache</span><span class="params">(<span class="keyword">final</span> String id)</span> </span>{</div><div class="line">        <span class="keyword">if</span> (id == <span class="keyword">null</span>) {</div><div class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException(<span class="string">&quot;&#x5FC5;&#x987B;&#x4F20;&#x5165;ID&quot;</span>);</div><div class="line">        }</div><div class="line">        LOG.debug(<span class="string">&quot;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;MybatisRedisCache:id=&quot;</span> + id);</div><div class="line">        <span class="keyword">this</span>.id = id;</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getId</span><span class="params">()</span> </span>{</div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.id;</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getSize</span><span class="params">()</span> </span>{</div><div class="line">        Jedis jedis = <span class="keyword">null</span>;</div><div class="line">        JedisPool jedisPool = <span class="keyword">null</span>;</div><div class="line">        <span class="keyword">int</span> result = <span class="number">0</span>;</div><div class="line">        <span class="keyword">boolean</span> borrowOrOprSuccess = <span class="keyword">true</span>;</div><div class="line">        <span class="keyword">try</span> {</div><div class="line">            jedis = CachePool.getInstance().getJedis();</div><div class="line">            jedisPool = CachePool.getInstance().getJedisPool();</div><div class="line">            result = Integer.valueOf(jedis.dbSize().toString());</div><div class="line">        } <span class="keyword">catch</span> (JedisConnectionException e) {</div><div class="line">            LOG.error(e);</div><div class="line">            borrowOrOprSuccess = <span class="keyword">false</span>;</div><div class="line">            <span class="keyword">if</span> (jedis != <span class="keyword">null</span>) {</div><div class="line">                jedisPool.returnBrokenResource(jedis);</div><div class="line">            }</div><div class="line">        } <span class="keyword">finally</span> {</div><div class="line">            <span class="keyword">if</span> (borrowOrOprSuccess) {</div><div class="line">                jedisPool.returnResource(jedis);</div><div class="line">            }</div><div class="line">        }</div><div class="line">        <span class="keyword">return</span> result;</div><div class="line"></div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">putObject</span><span class="params">(Object key, Object value)</span> </span>{</div><div class="line">        <span class="keyword">if</span> (LOG.isDebugEnabled()) {</div><div class="line">            LOG.debug(<span class="string">&quot;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;putObject:&quot;</span></div><div class="line">                    + key.hashCode() + <span class="string">&quot;=&quot;</span> + value);</div><div class="line">        } </div><div class="line">        <span class="keyword">if</span> (LOG.isInfoEnabled()) {</div><div class="line">            LOG.info(<span class="string">&quot;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;put to redis sql :&quot;</span></div><div class="line">                    + key.toString());</div><div class="line">        } </div><div class="line">        Jedis jedis = <span class="keyword">null</span>;</div><div class="line">        JedisPool jedisPool = <span class="keyword">null</span>;</div><div class="line">        <span class="keyword">boolean</span> borrowOrOprSuccess = <span class="keyword">true</span>;</div><div class="line">        <span class="keyword">try</span> {</div><div class="line">            jedis = CachePool.getInstance().getJedis();</div><div class="line">            jedisPool = CachePool.getInstance().getJedisPool();</div><div class="line">            jedis.set(SerializeUtil.serialize(key.hashCode()),</div><div class="line">                    SerializeUtil.serialize(value));</div><div class="line">        } <span class="keyword">catch</span> (JedisConnectionException e) {</div><div class="line">            LOG.error(e);</div><div class="line">            borrowOrOprSuccess = <span class="keyword">false</span>;</div><div class="line">            <span class="keyword">if</span> (jedis != <span class="keyword">null</span>) {</div><div class="line">                jedisPool.returnBrokenResource(jedis); </div><div class="line">            } </div><div class="line">        } <span class="keyword">finally</span> {</div><div class="line">            <span class="keyword">if</span> (borrowOrOprSuccess) {</div><div class="line">                jedisPool.returnResource(jedis); </div><div class="line">            }   </div><div class="line">        }</div><div class="line"></div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">getObject</span><span class="params">(Object key)</span> </span>{</div><div class="line">        Jedis jedis = <span class="keyword">null</span>;</div><div class="line">        JedisPool jedisPool = <span class="keyword">null</span>;</div><div class="line">        Object value = <span class="keyword">null</span>;</div><div class="line">        <span class="keyword">boolean</span> borrowOrOprSuccess = <span class="keyword">true</span>;</div><div class="line">        <span class="keyword">try</span> {</div><div class="line">            jedis = CachePool.getInstance().getJedis();</div><div class="line">            jedisPool = CachePool.getInstance().getJedisPool();</div><div class="line">            value = SerializeUtil.unserialize(jedis.get(SerializeUtil</div><div class="line">                    .serialize(key.hashCode())));</div><div class="line">        } <span class="keyword">catch</span> (JedisConnectionException e) {</div><div class="line">            LOG.error(e);</div><div class="line">            borrowOrOprSuccess = <span class="keyword">false</span>;</div><div class="line">            <span class="keyword">if</span> (jedis != <span class="keyword">null</span>) {</div><div class="line">                jedisPool.returnBrokenResource(jedis);</div><div class="line">            }  </div><div class="line">        } <span class="keyword">finally</span> {</div><div class="line">            <span class="keyword">if</span> (borrowOrOprSuccess) {</div><div class="line">                jedisPool.returnResource(jedis);</div><div class="line">            }  </div><div class="line">        }</div><div class="line">        <span class="keyword">if</span> (LOG.isDebugEnabled()) {</div><div class="line">            LOG.debug(<span class="string">&quot;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;getObject:&quot;</span></div><div class="line">                    + key.hashCode() + <span class="string">&quot;=&quot;</span> + value); </div><div class="line">        } </div><div class="line">        <span class="keyword">return</span> value;</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">removeObject</span><span class="params">(Object key)</span> </span>{</div><div class="line">        Jedis jedis = <span class="keyword">null</span>;</div><div class="line">        JedisPool jedisPool = <span class="keyword">null</span>;</div><div class="line">        Object value = <span class="keyword">null</span>;</div><div class="line">        <span class="keyword">boolean</span> borrowOrOprSuccess = <span class="keyword">true</span>;</div><div class="line">        <span class="keyword">try</span> {</div><div class="line">            jedis = CachePool.getInstance().getJedis();</div><div class="line">            jedisPool = CachePool.getInstance().getJedisPool();</div><div class="line">            value = jedis.expire(SerializeUtil.serialize(key.hashCode()), <span class="number">0</span>);</div><div class="line">        } <span class="keyword">catch</span> (JedisConnectionException e) {</div><div class="line">            LOG.error(e);</div><div class="line">            borrowOrOprSuccess = <span class="keyword">false</span>;</div><div class="line">            <span class="keyword">if</span> (jedis != <span class="keyword">null</span>) {</div><div class="line">                jedisPool.returnBrokenResource(jedis);</div><div class="line">            } </div><div class="line">        } <span class="keyword">finally</span> {</div><div class="line">            <span class="keyword">if</span> (borrowOrOprSuccess) {</div><div class="line">                jedisPool.returnResource(jedis);</div><div class="line">            }  </div><div class="line">        }</div><div class="line">        <span class="keyword">if</span> (LOG.isDebugEnabled()) {</div><div class="line">            LOG.debug(<span class="string">&quot;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;removeObject:&quot;</span></div><div class="line">                    + key.hashCode() + <span class="string">&quot;=&quot;</span> + value);</div><div class="line">        } </div><div class="line">        <span class="keyword">return</span> value;</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">clear</span><span class="params">()</span> </span>{</div><div class="line">        Jedis jedis = <span class="keyword">null</span>;</div><div class="line">        JedisPool jedisPool = <span class="keyword">null</span>;</div><div class="line">        <span class="keyword">boolean</span> borrowOrOprSuccess = <span class="keyword">true</span>;</div><div class="line">        <span class="keyword">try</span> {</div><div class="line">            jedis = CachePool.getInstance().getJedis();</div><div class="line">            jedisPool = CachePool.getInstance().getJedisPool();</div><div class="line">            jedis.flushDB();</div><div class="line">            jedis.flushAll();</div><div class="line">        } <span class="keyword">catch</span> (JedisConnectionException e) {</div><div class="line">            LOG.error(e);</div><div class="line">            borrowOrOprSuccess = <span class="keyword">false</span>;</div><div class="line">            <span class="keyword">if</span> (jedis != <span class="keyword">null</span>) {</div><div class="line">                jedisPool.returnBrokenResource(jedis); </div><div class="line">            }  </div><div class="line">        } <span class="keyword">finally</span> {</div><div class="line">            <span class="keyword">if</span> (borrowOrOprSuccess) {</div><div class="line">                jedisPool.returnResource(jedis);</div><div class="line">            } </div><div class="line">        }</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> ReadWriteLock <span class="title">getReadWriteLock</span><span class="params">()</span> </span>{</div><div class="line">        <span class="keyword">return</span> readWriteLock;</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">     * </div><div class="line">     * <span class="doctag">@ClassName</span>: CachePool</div><div class="line">     * <span class="doctag">@Description</span>: &#x5355;&#x4F8B;Cache&#x6C60;</div><div class="line">     * </div><div class="line">     */</div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">CachePool</span> </span>{</div><div class="line">        JedisPool pool;</div><div class="line">        <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> CachePool CACHEPOOL = <span class="keyword">new</span> CachePool();</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> CachePool <span class="title">getInstance</span><span class="params">()</span> </span>{</div><div class="line">            <span class="keyword">return</span> CACHEPOOL;</div><div class="line">        }</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">private</span> <span class="title">CachePool</span><span class="params">()</span> </span>{</div><div class="line">            <span class="keyword">try</span> {</div><div class="line">                <span class="keyword">int</span> maxIdle = Integer</div><div class="line">                        .valueOf(RedisConfig.getMaxIdle());</div><div class="line">                <span class="keyword">long</span> maxWait = Long.valueOf(RedisConfig.getMaxWait());</div><div class="line">                <span class="keyword">int</span> maxActive = Integer.valueOf(RedisConfig.getMaxActive());</div><div class="line">                String redisHost = RedisConfig.getHost();</div><div class="line">                <span class="keyword">int</span> redisPort = Integer.valueOf(RedisConfig.getPort());</div><div class="line">                JedisPoolConfig config = <span class="keyword">new</span> JedisPoolConfig();</div><div class="line">                config.setMaxIdle(maxIdle);</div><div class="line">                config.setMaxWait(maxWait);</div><div class="line">                config.setMaxActive(maxActive);</div><div class="line">                config.setTestOnBorrow(<span class="keyword">false</span>);</div><div class="line">                pool = <span class="keyword">new</span> JedisPool(config, redisHost, redisPort);</div><div class="line">            } <span class="keyword">catch</span> (Exception e) {</div><div class="line">                LOG.error(e);</div><div class="line">                <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(<span class="string">&quot;&#x521D;&#x59CB;&#x5316;&#x8FDE;&#x63A5;&#x6C60;&#x9519;&#x8BEF;&quot;</span>);</div><div class="line">            }</div><div class="line">        }</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> Jedis <span class="title">getJedis</span><span class="params">()</span> </span>{</div><div class="line">            Jedis jedis = <span class="keyword">null</span>;</div><div class="line">            <span class="keyword">boolean</span> borrowOrOprSuccess = <span class="keyword">true</span>;</div><div class="line">            <span class="keyword">try</span> {</div><div class="line">                jedis = pool.getResource();</div><div class="line">            } <span class="keyword">catch</span> (JedisConnectionException e) {</div><div class="line">                LOG.error(e);</div><div class="line">                borrowOrOprSuccess = <span class="keyword">false</span>;</div><div class="line">                <span class="keyword">if</span> (jedis != <span class="keyword">null</span>) {</div><div class="line">                    pool.returnBrokenResource(jedis); </div><div class="line">                } </div><div class="line">            } <span class="keyword">finally</span> {</div><div class="line">                <span class="keyword">if</span> (borrowOrOprSuccess) {</div><div class="line">                    pool.returnResource(jedis);</div><div class="line">                }  </div><div class="line">            }</div><div class="line">            jedis = pool.getResource();</div><div class="line">            <span class="keyword">return</span> jedis;</div><div class="line">        }</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> JedisPool <span class="title">getJedisPool</span><span class="params">()</span> </span>{</div><div class="line">            <span class="keyword">return</span> <span class="keyword">this</span>.pool;</div><div class="line">        }</div><div class="line"></div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">SerializeUtil</span> </span>{</div><div class="line">        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">byte</span>[] serialize(Object object) {</div><div class="line">            ObjectOutputStream oos = <span class="keyword">null</span>;</div><div class="line">            ByteArrayOutputStream baos = <span class="keyword">null</span>;</div><div class="line">            <span class="keyword">byte</span>[] bytes = <span class="keyword">null</span>;</div><div class="line">            <span class="keyword">try</span> {</div><div class="line">                <span class="comment">// &#x5E8F;&#x5217;&#x5316;</span></div><div class="line">                baos = <span class="keyword">new</span> ByteArrayOutputStream();</div><div class="line">                oos = <span class="keyword">new</span> ObjectOutputStream(baos);</div><div class="line">                oos.writeObject(object);</div><div class="line">                bytes = baos.toByteArray();</div><div class="line">                <span class="keyword">return</span> bytes;</div><div class="line">            } <span class="keyword">catch</span> (Exception e) {</div><div class="line">                LOG.error(e);</div><div class="line">            }</div><div class="line">            <span class="keyword">return</span> bytes;</div><div class="line">        }</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Object <span class="title">unserialize</span><span class="params">(<span class="keyword">byte</span>[] bytes)</span> </span>{</div><div class="line">            <span class="keyword">if</span> (bytes == <span class="keyword">null</span>) {</div><div class="line">                <span class="keyword">return</span> <span class="keyword">null</span>;</div><div class="line">            } </div><div class="line">            ByteArrayInputStream bais = <span class="keyword">null</span>;</div><div class="line">            <span class="keyword">try</span> {</div><div class="line">                <span class="comment">// &#x53CD;&#x5E8F;&#x5217;&#x5316;</span></div><div class="line">                bais = <span class="keyword">new</span> ByteArrayInputStream(bytes);</div><div class="line">                ObjectInputStream ois = <span class="keyword">new</span> ObjectInputStream(bais);</div><div class="line">                <span class="keyword">return</span> ois.readObject();</div><div class="line">            } <span class="keyword">catch</span> (Exception e) {</div><div class="line">                LOG.error(e);</div><div class="line">            }</div><div class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</div><div class="line">        }</div><div class="line">    }</div><div class="line">}</div></pre></td></tr></table></figure></p>
+<h3 id="&#x65B0;&#x5EFA;LoggingRedisCache-java&#x7C7B;"><a href="#&#x65B0;&#x5EFA;LoggingRedisCache-java&#x7C7B;" class="headerlink" title="&#x65B0;&#x5EFA;LoggingRedisCache.java&#x7C7B;"></a>&#x65B0;&#x5EFA;LoggingRedisCache.java&#x7C7B;</h3><p>&#x8BE5;&#x7C7B;&#x7EE7;&#x627F;&#x4E86;org.apache.ibatis.cache.decorators.LoggingCache&#xFF0C;&#x662F;&#x7F13;&#x5B58;&#x7684;&#x5165;&#x53E3;&#x7C7B;<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LoggingRedisCache</span> <span class="keyword">extends</span> <span class="title">LoggingCache</span> </span>{</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">LoggingRedisCache</span><span class="params">(String id)</span> </span>{</div><div class="line">        <span class="keyword">super</span>(<span class="keyword">new</span> RedisCache(id));</div><div class="line">    }</div><div class="line">}</div></pre></td></tr></table></figure></p>
+<h3 id="&#x4F7F;&#x7528;&#x7F13;&#x5B58;"><a href="#&#x4F7F;&#x7528;&#x7F13;&#x5B58;" class="headerlink" title="&#x4F7F;&#x7528;&#x7F13;&#x5B58;"></a>&#x4F7F;&#x7528;&#x7F13;&#x5B58;</h3><p>&#x5728;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x7F13;&#x5B58;&#x7684;mapper&#x6587;&#x4EF6;&#x4E2D;&#x52A0;&#x5165;&#xFF08;&#x8981;&#x5728;<code>&lt;mapper&gt;</code>&#x6807;&#x7B7E;&#x8303;&#x56F4;&#x5185;&#xFF09;&#xFF1A;<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">cache</span> <span class="attr">type</span>=<span class="string">&quot;cn.essa.component.privilege.cache.LoggingRedisCache&quot;</span> /&gt;</span></div></pre></td></tr></table></figure></p>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x6D4B;&#x8BD5;&#x65F6;&#x8BF7;&#x8BB0;&#x5F97;&#x5F00;&#x542F;redis</p>
+
+                        
+                    </div>
+
+                    
+                    
+                    
+
+                    <div class="description post-description">
+    <span class="post-description-item">
+        <time datetime="2017-04-10T12:04:46.507Z" itemprop="datePublished">2017-04-10</time>
+
+    </span>
+    <span class="post-description-item">
+        
+
+    <span>
+        <i class="tags icon"></i>
+    </span>
+
+    
+    <span class="ui tiny label">
+        <a href="/tags/MyBatis/">MyBatis</a>
+    </span>
+
+    
+    <span class="ui tiny label">
+        <a href="/tags/redis/">redis</a>
+    </span>
+
+    
+
+    </span>
+</div>
+
+                </div>
+                
+                <div id="pagination" class="nav-web ui text container pagination">
+
+    <div class="ui stackable two column divided grid container">
+        <div class="row">
+            <div class="column nav-left">
+                
+
+                <a href="/2017/04/10/hello-world/" class="ui tiny button">
+
+                    <i class="angle left icon"></i>
+                    
+                    Hello World
+                    
+
+                </a>
+
+                
+            </div>
+            <div class="column nav-right">
+                
+
+                <a class="ui tiny button disabled">下一篇<i class="angle right icon"></i></a>
+
+                
+            </div>
+        </div>
+    </div>
+
+</div>
+                
+            </div>
+
+            
+            <div class="three wide computer three wide tablet column">
+
+                <div class="ui sticky article-toc" id="article-toc">
+                    <!-- toc -->
+                    <ol class="ui ordered list"><li><a href="#概述"><span>概述</span></a></li><li><a href="#开始"><span>开始</span></a><ol><li><a href="#环境"><span>环境</span></a></li><li><a href="#新建redis-properties文件"><span>新建redis.properties文件</span></a></li><li><a href="#新建RedisConfig-java类"><span>新建RedisConfig.java类</span></a></li><li><a href="#spring配置文件中构造RedisConfig"><span>spring配置文件中构造RedisConfig</span></a></li><li><a href="#新建RedisCache-java类"><span>新建RedisCache.java类</span></a></li><li><a href="#新建LoggingRedisCache-java类"><span>新建LoggingRedisCache.java类</span></a></li><li><a href="#使用缓存"><span>使用缓存</span></a></li></ol></li></ol>
+                </div>
+
+            </div>
+            
+
+        </div>
+    </div>
+</div>
+
+
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        </div>
+        <div class="ui vertical footer segment">
+    <div class="ui center aligned container">
+        <div class="ui inverted section divider"></div>
+        &copy; 2017 <a href="/">cipher</a>,
+        Powered by <a href="https://github.com/henryhuang/hexo-theme-aloha" target="_blank">Aloha</a> and <a
+                href="http://hexo.io/" target="_blank">Hexo</a>.
+    </div>
+</div>
+
+    </div>
+
+
+
+
+<!-- scripts list from theme config.yml -->
+
+<script src="//cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+
+<script src="//cdn.bootcss.com/semantic-ui/2.2.4/semantic.min.js"></script>
+
+<script src="//cdn.bootcss.com/algoliasearch/3.18.1/algoliasearch.min.js"></script>
+
+<script src="//cdn.bootcss.com/algoliasearch-helper-js/2.13.0/algoliasearch.helper.min.js"></script>
+
+<script src="/js/semantic-ui-algolia.js"></script>
+
+<script src="/js/aloha-events.js"></script>
+
+
+
+</body>
+</html>
