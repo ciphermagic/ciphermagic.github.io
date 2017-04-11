@@ -1,7 +1,7 @@
 ---
 title: Mybatis整合redis实现缓存
 categories: blog
-tags: [myBatis,redis] 
+tags: [mybatis,redis] 
 ---
 ## 概述
 Mybatis默认缓存是PerpetualCache，它实现了Cache接口。Mybatis为了方便我们扩展缓存定义了一个Cache接口，因此，我们只需要参考源码自己使用redis实现Cache接口，即可达到Mybatis整合redis管理缓存的目的。
