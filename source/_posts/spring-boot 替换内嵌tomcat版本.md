@@ -6,6 +6,8 @@ tags: [spring-boot,tomcat]
 
 spring-boot中的内嵌tomcat有默认的指定版本，若想修改为其他版本，有以下两种途径：
 
+<!-- more -->
+
 ## 使用parent的方式
 若引入spring-boot的方式为加入&lt;parent&gt;：
 ``` xml

@@ -4,8 +4,13 @@ categories: blog
 tags: [spring-boot] 
 ---
 
+spring-boot配置方式集中处理异常，统一规范接口对外的异常输出。业务代码只需往外抛异常，不需过多关注异常的输出形式。
+
+<!-- more -->
+
 ## 非系统抛出异常
 对于400，404等非系统抛出的异常，使用以下方式：
+
 ``` java
 @Configuration
 public class ErrorHandler {
