@@ -4,10 +4,10 @@
 
 # Site
 title: $t/^Cipher_?\n
-subtitle: Welcome
+subtitle: be happy no matter what
 description: 猎人, 今天你愉快吗?
 author: cipher
-language: zh-CN
+language: zh-Hans
 timezone:
 
 # URL
@@ -58,15 +58,13 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: aloha
+theme: next
 
-sidebar:
-   bio: Java Developer / Player
-   avatar: /images/avatar.jpg
-   location: GuangZhou
-   social:
-     github: https://github.com/ciphermagic
-     weibo: http://weibo.com/ciphermagic
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
