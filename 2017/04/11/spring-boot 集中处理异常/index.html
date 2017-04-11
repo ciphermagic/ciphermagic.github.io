@@ -80,24 +80,24 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.0" />
 
 
 
 
 
 
-<meta name="description" content="非系统抛出异常对于400，404等非系统抛出的异常，使用以下方式：123456789101112131415161718@Configurationpublic class ErrorHandler &amp;#123;	@Bean	public EmbeddedServletContainerCustomizer containerCustomizer() &amp;#123;		return new MyCu">
+<meta name="description" content="spring-boot配置方式集中处理异常，统一规范接口对外的异常输出。业务代码只需往外抛异常，不需过多关注异常的输出形式。">
 <meta name="keywords" content="spring-boot">
 <meta property="og:type" content="article">
 <meta property="og:title" content="spring-boot 集中处理异常">
 <meta property="og:url" content="http://yoursite.com/2017/04/11/spring-boot 集中处理异常/index.html">
 <meta property="og:site_name" content="$t/^Cipher_?\n">
-<meta property="og:description" content="非系统抛出异常对于400，404等非系统抛出的异常，使用以下方式：123456789101112131415161718@Configurationpublic class ErrorHandler &amp;#123;	@Bean	public EmbeddedServletContainerCustomizer containerCustomizer() &amp;#123;		return new MyCu">
-<meta property="og:updated_time" content="2017-04-11T08:14:31.773Z">
+<meta property="og:description" content="spring-boot配置方式集中处理异常，统一规范接口对外的异常输出。业务代码只需往外抛异常，不需过多关注异常的输出形式。">
+<meta property="og:updated_time" content="2017-04-11T08:59:17.926Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="spring-boot 集中处理异常">
-<meta name="twitter:description" content="非系统抛出异常对于400，404等非系统抛出的异常，使用以下方式：123456789101112131415161718@Configurationpublic class ErrorHandler &amp;#123;	@Bean	public EmbeddedServletContainerCustomizer containerCustomizer() &amp;#123;		return new MyCu">
+<meta name="twitter:description" content="spring-boot配置方式集中处理异常，统一规范接口对外的异常输出。业务代码只需往外抛异常，不需过多关注异常的输出形式。">
 
 
 
@@ -388,7 +388,10 @@
       
 
       
-        <h2 id="非系统抛出异常"><a href="#非系统抛出异常" class="headerlink" title="非系统抛出异常"></a>非系统抛出异常</h2><p>对于400，404等非系统抛出的异常，使用以下方式：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Configuration</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ErrorHandler</span> </span>&#123;</div><div class="line"></div><div class="line">	<span class="meta">@Bean</span></div><div class="line">	<span class="function"><span class="keyword">public</span> EmbeddedServletContainerCustomizer <span class="title">containerCustomizer</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> <span class="keyword">new</span> MyCustomizer();</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">MyCustomizer</span> <span class="keyword">implements</span></span></div><div class="line">			<span class="title">EmbeddedServletContainerCustomizer</span> &#123;</div><div class="line">		<span class="meta">@Override</span></div><div class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">customize</span><span class="params">(ConfigurableEmbeddedServletContainer container)</span> </span>&#123;</div><div class="line">			container.addErrorPages(<span class="keyword">new</span> ErrorPage(HttpStatus.BAD_REQUEST,</div><div class="line">					<span class="string">"/400"</span>));</div><div class="line">			container.addErrorPages(<span class="keyword">new</span> ErrorPage(HttpStatus.NOT_FOUND, <span class="string">"/404"</span>));</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+        <p>spring-boot配置方式集中处理异常，统一规范接口对外的异常输出。业务代码只需往外抛异常，不需过多关注异常的输出形式。</p>
+<a id="more"></a>
+<h2 id="非系统抛出异常"><a href="#非系统抛出异常" class="headerlink" title="非系统抛出异常"></a>非系统抛出异常</h2><p>对于400，404等非系统抛出的异常，使用以下方式：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Configuration</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ErrorHandler</span> </span>&#123;</div><div class="line"></div><div class="line">	<span class="meta">@Bean</span></div><div class="line">	<span class="function"><span class="keyword">public</span> EmbeddedServletContainerCustomizer <span class="title">containerCustomizer</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> <span class="keyword">new</span> MyCustomizer();</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">MyCustomizer</span> <span class="keyword">implements</span></span></div><div class="line">			<span class="title">EmbeddedServletContainerCustomizer</span> &#123;</div><div class="line">		<span class="meta">@Override</span></div><div class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">customize</span><span class="params">(ConfigurableEmbeddedServletContainer container)</span> </span>&#123;</div><div class="line">			container.addErrorPages(<span class="keyword">new</span> ErrorPage(HttpStatus.BAD_REQUEST,</div><div class="line">					<span class="string">"/400"</span>));</div><div class="line">			container.addErrorPages(<span class="keyword">new</span> ErrorPage(HttpStatus.NOT_FOUND, <span class="string">"/404"</span>));</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>对于状态码为400，404的响应会转到相应的请求<code>/400</code>，<code>/404</code>中处理。</p>
 <h2 id="系统抛出异常"><a href="#系统抛出异常" class="headerlink" title="系统抛出异常"></a>系统抛出异常</h2><p>对于系统抛出的异常，除了跳到错误页面之外，我们常常需要记录错误日志等信息，因此不使用上述方法。而是在处理类和方法上加上注解<code>@ControllerAdvice</code>，<code>@ExceptionHandler</code>，如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Controller</span></div><div class="line"><span class="meta">@ControllerAdvice</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ErrorController</span> </span>&#123;</div><div class="line">	</div><div class="line">	<span class="meta">@RequestMapping</span>(value = &#123; <span class="string">"/404"</span> &#125;)</div><div class="line">	<span class="meta">@ResponseBody</span></div><div class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">notFound</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> <span class="string">"404"</span>;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="meta">@ExceptionHandler</span>(Exception.class)</div><div class="line">	<span class="meta">@ResponseBody</span></div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">handleException</span><span class="params">(Exception e)</span> </span>&#123;</div><div class="line">		<span class="comment">// 记录错误日志</span></div><div class="line">        <span class="keyword">return</span> <span class="string">"Exception"</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>在此类中一并处理非系统抛出异常，如上述的<code>/404</code>请求。</p>
@@ -623,7 +626,7 @@
       <div class="footer-inner">
         <div class="copyright" >
   
-  &copy; 
+  &copy;  2013 - 
   <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>

@@ -80,24 +80,24 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.0" />
 
 
 
 
 
 
-<meta name="description" content="spring-boot中的内嵌tomcat有默认的指定版本，若想修改为其他版本，有以下两种途径： 使用parent的方式若引入spring-boot的方式为加入&amp;lt;parent&amp;gt;：123456&amp;lt;!-- Inherit defaults from Spring Boot --&amp;gt;&amp;lt;parent&amp;gt;    &amp;lt;groupId&amp;gt;org.springframewor">
+<meta name="description" content="spring-boot中的内嵌tomcat有默认的指定版本，若想修改为其他版本，有以下两种途径：">
 <meta name="keywords" content="spring-boot,tomcat">
 <meta property="og:type" content="article">
 <meta property="og:title" content="spring-boot 替换内嵌tomcat版本">
 <meta property="og:url" content="http://yoursite.com/2017/04/11/spring-boot 替换内嵌tomcat版本/index.html">
 <meta property="og:site_name" content="$t/^Cipher_?\n">
-<meta property="og:description" content="spring-boot中的内嵌tomcat有默认的指定版本，若想修改为其他版本，有以下两种途径： 使用parent的方式若引入spring-boot的方式为加入&amp;lt;parent&amp;gt;：123456&amp;lt;!-- Inherit defaults from Spring Boot --&amp;gt;&amp;lt;parent&amp;gt;    &amp;lt;groupId&amp;gt;org.springframewor">
-<meta property="og:updated_time" content="2017-04-11T08:17:51.051Z">
+<meta property="og:description" content="spring-boot中的内嵌tomcat有默认的指定版本，若想修改为其他版本，有以下两种途径：">
+<meta property="og:updated_time" content="2017-04-11T08:51:48.529Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="spring-boot 替换内嵌tomcat版本">
-<meta name="twitter:description" content="spring-boot中的内嵌tomcat有默认的指定版本，若想修改为其他版本，有以下两种途径： 使用parent的方式若引入spring-boot的方式为加入&amp;lt;parent&amp;gt;：123456&amp;lt;!-- Inherit defaults from Spring Boot --&amp;gt;&amp;lt;parent&amp;gt;    &amp;lt;groupId&amp;gt;org.springframewor">
+<meta name="twitter:description" content="spring-boot中的内嵌tomcat有默认的指定版本，若想修改为其他版本，有以下两种途径：">
 
 
 
@@ -389,6 +389,7 @@
 
       
         <p>spring-boot中的内嵌tomcat有默认的指定版本，若想修改为其他版本，有以下两种途径：</p>
+<a id="more"></a>
 <h2 id="使用parent的方式"><a href="#使用parent的方式" class="headerlink" title="使用parent的方式"></a>使用parent的方式</h2><p>若引入spring-boot的方式为加入&lt;parent&gt;：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Inherit defaults from Spring Boot --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">parent</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-parent<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.3.0.BUILD-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">parent</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <p>则只需在properties中指定tomcat版本即可：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">properties</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">tomcat.version</span>&gt;</span>7.0.59<span class="tag">&lt;/<span class="name">tomcat.version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">properties</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <p>这种方式比较简单，官方文档中也有<a href="http://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#_use_tomcat_7_with_maven" target="_blank" rel="external">说明</a></p>
@@ -628,7 +629,7 @@
       <div class="footer-inner">
         <div class="copyright" >
   
-  &copy; 
+  &copy;  2013 - 
   <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>

@@ -80,24 +80,24 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.0" />
 
 
 
 
 
 
-<meta name="description" content="解决跨域访问问题，只需在被访问的应用中加入一个请求过滤器：12345678910111213141516171819202122232425262728public class CorsFilter implements Filter &amp;#123;    @Override    public void doFilter(ServletRequest request, ServletRespons">
+<meta name="description" content="解决跨域访问问题，只需在被访问的应用中加入一个请求过滤器：">
 <meta name="keywords" content="spring-mvc,跨域">
 <meta property="og:type" content="article">
 <meta property="og:title" content="spring-mvc 解决跨域问题">
 <meta property="og:url" content="http://yoursite.com/2017/04/11/spring-mvc 解决跨域问题/index.html">
 <meta property="og:site_name" content="$t/^Cipher_?\n">
-<meta property="og:description" content="解决跨域访问问题，只需在被访问的应用中加入一个请求过滤器：12345678910111213141516171819202122232425262728public class CorsFilter implements Filter &amp;#123;    @Override    public void doFilter(ServletRequest request, ServletRespons">
-<meta property="og:updated_time" content="2017-04-11T08:19:24.039Z">
+<meta property="og:description" content="解决跨域访问问题，只需在被访问的应用中加入一个请求过滤器：">
+<meta property="og:updated_time" content="2017-04-11T08:50:24.395Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="spring-mvc 解决跨域问题">
-<meta name="twitter:description" content="解决跨域访问问题，只需在被访问的应用中加入一个请求过滤器：12345678910111213141516171819202122232425262728public class CorsFilter implements Filter &amp;#123;    @Override    public void doFilter(ServletRequest request, ServletRespons">
+<meta name="twitter:description" content="解决跨域访问问题，只需在被访问的应用中加入一个请求过滤器：">
 
 
 
@@ -388,8 +388,9 @@
       
 
       
-        <p>解决跨域访问问题，只需在被访问的应用中加入一个请求过滤器：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CorsFilter</span> <span class="keyword">implements</span> <span class="title">Filter</span> </span>&#123;</div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doFilter</span><span class="params">(ServletRequest request, ServletResponse response,</span></span></div><div class="line">            FilterChain chain) <span class="keyword">throws</span> IOException, ServletException &#123;</div><div class="line"></div><div class="line">        HttpServletRequest req = (HttpServletRequest) request;</div><div class="line">        HttpServletResponse res = (HttpServletResponse) response;</div><div class="line"></div><div class="line">        <span class="keyword">if</span> (req.getHeader(<span class="string">"Origin"</span>) != <span class="keyword">null</span>) &#123;</div><div class="line">            res.addHeader(<span class="string">"Access-Control-Allow-Origin"</span>, <span class="string">"*"</span>);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">if</span> (<span class="string">"OPTIONS"</span>.equals(req.getMethod())) &#123;</div><div class="line">            res.addHeader(<span class="string">"Access-Control-Allow-Methods"</span>, <span class="string">"OPTIONS, GET, POST"</span>);</div><div class="line">            res.addHeader(<span class="string">"Access-Control-Allow-Headers"</span>,<span class="string">"Origin, Content-Type"</span>);</div><div class="line">            res.addHeader(<span class="string">"Access-Control-Max-Age"</span>, <span class="string">"-1"</span>);</div><div class="line">        &#125;</div><div class="line">        chain.doFilter(req, res);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">destroy</span><span class="params">()</span> </span>&#123;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">(FilterConfig filterConfig)</span> <span class="keyword">throws</span> ServletException </span>&#123;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-
+        <p>解决跨域访问问题，只需在被访问的应用中加入一个请求过滤器：</p>
+<a id="more"></a>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CorsFilter</span> <span class="keyword">implements</span> <span class="title">Filter</span> </span>&#123;</div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doFilter</span><span class="params">(ServletRequest request, ServletResponse response,</span></span></div><div class="line">            FilterChain chain) <span class="keyword">throws</span> IOException, ServletException &#123;</div><div class="line"></div><div class="line">        HttpServletRequest req = (HttpServletRequest) request;</div><div class="line">        HttpServletResponse res = (HttpServletResponse) response;</div><div class="line"></div><div class="line">        <span class="keyword">if</span> (req.getHeader(<span class="string">"Origin"</span>) != <span class="keyword">null</span>) &#123;</div><div class="line">            res.addHeader(<span class="string">"Access-Control-Allow-Origin"</span>, <span class="string">"*"</span>);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">if</span> (<span class="string">"OPTIONS"</span>.equals(req.getMethod())) &#123;</div><div class="line">            res.addHeader(<span class="string">"Access-Control-Allow-Methods"</span>, <span class="string">"OPTIONS, GET, POST"</span>);</div><div class="line">            res.addHeader(<span class="string">"Access-Control-Allow-Headers"</span>,<span class="string">"Origin, Content-Type"</span>);</div><div class="line">            res.addHeader(<span class="string">"Access-Control-Max-Age"</span>, <span class="string">"-1"</span>);</div><div class="line">        &#125;</div><div class="line">        chain.doFilter(req, res);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">destroy</span><span class="params">()</span> </span>&#123;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">(FilterConfig filterConfig)</span> <span class="keyword">throws</span> ServletException </span>&#123;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -589,7 +590,7 @@
       <div class="footer-inner">
         <div class="copyright" >
   
-  &copy; 
+  &copy;  2013 - 
   <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>

@@ -80,24 +80,24 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.0" />
 
 
 
 
 
 
-<meta name="description" content="JavaSimon，是Java Simple Monitoring的意思，是Java性能监控的一个开源方案（官方说明）。本文介绍它在项目中的用法：  pom.xml，加入core与dashboard的依赖 12345678910&amp;lt;dependency&amp;gt;    &amp;lt;groupId&amp;gt;org.javasimon&amp;lt;/groupId&amp;gt;    &amp;lt;artifactId&amp;g">
+<meta name="description" content="JavaSimon，是Java Simple Monitoring的意思，是Java性能监控的一个开源方案（官方说明）。本文介绍它在项目中的用法：">
 <meta name="keywords" content="java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaSimon">
 <meta property="og:url" content="http://yoursite.com/2017/04/11/JavaSimon/index.html">
 <meta property="og:site_name" content="$t/^Cipher_?\n">
-<meta property="og:description" content="JavaSimon，是Java Simple Monitoring的意思，是Java性能监控的一个开源方案（官方说明）。本文介绍它在项目中的用法：  pom.xml，加入core与dashboard的依赖 12345678910&amp;lt;dependency&amp;gt;    &amp;lt;groupId&amp;gt;org.javasimon&amp;lt;/groupId&amp;gt;    &amp;lt;artifactId&amp;g">
-<meta property="og:updated_time" content="2017-04-11T06:29:07.894Z">
+<meta property="og:description" content="JavaSimon，是Java Simple Monitoring的意思，是Java性能监控的一个开源方案（官方说明）。本文介绍它在项目中的用法：">
+<meta property="og:updated_time" content="2017-04-11T08:54:20.864Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaSimon">
-<meta name="twitter:description" content="JavaSimon，是Java Simple Monitoring的意思，是Java性能监控的一个开源方案（官方说明）。本文介绍它在项目中的用法：  pom.xml，加入core与dashboard的依赖 12345678910&amp;lt;dependency&amp;gt;    &amp;lt;groupId&amp;gt;org.javasimon&amp;lt;/groupId&amp;gt;    &amp;lt;artifactId&amp;g">
+<meta name="twitter:description" content="JavaSimon，是Java Simple Monitoring的意思，是Java性能监控的一个开源方案（官方说明）。本文介绍它在项目中的用法：">
 
 
 
@@ -389,30 +389,16 @@
 
       
         <p>JavaSimon，是Java Simple Monitoring的意思，是Java性能监控的一个开源方案（<a href="https://code.google.com/p/javasimon/wiki/JavaEE" target="_blank" rel="external">官方说明</a>）。本文介绍它在项目中的用法：</p>
-<ol>
-<li><p>pom.xml，加入core与dashboard的依赖</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.javasimon<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>javasimon-spring<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.3.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.javasimon<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>javasimon-console-embed<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.3.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>web.xml，加入dashboard：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">servlet</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>SimonConsoleServlet<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">servlet-class</span>&gt;</span>org.javasimon.console.SimonConsoleServlet<span class="tag">&lt;/<span class="name">servlet-class</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">init-param</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">param-name</span>&gt;</span>url-prefix<span class="tag">&lt;/<span class="name">param-name</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">param-value</span>&gt;</span>/javasimon<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">init-param</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">servlet</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">servlet-mapping</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>SimonConsoleServlet<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">url-pattern</span>&gt;</span>/javasimon/*<span class="tag">&lt;/<span class="name">url-pattern</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">servlet-mapping</span>&gt;</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>applicationContext.xml 加入AOP设置</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 调用StopWatch计时的Interceptor --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"monitoringInterceptor"</span> <span class="attr">class</span>=<span class="string">"org.javasimon.spring.MonitoringInterceptor"</span> /&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- 监控定义了@Monitored的方法 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"monitoringAdvisor"</span> <span class="attr">class</span>=<span class="string">"org.springframework.aop.support.DefaultPointcutAdvisor"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"advice"</span> <span class="attr">ref</span>=<span class="string">"monitoringInterceptor"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"pointcut"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">bean</span> <span class="attr">class</span>=<span class="string">"org.javasimon.spring.MonitoredMeasuringPointcut"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>在已知一定要监控的类或方法上加@Monitored</p>
-</li>
-<li><p>不修改代码监控新的方法<br>如下AOP定义片段监控了cn包或子包下的所有方法</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 性能监控拦截 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">aop:config</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">aop:advisor</span> <span class="attr">advice-ref</span>=<span class="string">"monitoringInterceptor"</span> <span class="attr">pointcut</span>=<span class="string">"execution(* cn..*.*(..))"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">aop:config</span>&gt;</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>(可选)监控jdbc访问速度 换用新的jdbc driver，在旧的jdbc url里插入simon</p>
-<ul>
+<a id="more"></a>
+<h3 id="pom-xml，加入core与dashboard的依赖"><a href="#pom-xml，加入core与dashboard的依赖" class="headerlink" title="pom.xml，加入core与dashboard的依赖"></a>pom.xml，加入core与dashboard的依赖</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.javasimon<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>javasimon-spring<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.3.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.javasimon<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>javasimon-console-embed<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.3.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="web-xml，加入dashboard："><a href="#web-xml，加入dashboard：" class="headerlink" title="web.xml，加入dashboard："></a>web.xml，加入dashboard：</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">servlet</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>SimonConsoleServlet<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">servlet-class</span>&gt;</span>org.javasimon.console.SimonConsoleServlet<span class="tag">&lt;/<span class="name">servlet-class</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">init-param</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">param-name</span>&gt;</span>url-prefix<span class="tag">&lt;/<span class="name">param-name</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">param-value</span>&gt;</span>/javasimon<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">init-param</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">servlet</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">servlet-mapping</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>SimonConsoleServlet<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">url-pattern</span>&gt;</span>/javasimon/*<span class="tag">&lt;/<span class="name">url-pattern</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">servlet-mapping</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="applicationContext-xml-加入AOP设置"><a href="#applicationContext-xml-加入AOP设置" class="headerlink" title="applicationContext.xml 加入AOP设置"></a>applicationContext.xml 加入AOP设置</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 调用StopWatch计时的Interceptor --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"monitoringInterceptor"</span> <span class="attr">class</span>=<span class="string">"org.javasimon.spring.MonitoringInterceptor"</span> /&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- 监控定义了@Monitored的方法 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"monitoringAdvisor"</span> <span class="attr">class</span>=<span class="string">"org.springframework.aop.support.DefaultPointcutAdvisor"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"advice"</span> <span class="attr">ref</span>=<span class="string">"monitoringInterceptor"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"pointcut"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">bean</span> <span class="attr">class</span>=<span class="string">"org.javasimon.spring.MonitoredMeasuringPointcut"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="在已知一定要监控的类或方法上加-Monitored"><a href="#在已知一定要监控的类或方法上加-Monitored" class="headerlink" title="在已知一定要监控的类或方法上加@Monitored"></a>在已知一定要监控的类或方法上加@Monitored</h3><h3 id="不修改代码监控新的方法"><a href="#不修改代码监控新的方法" class="headerlink" title="不修改代码监控新的方法"></a>不修改代码监控新的方法</h3><p>如下AOP定义片段监控了cn包或子包下的所有方法<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 性能监控拦截 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">aop:config</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">aop:advisor</span> <span class="attr">advice-ref</span>=<span class="string">"monitoringInterceptor"</span> <span class="attr">pointcut</span>=<span class="string">"execution(* cn..*.*(..))"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">aop:config</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h3 id="可选-监控jdbc访问速度-换用新的jdbc-driver，在旧的jdbc-url里插入simon"><a href="#可选-监控jdbc访问速度-换用新的jdbc-driver，在旧的jdbc-url里插入simon" class="headerlink" title="(可选)监控jdbc访问速度 换用新的jdbc driver，在旧的jdbc url里插入simon"></a>(可选)监控jdbc访问速度 换用新的jdbc driver，在旧的jdbc url里插入simon</h3><ul>
 <li>Oracle<br><code>Driver class name: org.javasimon.jdbc4.Driver instead of oracle.jdbc.OracleDriver</code><br><code>URL: jdbc:simon:oracle:thin:@host:1521/database instead of jdbc:oracle:thin:@host:1521/database</code></li>
 <li>MySQL<br><code>Driver class name: org.javasimon.jdbc4.Driver instead of com.mysql.jdbc.Driver</code><br><code>URL: jdbc:simon:mysql://host:3306/database instead of jdbc:mysql://host:3306/database</code></li>
 </ul>
-</li>
-<li><p>使用<br>访问”<code>{your webapp address}/javasimon</code>“，如:<code>http://localhost:8080/essa-logger/javasimon</code>即可。</p>
-</li>
-</ol>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p> 访问”<code>{your webapp address}/javasimon</code>“，如:<code>http://localhost:8080/essa-logger/javasimon</code>即可。</p>
 
       
     </div>
@@ -516,8 +502,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/cipher.jpeg"
@@ -600,6 +595,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#pom-xml，加入core与dashboard的依赖"><span class="nav-number">1.</span> <span class="nav-text">pom.xml，加入core与dashboard的依赖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#web-xml，加入dashboard："><span class="nav-number">2.</span> <span class="nav-text">web.xml，加入dashboard：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#applicationContext-xml-加入AOP设置"><span class="nav-number">3.</span> <span class="nav-text">applicationContext.xml 加入AOP设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在已知一定要监控的类或方法上加-Monitored"><span class="nav-number">4.</span> <span class="nav-text">在已知一定要监控的类或方法上加@Monitored</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#不修改代码监控新的方法"><span class="nav-number">5.</span> <span class="nav-text">不修改代码监控新的方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#可选-监控jdbc访问速度-换用新的jdbc-driver，在旧的jdbc-url里插入simon"><span class="nav-number">6.</span> <span class="nav-text">(可选)监控jdbc访问速度 换用新的jdbc driver，在旧的jdbc url里插入simon</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用"><span class="nav-number">7.</span> <span class="nav-text">使用</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -615,7 +626,7 @@
       <div class="footer-inner">
         <div class="copyright" >
   
-  &copy; 
+  &copy;  2013 - 
   <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>

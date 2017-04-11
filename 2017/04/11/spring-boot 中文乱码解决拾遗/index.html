@@ -80,24 +80,24 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.0" />
 
 
 
 
 
 
-<meta name="description" content="返回json中文乱码在spring-boot项目中返回json格式数据时出现中文乱码问题，有以下两种解决方式： 注解形式在@RequestMapping注解中指定返回格式，编码：12345   @RequestMapping(value = &amp;#123;&quot;/info&quot;&amp;#125;, produces=&quot;application/json;charset=utf-8&quot;)   @ResponseBody">
+<meta name="description" content="返回json中文乱码在spring-boot项目中返回json格式数据时出现中文乱码问题，有以下两种解决方式：">
 <meta name="keywords" content="spring-boot">
 <meta property="og:type" content="article">
 <meta property="og:title" content="spring-boot 中文乱码解决拾遗">
 <meta property="og:url" content="http://yoursite.com/2017/04/11/spring-boot 中文乱码解决拾遗/index.html">
 <meta property="og:site_name" content="$t/^Cipher_?\n">
-<meta property="og:description" content="返回json中文乱码在spring-boot项目中返回json格式数据时出现中文乱码问题，有以下两种解决方式： 注解形式在@RequestMapping注解中指定返回格式，编码：12345   @RequestMapping(value = &amp;#123;&quot;/info&quot;&amp;#125;, produces=&quot;application/json;charset=utf-8&quot;)   @ResponseBody">
-<meta property="og:updated_time" content="2017-04-11T08:18:32.725Z">
+<meta property="og:description" content="返回json中文乱码在spring-boot项目中返回json格式数据时出现中文乱码问题，有以下两种解决方式：">
+<meta property="og:updated_time" content="2017-04-11T08:51:37.415Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="spring-boot 中文乱码解决拾遗">
-<meta name="twitter:description" content="返回json中文乱码在spring-boot项目中返回json格式数据时出现中文乱码问题，有以下两种解决方式： 注解形式在@RequestMapping注解中指定返回格式，编码：12345   @RequestMapping(value = &amp;#123;&quot;/info&quot;&amp;#125;, produces=&quot;application/json;charset=utf-8&quot;)   @ResponseBody">
+<meta name="twitter:description" content="返回json中文乱码在spring-boot项目中返回json格式数据时出现中文乱码问题，有以下两种解决方式：">
 
 
 
@@ -389,6 +389,7 @@
 
       
         <h2 id="返回json中文乱码"><a href="#返回json中文乱码" class="headerlink" title="返回json中文乱码"></a>返回json中文乱码</h2><p>在spring-boot项目中返回json格式数据时出现中文乱码问题，有以下两种解决方式：</p>
+<a id="more"></a>
 <h3 id="注解形式"><a href="#注解形式" class="headerlink" title="注解形式"></a>注解形式</h3><p>在<code>@RequestMapping</code>注解中指定返回格式，编码：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">   <span class="meta">@RequestMapping</span>(value = &#123;<span class="string">"/info"</span>&#125;, produces=<span class="string">"application/json;charset=utf-8"</span>)</div><div class="line">   <span class="meta">@ResponseBody</span></div><div class="line"><span class="function"><span class="keyword">public</span> String <span class="title">index</span><span class="params">()</span> </span>&#123;</div><div class="line">	<span class="keyword">return</span> <span class="string">"世界"</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <h3 id="检查版本"><a href="#检查版本" class="headerlink" title="检查版本"></a>检查版本</h3><p>在spring-boot<code>1.2.3.RELEASE</code>版本中会出现中文乱码问题，使用上述解决方式可以解决。后来无意中把版本改为<code>1.2.3.RELEASE</code>，即使不在注解中指定返回格式编码，也不会出现中文乱码。初步认为高版本spring-boot中自动注册了<code>MappingJackson2HttpMessageConverter</code>这个bean，因此不用显示的指定，还有待考证。</p>
 <p>-END-</p>
@@ -619,7 +620,7 @@
       <div class="footer-inner">
         <div class="copyright" >
   
-  &copy; 
+  &copy;  2013 - 
   <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
