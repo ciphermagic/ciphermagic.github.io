@@ -6,7 +6,7 @@
 favicon: /images/favicon.ico
 
 # Set default keywords (Use a comma to separate)
-keywords: "Hexo, NexT"
+keywords: "Hexo,NexT,Java"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -29,7 +29,7 @@ copyright: true
 canonical: true
 
 # Change headers hierarchy on site-subtitle (will be main site description) and on all post/pages titles for better SEO-optimization.
-seo: false
+seo: true
 
 # ---------------------------------------------------------------
 # Menu Settings
@@ -38,10 +38,10 @@ seo: false
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
   home: /
-  #about: /about
   archives: /archives
   categories: /categories
   tags: /tags
+  about: /about
   #sitemap: /sitemap.xml
   #commonweal: /404.html
 
