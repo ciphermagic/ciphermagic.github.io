@@ -1,5 +1,6 @@
 ---
 title: spring-boot 集成Mysql和Druid连接池
+date: 2017-4-10
 categories: blog
 tags: [spring-boot,druid,mysql] 
 ---

@@ -1,5 +1,6 @@
 ---
 title: Maven初探
+date: 2017-4-10
 categories: blog
 tags: [maven] 
 ---
