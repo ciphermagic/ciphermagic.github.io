@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="redis,mybatis," />
+  <meta name="keywords" content="mybatis,redis," />
 
 
 
@@ -88,7 +88,7 @@
 
 
 <meta name="description" content="概述Mybatis默认缓存是PerpetualCache，它实现了Cache接口。Mybatis为了方便我们扩展缓存定义了一个Cache接口，因此，我们只需要参考源码自己使用redis实现Cache接口，即可达到Mybatis整合redis管理缓存的目的。 开始本文介绍在spring-mvc的项目中，如何实现使用redis作为Mybatis的二级缓存。重点是实现Cache接口，而如何引入redis">
-<meta name="keywords" content="redis,mybatis">
+<meta name="keywords" content="mybatis,redis">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mybatis整合redis实现缓存">
 <meta property="og:url" content="http://yoursite.com/2017/04/11/Mybatis整合redis实现缓存/index.html">
@@ -172,7 +172,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">be happy no matter what</p>
+        <h1 class="site-subtitle" itemprop="description">be happy no matter what</h1>
       
   </div>
 
@@ -228,6 +228,16 @@
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
           </a>
         </li>
       
@@ -311,14 +321,14 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
             
             
               
                 Mybatis整合redis实现缓存
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
@@ -442,9 +452,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/redis/" rel="tag"># redis</a>
-          
             <a href="/tags/mybatis/" rel="tag"># mybatis</a>
+          
+            <a href="/tags/redis/" rel="tag"># redis</a>
           
         </div>
       
@@ -535,8 +545,8 @@
                alt="cipher" />
           <p class="site-author-name" itemprop="name">cipher</p>
            
-              <p class="site-description motion-element" itemprop="description">猎人, 今天你愉快吗?</p>
-          
+              <p class="site-description motion-element" itemprop="description"></p>
+           
         </div>
         <nav class="site-state motion-element">
 
@@ -565,7 +575,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">23</span>
+                <span class="site-state-item-count">21</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
