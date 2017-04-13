@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="spring-boot,druid,mysql," />
+  <meta name="keywords" content="dubbo,proguard," />
 
 
 
@@ -87,20 +87,17 @@
 
 
 
-<meta name="description" content="概述spring-boot默认提供了数据库和数据库连接池，按照官方文档简单配置即可。若要自定义，需要修改一些配置，本文着重描述一下spring-boot如何集成mysql和阿里的druid数据库连接池。 开始本文环境 jdk：1.7 tomcat：7.0.55 spring-boot：1.2.3.RELEASE  修改application.properties文件修改spring-boot默认配">
-<meta name="keywords" content="spring-boot,druid,mysql">
+<meta name="description" content="ProGuard能够作为maven的插件使用，让我们在原来的项目结构中，能够方便的实现代码混淆。但是网上ProGuard的资料通常都是单应用的实现，因此本文基于dubbo分布式项目，简单描述一下如何实现服务提供者的代码混淆。">
+<meta name="keywords" content="dubbo,proguard">
 <meta property="og:type" content="article">
-<meta property="og:title" content="spring-boot 集成Mysql和Druid连接池">
-<meta property="og:url" content="ciphermagic.win/2017/04/11/spring-boot 集成Mysql和Druid连接池/index.html">
-<meta property="og:site_name" content="$t/^Cipher_?\n">
-<meta property="og:description" content="概述spring-boot默认提供了数据库和数据库连接池，按照官方文档简单配置即可。若要自定义，需要修改一些配置，本文着重描述一下spring-boot如何集成mysql和阿里的druid数据库连接池。 开始本文环境 jdk：1.7 tomcat：7.0.55 spring-boot：1.2.3.RELEASE  修改application.properties文件修改spring-boot默认配">
-<meta property="og:image" content="http://ww3.sinaimg.cn/large/6af06d97gw1es4xfagntaj20v40dgq36.jpg">
-<meta property="og:image" content="http://ww3.sinaimg.cn/large/6af06d97gw1es4xfb7e2aj218d0l7wjc.jpg">
-<meta property="og:updated_time" content="2017-04-12T08:20:00.498Z">
+<meta property="og:title" content="Dubbo服务提供者使用ProGuard实现代码混淆">
+<meta property="og:url" content="ciphermagic.win/2017/04/11/Dubbo服务提供者使用ProGuard实现代码混淆/index.html">
+<meta property="og:site_name" content="$t/^Cipher's Blog_?\n">
+<meta property="og:description" content="ProGuard能够作为maven的插件使用，让我们在原来的项目结构中，能够方便的实现代码混淆。但是网上ProGuard的资料通常都是单应用的实现，因此本文基于dubbo分布式项目，简单描述一下如何实现服务提供者的代码混淆。">
+<meta property="og:updated_time" content="2017-04-13T00:48:16.809Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="spring-boot 集成Mysql和Druid连接池">
-<meta name="twitter:description" content="概述spring-boot默认提供了数据库和数据库连接池，按照官方文档简单配置即可。若要自定义，需要修改一些配置，本文着重描述一下spring-boot如何集成mysql和阿里的druid数据库连接池。 开始本文环境 jdk：1.7 tomcat：7.0.55 spring-boot：1.2.3.RELEASE  修改application.properties文件修改spring-boot默认配">
-<meta name="twitter:image" content="http://ww3.sinaimg.cn/large/6af06d97gw1es4xfagntaj20v40dgq36.jpg">
+<meta name="twitter:title" content="Dubbo服务提供者使用ProGuard实现代码混淆">
+<meta name="twitter:description" content="ProGuard能够作为maven的插件使用，让我们在原来的项目结构中，能够方便的实现代码混淆。但是网上ProGuard的资料通常都是单应用的实现，因此本文基于dubbo分布式项目，简单描述一下如何实现服务提供者的代码混淆。">
 
 
 
@@ -128,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="ciphermagic.win/2017/04/11/spring-boot 集成Mysql和Druid连接池/"/>
+  <link rel="canonical" href="ciphermagic.win/2017/04/11/Dubbo服务提供者使用ProGuard实现代码混淆/"/>
 
 
 
 
 
-  <title> spring-boot 集成Mysql和Druid连接池 | $t/^Cipher_?\n </title>
+  <title> Dubbo服务提供者使用ProGuard实现代码混淆 | $t/^Cipher's Blog_?\n </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -170,7 +167,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">$t/^Cipher_?\n</span>
+        <span class="site-title">$t/^Cipher's Blog_?\n</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -307,16 +304,16 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="ciphermagic.win/2017/04/11/spring-boot 集成Mysql和Druid连接池/">
+    <link itemprop="mainEntityOfPage" href="ciphermagic.win/2017/04/11/Dubbo服务提供者使用ProGuard实现代码混淆/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="cipher">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="猎人, 今天你愉快吗?">
       <meta itemprop="image" content="/images/cipher.jpeg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="$t/^Cipher_?\n">
+      <meta itemprop="name" content="$t/^Cipher's Blog_?\n">
     </span>
 
     
@@ -328,7 +325,7 @@
             
             
               
-                spring-boot 集成Mysql和Druid连接池
+                Dubbo服务提供者使用ProGuard实现代码混淆
               
             
           </h2>
@@ -343,7 +340,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-11T16:03:47+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-11T21:23:20+08:00">
                 2017-04-11
               </time>
             
@@ -384,7 +381,7 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a class="cloud-tie-join-count" href="/2017/04/11/spring-boot 集成Mysql和Druid连接池/#comments" itemprop="discussionUrl">
+                <a class="cloud-tie-join-count" href="/2017/04/11/Dubbo服务提供者使用ProGuard实现代码混淆/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count join-count" itemprop="commentCount"></span>
                 </a>
               </span>
@@ -393,7 +390,7 @@
 
           
           
-             <span id="/2017/04/11/spring-boot 集成Mysql和Druid连接池/" class="leancloud_visitors" data-flag-title="spring-boot 集成Mysql和Druid连接池">
+             <span id="/2017/04/11/Dubbo服务提供者使用ProGuard实现代码混淆/" class="leancloud_visitors" data-flag-title="Dubbo服务提供者使用ProGuard实现代码混淆">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -408,6 +405,34 @@
           
 
           
+           <div class="post-wordcount">
+             
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-edit"></i>
+               </span>
+                 
+                   <span class="post-meta-item-text">字数统计</span>
+                 
+                   <span title="字数统计" }}">
+                     679 字  <!-- 我在这里加了一个单位上去 -->
+                   </span>
+             
+             
+               <span class="post-meta-divider">|</span>
+             
+             
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-clock-o"></i>
+               </span>
+                 
+                   <span class="post-meta-item-text">阅读时长</span>
+                 
+                   <span title="阅读时长" }}">
+                     3 分钟   <!-- 我在这里加了一个单位上去 -->
+                   </span>
+             
+           </div>
+         
 
           
 
@@ -422,19 +447,17 @@
       
 
       
-        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>spring-boot默认提供了数据库和数据库连接池，按照<a href="http://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#boot-features-connect-to-production-database" target="_blank" rel="external">官方文档</a>简单配置即可。若要自定义，需要修改一些配置，本文着重描述一下spring-boot如何集成mysql和阿里的<a href="https://github.com/alibaba/druid" target="_blank" rel="external">druid</a>数据库连接池。</p>
-<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><h3 id="本文环境"><a href="#本文环境" class="headerlink" title="本文环境"></a>本文环境</h3><ul>
-<li>jdk：1.7</li>
-<li>tomcat：7.0.55</li>
-<li>spring-boot：1.2.3.RELEASE</li>
+        <p>ProGuard能够作为maven的插件使用，让我们在原来的项目结构中，能够方便的实现代码混淆。但是网上ProGuard的资料通常都是单应用的实现，因此本文基于dubbo分布式项目，简单描述一下如何实现服务提供者的代码混淆。</p>
+<a id="more"></a>
+<h2 id="服务提供者代码混淆"><a href="#服务提供者代码混淆" class="headerlink" title="服务提供者代码混淆"></a>服务提供者代码混淆</h2><p>项目作为dubbo服务提供者，以jar的方式发布服务。</p>
+<h3 id="pom中添加ProGuard插件"><a href="#pom中添加ProGuard插件" class="headerlink" title="pom中添加ProGuard插件"></a>pom中添加ProGuard插件</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- ProGuard混淆插件--&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">plugin</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.github.wvengen<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>proguard-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.0.11<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">executions</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">execution</span>&gt;</span></div><div class="line">            <span class="comment">&lt;!-- 打包的时候混淆--&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">phase</span>&gt;</span>package<span class="tag">&lt;/<span class="name">phase</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">goals</span>&gt;</span></div><div class="line">                <span class="comment">&lt;!-- 使用混淆功能--&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">goal</span>&gt;</span>proguard<span class="tag">&lt;/<span class="name">goal</span>&gt;</span></div><div class="line">            <span class="tag">&lt;/<span class="name">goals</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">execution</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">executions</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></div><div class="line">        <span class="comment">&lt;!-- 是否将生成的PG文件安装部署--&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">attach</span>&gt;</span>true<span class="tag">&lt;/<span class="name">attach</span>&gt;</span></div><div class="line">        <span class="comment">&lt;!-- 是否混淆--&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">obfuscate</span>&gt;</span>true<span class="tag">&lt;/<span class="name">obfuscate</span>&gt;</span></div><div class="line">        <span class="comment">&lt;!-- 指定生成文件分类 --&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">attachArtifactClassifier</span>&gt;</span>pg<span class="tag">&lt;/<span class="name">attachArtifactClassifier</span>&gt;</span></div><div class="line">        <span class="comment">&lt;!-- 指定配置文件的路径，不在pom文件中配置，放在配置文件中方便管理 --&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">proguardInclude</span>&gt;</span>$&#123;basedir&#125;/proguard.conf<span class="tag">&lt;/<span class="name">proguardInclude</span>&gt;</span></div><div class="line">        <span class="comment">&lt;!-- 添加依赖，添加jdk的依赖即可 --&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">libs</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">lib</span>&gt;</span>$&#123;java.home&#125;/lib/rt.jar<span class="tag">&lt;/<span class="name">lib</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">lib</span>&gt;</span>$&#123;java.home&#125;/lib/jce.jar<span class="tag">&lt;/<span class="name">lib</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">libs</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="pom同级目录下添加proguard-conf混淆配置文件"><a href="#pom同级目录下添加proguard-conf混淆配置文件" class="headerlink" title="pom同级目录下添加proguard.conf混淆配置文件"></a>pom同级目录下添加proguard.conf混淆配置文件</h3><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div></pre></td><td class="code"><pre><div class="line"># ----------------------------------</div><div class="line"># JDK目标版本</div><div class="line"># ----------------------------------</div><div class="line">-target 1.7</div><div class="line"></div><div class="line"># ----------------------------------</div><div class="line"># 忽略所有告警</div><div class="line"># ----------------------------------</div><div class="line">-ignorewarnings</div><div class="line"></div><div class="line"># ----------------------------------</div><div class="line"># 混淆时应用侵入式重载</div><div class="line"># ----------------------------------</div><div class="line">-overloadaggressively</div><div class="line"></div><div class="line"># ----------------------------------</div><div class="line"># 优化时允许访问并修改有修饰符的类和类的成员</div><div class="line"># ----------------------------------</div><div class="line">-allowaccessmodification</div><div class="line"></div><div class="line"># ----------------------------------</div><div class="line">#确定统一的混淆类的成员名称来增加混淆</div><div class="line"># ----------------------------------</div><div class="line">-useuniqueclassmembernames</div><div class="line"></div><div class="line"># ----------------------------------</div><div class="line"># 不略过非公用类文件及成员</div><div class="line"># ----------------------------------</div><div class="line">-dontskipnonpubliclibraryclasses</div><div class="line">-dontskipnonpubliclibraryclassmembers</div><div class="line"></div><div class="line"># ----------------------------------</div><div class="line"># 不输出通知</div><div class="line"># ----------------------------------</div><div class="line">-dontnote</div><div class="line"></div><div class="line"># ----------------------------------</div><div class="line"># 不混淆所有包名，Spring配置中有大量固定写法的包名</div><div class="line"># ----------------------------------</div><div class="line">-keeppackagenames</div><div class="line"></div><div class="line"># ----------------------------------</div><div class="line"># 不混淆所有特殊的类</div><div class="line"># ----------------------------------</div><div class="line">-keepattributes SourceFile,Exceptions,InnerClasses,*Annotation*,Signature,LineNumberTable</div><div class="line"></div><div class="line"># ----------------------------------</div><div class="line"># 不混淆对外服务的类</div><div class="line"># 实体类、dao、service、枚举类：不混淆类名和属性、方法</div><div class="line"># 实现类：不混淆类名</div><div class="line"># ----------------------------------</div><div class="line">-keep class xxx.dao.** &#123;*;&#125;</div><div class="line">-keep class xxx.domain.** &#123;*;&#125;</div><div class="line">-keep class xxx.enums.** &#123;*;&#125;</div><div class="line">-keep class xxx.service.** &#123;*;&#125;</div><div class="line">-keep class xxx.impl.**</div><div class="line"></div><div class="line"># ----------------------------------</div><div class="line"># 不混淆spring配置文件中定义的类</div><div class="line"># ----------------------------------</div><div class="line">按照项目配置</div></pre></td></tr></table></figure>
+<h3 id="打包，并替换class文件"><a href="#打包，并替换class文件" class="headerlink" title="打包，并替换class文件"></a>打包，并替换class文件</h3><p>经过以上配置后，执行maven打包命令<code>mvn package</code>，在项目的target文件夹中会得到两个jar：项目名.jar、项目名-pg.jar。<br>然后我们要将这两个解压：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">PROJ=项目名</div><div class="line">PROJPG=$&#123;PROJ&#125;&quot;-pg&quot;</div><div class="line"></div><div class="line">unzip $PROJ.jar </div><div class="line">unzip $PROJPG.jar</div></pre></td></tr></table></figure></p>
+<p>并将“项目名-pg”文件夹中的cn目录拷贝到原项目中，然后把它打成jar包：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">rm -rf $PROJ/cn/</div><div class="line">cp -avpf $PROJPG/cn/ $PROJ/</div><div class="line">jar cvfm $PROJPG.jar $PROJ/META-INF/MANIFEST.MF -C $PROJ/ .</div></pre></td></tr></table></figure></p>
+<p>此时得到的“项目名.jar”就是混淆后的可执行jar包。执行它即可发布服务到dubbo注册中心。<br>以上操作可写成shell脚本，添加到自动部署流程中，实现自动化管理。</p>
+<ul>
+<li>本文的配置请参照自身的项目做相应的调整</li>
 </ul>
-<h3 id="修改application-properties文件"><a href="#修改application-properties文件" class="headerlink" title="修改application.properties文件"></a>修改application.properties文件</h3><p>修改spring-boot默认配置文件<code>application.properties</code>，加入一下内容(根据实际情况修改)：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"># 数据库配置</div><div class="line">spring.mysql.datasource.driverClassName=com.mysql.jdbc.Driver</div><div class="line">spring.mysql.datasource.url=jdbc:mysql://127.0.0.1:3306/message?useUnicode=true&amp;characterEncoding=utf8</div><div class="line">spring.mysql.datasource.username=root</div><div class="line">spring.mysql.datasource.password=</div><div class="line"># 连接池配置</div><div class="line">spring.mysql.datasource.filters=stat</div><div class="line">spring.mysql.datasource.maxActive=5</div><div class="line">spring.mysql.datasource.initialSize=1</div><div class="line">spring.mysql.datasource.maxWait=60000</div><div class="line">spring.mysql.datasource.minIdle=1</div><div class="line">spring.mysql.datasource.maxIdle=3</div><div class="line">spring.mysql.datasource.timeBetweenEvictionRunsMillis=60000</div><div class="line">spring.mysql.datasource.minEvictableIdleTimeMillis=300000</div><div class="line">spring.mysql.datasource.validationQuery=SELECT 'x'</div><div class="line">spring.mysql.datasource.testWhileIdle=true</div><div class="line">spring.mysql.datasource.testOnBorrow=false</div><div class="line">spring.mysql.datasource.testOnReturn=false</div><div class="line">spring.mysql.datasource.maxOpenPreparedStatements=10</div><div class="line">spring.mysql.datasource.removeAbandoned=true</div><div class="line">spring.mysql.datasource.removeAbandonedTimeout=1800</div><div class="line">spring.mysql.datasource.logAbandoned=true</div></pre></td></tr></table></figure></p>
-<p>druid数据库连接池的具体配置请参考官方文档并根据项目的实际情况修改。</p>
-<h3 id="新建DataSourceConfig-java配置类"><a href="#新建DataSourceConfig-java配置类" class="headerlink" title="新建DataSourceConfig.java配置类"></a>新建<code>DataSourceConfig.java</code>配置类</h3><p>为数据库配置单独新建一个类，内容如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Configuration</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DataSourceConfig</span> </span>&#123;</div><div class="line">    </div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.driverClassName&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> String driverClassName;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.url&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> String url;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.username&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> String username;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.password&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> String password;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.filters&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> String filters;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.maxActive&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> <span class="keyword">int</span> maxActive;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.initialSize&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> <span class="keyword">int</span> initialSize;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.maxWait&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> <span class="keyword">long</span> maxWait;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.minIdle&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> <span class="keyword">int</span> minIdle;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.timeBetweenEvictionRunsMillis&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> <span class="keyword">long</span> timeBetweenEvictionRunsMillis;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.minEvictableIdleTimeMillis&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> <span class="keyword">long</span> minEvictableIdleTimeMillis;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.validationQuery&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> String validationQuery;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.testWhileIdle&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> <span class="keyword">boolean</span> testWhileIdle;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.testOnBorrow&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> <span class="keyword">boolean</span> testOnBorrow;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.testOnReturn&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> <span class="keyword">boolean</span> testOnReturn;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.removeAbandoned&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> <span class="keyword">boolean</span> removeAbandoned;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.logAbandoned&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> <span class="keyword">boolean</span> logAbandoned;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.maxOpenPreparedStatements&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> <span class="keyword">int</span> maxOpenPreparedStatements;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.removeAbandonedTimeout&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> <span class="keyword">int</span> removeAbandonedTimeout;</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">     * druid 数据库连接池</div><div class="line">     * <span class="doctag">@return</span></div><div class="line">     */</div><div class="line">    <span class="meta">@Bean</span>(name = <span class="string">"mysqlDS"</span>)</div><div class="line">    <span class="meta">@Qualifier</span>(<span class="string">"mysqlDS"</span>)</div><div class="line">    <span class="meta">@Primary</span></div><div class="line">    <span class="function"><span class="keyword">public</span> DataSource <span class="title">dataSource</span><span class="params">()</span> </span>&#123;</div><div class="line">        DruidDataSource dataSource = <span class="keyword">new</span> DruidDataSource();</div><div class="line">        dataSource.setUrl(url);</div><div class="line">        dataSource.setUsername(username);</div><div class="line">        dataSource.setPassword(password);</div><div class="line">        dataSource.setDriverClassName(driverClassName);</div><div class="line">        dataSource.setMaxActive(maxActive);</div><div class="line">        dataSource.setInitialSize(initialSize);</div><div class="line">        dataSource.setMaxWait(maxWait);</div><div class="line">        dataSource.setMinIdle(minIdle);</div><div class="line">        dataSource.setTimeBetweenEvictionRunsMillis(timeBetweenEvictionRunsMillis);</div><div class="line">        dataSource.setMinEvictableIdleTimeMillis(minEvictableIdleTimeMillis);</div><div class="line">        dataSource.setValidationQuery(validationQuery);</div><div class="line">        dataSource.setTestWhileIdle(testWhileIdle);</div><div class="line">        dataSource.setTestOnBorrow(testOnBorrow);</div><div class="line">        dataSource.setTestOnReturn(testOnReturn);</div><div class="line">        dataSource.setMaxOpenPreparedStatements(maxOpenPreparedStatements);</div><div class="line">        dataSource.setRemoveAbandoned(removeAbandoned);</div><div class="line">        dataSource.setRemoveAbandonedTimeout(removeAbandonedTimeout);</div><div class="line">        dataSource.setLogAbandoned(logAbandoned);</div><div class="line">        <span class="keyword">try</span> &#123;</div><div class="line">            dataSource.setFilters(filters);</div><div class="line">        &#125; <span class="keyword">catch</span> (SQLException e) &#123;</div><div class="line">            <span class="keyword">return</span> dataSource;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> dataSource;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="comment">/**</span></div><div class="line">     * druid 监控页面</div><div class="line">     * <span class="doctag">@return</span></div><div class="line">     */</div><div class="line">    <span class="meta">@Bean</span></div><div class="line">    <span class="function"><span class="keyword">public</span> ServletRegistrationBean <span class="title">druidServletBean</span><span class="params">()</span> </span>&#123;</div><div class="line">        ServletRegistrationBean registrationBean = <span class="keyword">new</span> ServletRegistrationBean();</div><div class="line">        StatViewServlet statViewServlet = <span class="keyword">new</span> StatViewServlet();</div><div class="line">        registrationBean.addInitParameter(<span class="string">"loginUsername"</span>, <span class="string">"admin"</span>);</div><div class="line">        registrationBean.addInitParameter(<span class="string">"loginPassword"</span>, <span class="string">"admin"</span>);</div><div class="line">        registrationBean.addInitParameter(<span class="string">"resetEnable"</span>, <span class="string">"true"</span>);</div><div class="line">        registrationBean.addUrlMappings(<span class="string">"/druid/*"</span>);</div><div class="line">        registrationBean.setServlet(statViewServlet);</div><div class="line">        <span class="keyword">return</span> registrationBean;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="comment">/**</span></div><div class="line">     * druid 资源监控过滤</div><div class="line">     * <span class="doctag">@return</span></div><div class="line">     */</div><div class="line">    <span class="meta">@Bean</span></div><div class="line">    <span class="function"><span class="keyword">public</span> FilterRegistrationBean <span class="title">druidWebStatFilter</span><span class="params">()</span> </span>&#123;</div><div class="line">        FilterRegistrationBean registrationBean = <span class="keyword">new</span> FilterRegistrationBean();</div><div class="line">        WebStatFilter webStatFilter = <span class="keyword">new</span> WebStatFilter();</div><div class="line">        registrationBean.addInitParameter(<span class="string">"sessionStatMaxCount"</span>, <span class="string">"2000"</span>);</div><div class="line">        registrationBean.addInitParameter(<span class="string">"sessionStatEnable"</span>, <span class="string">"true"</span>);</div><div class="line">        registrationBean.addInitParameter(<span class="string">"principalSessionName"</span>, <span class="string">"session_user_key"</span>);</div><div class="line">        registrationBean.addInitParameter(<span class="string">"profileEnable"</span>, <span class="string">"true"</span>);</div><div class="line">        registrationBean.addInitParameter(<span class="string">"exclusions"</span>, <span class="string">"*.js,*.gif,*.jpg,*.png,*.css,*.ico,*.jsp,/druid/*"</span>);</div><div class="line">        registrationBean.setFilter(webStatFilter);</div><div class="line">        registrationBean.addUrlPatterns(<span class="string">"/*"</span>);</div><div class="line">        <span class="keyword">return</span> registrationBean;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>配置了druid监控页面的登录页，用户名密码为admin。</p>
-<h3 id="访问druid监控页面"><a href="#访问druid监控页面" class="headerlink" title="访问druid监控页面"></a>访问druid监控页面</h3><p>启动应用，我tomcat的端口是8089，没有设置项目名称，因此我访问的是<code>http://localhost:8089/druid/login.html</code>。一般而言，druid监控登录页面的入口为：<code>http://{IP地址}:{端口}/{项目名}/druid/login.html</code></p>
-<p><img src="http://ww3.sinaimg.cn/large/6af06d97gw1es4xfagntaj20v40dgq36.jpg" alt=""></p>
-<p><img src="http://ww3.sinaimg.cn/large/6af06d97gw1es4xfb7e2aj218d0l7wjc.jpg" alt=""></p>
 
       
     </div>
@@ -464,11 +487,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/spring-boot/" rel="tag"># spring-boot</a>
+            <a href="/tags/dubbo/" rel="tag"># dubbo</a>
           
-            <a href="/tags/druid/" rel="tag"># druid</a>
-          
-            <a href="/tags/mysql/" rel="tag"># mysql</a>
+            <a href="/tags/proguard/" rel="tag"># proguard</a>
           
         </div>
       
@@ -481,8 +502,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/11/spring-boot 集中处理异常/" rel="next" title="spring-boot 集中处理异常">
-                <i class="fa fa-chevron-left"></i> spring-boot 集中处理异常
+              <a href="/2017/04/12/IDEA中忽略spring配置文件无法识别xsd的错误/" rel="next" title="IDEA中忽略spring配置文件无法识别xsd的错误">
+                <i class="fa fa-chevron-left"></i> IDEA中忽略spring配置文件无法识别xsd的错误
               </a>
             
           </div>
@@ -491,8 +512,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/04/11/sonar质量分析 Tabulation characters should not be used 原因与解决/" rel="prev" title="sonar质量分析 Tabulation characters should not be used 原因与解决">
-                sonar质量分析 Tabulation characters should not be used 原因与解决 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/04/11/充值一波信仰/" rel="prev" title="充值一波信仰">
+                充值一波信仰 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -597,7 +618,7 @@
                alt="cipher" />
           <p class="site-author-name" itemprop="name">cipher</p>
            
-              <p class="site-description motion-element" itemprop="description"></p>
+              <p class="site-description motion-element" itemprop="description">猎人, 今天你愉快吗?</p>
            
         </div>
         <nav class="site-state motion-element">
@@ -682,7 +703,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开始"><span class="nav-number">2.</span> <span class="nav-text">开始</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#本文环境"><span class="nav-number">2.1.</span> <span class="nav-text">本文环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改application-properties文件"><span class="nav-number">2.2.</span> <span class="nav-text">修改application.properties文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#新建DataSourceConfig-java配置类"><span class="nav-number">2.3.</span> <span class="nav-text">新建DataSourceConfig.java配置类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#访问druid监控页面"><span class="nav-number">2.4.</span> <span class="nav-text">访问druid监控页面</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#服务提供者代码混淆"><span class="nav-number">1.</span> <span class="nav-text">服务提供者代码混淆</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#pom中添加ProGuard插件"><span class="nav-number">1.1.</span> <span class="nav-text">pom中添加ProGuard插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pom同级目录下添加proguard-conf混淆配置文件"><span class="nav-number">1.2.</span> <span class="nav-text">pom同级目录下添加proguard.conf混淆配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#打包，并替换class文件"><span class="nav-number">1.3.</span> <span class="nav-text">打包，并替换class文件</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -712,17 +733,6 @@
   <span class="author" itemprop="copyrightHolder">cipher</span>
 </div>
 
-
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
-
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
-  </a>
-</div>
 
 
         

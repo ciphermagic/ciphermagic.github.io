@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="maven," />
+  <meta name="keywords" content="logstash,elasticsearch,kibana," />
 
 
 
@@ -87,20 +87,20 @@
 
 
 
-<meta name="description" content="最近刚接触了Maven，就根据自己的理解介绍一下Maven在开发中怎么用，顺便巩固一下知识。 Maven是什么我目前使用Maven主要是管理项目中jar包，其它高级的用法暂时还没涉及到。我们为什么要用Maven帮我们管理jar包呢，一个是我们不需要自己再到各个第三方框架或技术的网站上下载jar包了，另外一个是很好的统一了项目中各jar包的版本，因为多人开发中使用不同版本的jar包可能会有版本的冲突">
-<meta name="keywords" content="maven">
+<meta name="description" content="概述日志系统中的收集、查询、显示，分别对应于Logstash、Elasticsearch、Kibana。  Logstash：是一个应用程序日志、事件的传输、处理、管理和搜索的平台 Elasticsearch：是基于lucene的开源搜索引擎 Kibana：是一个功能强大的elasticsearch数据显示客户端  日志收集采用分布式方式，使用redis作为中间缓冲队列。LEK平台结构如下：">
+<meta name="keywords" content="logstash,elasticsearch,kibana">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Maven初探">
-<meta property="og:url" content="ciphermagic.win/2017/04/11/Maven初探/index.html">
-<meta property="og:site_name" content="$t/^Cipher_?\n">
-<meta property="og:description" content="最近刚接触了Maven，就根据自己的理解介绍一下Maven在开发中怎么用，顺便巩固一下知识。 Maven是什么我目前使用Maven主要是管理项目中jar包，其它高级的用法暂时还没涉及到。我们为什么要用Maven帮我们管理jar包呢，一个是我们不需要自己再到各个第三方框架或技术的网站上下载jar包了，另外一个是很好的统一了项目中各jar包的版本，因为多人开发中使用不同版本的jar包可能会有版本的冲突">
-<meta property="og:image" content="http://ww3.sinaimg.cn/large/698f7fe7gw1elwuvq2saxj20i20ga43m.jpg">
-<meta property="og:image" content="http://ww4.sinaimg.cn/large/698f7fe7gw1elwv0l1a2kj20i20gadii.jpg">
-<meta property="og:updated_time" content="2017-04-11T05:45:10.977Z">
+<meta property="og:title" content="Logstash + Elasticsearch + Kibana 搭建日志平台">
+<meta property="og:url" content="ciphermagic.win/2017/04/10/Logstash + Elasticsearch + Kibana 搭建日志平台/index.html">
+<meta property="og:site_name" content="$t/^Cipher's Blog_?\n">
+<meta property="og:description" content="概述日志系统中的收集、查询、显示，分别对应于Logstash、Elasticsearch、Kibana。  Logstash：是一个应用程序日志、事件的传输、处理、管理和搜索的平台 Elasticsearch：是基于lucene的开源搜索引擎 Kibana：是一个功能强大的elasticsearch数据显示客户端  日志收集采用分布式方式，使用redis作为中间缓冲队列。LEK平台结构如下：">
+<meta property="og:image" content="http://img0.ph.126.net/ycmJtSvQLMqqBIhCHxnRRg==/3303108851799736440.png">
+<meta property="og:image" content="http://img2.ph.126.net/ZZ_s9EHgJmLCrNoDeG7hxg==/6608407930561742180.png">
+<meta property="og:updated_time" content="2017-04-13T00:48:16.822Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Maven初探">
-<meta name="twitter:description" content="最近刚接触了Maven，就根据自己的理解介绍一下Maven在开发中怎么用，顺便巩固一下知识。 Maven是什么我目前使用Maven主要是管理项目中jar包，其它高级的用法暂时还没涉及到。我们为什么要用Maven帮我们管理jar包呢，一个是我们不需要自己再到各个第三方框架或技术的网站上下载jar包了，另外一个是很好的统一了项目中各jar包的版本，因为多人开发中使用不同版本的jar包可能会有版本的冲突">
-<meta name="twitter:image" content="http://ww3.sinaimg.cn/large/698f7fe7gw1elwuvq2saxj20i20ga43m.jpg">
+<meta name="twitter:title" content="Logstash + Elasticsearch + Kibana 搭建日志平台">
+<meta name="twitter:description" content="概述日志系统中的收集、查询、显示，分别对应于Logstash、Elasticsearch、Kibana。  Logstash：是一个应用程序日志、事件的传输、处理、管理和搜索的平台 Elasticsearch：是基于lucene的开源搜索引擎 Kibana：是一个功能强大的elasticsearch数据显示客户端  日志收集采用分布式方式，使用redis作为中间缓冲队列。LEK平台结构如下：">
+<meta name="twitter:image" content="http://img0.ph.126.net/ycmJtSvQLMqqBIhCHxnRRg==/3303108851799736440.png">
 
 
 
@@ -128,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="ciphermagic.win/2017/04/11/Maven初探/"/>
+  <link rel="canonical" href="ciphermagic.win/2017/04/10/Logstash + Elasticsearch + Kibana 搭建日志平台/"/>
 
 
 
 
 
-  <title> Maven初探 | $t/^Cipher_?\n </title>
+  <title> Logstash + Elasticsearch + Kibana 搭建日志平台 | $t/^Cipher's Blog_?\n </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -170,7 +170,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">$t/^Cipher_?\n</span>
+        <span class="site-title">$t/^Cipher's Blog_?\n</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -307,16 +307,16 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="ciphermagic.win/2017/04/11/Maven初探/">
+    <link itemprop="mainEntityOfPage" href="ciphermagic.win/2017/04/10/Logstash + Elasticsearch + Kibana 搭建日志平台/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="cipher">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="猎人, 今天你愉快吗?">
       <meta itemprop="image" content="/images/cipher.jpeg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="$t/^Cipher_?\n">
+      <meta itemprop="name" content="$t/^Cipher's Blog_?\n">
     </span>
 
     
@@ -328,7 +328,7 @@
             
             
               
-                Maven初探
+                Logstash + Elasticsearch + Kibana 搭建日志平台
               
             
           </h2>
@@ -343,8 +343,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-11T13:45:10+08:00">
-                2017-04-11
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-10T00:00:00+08:00">
+                2017-04-10
               </time>
             
 
@@ -384,7 +384,7 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a class="cloud-tie-join-count" href="/2017/04/11/Maven初探/#comments" itemprop="discussionUrl">
+                <a class="cloud-tie-join-count" href="/2017/04/10/Logstash + Elasticsearch + Kibana 搭建日志平台/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count join-count" itemprop="commentCount"></span>
                 </a>
               </span>
@@ -393,7 +393,7 @@
 
           
           
-             <span id="/2017/04/11/Maven初探/" class="leancloud_visitors" data-flag-title="Maven初探">
+             <span id="/2017/04/10/Logstash + Elasticsearch + Kibana 搭建日志平台/" class="leancloud_visitors" data-flag-title="Logstash + Elasticsearch + Kibana 搭建日志平台">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -408,6 +408,34 @@
           
 
           
+           <div class="post-wordcount">
+             
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-edit"></i>
+               </span>
+                 
+                   <span class="post-meta-item-text">字数统计</span>
+                 
+                   <span title="字数统计" }}">
+                     548 字  <!-- 我在这里加了一个单位上去 -->
+                   </span>
+             
+             
+               <span class="post-meta-divider">|</span>
+             
+             
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-clock-o"></i>
+               </span>
+                 
+                   <span class="post-meta-item-text">阅读时长</span>
+                 
+                   <span title="阅读时长" }}">
+                     2 分钟   <!-- 我在这里加了一个单位上去 -->
+                   </span>
+             
+           </div>
+         
 
           
 
@@ -422,14 +450,54 @@
       
 
       
-        <p>最近刚接触了Maven，就根据自己的理解介绍一下Maven在开发中怎么用，顺便巩固一下知识。</p>
-<h2 id="Maven是什么"><a href="#Maven是什么" class="headerlink" title="Maven是什么"></a>Maven是什么</h2><p>我目前使用Maven主要是管理项目中jar包，其它高级的用法暂时还没涉及到。我们为什么要用Maven帮我们管理jar包呢，一个是我们不需要自己再到各个第三方框架或技术的网站上下载jar包了，另外一个是很好的统一了项目中各jar包的版本，因为多人开发中使用不同版本的jar包可能会有版本的冲突问题。Maven提供一个中央仓库，里面有几乎所有主流技术的jar包，我们只需要在配置文件中指定好要使用的jar，Maven就会帮我们自动下载。Maven会在本地建一个仓库，第一次下载的jar包放在本地仓库里，Maven根据配置注入jar的时候先从本地仓库里查找，如果没有再从远程中央仓库里下载，提高了效率。</p>
-<h2 id="如何安装和配置Maven"><a href="#如何安装和配置Maven" class="headerlink" title="如何安装和配置Maven"></a>如何安装和配置Maven</h2><p>安装Maven跟安装Jdk差不多，我们只需要把Maven下载下来，在环境变量中新建一个变量<code>%MAVEN_HOME%</code>，再在<code>path</code>中加上<code>%MAVEN_HOME%/bin</code>，如此，我们就能在控制台中使用Maven的命令了，我们可以在控制台输入<code>mvn -v</code>，如果成功输入Maven的版本信息，就说明Maven已经能正常工作了。但是，在使用之前我们做一些简单的修改来更好的使用Maven。</p>
-<h3 id="一些必要的修改"><a href="#一些必要的修改" class="headerlink" title="一些必要的修改"></a>一些必要的修改</h3><p>首先，在Maven根目录下进入<code>conf</code>文件夹找到<code>settings.xml</code>配置文件，它可以配置Maven各种信息。在文件里面找到<code>&lt;localRepository&gt;/path/to/local/repo&lt;/localRepository&gt;</code>，这一行是配置Maven本地仓库的路径，把标签中的路径换成自己指定的路径例如<code>E:\apache-maven-3.2.3-bin\Repository</code>，要在对应的地方把这个文件夹新建好，这样Maven下载下来的jar包就会存到这个文件夹中。注意这一行在文件中是注释掉的，要把注释打开。接着，在配置文件中找到<code>&lt;proxies&gt;</code>标签，这里是设置Maven的镜像，如果我们有自己局域网内的中央仓库，可以在这里设置，这样Maven就会从我们局域网中的仓库下载，速度就会快很多。在日常开发中主要是设置这两个地方。</p>
-<h2 id="在Eclipse中集成Maven"><a href="#在Eclipse中集成Maven" class="headerlink" title="在Eclipse中集成Maven"></a>在Eclipse中集成Maven</h2><h3 id="安装Maven插件"><a href="#安装Maven插件" class="headerlink" title="安装Maven插件"></a>安装Maven插件</h3><p>我使用的是Eclipse版本是<strong>kepler</strong>，首先要安装Maven插件，在菜单栏中选择<code>Help——Install New Software…</code>接着你会看到一个Install对话框，点击Work with:字段边上的<strong>Add</strong>按钮，你会得到一个新的Add Repository对话框，在<strong>Name</strong>字段中输入<code>m2e</code>，<strong>Location</strong>字段中输入在线安装地址，这里提供一个<a href="http://download.eclipse.org/technology/m2e/releases/" target="_blank" rel="external">地址</a>，如果失效了可以在网上再找。然后点击OK。Eclipse会下载m2eclipse安装站点上的资源信息。</p>
-<h3 id="加入本地Maven"><a href="#加入本地Maven" class="headerlink" title="加入本地Maven"></a>加入本地Maven</h3><p>依次选择菜单<code>Windows——Preferences——Maven——Installations</code>，然后在界面中点击<code>Add</code>，选择本地Maven的根目录，这样我们就设置好Maven插件了。</p>
-<h2 id="Eclipse创建Maven项目"><a href="#Eclipse创建Maven项目" class="headerlink" title="Eclipse创建Maven项目"></a>Eclipse创建Maven项目</h2><p>新建项目选择<code>Maven Project</code>，勾选<code>Use default Workspace location</code>使用默认的Workspace路径，点<code>Next</code>，一般的Web项目我们选择webapp<br><img src="http://ww3.sinaimg.cn/large/698f7fe7gw1elwuvq2saxj20i20ga43m.jpg" alt=""><br>点<code>Next</code>，输入工程信息， <code>Group Id</code>类似一个包名，<code>Artifact Id</code>类似类名。其它默认即可。<br><img src="http://ww4.sinaimg.cn/large/698f7fe7gw1elwv0l1a2kj20i20gadii.jpg" alt=""><br>点<code>Finish</code>就完成创建了。完成后我们能在项目中找到一个<code>pom.xml</code>文件，里面就可以配置我们项目中所需的依赖jar包了。</p>
-<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>以上就是我最近初学Maven的一点认识，Maven确实是一个很好的构建工具，而也不仅仅是一个构建工具。更深的了解还要在以后的学习当中去探索。<br>-END-</p>
+        <h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>日志系统中的收集、查询、显示，分别对应于Logstash、Elasticsearch、Kibana。</p>
+<ul>
+<li>Logstash：是一个应用程序日志、事件的传输、处理、管理和搜索的平台</li>
+<li>Elasticsearch：是基于lucene的开源搜索引擎</li>
+<li>Kibana：是一个功能强大的elasticsearch数据显示客户端</li>
+</ul>
+<p>日志收集采用分布式方式，使用redis作为中间缓冲队列。LEK平台结构如下：</p>
+<hr>
+<p><img src="http://img0.ph.126.net/ycmJtSvQLMqqBIhCHxnRRg==/3303108851799736440.png" alt=""></p>
+<hr>
+<ul>
+<li>Shipper：Logstash分发端</li>
+<li>Broker：redis缓存数据库</li>
+<li>Indexer：Logstash收集端</li>
+<li>Storage&amp;Search：Elasticsearch</li>
+<li>Web Interface：Kibana</li>
+</ul>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>搭建环境和所需组件：</p>
+<ul>
+<li>Windows7</li>
+<li>redis64-2.8.12</li>
+<li>logstash-1.4.2</li>
+<li>elasticsearch-1.2.1</li>
+<li>kibana3</li>
+</ul>
+<h4 id="安装redis"><a href="#安装redis" class="headerlink" title="安装redis"></a>安装redis</h4><h5 id="启动redis服务"><a href="#启动redis服务" class="headerlink" title="启动redis服务"></a>启动redis服务</h5><p>cmd到<code>redis64-2.8.12</code>根目录下，输入：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">redis-server</div></pre></td></tr></table></figure></p>
+<p>看到类似信息即可：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[5424] 28 Nov 10:06:03.898 * The server is now ready to accept connections on port 6379</div></pre></td></tr></table></figure></p>
+<h4 id="安装Elasticsearch"><a href="#安装Elasticsearch" class="headerlink" title="安装Elasticsearch"></a>安装Elasticsearch</h4><h5 id="启动Elasticsearch服务"><a href="#启动Elasticsearch服务" class="headerlink" title="启动Elasticsearch服务"></a>启动Elasticsearch服务</h5><p>cmd到<code>elasticsearch-1.2.1\bin</code>根目录下，输入：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">elasticsearch</div></pre></td></tr></table></figure></p>
+<p>看到类似信息即可：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[2014-11-28 10:06:32,688][INFO ][node] [Batroc the Leaper] started</div></pre></td></tr></table></figure></p>
+<h4 id="安装Logstash"><a href="#安装Logstash" class="headerlink" title="安装Logstash"></a>安装Logstash</h4><h5 id="配置shipper-conf（日志分发）"><a href="#配置shipper-conf（日志分发）" class="headerlink" title="配置shipper.conf（日志分发）"></a>配置shipper.conf（日志分发）</h5><p>在<code>logstash-1.4.2\bin</code>目录下新建一个shipper.conf文件，内容如下：<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">input &#123;</div><div class="line">  file &#123;</div><div class="line">    path =&gt; "D:\error.log"</div><div class="line">    type =&gt; "App-log"</div><div class="line">    codec  =&gt; "json"</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">output &#123;</div><div class="line">  redis &#123;</div><div class="line">    host =&gt; "127.0.0.1"</div><div class="line">    port =&gt; "6379" </div><div class="line">    key =&gt; "testlog"</div><div class="line">    data_type =&gt; "list"</div><div class="line">    codec  =&gt; "json"</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<ul>
+<li>input中配置从哪里收集日志，这里表示从file（文件）中收集，地址是<code>D:\error.log</code></li>
+<li>output中配置将日志信息分发到哪里，这里表示分发到redis中，配置好地址和端口等信息<br><code>logstash-1.4.2\bin</code>目录下，启动shipper的命令：<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">logstash agent <span class="_">-f</span> shipper.conf</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="配置collector-conf（日志收集）"><a href="#配置collector-conf（日志收集）" class="headerlink" title="配置collector.conf（日志收集）"></a>配置collector.conf（日志收集）</h5><p>在<code>logstash-1.4.2\bin</code>目录下新建一个collector.conf文件，内容如下：<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">input &#123;   </div><div class="line">  redis</div><div class="line">    &#123;</div><div class="line">    host =&gt; "127.0.0.1"</div><div class="line">    port =&gt; "6379" </div><div class="line">    key =&gt; "testlog"</div><div class="line">    data_type =&gt; "list"</div><div class="line">    type =&gt; "redis-input"</div><div class="line">    codec  =&gt; "json"</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">output &#123;   </div><div class="line">  elasticsearch &#123;</div><div class="line">    host =&gt; "127.0.0.1"</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>表示从reids中得到日志信息，并发送给Elasticsearch。<br><code>logstash-1.4.2\bin</code>目录下，启动collector的命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">logstash agent <span class="_">-f</span> collector.conf</div></pre></td></tr></table></figure></p>
+<h4 id="安装Kibana"><a href="#安装Kibana" class="headerlink" title="安装Kibana"></a>安装Kibana</h4><p>Kibana是一个webapp，把他放在web容器（如tomcat）中即可。</p>
+<h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><p>请先确保监控的日志文件存在，此处为<code>D:\error.log</code>。</p>
+<ol>
+<li>运行redis</li>
+<li>运行Elasticsea</li>
+<li>运行shipper</li>
+<li>运行collector</li>
+<li>启动tomcat容器</li>
+<li>打开Kibanna页面：<a href="http://localhost:8080/kibana" target="_blank" rel="external">http://localhost:8080/kibana</a></li>
+</ol>
+<p><img src="http://img2.ph.126.net/ZZ_s9EHgJmLCrNoDeG7hxg==/6608407930561742180.png" alt=""></p>
 
       
     </div>
@@ -459,7 +527,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/maven/" rel="tag"># maven</a>
+            <a href="/tags/logstash/" rel="tag"># logstash</a>
+          
+            <a href="/tags/elasticsearch/" rel="tag"># elasticsearch</a>
+          
+            <a href="/tags/kibana/" rel="tag"># kibana</a>
           
         </div>
       
@@ -472,8 +544,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/11/Mybatis整合redis实现缓存/" rel="next" title="Mybatis整合redis实现缓存">
-                <i class="fa fa-chevron-left"></i> Mybatis整合redis实现缓存
+              <a href="/2017/04/10/Maven初探/" rel="next" title="Maven初探">
+                <i class="fa fa-chevron-left"></i> Maven初探
               </a>
             
           </div>
@@ -481,6 +553,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/04/10/sonar质量分析 Tabulation characters should not be used 原因与解决/" rel="prev" title="sonar质量分析 Tabulation characters should not be used 原因与解决">
+                sonar质量分析 Tabulation characters should not be used 原因与解决 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -584,7 +660,7 @@
                alt="cipher" />
           <p class="site-author-name" itemprop="name">cipher</p>
            
-              <p class="site-description motion-element" itemprop="description"></p>
+              <p class="site-description motion-element" itemprop="description">猎人, 今天你愉快吗?</p>
            
         </div>
         <nav class="site-state motion-element">
@@ -669,7 +745,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Maven是什么"><span class="nav-number">1.</span> <span class="nav-text">Maven是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何安装和配置Maven"><span class="nav-number">2.</span> <span class="nav-text">如何安装和配置Maven</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一些必要的修改"><span class="nav-number">2.1.</span> <span class="nav-text">一些必要的修改</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在Eclipse中集成Maven"><span class="nav-number">3.</span> <span class="nav-text">在Eclipse中集成Maven</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Maven插件"><span class="nav-number">3.1.</span> <span class="nav-text">安装Maven插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#加入本地Maven"><span class="nav-number">3.2.</span> <span class="nav-text">加入本地Maven</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Eclipse创建Maven项目"><span class="nav-number">4.</span> <span class="nav-text">Eclipse创建Maven项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最后"><span class="nav-number">5.</span> <span class="nav-text">最后</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">2.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装redis"><span class="nav-number">2.1.</span> <span class="nav-text">安装redis</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#启动redis服务"><span class="nav-number">2.1.1.</span> <span class="nav-text">启动redis服务</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装Elasticsearch"><span class="nav-number">2.2.</span> <span class="nav-text">安装Elasticsearch</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#启动Elasticsearch服务"><span class="nav-number">2.2.1.</span> <span class="nav-text">启动Elasticsearch服务</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装Logstash"><span class="nav-number">2.3.</span> <span class="nav-text">安装Logstash</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#配置shipper-conf（日志分发）"><span class="nav-number">2.3.1.</span> <span class="nav-text">配置shipper.conf（日志分发）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#配置collector-conf（日志收集）"><span class="nav-number">2.3.2.</span> <span class="nav-text">配置collector.conf（日志收集）</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装Kibana"><span class="nav-number">2.4.</span> <span class="nav-text">安装Kibana</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运行"><span class="nav-number">3.</span> <span class="nav-text">运行</span></a></li></ol></div>
             
 
           </div>
@@ -699,17 +775,6 @@
   <span class="author" itemprop="copyrightHolder">cipher</span>
 </div>
 
-
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
-
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
-  </a>
-</div>
 
 
         

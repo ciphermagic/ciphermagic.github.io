@@ -1691,7 +1691,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #283cff;
+  background: #961b5b;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2864,4 +2864,49 @@ hr {
 #yun-tie-sdk-wrap .single-tie .tie-time {
   transition: border-width 0.3s linear 0.1s, color 0.2s linear 0.3s;
   cursor: pointer;
+}
+.footer {
+  font-size: 16px;
+}
+.footer-inner {
+  font-family: 'Comic Sans MS', sans-serif;
+  text-align: center;
+}
+.site-author-name {
+  font-family: 'Comic Sans MS', sans-serif;
+  font-size: 26px;
+}
+.site-description {
+  font-family: 'Comic Sans MS', sans-serif;
+}
+.links-of-blogroll {
+  font-size: 14px;
+  margin-bottom: 42px;
+}
+.links-of-author {
+  margin-top: 30px;
+  margin-bottom: 58px;
+}
+.site-state-item {
+  display: inline-block;
+  padding: 8px 28px;
+  border-left: 1px solid #649ab6;
+}
+.site-author-image {
+  border-radius: 50%;
+  webkit-transition: 1.4s all;
+  moz-transition: 1.4s all;
+  ms-transition: 1.4s all;
+  transition: 1.4s all;
+}
+.site-author-image:hover {
+  background-color: #ccc;
+  webkit-transform: rotate(360deg) scale(1.1);
+  moz-transform: rotate(360deg) scale(1.1);
+  ms-transform: rotate(360deg) scale(1.1);
+  -webkit-transform: rotate(360deg) scale(1.1);
+  -moz-transform: rotate(360deg) scale(1.1);
+  -ms-transform: rotate(360deg) scale(1.1);
+  -o-transform: rotate(360deg) scale(1.1);
+  transform: rotate(360deg) scale(1.1);
 }
