@@ -2,7 +2,7 @@
 title: spring-boot 中文乱码解决拾遗
 date: 2017-4-10
 categories: blog
-tags: [spring-boot] 
+tags: [spring-boot,java] 
 ---
 
 在spring-boot项目中返回json格式数据时出现中文乱码问题，有以下两种解决方式：

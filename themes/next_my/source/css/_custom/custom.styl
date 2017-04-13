@@ -12,6 +12,7 @@
 .tie-empty-tip {
     display: none;
 }
+
 //即将发布消息人样式
 #yun-tie-sdk-wrap .input-box .tie-submit-row .user-info img:hover {
 box-shadow: 0 0 10px #fff;
@@ -36,6 +37,7 @@ box-shadow: inset 0 -1px 0 #3333sf; /*设置图像阴影效果*/
 transition: transform 0.4s ease-out; /*变化时间设置为0.4秒(变化动作即为下面的图像旋转360读）*/
 -moz-transition: -moz-transform 0.4s ease-out;
 }
+
 //评论框内其他人样式
 #yun-tie-sdk-wrap .single-tie .photo img:hover {
 box-shadow: 0 0 10px #fff;
@@ -79,4 +81,51 @@ transition: transform 0.4s ease-out; /*变化时间设置为0.4秒(变化动作�
 #yun-tie-sdk-wrap .single-tie .tie-time {
     transition: border-width 0.3s linear 0.1s, color 0.2s linear 0.3s;
     cursor: pointer;
+}
+
+//首页尾部样式
+.footer {
+    font-size: 16px;
+}
+.footer-inner {
+    font-family: 'Comic Sans MS', sans-serif;
+    text-align: center;
+}
+
+//侧边栏信息样式修改
+.site-author-name {
+    font-family: 'Comic Sans MS', sans-serif;
+	font-size: 26px;
+}
+.site-description {
+	font-family: 'Comic Sans MS', sans-serif;
+}
+.links-of-blogroll {
+    font-size: 14px;
+    margin-bottom: 42px;
+}
+.links-of-author {
+    margin-top: 30px;
+    margin-bottom: 58px;
+}
+.site-state-item {
+    display: inline-block;
+    padding: 8px 28px;
+    border-left: 1px solid #649ab6;
+}
+
+// 作者头像样式
+.site-author-image {
+  border-radius: 50%
+  webkit-transition: 1.4s all;
+  moz-transition: 1.4s all;
+  ms-transition: 1.4s all;
+  transition: 1.4s all;
+}
+.site-author-image:hover {
+  background-color: #ccc;
+  webkit-transform: rotate(360deg) scale(1.1);
+  moz-transform: rotate(360deg) scale(1.1);
+  ms-transform: rotate(360deg) scale(1.1);
+  transform: rotate(360deg) scale(1.1);
 }

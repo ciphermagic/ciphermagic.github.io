@@ -2,7 +2,7 @@
 title: spring-boot 集中处理异常
 date: 2017-4-10
 categories: blog
-tags: [spring-boot] 
+tags: [spring-boot,java] 
 ---
 
 spring-boot配置方式集中处理异常，统一规范接口对外的异常输出。业务代码只需往外抛异常，不需过多关注异常的输出形式。

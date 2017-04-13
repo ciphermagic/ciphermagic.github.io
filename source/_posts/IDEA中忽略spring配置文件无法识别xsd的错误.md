@@ -2,7 +2,7 @@
 title: IDEA中忽略spring配置文件无法识别xsd的错误
 date: 2017-4-12 21:23:20
 categories: blog
-tags: [idea,spring] 
+tags: [idea] 
 ---
 
 有时我们在写spring配置文件的时候，会出现idea无法识别schema，导致报错。虽然说不影响执行，但看着那红色的波浪线确实有一点不爽，寻思着能不能忽略这个错误。最开始的想法是像忽略代码语法校验那样，在Inspections中去掉相关的校验，但发现Inspections中没有schema，xsd等相关的配置，直到发现了如下的方法。
