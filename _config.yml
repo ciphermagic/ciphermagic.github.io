@@ -77,5 +77,6 @@ baidusitemap:
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: http://github.com/ciphermagic/ciphermagic.github.io.git
-  branch: master
+  repo: 
+    github: http://github.com/ciphermagic/ciphermagic.github.io.git,master
+    coding: http://git.coding.net/ciphermagic/ciphermagic.git,master
