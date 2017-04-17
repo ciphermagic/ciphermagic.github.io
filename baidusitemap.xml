@@ -4,6 +4,308 @@
 
     
   <url>
+    <loc>ciphermagic.win/2016/01/19/spring-mvc%20%E8%A7%A3%E5%86%B3%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2017-04-17T03:46:31.711Z</lastmod>
+    <data>
+        <display>
+        <title>spring-mvc 解决跨域问题</title>
+        <pubTime>2016-01-18T16:00:00.000Z</pubTime>
+        
+        <tag>java</tag>
+         
+        <tag>spring-mvc</tag>
+         
+         
+           
+             
+              <breadCrumb title="blog" url="ciphermagic.win/categories/blog/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>ciphermagic.win/2016/07/17/spring-boot%20%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E8%A7%A3%E5%86%B3%E6%8B%BE%E9%81%97/</loc>
+    <lastmod>2017-04-17T03:46:17.605Z</lastmod>
+    <data>
+        <display>
+        <title>spring-boot 中文乱码解决拾遗</title>
+        <pubTime>2016-07-16T16:00:00.000Z</pubTime>
+        
+        <tag>java</tag>
+         
+        <tag>spring-boot</tag>
+         
+         
+           
+             
+              <breadCrumb title="blog" url="ciphermagic.win/categories/blog/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>ciphermagic.win/2016/05/27/spring-boot%20%E6%9B%BF%E6%8D%A2%E5%86%85%E5%B5%8Ctomcat%E7%89%88%E6%9C%AC/</loc>
+    <lastmod>2017-04-17T03:46:06.804Z</lastmod>
+    <data>
+        <display>
+        <title>spring-boot 替换内嵌tomcat版本</title>
+        <pubTime>2016-05-26T16:00:00.000Z</pubTime>
+        
+        <tag>java</tag>
+         
+        <tag>spring-boot</tag>
+         
+        <tag>tomcat</tag>
+         
+         
+           
+             
+              <breadCrumb title="blog" url="ciphermagic.win/categories/blog/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>ciphermagic.win/2016/05/21/spring-boot%20%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/</loc>
+    <lastmod>2017-04-17T03:45:44.642Z</lastmod>
+    <data>
+        <display>
+        <title>spring-boot 实现文件上传</title>
+        <pubTime>2016-05-20T16:00:00.000Z</pubTime>
+        
+        <tag>java</tag>
+         
+        <tag>spring-boot</tag>
+         
+         
+           
+             
+              <breadCrumb title="blog" url="ciphermagic.win/categories/blog/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>ciphermagic.win/2016/05/18/spring-boot%20%E9%9B%86%E4%B8%AD%E5%A4%84%E7%90%86%E5%BC%82%E5%B8%B8/</loc>
+    <lastmod>2017-04-17T03:45:36.784Z</lastmod>
+    <data>
+        <display>
+        <title>spring-boot 集中处理异常</title>
+        <pubTime>2016-05-17T16:00:00.000Z</pubTime>
+        
+        <tag>java</tag>
+         
+        <tag>spring-boot</tag>
+         
+         
+           
+             
+              <breadCrumb title="blog" url="ciphermagic.win/categories/blog/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>ciphermagic.win/2016/05/16/spring-boot%20%E9%9B%86%E6%88%90Mysql%E5%92%8CDruid%E8%BF%9E%E6%8E%A5%E6%B1%A0/</loc>
+    <lastmod>2017-04-17T03:45:21.382Z</lastmod>
+    <data>
+        <display>
+        <title>spring-boot 集成Mysql和Druid连接池</title>
+        <pubTime>2016-05-15T16:00:00.000Z</pubTime>
+        
+        <tag>java</tag>
+         
+        <tag>spring-boot</tag>
+         
+        <tag>druid</tag>
+         
+        <tag>mysql</tag>
+         
+         
+           
+             
+              <breadCrumb title="blog" url="ciphermagic.win/categories/blog/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>ciphermagic.win/2015/12/22/sonar%E8%B4%A8%E9%87%8F%E5%88%86%E6%9E%90%20Tabulation%20characters%20should%20not%20be%20used%20%E5%8E%9F%E5%9B%A0%E4%B8%8E%E8%A7%A3%E5%86%B3/</loc>
+    <lastmod>2017-04-17T03:45:05.591Z</lastmod>
+    <data>
+        <display>
+        <title>sonar质量分析 Tabulation characters should not be used 原因与解决</title>
+        <pubTime>2015-12-21T16:00:00.000Z</pubTime>
+        
+        <tag>sonar</tag>
+         
+         
+           
+             
+              <breadCrumb title="blog" url="ciphermagic.win/categories/blog/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>ciphermagic.win/2015/09/10/Mybatis%E5%88%86%E9%A1%B5%E6%96%B9%E6%A1%88/</loc>
+    <lastmod>2017-04-17T03:44:55.292Z</lastmod>
+    <data>
+        <display>
+        <title>Mybatis分页方案</title>
+        <pubTime>2015-09-09T16:00:00.000Z</pubTime>
+        
+        <tag>mybatis</tag>
+         
+         
+           
+             
+              <breadCrumb title="blog" url="ciphermagic.win/categories/blog/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>ciphermagic.win/2015/09/26/Mybatis%E6%95%B4%E5%90%88redis%E5%AE%9E%E7%8E%B0%E7%BC%93%E5%AD%98/</loc>
+    <lastmod>2017-04-17T03:44:51.300Z</lastmod>
+    <data>
+        <display>
+        <title>Mybatis整合redis实现缓存</title>
+        <pubTime>2015-09-25T16:00:00.000Z</pubTime>
+        
+        <tag>mybatis</tag>
+         
+        <tag>redis</tag>
+         
+         
+           
+             
+              <breadCrumb title="blog" url="ciphermagic.win/categories/blog/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>ciphermagic.win/2015/06/08/JavaSimon/</loc>
+    <lastmod>2017-04-17T03:44:40.237Z</lastmod>
+    <data>
+        <display>
+        <title>JavaSimon</title>
+        <pubTime>2015-06-07T16:00:00.000Z</pubTime>
+        
+        <tag>java</tag>
+         
+         
+           
+             
+              <breadCrumb title="blog" url="ciphermagic.win/categories/blog/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>ciphermagic.win/2015/08/25/Logstash%20+%20Elasticsearch%20+%20Kibana%20%E6%90%AD%E5%BB%BA%E6%97%A5%E5%BF%97%E5%B9%B3%E5%8F%B0/</loc>
+    <lastmod>2017-04-17T03:44:32.816Z</lastmod>
+    <data>
+        <display>
+        <title>Logstash + Elasticsearch + Kibana 搭建日志平台</title>
+        <pubTime>2015-08-24T16:00:00.000Z</pubTime>
+        
+        <tag>logstash</tag>
+         
+        <tag>elasticsearch</tag>
+         
+        <tag>kibana</tag>
+         
+         
+           
+             
+              <breadCrumb title="blog" url="ciphermagic.win/categories/blog/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>ciphermagic.win/2014/11/13/Maven%E5%88%9D%E6%8E%A2/</loc>
+    <lastmod>2017-04-17T03:44:21.992Z</lastmod>
+    <data>
+        <display>
+        <title>Maven初探</title>
+        <pubTime>2014-11-12T16:00:00.000Z</pubTime>
+        
+        <tag>maven</tag>
+         
+         
+           
+             
+              <breadCrumb title="blog" url="ciphermagic.win/categories/blog/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>ciphermagic.win/2015/02/14/%E3%80%8A%E6%B7%98%E5%AE%9D%E6%8A%80%E6%9C%AF%E8%BF%99%E5%8D%81%E5%B9%B4%E3%80%8B%EF%BC%9A%E6%AD%A6%E4%BE%A0%E5%92%8C%E5%80%92%E7%AB%8B%E6%96%87%E5%8C%96%E7%9A%84%E8%B5%B7%E6%BA%90/</loc>
+    <lastmod>2017-04-17T03:42:16.075Z</lastmod>
+    <data>
+        <display>
+        <title>《淘宝技术这十年》：武侠和倒立文化的起源</title>
+        <pubTime>2015-02-14T03:06:00.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="生活" url="ciphermagic.win/categories/%E7%94%9F%E6%B4%BB/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>ciphermagic.win/2017/04/17/%E4%BD%BF%E7%94%A8%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%9E%E7%8E%B0%E7%81%B5%E6%B4%BB%E7%9A%84%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</loc>
+    <lastmod>2017-04-17T03:37:49.861Z</lastmod>
+    <data>
+        <display>
+        <title>使用虚拟机实现灵活的科学上网</title>
+        <pubTime>2017-04-17T03:37:00.000Z</pubTime>
+        
+        <tag>科学上网</tag>
+         
+         
+           
+             
+              <breadCrumb title="blog" url="ciphermagic.win/categories/blog/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>ciphermagic.win/2017/04/14/spring-cloud%20%E6%9C%8D%E5%8A%A1%E5%8F%91%E5%B8%83%E4%B8%8E%E6%B6%88%E8%B4%B9/</loc>
     <lastmod>2017-04-14T08:16:44.395Z</lastmod>
     <data>
@@ -66,24 +368,6 @@
 
     
   <url>
-    <loc>ciphermagic.win/2017/04/13/%E3%80%8A%E6%B7%98%E5%AE%9D%E6%8A%80%E6%9C%AF%E8%BF%99%E5%8D%81%E5%B9%B4%E3%80%8B%EF%BC%9A%E6%AD%A6%E4%BE%A0%E5%92%8C%E5%80%92%E7%AB%8B%E6%96%87%E5%8C%96%E7%9A%84%E8%B5%B7%E6%BA%90/</loc>
-    <lastmod>2017-04-13T05:45:06.879Z</lastmod>
-    <data>
-        <display>
-        <title>《淘宝技术这十年》：武侠和倒立文化的起源</title>
-        <pubTime>2017-04-13T03:06:00.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="生活" url="ciphermagic.win/categories/%E7%94%9F%E6%B4%BB/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>ciphermagic.win/2017/04/12/IDEA%E4%B8%AD%E5%BF%BD%E7%95%A5spring%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E6%97%A0%E6%B3%95%E8%AF%86%E5%88%ABxsd%E7%9A%84%E9%94%99%E8%AF%AF/</loc>
     <lastmod>2017-04-13T03:16:44.187Z</lastmod>
     <data>
@@ -117,270 +401,6 @@
            
              
               <breadCrumb title="生活" url="ciphermagic.win/categories/%E7%94%9F%E6%B4%BB/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>ciphermagic.win/2017/04/10/Maven%E5%88%9D%E6%8E%A2/</loc>
-    <lastmod>2017-04-13T02:19:29.583Z</lastmod>
-    <data>
-        <display>
-        <title>Maven初探</title>
-        <pubTime>2017-04-09T16:00:00.000Z</pubTime>
-        
-        <tag>maven</tag>
-         
-         
-           
-             
-              <breadCrumb title="blog" url="ciphermagic.win/categories/blog/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>ciphermagic.win/2017/04/10/Mybatis%E5%88%86%E9%A1%B5%E6%96%B9%E6%A1%88/</loc>
-    <lastmod>2017-04-13T02:19:19.819Z</lastmod>
-    <data>
-        <display>
-        <title>Mybatis分页方案</title>
-        <pubTime>2017-04-09T16:00:00.000Z</pubTime>
-        
-        <tag>mybatis</tag>
-         
-         
-           
-             
-              <breadCrumb title="blog" url="ciphermagic.win/categories/blog/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>ciphermagic.win/2017/04/10/sonar%E8%B4%A8%E9%87%8F%E5%88%86%E6%9E%90%20Tabulation%20characters%20should%20not%20be%20used%20%E5%8E%9F%E5%9B%A0%E4%B8%8E%E8%A7%A3%E5%86%B3/</loc>
-    <lastmod>2017-04-13T02:19:03.050Z</lastmod>
-    <data>
-        <display>
-        <title>sonar质量分析 Tabulation characters should not be used 原因与解决</title>
-        <pubTime>2017-04-09T16:00:00.000Z</pubTime>
-        
-        <tag>sonar</tag>
-         
-         
-           
-             
-              <breadCrumb title="blog" url="ciphermagic.win/categories/blog/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>ciphermagic.win/2017/04/10/spring-boot%20%E9%9B%86%E6%88%90Mysql%E5%92%8CDruid%E8%BF%9E%E6%8E%A5%E6%B1%A0/</loc>
-    <lastmod>2017-04-13T02:18:52.097Z</lastmod>
-    <data>
-        <display>
-        <title>spring-boot 集成Mysql和Druid连接池</title>
-        <pubTime>2017-04-09T16:00:00.000Z</pubTime>
-        
-        <tag>java</tag>
-         
-        <tag>spring-boot</tag>
-         
-        <tag>druid</tag>
-         
-        <tag>mysql</tag>
-         
-         
-           
-             
-              <breadCrumb title="blog" url="ciphermagic.win/categories/blog/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>ciphermagic.win/2017/04/10/spring-boot%20%E9%9B%86%E4%B8%AD%E5%A4%84%E7%90%86%E5%BC%82%E5%B8%B8/</loc>
-    <lastmod>2017-04-13T02:18:38.975Z</lastmod>
-    <data>
-        <display>
-        <title>spring-boot 集中处理异常</title>
-        <pubTime>2017-04-09T16:00:00.000Z</pubTime>
-        
-        <tag>java</tag>
-         
-        <tag>spring-boot</tag>
-         
-         
-           
-             
-              <breadCrumb title="blog" url="ciphermagic.win/categories/blog/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>ciphermagic.win/2017/04/10/spring-boot%20%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/</loc>
-    <lastmod>2017-04-13T02:18:33.104Z</lastmod>
-    <data>
-        <display>
-        <title>spring-boot 实现文件上传</title>
-        <pubTime>2017-04-09T16:00:00.000Z</pubTime>
-        
-        <tag>java</tag>
-         
-        <tag>spring-boot</tag>
-         
-         
-           
-             
-              <breadCrumb title="blog" url="ciphermagic.win/categories/blog/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>ciphermagic.win/2017/04/10/spring-boot%20%E6%9B%BF%E6%8D%A2%E5%86%85%E5%B5%8Ctomcat%E7%89%88%E6%9C%AC/</loc>
-    <lastmod>2017-04-13T02:16:38.019Z</lastmod>
-    <data>
-        <display>
-        <title>spring-boot 替换内嵌tomcat版本</title>
-        <pubTime>2017-04-09T16:00:00.000Z</pubTime>
-        
-        <tag>java</tag>
-         
-        <tag>spring-boot</tag>
-         
-        <tag>tomcat</tag>
-         
-         
-           
-             
-              <breadCrumb title="blog" url="ciphermagic.win/categories/blog/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>ciphermagic.win/2017/04/10/spring-boot%20%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E8%A7%A3%E5%86%B3%E6%8B%BE%E9%81%97/</loc>
-    <lastmod>2017-04-13T02:16:24.216Z</lastmod>
-    <data>
-        <display>
-        <title>spring-boot 中文乱码解决拾遗</title>
-        <pubTime>2017-04-09T16:00:00.000Z</pubTime>
-        
-        <tag>java</tag>
-         
-        <tag>spring-boot</tag>
-         
-         
-           
-             
-              <breadCrumb title="blog" url="ciphermagic.win/categories/blog/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>ciphermagic.win/2017/04/10/spring-mvc%20%E8%A7%A3%E5%86%B3%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/</loc>
-    <lastmod>2017-04-13T02:16:13.861Z</lastmod>
-    <data>
-        <display>
-        <title>spring-mvc 解决跨域问题</title>
-        <pubTime>2017-04-09T16:00:00.000Z</pubTime>
-        
-        <tag>java</tag>
-         
-        <tag>spring-mvc</tag>
-         
-         
-           
-             
-              <breadCrumb title="blog" url="ciphermagic.win/categories/blog/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>ciphermagic.win/2017/04/10/Mybatis%E6%95%B4%E5%90%88redis%E5%AE%9E%E7%8E%B0%E7%BC%93%E5%AD%98/</loc>
-    <lastmod>2017-04-13T00:48:16.858Z</lastmod>
-    <data>
-        <display>
-        <title>Mybatis整合redis实现缓存</title>
-        <pubTime>2017-04-09T16:00:00.000Z</pubTime>
-        
-        <tag>mybatis</tag>
-         
-        <tag>redis</tag>
-         
-         
-           
-             
-              <breadCrumb title="blog" url="ciphermagic.win/categories/blog/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>ciphermagic.win/2017/04/10/Logstash%20+%20Elasticsearch%20+%20Kibana%20%E6%90%AD%E5%BB%BA%E6%97%A5%E5%BF%97%E5%B9%B3%E5%8F%B0/</loc>
-    <lastmod>2017-04-13T00:48:16.822Z</lastmod>
-    <data>
-        <display>
-        <title>Logstash + Elasticsearch + Kibana 搭建日志平台</title>
-        <pubTime>2017-04-09T16:00:00.000Z</pubTime>
-        
-        <tag>logstash</tag>
-         
-        <tag>elasticsearch</tag>
-         
-        <tag>kibana</tag>
-         
-         
-           
-             
-              <breadCrumb title="blog" url="ciphermagic.win/categories/blog/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>ciphermagic.win/2017/04/10/JavaSimon/</loc>
-    <lastmod>2017-04-13T00:48:16.818Z</lastmod>
-    <data>
-        <display>
-        <title>JavaSimon</title>
-        <pubTime>2017-04-09T16:00:00.000Z</pubTime>
-        
-        <tag>java</tag>
-         
-         
-           
-             
-              <breadCrumb title="blog" url="ciphermagic.win/categories/blog/"/>
           
         </display>
     </data>
