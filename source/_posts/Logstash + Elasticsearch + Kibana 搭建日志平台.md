@@ -1,6 +1,6 @@
 ---
 title: Logstash + Elasticsearch + Kibana 搭建日志平台
-date: 2017-4-10
+date: 2015-8-25
 categories: blog
 tags: [logstash,elasticsearch,kibana] 
 ---
