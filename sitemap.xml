@@ -2,140 +2,140 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>ciphermagic.win/2016/01/19/spring-mvc%20cros/</loc>
+    <loc>ciphermagic.win/2016/01/19/spring-mvc-cors/</loc>
     
     <lastmod>2017-04-17T03:46:31.711Z</lastmod>
     
   </url>
   
   <url>
-    <loc>ciphermagic.win/2016/07/17/spring-boot%20chinese/</loc>
+    <loc>ciphermagic.win/2016/07/17/spring-boot-chinese/</loc>
     
     <lastmod>2017-04-17T03:46:17.605Z</lastmod>
     
   </url>
   
   <url>
-    <loc>ciphermagic.win/2016/05/27/spring-boot%20tomcat/</loc>
+    <loc>ciphermagic.win/2016/05/27/spring-boot-tomcat/</loc>
     
     <lastmod>2017-04-17T03:46:06.804Z</lastmod>
     
   </url>
   
   <url>
-    <loc>ciphermagic.win/2016/05/21/spring-boot%20upload/</loc>
+    <loc>ciphermagic.win/2016/05/21/spring-boot-upload/</loc>
     
     <lastmod>2017-04-17T03:45:44.642Z</lastmod>
     
   </url>
   
   <url>
-    <loc>ciphermagic.win/2016/05/18/spring-boot%20exception/</loc>
+    <loc>ciphermagic.win/2016/05/18/spring-boot-exception/</loc>
     
     <lastmod>2017-04-17T03:45:36.784Z</lastmod>
     
   </url>
   
   <url>
-    <loc>ciphermagic.win/2016/05/16/spring-boot%20Mysql%20Druid/</loc>
+    <loc>ciphermagic.win/2016/05/16/spring-boot-mysql-druid/</loc>
     
     <lastmod>2017-04-17T03:45:21.382Z</lastmod>
     
   </url>
   
   <url>
-    <loc>ciphermagic.win/2015/12/22/sonar%20Tabulation%20characters%20should%20not%20be%20used/</loc>
+    <loc>ciphermagic.win/2015/12/22/sonar-issue/</loc>
     
     <lastmod>2017-04-17T03:45:05.591Z</lastmod>
     
   </url>
   
   <url>
-    <loc>ciphermagic.win/2015/09/10/Mybatis%20Page/</loc>
+    <loc>ciphermagic.win/2015/09/10/mybatis-page/</loc>
     
     <lastmod>2017-04-17T03:44:55.292Z</lastmod>
     
   </url>
   
   <url>
-    <loc>ciphermagic.win/2015/09/26/Mybatis%20redis/</loc>
+    <loc>ciphermagic.win/2015/09/26/mybatis-redis/</loc>
     
     <lastmod>2017-04-17T03:44:51.300Z</lastmod>
     
   </url>
   
   <url>
-    <loc>ciphermagic.win/2015/06/08/JavaSimon/</loc>
+    <loc>ciphermagic.win/2015/06/08/javasimon/</loc>
     
     <lastmod>2017-04-17T03:44:40.237Z</lastmod>
     
   </url>
   
   <url>
-    <loc>ciphermagic.win/2015/08/25/Logstash%20Elasticsearch%20Kibana/</loc>
+    <loc>ciphermagic.win/2015/08/25/logstash-elasticsearch-kibana/</loc>
     
     <lastmod>2017-04-17T03:44:32.816Z</lastmod>
     
   </url>
   
   <url>
-    <loc>ciphermagic.win/2014/11/13/Maven/</loc>
+    <loc>ciphermagic.win/2014/11/13/maven/</loc>
     
     <lastmod>2017-04-17T03:44:21.992Z</lastmod>
     
   </url>
   
   <url>
-    <loc>ciphermagic.win/2015/02/14/Taobao%20technology%20this%20decade/</loc>
+    <loc>ciphermagic.win/2015/02/14/taobao-technology-this-decade/</loc>
     
     <lastmod>2017-04-17T03:42:16.075Z</lastmod>
     
   </url>
   
   <url>
-    <loc>ciphermagic.win/2017/04/17/scientific%20Internet%20access/</loc>
+    <loc>ciphermagic.win/2017/04/17/scientific-Internet-access/</loc>
     
     <lastmod>2017-04-17T03:37:49.861Z</lastmod>
     
   </url>
   
   <url>
-    <loc>ciphermagic.win/2017/04/14/spring-cloud%20Service%20release%20and%20consumption/</loc>
+    <loc>ciphermagic.win/2017/04/14/spring-cloud-service-release-and-consumption/</loc>
     
     <lastmod>2017-04-14T08:16:44.395Z</lastmod>
     
   </url>
   
   <url>
-    <loc>ciphermagic.win/2017/04/14/spring-boot%20JavaConfig%20Dubbo/</loc>
+    <loc>ciphermagic.win/2017/04/14/spring-boot-javaconfig-dubbo/</loc>
     
     <lastmod>2017-04-14T03:14:56.697Z</lastmod>
     
   </url>
   
   <url>
-    <loc>ciphermagic.win/2017/04/13/UML/</loc>
+    <loc>ciphermagic.win/2017/04/13/uml/</loc>
     
     <lastmod>2017-04-13T05:55:03.683Z</lastmod>
     
   </url>
   
   <url>
-    <loc>ciphermagic.win/2017/04/12/IDEA-spring-xsd/</loc>
+    <loc>ciphermagic.win/2017/04/12/idea-spring-xsd/</loc>
     
     <lastmod>2017-04-13T03:16:44.187Z</lastmod>
     
   </url>
   
   <url>
-    <loc>ciphermagic.win/2017/04/11/Recharge%20a%20wave%20of%20faith/</loc>
+    <loc>ciphermagic.win/2017/04/11/recharge-a-wave-of-faith/</loc>
     
     <lastmod>2017-04-13T03:16:07.735Z</lastmod>
     
   </url>
   
   <url>
-    <loc>ciphermagic.win/2017/04/11/Dubbo-ProGuard/</loc>
+    <loc>ciphermagic.win/2017/04/11/dubbo-proguard/</loc>
     
     <lastmod>2017-04-13T00:48:16.809Z</lastmod>
     

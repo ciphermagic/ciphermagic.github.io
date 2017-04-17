@@ -73,7 +73,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="java,spring-boot,druid,mysql," />
+  <meta name="keywords" content="科学上网," />
 
 
 
@@ -89,20 +89,25 @@
 
 
 
-<meta name="description" content="概述spring-boot默认提供了数据库和数据库连接池，按照官方文档简单配置即可。若要自定义，需要修改一些配置，本文着重描述一下spring-boot如何集成mysql和阿里的druid数据库连接池。 开始本文环境 jdk：1.7 tomcat：7.0.55 spring-boot：1.2.3.RELEASE  修改application.properties文件修改spring-boot默认配">
-<meta name="keywords" content="java,spring-boot,druid,mysql">
+<meta name="description" content="缘由笔者一直使用ExpressVPN作为梯子，ExpressVPN是国外的收费VPN工具，最近官网不是很稳定，可能要翻墙才能登上。ExpressVPN有windows下的管理工具，一键链接，方便快捷，且速度在同类工具中算得上突出，但是美中不足的是，跟很多VPN工具一样，ExpressVPN只支持全局代理，没有提供浏览器插件之类的东西。然而在平常的使用当中只是上google等一些国外网站才需要vpn">
+<meta name="keywords" content="科学上网">
 <meta property="og:type" content="article">
-<meta property="og:title" content="spring-boot 集成Mysql和Druid连接池">
-<meta property="og:url" content="ciphermagic.win/2016/05/16/spring-boot Mysql Druid/index.html">
+<meta property="og:title" content="使用虚拟机实现灵活的科学上网">
+<meta property="og:url" content="ciphermagic.win/2017/04/17/scientific-Internet-access/index.html">
 <meta property="og:site_name" content="$t/^Cipher's Blog_?\n">
-<meta property="og:description" content="概述spring-boot默认提供了数据库和数据库连接池，按照官方文档简单配置即可。若要自定义，需要修改一些配置，本文着重描述一下spring-boot如何集成mysql和阿里的druid数据库连接池。 开始本文环境 jdk：1.7 tomcat：7.0.55 spring-boot：1.2.3.RELEASE  修改application.properties文件修改spring-boot默认配">
-<meta property="og:image" content="http://ww3.sinaimg.cn/large/6af06d97gw1es4xfagntaj20v40dgq36.jpg">
-<meta property="og:image" content="http://ww3.sinaimg.cn/large/6af06d97gw1es4xfb7e2aj218d0l7wjc.jpg">
-<meta property="og:updated_time" content="2017-04-17T03:45:21.382Z">
+<meta property="og:description" content="缘由笔者一直使用ExpressVPN作为梯子，ExpressVPN是国外的收费VPN工具，最近官网不是很稳定，可能要翻墙才能登上。ExpressVPN有windows下的管理工具，一键链接，方便快捷，且速度在同类工具中算得上突出，但是美中不足的是，跟很多VPN工具一样，ExpressVPN只支持全局代理，没有提供浏览器插件之类的东西。然而在平常的使用当中只是上google等一些国外网站才需要vpn">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/698f7fe7gy1fepfqray3pj20am0go75q.jpg">
+<meta property="og:image" content="https://2y0ge4lrxiko1n2r1be9ibxk-wpengine.netdna-ssl.com/wp-content/uploads/2016/03/installer-command.png">
+<meta property="og:image" content="https://2y0ge4lrxiko1n2r1be9ibxk-wpengine.netdna-ssl.com/wp-content/uploads/2016/03/activate-expressvpn.png">
+<meta property="og:image" content="https://2y0ge4lrxiko1n2r1be9ibxk-wpengine.netdna-ssl.com/wp-content/uploads/2016/03/sharing-information.png">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/698f7fe7gy1fepfqrf9rmj20mx05a3ym.jpg">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/698f7fe7gy1fepfqrl54yj218g0leab5.jpg">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/698f7fe7gy1fepfqscytzj204o05ta9y.jpg">
+<meta property="og:updated_time" content="2017-04-17T03:37:49.861Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="spring-boot 集成Mysql和Druid连接池">
-<meta name="twitter:description" content="概述spring-boot默认提供了数据库和数据库连接池，按照官方文档简单配置即可。若要自定义，需要修改一些配置，本文着重描述一下spring-boot如何集成mysql和阿里的druid数据库连接池。 开始本文环境 jdk：1.7 tomcat：7.0.55 spring-boot：1.2.3.RELEASE  修改application.properties文件修改spring-boot默认配">
-<meta name="twitter:image" content="http://ww3.sinaimg.cn/large/6af06d97gw1es4xfagntaj20v40dgq36.jpg">
+<meta name="twitter:title" content="使用虚拟机实现灵活的科学上网">
+<meta name="twitter:description" content="缘由笔者一直使用ExpressVPN作为梯子，ExpressVPN是国外的收费VPN工具，最近官网不是很稳定，可能要翻墙才能登上。ExpressVPN有windows下的管理工具，一键链接，方便快捷，且速度在同类工具中算得上突出，但是美中不足的是，跟很多VPN工具一样，ExpressVPN只支持全局代理，没有提供浏览器插件之类的东西。然而在平常的使用当中只是上google等一些国外网站才需要vpn">
+<meta name="twitter:image" content="http://ww4.sinaimg.cn/large/698f7fe7gy1fepfqray3pj20am0go75q.jpg">
 
 
 
@@ -130,13 +135,13 @@
 
 
 
-  <link rel="canonical" href="ciphermagic.win/2016/05/16/spring-boot Mysql Druid/"/>
+  <link rel="canonical" href="ciphermagic.win/2017/04/17/scientific-Internet-access/"/>
 
 
 
 
 
-  <title> spring-boot 集成Mysql和Druid连接池 | $t/^Cipher's Blog_?\n </title>
+  <title> 使用虚拟机实现灵活的科学上网 | $t/^Cipher's Blog_?\n </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -309,7 +314,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="ciphermagic.win/2016/05/16/spring-boot Mysql Druid/">
+    <link itemprop="mainEntityOfPage" href="ciphermagic.win/2017/04/17/scientific-Internet-access/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="cipher">
@@ -330,7 +335,7 @@
             
             
               
-                spring-boot 集成Mysql和Druid连接池
+                使用虚拟机实现灵活的科学上网
               
             
           </h2>
@@ -345,8 +350,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-05-16T00:00:00+08:00">
-                2016-05-16
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-17T11:37:00+08:00">
+                2017-04-17
               </time>
             
 
@@ -386,7 +391,7 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a class="cloud-tie-join-count" href="/2016/05/16/spring-boot Mysql Druid/#comments" itemprop="discussionUrl">
+                <a class="cloud-tie-join-count" href="/2017/04/17/scientific-Internet-access/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count join-count" itemprop="commentCount"></span>
                 </a>
               </span>
@@ -395,7 +400,7 @@
 
           
           
-             <span id="/2016/05/16/spring-boot Mysql Druid/" class="leancloud_visitors" data-flag-title="spring-boot 集成Mysql和Druid连接池">
+             <span id="/2017/04/17/scientific-Internet-access/" class="leancloud_visitors" data-flag-title="使用虚拟机实现灵活的科学上网">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -419,7 +424,7 @@
                    <span class="post-meta-item-text">字数统计</span>
                  
                    <span title="字数统计" }}">
-                     699 字  <!-- 我在这里加了一个单位上去 -->
+                     937 字  <!-- 我在这里加了一个单位上去 -->
                    </span>
              
              
@@ -433,7 +438,7 @@
                    <span class="post-meta-item-text">阅读时长</span>
                  
                    <span title="阅读时长" }}">
-                     4 分钟   <!-- 我在这里加了一个单位上去 -->
+                     3 分钟   <!-- 我在这里加了一个单位上去 -->
                    </span>
              
            </div>
@@ -452,19 +457,33 @@
       
 
       
-        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>spring-boot默认提供了数据库和数据库连接池，按照<a href="http://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#boot-features-connect-to-production-database" target="_blank" rel="external">官方文档</a>简单配置即可。若要自定义，需要修改一些配置，本文着重描述一下spring-boot如何集成mysql和阿里的<a href="https://github.com/alibaba/druid" target="_blank" rel="external">druid</a>数据库连接池。</p>
-<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><h3 id="本文环境"><a href="#本文环境" class="headerlink" title="本文环境"></a>本文环境</h3><ul>
-<li>jdk：1.7</li>
-<li>tomcat：7.0.55</li>
-<li>spring-boot：1.2.3.RELEASE</li>
+        <h2 id="缘由"><a href="#缘由" class="headerlink" title="缘由"></a>缘由</h2><p>笔者一直使用<a href="https://www.expressvpn.com/" target="_blank" rel="external">ExpressVPN</a>作为梯子，ExpressVPN是国外的收费VPN工具，最近官网不是很稳定，可能要翻墙才能登上。ExpressVPN有windows下的管理工具，一键链接，方便快捷，且速度在同类工具中算得上突出，但是美中不足的是，跟很多VPN工具一样，ExpressVPN只支持全局代理，没有提供浏览器插件之类的东西。然而在平常的使用当中只是上google等一些国外网站才需要vpn，频繁的开关代理显得格外的麻烦和耗时，因此便萌生一种实现灵活可切换的科学上网方式的想法。</p>
+<p><em>windows下的ExpressVPN工具：</em><br><img src="http://ww4.sinaimg.cn/large/698f7fe7gy1fepfqray3pj20am0go75q.jpg" alt="windows下的ExpressVPN工具"></p>
+<h2 id="实现思路"><a href="#实现思路" class="headerlink" title="实现思路"></a>实现思路</h2><p>在宿主机（windows10）下安装虚拟机（ubuntu），在虚拟机中安装ExpressVPN对应的安装包，这里是expressvpn_1.2.0_amd64.deb，这样虚拟机即可连接vpn实现科学上网。要让外部的宿主机也能使用vpn，就要在虚拟机中搭建一个http代理服务器，这里使用squid，并开启代理服务。最后，在宿主机的chrome浏览器中安装SwitchyOmega插件，把代理地址指向虚拟机的ip和squid监听的端口，当我们需要访问国外网站时，只需切换插件的代理模式即可。</p>
+<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><ul>
+<li>宿主机：Windows10 64位</li>
+<li>虚拟机：Ubuntu-16.04.1-server-amd64</li>
+<li>浏览器：Chrome</li>
+<li>vpn工具：ExpressVPN</li>
 </ul>
-<h3 id="修改application-properties文件"><a href="#修改application-properties文件" class="headerlink" title="修改application.properties文件"></a>修改application.properties文件</h3><p>修改spring-boot默认配置文件<code>application.properties</code>，加入一下内容(根据实际情况修改)：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"># 数据库配置</div><div class="line">spring.mysql.datasource.driverClassName=com.mysql.jdbc.Driver</div><div class="line">spring.mysql.datasource.url=jdbc:mysql://127.0.0.1:3306/message?useUnicode=true&amp;characterEncoding=utf8</div><div class="line">spring.mysql.datasource.username=root</div><div class="line">spring.mysql.datasource.password=</div><div class="line"># 连接池配置</div><div class="line">spring.mysql.datasource.filters=stat</div><div class="line">spring.mysql.datasource.maxActive=5</div><div class="line">spring.mysql.datasource.initialSize=1</div><div class="line">spring.mysql.datasource.maxWait=60000</div><div class="line">spring.mysql.datasource.minIdle=1</div><div class="line">spring.mysql.datasource.maxIdle=3</div><div class="line">spring.mysql.datasource.timeBetweenEvictionRunsMillis=60000</div><div class="line">spring.mysql.datasource.minEvictableIdleTimeMillis=300000</div><div class="line">spring.mysql.datasource.validationQuery=SELECT 'x'</div><div class="line">spring.mysql.datasource.testWhileIdle=true</div><div class="line">spring.mysql.datasource.testOnBorrow=false</div><div class="line">spring.mysql.datasource.testOnReturn=false</div><div class="line">spring.mysql.datasource.maxOpenPreparedStatements=10</div><div class="line">spring.mysql.datasource.removeAbandoned=true</div><div class="line">spring.mysql.datasource.removeAbandonedTimeout=1800</div><div class="line">spring.mysql.datasource.logAbandoned=true</div></pre></td></tr></table></figure></p>
-<p>druid数据库连接池的具体配置请参考官方文档并根据项目的实际情况修改。</p>
-<h3 id="新建DataSourceConfig-java配置类"><a href="#新建DataSourceConfig-java配置类" class="headerlink" title="新建DataSourceConfig.java配置类"></a>新建<code>DataSourceConfig.java</code>配置类</h3><p>为数据库配置单独新建一个类，内容如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Configuration</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DataSourceConfig</span> </span>&#123;</div><div class="line">    </div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.driverClassName&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> String driverClassName;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.url&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> String url;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.username&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> String username;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.password&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> String password;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.filters&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> String filters;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.maxActive&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> <span class="keyword">int</span> maxActive;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.initialSize&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> <span class="keyword">int</span> initialSize;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.maxWait&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> <span class="keyword">long</span> maxWait;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.minIdle&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> <span class="keyword">int</span> minIdle;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.timeBetweenEvictionRunsMillis&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> <span class="keyword">long</span> timeBetweenEvictionRunsMillis;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.minEvictableIdleTimeMillis&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> <span class="keyword">long</span> minEvictableIdleTimeMillis;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.validationQuery&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> String validationQuery;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.testWhileIdle&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> <span class="keyword">boolean</span> testWhileIdle;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.testOnBorrow&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> <span class="keyword">boolean</span> testOnBorrow;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.testOnReturn&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> <span class="keyword">boolean</span> testOnReturn;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.removeAbandoned&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> <span class="keyword">boolean</span> removeAbandoned;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.logAbandoned&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> <span class="keyword">boolean</span> logAbandoned;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.maxOpenPreparedStatements&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> <span class="keyword">int</span> maxOpenPreparedStatements;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.removeAbandonedTimeout&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> <span class="keyword">int</span> removeAbandonedTimeout;</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">     * druid 数据库连接池</div><div class="line">     * <span class="doctag">@return</span></div><div class="line">     */</div><div class="line">    <span class="meta">@Bean</span>(name = <span class="string">"mysqlDS"</span>)</div><div class="line">    <span class="meta">@Qualifier</span>(<span class="string">"mysqlDS"</span>)</div><div class="line">    <span class="meta">@Primary</span></div><div class="line">    <span class="function"><span class="keyword">public</span> DataSource <span class="title">dataSource</span><span class="params">()</span> </span>&#123;</div><div class="line">        DruidDataSource dataSource = <span class="keyword">new</span> DruidDataSource();</div><div class="line">        dataSource.setUrl(url);</div><div class="line">        dataSource.setUsername(username);</div><div class="line">        dataSource.setPassword(password);</div><div class="line">        dataSource.setDriverClassName(driverClassName);</div><div class="line">        dataSource.setMaxActive(maxActive);</div><div class="line">        dataSource.setInitialSize(initialSize);</div><div class="line">        dataSource.setMaxWait(maxWait);</div><div class="line">        dataSource.setMinIdle(minIdle);</div><div class="line">        dataSource.setTimeBetweenEvictionRunsMillis(timeBetweenEvictionRunsMillis);</div><div class="line">        dataSource.setMinEvictableIdleTimeMillis(minEvictableIdleTimeMillis);</div><div class="line">        dataSource.setValidationQuery(validationQuery);</div><div class="line">        dataSource.setTestWhileIdle(testWhileIdle);</div><div class="line">        dataSource.setTestOnBorrow(testOnBorrow);</div><div class="line">        dataSource.setTestOnReturn(testOnReturn);</div><div class="line">        dataSource.setMaxOpenPreparedStatements(maxOpenPreparedStatements);</div><div class="line">        dataSource.setRemoveAbandoned(removeAbandoned);</div><div class="line">        dataSource.setRemoveAbandonedTimeout(removeAbandonedTimeout);</div><div class="line">        dataSource.setLogAbandoned(logAbandoned);</div><div class="line">        <span class="keyword">try</span> &#123;</div><div class="line">            dataSource.setFilters(filters);</div><div class="line">        &#125; <span class="keyword">catch</span> (SQLException e) &#123;</div><div class="line">            <span class="keyword">return</span> dataSource;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> dataSource;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="comment">/**</span></div><div class="line">     * druid 监控页面</div><div class="line">     * <span class="doctag">@return</span></div><div class="line">     */</div><div class="line">    <span class="meta">@Bean</span></div><div class="line">    <span class="function"><span class="keyword">public</span> ServletRegistrationBean <span class="title">druidServletBean</span><span class="params">()</span> </span>&#123;</div><div class="line">        ServletRegistrationBean registrationBean = <span class="keyword">new</span> ServletRegistrationBean();</div><div class="line">        StatViewServlet statViewServlet = <span class="keyword">new</span> StatViewServlet();</div><div class="line">        registrationBean.addInitParameter(<span class="string">"loginUsername"</span>, <span class="string">"admin"</span>);</div><div class="line">        registrationBean.addInitParameter(<span class="string">"loginPassword"</span>, <span class="string">"admin"</span>);</div><div class="line">        registrationBean.addInitParameter(<span class="string">"resetEnable"</span>, <span class="string">"true"</span>);</div><div class="line">        registrationBean.addUrlMappings(<span class="string">"/druid/*"</span>);</div><div class="line">        registrationBean.setServlet(statViewServlet);</div><div class="line">        <span class="keyword">return</span> registrationBean;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="comment">/**</span></div><div class="line">     * druid 资源监控过滤</div><div class="line">     * <span class="doctag">@return</span></div><div class="line">     */</div><div class="line">    <span class="meta">@Bean</span></div><div class="line">    <span class="function"><span class="keyword">public</span> FilterRegistrationBean <span class="title">druidWebStatFilter</span><span class="params">()</span> </span>&#123;</div><div class="line">        FilterRegistrationBean registrationBean = <span class="keyword">new</span> FilterRegistrationBean();</div><div class="line">        WebStatFilter webStatFilter = <span class="keyword">new</span> WebStatFilter();</div><div class="line">        registrationBean.addInitParameter(<span class="string">"sessionStatMaxCount"</span>, <span class="string">"2000"</span>);</div><div class="line">        registrationBean.addInitParameter(<span class="string">"sessionStatEnable"</span>, <span class="string">"true"</span>);</div><div class="line">        registrationBean.addInitParameter(<span class="string">"principalSessionName"</span>, <span class="string">"session_user_key"</span>);</div><div class="line">        registrationBean.addInitParameter(<span class="string">"profileEnable"</span>, <span class="string">"true"</span>);</div><div class="line">        registrationBean.addInitParameter(<span class="string">"exclusions"</span>, <span class="string">"*.js,*.gif,*.jpg,*.png,*.css,*.ico,*.jsp,/druid/*"</span>);</div><div class="line">        registrationBean.setFilter(webStatFilter);</div><div class="line">        registrationBean.addUrlPatterns(<span class="string">"/*"</span>);</div><div class="line">        <span class="keyword">return</span> registrationBean;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>配置了druid监控页面的登录页，用户名密码为admin。</p>
-<h3 id="访问druid监控页面"><a href="#访问druid监控页面" class="headerlink" title="访问druid监控页面"></a>访问druid监控页面</h3><p>启动应用，我tomcat的端口是8089，没有设置项目名称，因此我访问的是<code>http://localhost:8089/druid/login.html</code>。一般而言，druid监控登录页面的入口为：<code>http://{IP地址}:{端口}/{项目名}/druid/login.html</code></p>
-<p><img src="http://ww3.sinaimg.cn/large/6af06d97gw1es4xfagntaj20v40dgq36.jpg" alt=""></p>
-<p><img src="http://ww3.sinaimg.cn/large/6af06d97gw1es4xfb7e2aj218d0l7wjc.jpg" alt=""></p>
+<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>笔者的虚拟机是使用win10自带的Hyper-V虚拟机工具安装的，虚拟机与宿主机可以互相ping通，并可访问外网。本文使用的vpn工具是ExpressVPN，其他vpn工具只要支持linux环境，实现方式也是一样的。</p>
+<h2 id="实现步骤"><a href="#实现步骤" class="headerlink" title="实现步骤"></a>实现步骤</h2><h3 id="安装VPN软件"><a href="#安装VPN软件" class="headerlink" title="安装VPN软件"></a>安装VPN软件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo dpkg -i expressvpn_1.2.0_amd64.deb</div></pre></td></tr></table></figure>
+<p><img src="https://2y0ge4lrxiko1n2r1be9ibxk-wpengine.netdna-ssl.com/wp-content/uploads/2016/03/installer-command.png" alt="此处输入图片的描述"></p>
+<p>ExpressVPN需要填写激活码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">expressvpn activate</div></pre></td></tr></table></figure></p>
+<p><img src="https://2y0ge4lrxiko1n2r1be9ibxk-wpengine.netdna-ssl.com/wp-content/uploads/2016/03/activate-expressvpn.png" alt="此处输入图片的描述"></p>
+<p>输入n，不向ExpressVPN分享信息：<br><img src="https://2y0ge4lrxiko1n2r1be9ibxk-wpengine.netdna-ssl.com/wp-content/uploads/2016/03/sharing-information.png" alt="此处输入图片的描述"></p>
+<p>连接国外节点：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">expressvpn connect</div></pre></td></tr></table></figure></p>
+<p>这样即可使用ExpressVPN，可以ping一下www.google.com验证能否ping通。更多ExpressVPN相关的命令可以查看<a href="www.expressvpn.com">官网</a>，这里就不多做介绍了，毕竟不是所有人都是用ExpressVPN。</p>
+<h3 id="安装Squid"><a href="#安装Squid" class="headerlink" title="安装Squid"></a>安装Squid</h3><p><a href="http://baike.baidu.com/link?url=Zxt1x4-IkZNBUndGuz6gMDqSZM3REYRHdwk-6zd5rQn8XggYMCIuAvwqGWLBAQhOVOqKsf9ZsjfPGMGyzaB3sq" target="_blank" rel="external">Squid</a>是一个高性能的代理缓存服务器，Squid支持FTP、gopher和HTTP协议。这里即是使用它的Http代理功能。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">apt-get install squid</div></pre></td></tr></table></figure>
+<h3 id="配置Squid"><a href="#配置Squid" class="headerlink" title="配置Squid"></a>配置Squid</h3><p>修改/etc/squid/squid.conf<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim /etc/squid/squid.conf</div></pre></td></tr></table></figure></p>
+<p>找到 http_access deny all ，将 deny 改成 allow 。意思是允许任何IP使用这个代理。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">http_access allow all</div></pre></td></tr></table></figure></p>
+<p>配置端口，这是服务器的监听端口，也就是客户端连接服务器时配置的端口，这里保持默认。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">http_port 3128</div></pre></td></tr></table></figure></p>
+<p>重启squid<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">service squid restart</div></pre></td></tr></table></figure></p>
+<h3 id="安装Chrome插件：SwitchyOmega"><a href="#安装Chrome插件：SwitchyOmega" class="headerlink" title="安装Chrome插件：SwitchyOmega"></a>安装Chrome插件：SwitchyOmega</h3><p><img src="http://ww4.sinaimg.cn/large/698f7fe7gy1fepfqrf9rmj20mx05a3ym.jpg" alt="此处输入图片的描述"></p>
+<h3 id="配置代理方式"><a href="#配置代理方式" class="headerlink" title="配置代理方式"></a>配置代理方式</h3><p>代理服务器为虚拟机的ip地址，代理端口为squid配置的监听端口<br><img src="http://ww4.sinaimg.cn/large/698f7fe7gy1fepfqrl54yj218g0leab5.jpg" alt="此处输入图片的描述"></p>
+<h3 id="开始使用"><a href="#开始使用" class="headerlink" title="开始使用"></a>开始使用</h3><p>安装配置完SwitchyOmega，会在浏览器的右上角出现SwitchyOmega的图标，里面有刚刚配置的代理方式【ExpressVPN】。在需要翻墙的时候，点击【ExpressVPN】即可。或者可以指定某些url使用代理方式，其他使用直连的方式，这样选择当【auto switch】方式时，即可根据不同的访问地址，自动选择对应的代理方式。<br><img src="http://ww4.sinaimg.cn/large/698f7fe7gy1fepfqscytzj204o05ta9y.jpg" alt="此处输入图片的描述"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>由于虚拟机是一直运行着的，使用SwitchyOmega插件仅仅是切换浏览器连接的代理方式，这样便省去了在全局代理时每次都要重新连接vpn节点的时间。经过上文的描述，我们实际上是搭建了一台内网的vpn服务器，如果内网中有多台电脑或其他设备，只需安装类似SwitchyOmega的代理插件连接到这台vpn服务器，就可以实现科学上网了。</p>
 
       
     </div>
@@ -494,13 +513,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/java/" rel="tag"># java</a>
-          
-            <a href="/tags/spring-boot/" rel="tag"># spring-boot</a>
-          
-            <a href="/tags/druid/" rel="tag"># druid</a>
-          
-            <a href="/tags/mysql/" rel="tag"># mysql</a>
+            <a href="/tags/科学上网/" rel="tag"># 科学上网</a>
           
         </div>
       
@@ -513,18 +526,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/05/18/spring-boot exception/" rel="next" title="spring-boot 集中处理异常">
-                <i class="fa fa-chevron-left"></i> spring-boot 集中处理异常
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/01/19/spring-mvc cros/" rel="prev" title="spring-mvc 解决跨域问题">
-                spring-mvc 解决跨域问题 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/04/14/spring-cloud-service-release-and-consumption/" rel="prev" title="Spring Cloud 服务发布与消费">
+                Spring Cloud 服务发布与消费 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -714,7 +723,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开始"><span class="nav-number">2.</span> <span class="nav-text">开始</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#本文环境"><span class="nav-number">2.1.</span> <span class="nav-text">本文环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改application-properties文件"><span class="nav-number">2.2.</span> <span class="nav-text">修改application.properties文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#新建DataSourceConfig-java配置类"><span class="nav-number">2.3.</span> <span class="nav-text">新建DataSourceConfig.java配置类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#访问druid监控页面"><span class="nav-number">2.4.</span> <span class="nav-text">访问druid监控页面</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#缘由"><span class="nav-number">1.</span> <span class="nav-text">缘由</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现思路"><span class="nav-number">2.</span> <span class="nav-text">实现思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#环境"><span class="nav-number">3.</span> <span class="nav-text">环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#说明"><span class="nav-number">4.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现步骤"><span class="nav-number">5.</span> <span class="nav-text">实现步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装VPN软件"><span class="nav-number">5.1.</span> <span class="nav-text">安装VPN软件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Squid"><span class="nav-number">5.2.</span> <span class="nav-text">安装Squid</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置Squid"><span class="nav-number">5.3.</span> <span class="nav-text">配置Squid</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Chrome插件：SwitchyOmega"><span class="nav-number">5.4.</span> <span class="nav-text">安装Chrome插件：SwitchyOmega</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置代理方式"><span class="nav-number">5.5.</span> <span class="nav-text">配置代理方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开始使用"><span class="nav-number">5.6.</span> <span class="nav-text">开始使用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">6.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>

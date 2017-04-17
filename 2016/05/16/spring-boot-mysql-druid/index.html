@@ -73,7 +73,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo,NexT,Java" />
+  <meta name="keywords" content="java,spring-boot,druid,mysql," />
 
 
 
@@ -89,16 +89,20 @@
 
 
 
-<meta name="keywords">
+<meta name="description" content="概述spring-boot默认提供了数据库和数据库连接池，按照官方文档简单配置即可。若要自定义，需要修改一些配置，本文着重描述一下spring-boot如何集成mysql和阿里的druid数据库连接池。 开始本文环境 jdk：1.7 tomcat：7.0.55 spring-boot：1.2.3.RELEASE  修改application.properties文件修改spring-boot默认配">
+<meta name="keywords" content="java,spring-boot,druid,mysql">
 <meta property="og:type" content="article">
-<meta property="og:title" content="《淘宝技术这十年》：武侠和倒立文化的起源">
-<meta property="og:url" content="ciphermagic.win/2015/02/14/Taobao technology this decade/index.html">
+<meta property="og:title" content="spring-boot 集成Mysql和Druid连接池">
+<meta property="og:url" content="ciphermagic.win/2016/05/16/spring-boot-mysql-druid/index.html">
 <meta property="og:site_name" content="$t/^Cipher's Blog_?\n">
-<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1492063172740&di=2c17a4d111b6fe99741ea2890f8e2242&imgtype=0&src=http://www.ctps.cn/PhotoNet/Profiles/%25BA%25EC%25D0%25E4%25CC%25ED%25CF%25E3/2010129173107358.jpg">
-<meta property="og:updated_time" content="2017-04-17T03:42:16.075Z">
+<meta property="og:description" content="概述spring-boot默认提供了数据库和数据库连接池，按照官方文档简单配置即可。若要自定义，需要修改一些配置，本文着重描述一下spring-boot如何集成mysql和阿里的druid数据库连接池。 开始本文环境 jdk：1.7 tomcat：7.0.55 spring-boot：1.2.3.RELEASE  修改application.properties文件修改spring-boot默认配">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/6af06d97gw1es4xfagntaj20v40dgq36.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/6af06d97gw1es4xfb7e2aj218d0l7wjc.jpg">
+<meta property="og:updated_time" content="2017-04-17T03:45:21.382Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="《淘宝技术这十年》：武侠和倒立文化的起源">
-<meta name="twitter:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1492063172740&di=2c17a4d111b6fe99741ea2890f8e2242&imgtype=0&src=http://www.ctps.cn/PhotoNet/Profiles/%25BA%25EC%25D0%25E4%25CC%25ED%25CF%25E3/2010129173107358.jpg">
+<meta name="twitter:title" content="spring-boot 集成Mysql和Druid连接池">
+<meta name="twitter:description" content="概述spring-boot默认提供了数据库和数据库连接池，按照官方文档简单配置即可。若要自定义，需要修改一些配置，本文着重描述一下spring-boot如何集成mysql和阿里的druid数据库连接池。 开始本文环境 jdk：1.7 tomcat：7.0.55 spring-boot：1.2.3.RELEASE  修改application.properties文件修改spring-boot默认配">
+<meta name="twitter:image" content="http://ww3.sinaimg.cn/large/6af06d97gw1es4xfagntaj20v40dgq36.jpg">
 
 
 
@@ -126,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="ciphermagic.win/2015/02/14/Taobao technology this decade/"/>
+  <link rel="canonical" href="ciphermagic.win/2016/05/16/spring-boot-mysql-druid/"/>
 
 
 
 
 
-  <title> 《淘宝技术这十年》：武侠和倒立文化的起源 | $t/^Cipher's Blog_?\n </title>
+  <title> spring-boot 集成Mysql和Druid连接池 | $t/^Cipher's Blog_?\n </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -305,7 +309,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="ciphermagic.win/2015/02/14/Taobao technology this decade/">
+    <link itemprop="mainEntityOfPage" href="ciphermagic.win/2016/05/16/spring-boot-mysql-druid/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="cipher">
@@ -326,7 +330,7 @@
             
             
               
-                《淘宝技术这十年》：武侠和倒立文化的起源
+                spring-boot 集成Mysql和Druid连接池
               
             
           </h2>
@@ -341,8 +345,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-02-14T11:06:00+08:00">
-                2015-02-14
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-05-16T00:00:00+08:00">
+                2016-05-16
               </time>
             
 
@@ -364,8 +368,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/生活/" itemprop="url" rel="index">
-                    <span itemprop="name">生活</span>
+                  <a href="/categories/blog/" itemprop="url" rel="index">
+                    <span itemprop="name">blog</span>
                   </a>
                 </span>
 
@@ -382,7 +386,7 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a class="cloud-tie-join-count" href="/2015/02/14/Taobao technology this decade/#comments" itemprop="discussionUrl">
+                <a class="cloud-tie-join-count" href="/2016/05/16/spring-boot-mysql-druid/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count join-count" itemprop="commentCount"></span>
                 </a>
               </span>
@@ -391,7 +395,7 @@
 
           
           
-             <span id="/2015/02/14/Taobao technology this decade/" class="leancloud_visitors" data-flag-title="《淘宝技术这十年》：武侠和倒立文化的起源">
+             <span id="/2016/05/16/spring-boot-mysql-druid/" class="leancloud_visitors" data-flag-title="spring-boot 集成Mysql和Druid连接池">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -415,7 +419,7 @@
                    <span class="post-meta-item-text">字数统计</span>
                  
                    <span title="字数统计" }}">
-                     268 字  <!-- 我在这里加了一个单位上去 -->
+                     699 字  <!-- 我在这里加了一个单位上去 -->
                    </span>
              
              
@@ -429,7 +433,7 @@
                    <span class="post-meta-item-text">阅读时长</span>
                  
                    <span title="阅读时长" }}">
-                     1 分钟   <!-- 我在这里加了一个单位上去 -->
+                     4 分钟   <!-- 我在这里加了一个单位上去 -->
                    </span>
              
            </div>
@@ -448,12 +452,19 @@
       
 
       
-        <p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1492063172740&amp;di=2c17a4d111b6fe99741ea2890f8e2242&amp;imgtype=0&amp;src=http://www.ctps.cn/PhotoNet/Profiles/%25BA%25EC%25D0%25E4%25CC%25ED%25CF%25E3/2010129173107358.jpg" alt="此处输入图片的描述"></p>
-<a id="more"></a>
-<blockquote>
-<p>公司给这几个人租了房子，他们合住在湖畔花园旁边的小区里（男女分开），每天睁开眼就去公司，半夜两三点收工睡觉，响应用户的需求非常快。</p>
-</blockquote>
-<p>这让我想起我第一份面试的工作，也是在一个封闭的小区里，租了一个套房当做公司。当时让我感觉就是吃睡都在那里，没日没夜的工作，但初出茅庐的我感觉这也是一个锻炼的机会，可是我最后没有选择它。现在想想，对于当时初入职场的我，在这种小公司也许能锻炼很多技术，但对于整个软件开发的规范模式、流程的认识不会有很好的帮助，也就不能从大体上去了解软件开发这个行业，我想这应该比较适合有一定经验的人去工作，也不知道他们招初级程序员的初衷是便宜劳动力，还是真的为了培养人才。</p>
+        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>spring-boot默认提供了数据库和数据库连接池，按照<a href="http://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#boot-features-connect-to-production-database" target="_blank" rel="external">官方文档</a>简单配置即可。若要自定义，需要修改一些配置，本文着重描述一下spring-boot如何集成mysql和阿里的<a href="https://github.com/alibaba/druid" target="_blank" rel="external">druid</a>数据库连接池。</p>
+<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><h3 id="本文环境"><a href="#本文环境" class="headerlink" title="本文环境"></a>本文环境</h3><ul>
+<li>jdk：1.7</li>
+<li>tomcat：7.0.55</li>
+<li>spring-boot：1.2.3.RELEASE</li>
+</ul>
+<h3 id="修改application-properties文件"><a href="#修改application-properties文件" class="headerlink" title="修改application.properties文件"></a>修改application.properties文件</h3><p>修改spring-boot默认配置文件<code>application.properties</code>，加入一下内容(根据实际情况修改)：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"># 数据库配置</div><div class="line">spring.mysql.datasource.driverClassName=com.mysql.jdbc.Driver</div><div class="line">spring.mysql.datasource.url=jdbc:mysql://127.0.0.1:3306/message?useUnicode=true&amp;characterEncoding=utf8</div><div class="line">spring.mysql.datasource.username=root</div><div class="line">spring.mysql.datasource.password=</div><div class="line"># 连接池配置</div><div class="line">spring.mysql.datasource.filters=stat</div><div class="line">spring.mysql.datasource.maxActive=5</div><div class="line">spring.mysql.datasource.initialSize=1</div><div class="line">spring.mysql.datasource.maxWait=60000</div><div class="line">spring.mysql.datasource.minIdle=1</div><div class="line">spring.mysql.datasource.maxIdle=3</div><div class="line">spring.mysql.datasource.timeBetweenEvictionRunsMillis=60000</div><div class="line">spring.mysql.datasource.minEvictableIdleTimeMillis=300000</div><div class="line">spring.mysql.datasource.validationQuery=SELECT 'x'</div><div class="line">spring.mysql.datasource.testWhileIdle=true</div><div class="line">spring.mysql.datasource.testOnBorrow=false</div><div class="line">spring.mysql.datasource.testOnReturn=false</div><div class="line">spring.mysql.datasource.maxOpenPreparedStatements=10</div><div class="line">spring.mysql.datasource.removeAbandoned=true</div><div class="line">spring.mysql.datasource.removeAbandonedTimeout=1800</div><div class="line">spring.mysql.datasource.logAbandoned=true</div></pre></td></tr></table></figure></p>
+<p>druid数据库连接池的具体配置请参考官方文档并根据项目的实际情况修改。</p>
+<h3 id="新建DataSourceConfig-java配置类"><a href="#新建DataSourceConfig-java配置类" class="headerlink" title="新建DataSourceConfig.java配置类"></a>新建<code>DataSourceConfig.java</code>配置类</h3><p>为数据库配置单独新建一个类，内容如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Configuration</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DataSourceConfig</span> </span>&#123;</div><div class="line">    </div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.driverClassName&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> String driverClassName;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.url&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> String url;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.username&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> String username;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.password&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> String password;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.filters&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> String filters;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.maxActive&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> <span class="keyword">int</span> maxActive;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.initialSize&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> <span class="keyword">int</span> initialSize;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.maxWait&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> <span class="keyword">long</span> maxWait;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.minIdle&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> <span class="keyword">int</span> minIdle;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.timeBetweenEvictionRunsMillis&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> <span class="keyword">long</span> timeBetweenEvictionRunsMillis;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.minEvictableIdleTimeMillis&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> <span class="keyword">long</span> minEvictableIdleTimeMillis;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.validationQuery&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> String validationQuery;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.testWhileIdle&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> <span class="keyword">boolean</span> testWhileIdle;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.testOnBorrow&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> <span class="keyword">boolean</span> testOnBorrow;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.testOnReturn&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> <span class="keyword">boolean</span> testOnReturn;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.removeAbandoned&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> <span class="keyword">boolean</span> removeAbandoned;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.logAbandoned&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> <span class="keyword">boolean</span> logAbandoned;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.maxOpenPreparedStatements&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> <span class="keyword">int</span> maxOpenPreparedStatements;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;spring.mysql.datasource.removeAbandonedTimeout&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> <span class="keyword">int</span> removeAbandonedTimeout;</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">     * druid 数据库连接池</div><div class="line">     * <span class="doctag">@return</span></div><div class="line">     */</div><div class="line">    <span class="meta">@Bean</span>(name = <span class="string">"mysqlDS"</span>)</div><div class="line">    <span class="meta">@Qualifier</span>(<span class="string">"mysqlDS"</span>)</div><div class="line">    <span class="meta">@Primary</span></div><div class="line">    <span class="function"><span class="keyword">public</span> DataSource <span class="title">dataSource</span><span class="params">()</span> </span>&#123;</div><div class="line">        DruidDataSource dataSource = <span class="keyword">new</span> DruidDataSource();</div><div class="line">        dataSource.setUrl(url);</div><div class="line">        dataSource.setUsername(username);</div><div class="line">        dataSource.setPassword(password);</div><div class="line">        dataSource.setDriverClassName(driverClassName);</div><div class="line">        dataSource.setMaxActive(maxActive);</div><div class="line">        dataSource.setInitialSize(initialSize);</div><div class="line">        dataSource.setMaxWait(maxWait);</div><div class="line">        dataSource.setMinIdle(minIdle);</div><div class="line">        dataSource.setTimeBetweenEvictionRunsMillis(timeBetweenEvictionRunsMillis);</div><div class="line">        dataSource.setMinEvictableIdleTimeMillis(minEvictableIdleTimeMillis);</div><div class="line">        dataSource.setValidationQuery(validationQuery);</div><div class="line">        dataSource.setTestWhileIdle(testWhileIdle);</div><div class="line">        dataSource.setTestOnBorrow(testOnBorrow);</div><div class="line">        dataSource.setTestOnReturn(testOnReturn);</div><div class="line">        dataSource.setMaxOpenPreparedStatements(maxOpenPreparedStatements);</div><div class="line">        dataSource.setRemoveAbandoned(removeAbandoned);</div><div class="line">        dataSource.setRemoveAbandonedTimeout(removeAbandonedTimeout);</div><div class="line">        dataSource.setLogAbandoned(logAbandoned);</div><div class="line">        <span class="keyword">try</span> &#123;</div><div class="line">            dataSource.setFilters(filters);</div><div class="line">        &#125; <span class="keyword">catch</span> (SQLException e) &#123;</div><div class="line">            <span class="keyword">return</span> dataSource;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> dataSource;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="comment">/**</span></div><div class="line">     * druid 监控页面</div><div class="line">     * <span class="doctag">@return</span></div><div class="line">     */</div><div class="line">    <span class="meta">@Bean</span></div><div class="line">    <span class="function"><span class="keyword">public</span> ServletRegistrationBean <span class="title">druidServletBean</span><span class="params">()</span> </span>&#123;</div><div class="line">        ServletRegistrationBean registrationBean = <span class="keyword">new</span> ServletRegistrationBean();</div><div class="line">        StatViewServlet statViewServlet = <span class="keyword">new</span> StatViewServlet();</div><div class="line">        registrationBean.addInitParameter(<span class="string">"loginUsername"</span>, <span class="string">"admin"</span>);</div><div class="line">        registrationBean.addInitParameter(<span class="string">"loginPassword"</span>, <span class="string">"admin"</span>);</div><div class="line">        registrationBean.addInitParameter(<span class="string">"resetEnable"</span>, <span class="string">"true"</span>);</div><div class="line">        registrationBean.addUrlMappings(<span class="string">"/druid/*"</span>);</div><div class="line">        registrationBean.setServlet(statViewServlet);</div><div class="line">        <span class="keyword">return</span> registrationBean;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="comment">/**</span></div><div class="line">     * druid 资源监控过滤</div><div class="line">     * <span class="doctag">@return</span></div><div class="line">     */</div><div class="line">    <span class="meta">@Bean</span></div><div class="line">    <span class="function"><span class="keyword">public</span> FilterRegistrationBean <span class="title">druidWebStatFilter</span><span class="params">()</span> </span>&#123;</div><div class="line">        FilterRegistrationBean registrationBean = <span class="keyword">new</span> FilterRegistrationBean();</div><div class="line">        WebStatFilter webStatFilter = <span class="keyword">new</span> WebStatFilter();</div><div class="line">        registrationBean.addInitParameter(<span class="string">"sessionStatMaxCount"</span>, <span class="string">"2000"</span>);</div><div class="line">        registrationBean.addInitParameter(<span class="string">"sessionStatEnable"</span>, <span class="string">"true"</span>);</div><div class="line">        registrationBean.addInitParameter(<span class="string">"principalSessionName"</span>, <span class="string">"session_user_key"</span>);</div><div class="line">        registrationBean.addInitParameter(<span class="string">"profileEnable"</span>, <span class="string">"true"</span>);</div><div class="line">        registrationBean.addInitParameter(<span class="string">"exclusions"</span>, <span class="string">"*.js,*.gif,*.jpg,*.png,*.css,*.ico,*.jsp,/druid/*"</span>);</div><div class="line">        registrationBean.setFilter(webStatFilter);</div><div class="line">        registrationBean.addUrlPatterns(<span class="string">"/*"</span>);</div><div class="line">        <span class="keyword">return</span> registrationBean;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>配置了druid监控页面的登录页，用户名密码为admin。</p>
+<h3 id="访问druid监控页面"><a href="#访问druid监控页面" class="headerlink" title="访问druid监控页面"></a>访问druid监控页面</h3><p>启动应用，我tomcat的端口是8089，没有设置项目名称，因此我访问的是<code>http://localhost:8089/druid/login.html</code>。一般而言，druid监控登录页面的入口为：<code>http://{IP地址}:{端口}/{项目名}/druid/login.html</code></p>
+<p><img src="http://ww3.sinaimg.cn/large/6af06d97gw1es4xfagntaj20v40dgq36.jpg" alt=""></p>
+<p><img src="http://ww3.sinaimg.cn/large/6af06d97gw1es4xfb7e2aj218d0l7wjc.jpg" alt=""></p>
 
       
     </div>
@@ -481,6 +492,18 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/java/" rel="tag"># java</a>
+          
+            <a href="/tags/spring-boot/" rel="tag"># spring-boot</a>
+          
+            <a href="/tags/druid/" rel="tag"># druid</a>
+          
+            <a href="/tags/mysql/" rel="tag"># mysql</a>
+          
+        </div>
+      
 
       
         
@@ -490,8 +513,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/06/08/JavaSimon/" rel="next" title="JavaSimon">
-                <i class="fa fa-chevron-left"></i> JavaSimon
+              <a href="/2016/05/18/spring-boot-exception/" rel="next" title="spring-boot 集中处理异常">
+                <i class="fa fa-chevron-left"></i> spring-boot 集中处理异常
               </a>
             
           </div>
@@ -500,8 +523,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2014/11/13/Maven/" rel="prev" title="Maven初探">
-                Maven初探 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/01/19/spring-mvc-cors/" rel="prev" title="spring-mvc 解决跨域问题">
+                spring-mvc 解决跨域问题 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -589,8 +612,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/cipher.jpeg"
@@ -672,6 +704,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开始"><span class="nav-number">2.</span> <span class="nav-text">开始</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#本文环境"><span class="nav-number">2.1.</span> <span class="nav-text">本文环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改application-properties文件"><span class="nav-number">2.2.</span> <span class="nav-text">修改application.properties文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#新建DataSourceConfig-java配置类"><span class="nav-number">2.3.</span> <span class="nav-text">新建DataSourceConfig.java配置类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#访问druid监控页面"><span class="nav-number">2.4.</span> <span class="nav-text">访问druid监控页面</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

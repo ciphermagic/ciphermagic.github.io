@@ -73,7 +73,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="java,spring-boot," />
+  <meta name="keywords" content="sonar," />
 
 
 
@@ -89,17 +89,23 @@
 
 
 
-<meta name="description" content="Spring Boot提倡以JavaConfig的方式进行配置，就是使用注释来描述Bean配置的组件，从而取代让许多开发者诟病已久的xml配置方式。Spring Boot官方也提供了很多相关的JavaConfig例子，例如数据库配置，消息队列配置等。本文将提供一个JavaConfig配置Dubbo的例子。">
-<meta name="keywords" content="java,spring-boot">
+<meta name="description" content="缘由项目中使用sonar质量分析，很多代码提示：Replace all tab characters in this file by sequences of white-spaces.  Tabulation characters should not be usedDevelopers should not need to configure the tab width of their te">
+<meta name="keywords" content="sonar">
 <meta property="og:type" content="article">
-<meta property="og:title" content="spring-boot 使用JavaConfig方式配置Dubbo">
-<meta property="og:url" content="ciphermagic.win/2017/04/14/spring-boot JavaConfig Dubbo/index.html">
+<meta property="og:title" content="sonar质量分析 Tabulation characters should not be used 原因与解决">
+<meta property="og:url" content="ciphermagic.win/2015/12/22/sonar-issue/index.html">
 <meta property="og:site_name" content="$t/^Cipher's Blog_?\n">
-<meta property="og:description" content="Spring Boot提倡以JavaConfig的方式进行配置，就是使用注释来描述Bean配置的组件，从而取代让许多开发者诟病已久的xml配置方式。Spring Boot官方也提供了很多相关的JavaConfig例子，例如数据库配置，消息队列配置等。本文将提供一个JavaConfig配置Dubbo的例子。">
-<meta property="og:updated_time" content="2017-04-14T03:14:56.697Z">
+<meta property="og:description" content="缘由项目中使用sonar质量分析，很多代码提示：Replace all tab characters in this file by sequences of white-spaces.  Tabulation characters should not be usedDevelopers should not need to configure the tab width of their te">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/6af06d97gw1ergh3aoyd8j20h30cadhv.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/6af06d97gw1ergh3bdz3qj20j00cb40g.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/6af06d97gw1ergh3c1rugj20ss06q75t.jpg">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/6af06d97gw1ergh3crmmij20jn0ilad1.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/6af06d97gw1ergh3d9na3j20as067gly.jpg">
+<meta property="og:updated_time" content="2017-04-17T03:45:05.591Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="spring-boot 使用JavaConfig方式配置Dubbo">
-<meta name="twitter:description" content="Spring Boot提倡以JavaConfig的方式进行配置，就是使用注释来描述Bean配置的组件，从而取代让许多开发者诟病已久的xml配置方式。Spring Boot官方也提供了很多相关的JavaConfig例子，例如数据库配置，消息队列配置等。本文将提供一个JavaConfig配置Dubbo的例子。">
+<meta name="twitter:title" content="sonar质量分析 Tabulation characters should not be used 原因与解决">
+<meta name="twitter:description" content="缘由项目中使用sonar质量分析，很多代码提示：Replace all tab characters in this file by sequences of white-spaces.  Tabulation characters should not be usedDevelopers should not need to configure the tab width of their te">
+<meta name="twitter:image" content="http://ww2.sinaimg.cn/large/6af06d97gw1ergh3aoyd8j20h30cadhv.jpg">
 
 
 
@@ -127,13 +133,13 @@
 
 
 
-  <link rel="canonical" href="ciphermagic.win/2017/04/14/spring-boot JavaConfig Dubbo/"/>
+  <link rel="canonical" href="ciphermagic.win/2015/12/22/sonar-issue/"/>
 
 
 
 
 
-  <title> spring-boot 使用JavaConfig方式配置Dubbo | $t/^Cipher's Blog_?\n </title>
+  <title> sonar质量分析 Tabulation characters should not be used 原因与解决 | $t/^Cipher's Blog_?\n </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -306,7 +312,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="ciphermagic.win/2017/04/14/spring-boot JavaConfig Dubbo/">
+    <link itemprop="mainEntityOfPage" href="ciphermagic.win/2015/12/22/sonar-issue/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="cipher">
@@ -327,7 +333,7 @@
             
             
               
-                spring-boot 使用JavaConfig方式配置Dubbo
+                sonar质量分析 Tabulation characters should not be used 原因与解决
               
             
           </h2>
@@ -342,8 +348,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-14T10:49:00+08:00">
-                2017-04-14
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-12-22T00:00:00+08:00">
+                2015-12-22
               </time>
             
 
@@ -383,7 +389,7 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a class="cloud-tie-join-count" href="/2017/04/14/spring-boot JavaConfig Dubbo/#comments" itemprop="discussionUrl">
+                <a class="cloud-tie-join-count" href="/2015/12/22/sonar-issue/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count join-count" itemprop="commentCount"></span>
                 </a>
               </span>
@@ -392,7 +398,7 @@
 
           
           
-             <span id="/2017/04/14/spring-boot JavaConfig Dubbo/" class="leancloud_visitors" data-flag-title="spring-boot 使用JavaConfig方式配置Dubbo">
+             <span id="/2015/12/22/sonar-issue/" class="leancloud_visitors" data-flag-title="sonar质量分析 Tabulation characters should not be used 原因与解决">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -416,7 +422,7 @@
                    <span class="post-meta-item-text">字数统计</span>
                  
                    <span title="字数统计" }}">
-                     433 字  <!-- 我在这里加了一个单位上去 -->
+                     342 字  <!-- 我在这里加了一个单位上去 -->
                    </span>
              
              
@@ -430,7 +436,7 @@
                    <span class="post-meta-item-text">阅读时长</span>
                  
                    <span title="阅读时长" }}">
-                     2 分钟   <!-- 我在这里加了一个单位上去 -->
+                     1 分钟   <!-- 我在这里加了一个单位上去 -->
                    </span>
              
            </div>
@@ -449,9 +455,26 @@
       
 
       
-        <p>Spring Boot提倡以JavaConfig的方式进行配置，就是使用注释来描述Bean配置的组件，从而取代让许多开发者诟病已久的xml配置方式。Spring Boot官方也提供了很多相关的JavaConfig例子，例如数据库配置，消息队列配置等。本文将提供一个JavaConfig配置Dubbo的例子。</p>
-<a id="more"></a>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Value;</div><div class="line"><span class="keyword">import</span> org.springframework.context.annotation.Bean;</div><div class="line"><span class="keyword">import</span> org.springframework.context.annotation.Configuration;</div><div class="line"><span class="keyword">import</span> com.alibaba.dubbo.config.ApplicationConfig;</div><div class="line"><span class="keyword">import</span> com.alibaba.dubbo.config.MonitorConfig;</div><div class="line"><span class="keyword">import</span> com.alibaba.dubbo.config.ProtocolConfig;</div><div class="line"><span class="keyword">import</span> com.alibaba.dubbo.config.ProviderConfig;</div><div class="line"><span class="keyword">import</span> com.alibaba.dubbo.config.RegistryConfig;</div><div class="line"><span class="keyword">import</span> com.alibaba.dubbo.config.spring.AnnotationBean;</div><div class="line"></div><div class="line"><span class="meta">@Configuration</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DubboConfig</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="comment">// 应用名称</span></div><div class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String APPLICATION_NAME = <span class="string">"spring-boot-demo"</span>;</div><div class="line">	<span class="comment">// 扫描service包路径</span></div><div class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String ANNOTATION_PACKAGE = <span class="string">"com.cipher.springboot.service"</span>;</div><div class="line">    </div><div class="line">    <span class="comment">// 以下信息将从配置文件application.properties中读取                          </span></div><div class="line">	<span class="meta">@Value</span>(<span class="string">"$&#123;dubbo_registry_address&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> String registryAddress;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;dubbo_port&#125;"</span>)</div><div class="line">	<span class="keyword">private</span> <span class="keyword">int</span> dubboPort;</div><div class="line">	<span class="meta">@Value</span>(<span class="string">"$&#123;dubbo_register&#125;"</span>)</div><div class="line">	<span class="keyword">private</span> <span class="keyword">boolean</span> dubboRegister;</div><div class="line">	</div><div class="line">	<span class="comment">/**</span></div><div class="line">	 * 提供方应用信息，用于计算依赖关系</div><div class="line">	 * </div><div class="line">	 * <span class="doctag">@return</span></div><div class="line">	 */</div><div class="line">	<span class="meta">@Bean</span></div><div class="line">	<span class="function"><span class="keyword">public</span> ApplicationConfig <span class="title">applicationConfig</span><span class="params">()</span> </span>&#123;</div><div class="line">		ApplicationConfig applicationConfig = <span class="keyword">new</span> ApplicationConfig();</div><div class="line">		applicationConfig.setName(APPLICATION_NAME);</div><div class="line">		<span class="keyword">return</span> applicationConfig;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">/**</span></div><div class="line">	 * 与&lt;dubbo:annotation/&gt;相当.</div><div class="line">     * 提供方扫描带有<span class="doctag">@com</span>.alibaba.dubbo.config.annotation.</div><div class="line">	 * Service的注解类</div><div class="line">	 * </div><div class="line">	 * <span class="doctag">@return</span></div><div class="line">	 */</div><div class="line">	<span class="meta">@Bean</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> AnnotationBean <span class="title">annotationBean</span><span class="params">()</span> </span>&#123;</div><div class="line">		AnnotationBean annotationBean = <span class="keyword">new</span> AnnotationBean();</div><div class="line">		annotationBean.setPackage(ANNOTATION_PACKAGE);</div><div class="line">		<span class="keyword">return</span> annotationBean;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">/**</span></div><div class="line">	 * 使用zookeeper注册中心暴露服务地址</div><div class="line">	 * </div><div class="line">	 * <span class="doctag">@return</span></div><div class="line">	 */</div><div class="line">	<span class="meta">@Bean</span></div><div class="line">	<span class="function"><span class="keyword">public</span> RegistryConfig <span class="title">registryConfig</span><span class="params">()</span> </span>&#123;</div><div class="line">		RegistryConfig registryConfig = <span class="keyword">new</span> RegistryConfig();</div><div class="line">		registryConfig.setAddress(registryAddress);</div><div class="line">		registryConfig.setRegister(dubboRegister);</div><div class="line">		<span class="keyword">return</span> registryConfig;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">/**</span></div><div class="line">	 * 用dubbo协议在指定端口暴露服务</div><div class="line">	 * </div><div class="line">	 * <span class="doctag">@return</span></div><div class="line">	 */</div><div class="line">	<span class="meta">@Bean</span></div><div class="line">	<span class="function"><span class="keyword">public</span> ProtocolConfig <span class="title">protocolConfig</span><span class="params">()</span> </span>&#123;</div><div class="line">		ProtocolConfig protocolConfig = <span class="keyword">new</span> ProtocolConfig(<span class="string">"dubbo"</span>, dubboPort);</div><div class="line">		<span class="comment">// 默认为hessian2,但不支持无参构造函数类,而这种方式的效率很低</span></div><div class="line">		protocolConfig.setSerialization(<span class="string">"java"</span>);</div><div class="line">		<span class="keyword">return</span> protocolConfig;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">/**</span></div><div class="line">	 * 监控中心配置，protocol="registry"，表示从注册中心发现监控中心地址</div><div class="line">	 * </div><div class="line">	 * <span class="doctag">@return</span></div><div class="line">	 */</div><div class="line">	<span class="meta">@Bean</span></div><div class="line">	<span class="function"><span class="keyword">public</span> MonitorConfig <span class="title">monitorConfig</span><span class="params">()</span> </span>&#123;</div><div class="line">		MonitorConfig monitorConfig = <span class="keyword">new</span> MonitorConfig();</div><div class="line">		monitorConfig.setProtocol(<span class="string">"registry"</span>);</div><div class="line">		<span class="keyword">return</span> monitorConfig;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">/**</span></div><div class="line">	 * 当ProtocolConfig和ServiceConfig某属性没有配置时,采用此缺省值</div><div class="line">	 * </div><div class="line">	 * <span class="doctag">@return</span></div><div class="line">	 */</div><div class="line">	<span class="meta">@Bean</span></div><div class="line">	<span class="function"><span class="keyword">public</span> ProviderConfig <span class="title">providerConfig</span><span class="params">()</span> </span>&#123;</div><div class="line">		ProviderConfig providerConfig = <span class="keyword">new</span> ProviderConfig();</div><div class="line">		providerConfig.setTimeout(<span class="number">10000</span>);</div><div class="line">		providerConfig.setThreadpool(<span class="string">"fixed"</span>);</div><div class="line">		providerConfig.setThreads(<span class="number">100</span>);</div><div class="line">		providerConfig.setAccepts(<span class="number">1000</span>);</div><div class="line">		<span class="keyword">return</span> providerConfig;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        <h2 id="缘由"><a href="#缘由" class="headerlink" title="缘由"></a>缘由</h2><p>项目中使用sonar质量分析，很多代码提示：Replace all tab characters in this file by sequences of white-spaces.</p>
+<blockquote>
+<h3 id="Tabulation-characters-should-not-be-used"><a href="#Tabulation-characters-should-not-be-used" class="headerlink" title="Tabulation characters should not be used"></a>Tabulation characters should not be used</h3><p>Developers should not need to configure the tab width of their text editors in order to be able to read source code. So the use of tabulation character must be banned. </p>
+</blockquote>
+<p>这是因为编辑器不一样默认的tab的宽度或在不同系统下显示的效果不同，考虑到代码跨平台的可读性，应该将tab统一换成空格。</p>
+<h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>将编辑器中的tab换成空格，以Eclipse为例。</p>
+<h3 id="设置Eclipse中的tab键为4个空格"><a href="#设置Eclipse中的tab键为4个空格" class="headerlink" title="设置Eclipse中的tab键为4个空格"></a>设置Eclipse中的tab键为4个空格</h3><h4 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h4><p>点击 window-&gt;preference-,依次选择 General-&gt;Editors-&gt;Text Editors,选中右侧的 insert space for tabs;如下图所示，保存，第一步完成；</p>
+<p><img src="http://ww2.sinaimg.cn/large/6af06d97gw1ergh3aoyd8j20h30cadhv.jpg" alt=""></p>
+<h4 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h4><p>点击 window-&gt;preference-,依次选择 java（或C++）-&gt;code style -&gt;formatter,点击右侧的editor，选则左侧 tab policy的值为spaces only,确定，应用保存即可，如下图所示：</p>
+<p><img src="http://ww3.sinaimg.cn/large/6af06d97gw1ergh3bdz3qj20j00cb40g.jpg" alt=""></p>
+<p><img src="http://ww3.sinaimg.cn/large/6af06d97gw1ergh3c1rugj20ss06q75t.jpg" alt=""></p>
+<p>若出现应用Apply按钮为灰色的情况，需要回到上一步，点击new按钮，根据当前的样式重新生成一个新的样式并保存，重复第二步，编辑该样式即可，如下图： </p>
+<p><img src="http://ww4.sinaimg.cn/large/6af06d97gw1ergh3crmmij20jn0ilad1.jpg" alt=""></p>
+<p><img src="http://ww2.sinaimg.cn/large/6af06d97gw1ergh3d9na3j20as067gly.jpg" alt=""></p>
+<p>注意编辑完要选择新建的这个样式。</p>
+<blockquote>
+<p>参考：<br><a href="http://www.oschina.net/question/1772009_166774" target="_blank" rel="external">sonar质量分析不让用tab，说要使用空格，大家怎么看？</a>，<br><a href="http://my.oschina.net/xunxun10/blog/110074" target="_blank" rel="external">设置Eclipse中的tab键为4个空格的完整方法</a></p>
+</blockquote>
+<p>-END-</p>
+
       
     </div>
 
@@ -480,9 +503,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/java/" rel="tag"># java</a>
-          
-            <a href="/tags/spring-boot/" rel="tag"># spring-boot</a>
+            <a href="/tags/sonar/" rel="tag"># sonar</a>
           
         </div>
       
@@ -495,8 +516,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/14/spring-cloud Service release and consumption/" rel="next" title="Spring Cloud 服务发布与消费">
-                <i class="fa fa-chevron-left"></i> Spring Cloud 服务发布与消费
+              <a href="/2016/01/19/spring-mvc-cors/" rel="next" title="spring-mvc 解决跨域问题">
+                <i class="fa fa-chevron-left"></i> spring-mvc 解决跨域问题
               </a>
             
           </div>
@@ -505,8 +526,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/04/13/UML/" rel="prev" title="UML类图">
-                UML类图 <i class="fa fa-chevron-right"></i>
+              <a href="/2015/09/26/mybatis-redis/" rel="prev" title="Mybatis整合redis实现缓存">
+                Mybatis整合redis实现缓存 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -594,8 +615,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/cipher.jpeg"
@@ -677,6 +707,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#缘由"><span class="nav-number">1.</span> <span class="nav-text">缘由</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Tabulation-characters-should-not-be-used"><span class="nav-number">1.1.</span> <span class="nav-text">Tabulation characters should not be used</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决"><span class="nav-number">2.</span> <span class="nav-text">解决</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#设置Eclipse中的tab键为4个空格"><span class="nav-number">2.1.</span> <span class="nav-text">设置Eclipse中的tab键为4个空格</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#第一步"><span class="nav-number">2.1.1.</span> <span class="nav-text">第一步</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第二步"><span class="nav-number">2.1.2.</span> <span class="nav-text">第二步</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

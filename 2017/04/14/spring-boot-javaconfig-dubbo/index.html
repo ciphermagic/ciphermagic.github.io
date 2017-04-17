@@ -73,7 +73,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="科学上网," />
+  <meta name="keywords" content="java,spring-boot," />
 
 
 
@@ -89,25 +89,17 @@
 
 
 
-<meta name="description" content="缘由笔者一直使用ExpressVPN作为梯子，ExpressVPN是国外的收费VPN工具，最近官网不是很稳定，可能要翻墙才能登上。ExpressVPN有windows下的管理工具，一键链接，方便快捷，且速度在同类工具中算得上突出，但是美中不足的是，跟很多VPN工具一样，ExpressVPN只支持全局代理，没有提供浏览器插件之类的东西。然而在平常的使用当中只是上google等一些国外网站才需要vpn">
-<meta name="keywords" content="科学上网">
+<meta name="description" content="Spring Boot提倡以JavaConfig的方式进行配置，就是使用注释来描述Bean配置的组件，从而取代让许多开发者诟病已久的xml配置方式。Spring Boot官方也提供了很多相关的JavaConfig例子，例如数据库配置，消息队列配置等。本文将提供一个JavaConfig配置Dubbo的例子。">
+<meta name="keywords" content="java,spring-boot">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用虚拟机实现灵活的科学上网">
-<meta property="og:url" content="ciphermagic.win/2017/04/17/scientific Internet access/index.html">
+<meta property="og:title" content="spring-boot 使用JavaConfig方式配置Dubbo">
+<meta property="og:url" content="ciphermagic.win/2017/04/14/spring-boot-javaconfig-dubbo/index.html">
 <meta property="og:site_name" content="$t/^Cipher's Blog_?\n">
-<meta property="og:description" content="缘由笔者一直使用ExpressVPN作为梯子，ExpressVPN是国外的收费VPN工具，最近官网不是很稳定，可能要翻墙才能登上。ExpressVPN有windows下的管理工具，一键链接，方便快捷，且速度在同类工具中算得上突出，但是美中不足的是，跟很多VPN工具一样，ExpressVPN只支持全局代理，没有提供浏览器插件之类的东西。然而在平常的使用当中只是上google等一些国外网站才需要vpn">
-<meta property="og:image" content="http://ww4.sinaimg.cn/large/698f7fe7gy1fepfqray3pj20am0go75q.jpg">
-<meta property="og:image" content="https://2y0ge4lrxiko1n2r1be9ibxk-wpengine.netdna-ssl.com/wp-content/uploads/2016/03/installer-command.png">
-<meta property="og:image" content="https://2y0ge4lrxiko1n2r1be9ibxk-wpengine.netdna-ssl.com/wp-content/uploads/2016/03/activate-expressvpn.png">
-<meta property="og:image" content="https://2y0ge4lrxiko1n2r1be9ibxk-wpengine.netdna-ssl.com/wp-content/uploads/2016/03/sharing-information.png">
-<meta property="og:image" content="http://ww4.sinaimg.cn/large/698f7fe7gy1fepfqrf9rmj20mx05a3ym.jpg">
-<meta property="og:image" content="http://ww4.sinaimg.cn/large/698f7fe7gy1fepfqrl54yj218g0leab5.jpg">
-<meta property="og:image" content="http://ww4.sinaimg.cn/large/698f7fe7gy1fepfqscytzj204o05ta9y.jpg">
-<meta property="og:updated_time" content="2017-04-17T03:37:49.861Z">
+<meta property="og:description" content="Spring Boot提倡以JavaConfig的方式进行配置，就是使用注释来描述Bean配置的组件，从而取代让许多开发者诟病已久的xml配置方式。Spring Boot官方也提供了很多相关的JavaConfig例子，例如数据库配置，消息队列配置等。本文将提供一个JavaConfig配置Dubbo的例子。">
+<meta property="og:updated_time" content="2017-04-14T03:14:56.697Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用虚拟机实现灵活的科学上网">
-<meta name="twitter:description" content="缘由笔者一直使用ExpressVPN作为梯子，ExpressVPN是国外的收费VPN工具，最近官网不是很稳定，可能要翻墙才能登上。ExpressVPN有windows下的管理工具，一键链接，方便快捷，且速度在同类工具中算得上突出，但是美中不足的是，跟很多VPN工具一样，ExpressVPN只支持全局代理，没有提供浏览器插件之类的东西。然而在平常的使用当中只是上google等一些国外网站才需要vpn">
-<meta name="twitter:image" content="http://ww4.sinaimg.cn/large/698f7fe7gy1fepfqray3pj20am0go75q.jpg">
+<meta name="twitter:title" content="spring-boot 使用JavaConfig方式配置Dubbo">
+<meta name="twitter:description" content="Spring Boot提倡以JavaConfig的方式进行配置，就是使用注释来描述Bean配置的组件，从而取代让许多开发者诟病已久的xml配置方式。Spring Boot官方也提供了很多相关的JavaConfig例子，例如数据库配置，消息队列配置等。本文将提供一个JavaConfig配置Dubbo的例子。">
 
 
 
@@ -135,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="ciphermagic.win/2017/04/17/scientific Internet access/"/>
+  <link rel="canonical" href="ciphermagic.win/2017/04/14/spring-boot-javaconfig-dubbo/"/>
 
 
 
 
 
-  <title> 使用虚拟机实现灵活的科学上网 | $t/^Cipher's Blog_?\n </title>
+  <title> spring-boot 使用JavaConfig方式配置Dubbo | $t/^Cipher's Blog_?\n </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -314,7 +306,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="ciphermagic.win/2017/04/17/scientific Internet access/">
+    <link itemprop="mainEntityOfPage" href="ciphermagic.win/2017/04/14/spring-boot-javaconfig-dubbo/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="cipher">
@@ -335,7 +327,7 @@
             
             
               
-                使用虚拟机实现灵活的科学上网
+                spring-boot 使用JavaConfig方式配置Dubbo
               
             
           </h2>
@@ -350,8 +342,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-17T11:37:00+08:00">
-                2017-04-17
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-14T10:49:00+08:00">
+                2017-04-14
               </time>
             
 
@@ -391,7 +383,7 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a class="cloud-tie-join-count" href="/2017/04/17/scientific Internet access/#comments" itemprop="discussionUrl">
+                <a class="cloud-tie-join-count" href="/2017/04/14/spring-boot-javaconfig-dubbo/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count join-count" itemprop="commentCount"></span>
                 </a>
               </span>
@@ -400,7 +392,7 @@
 
           
           
-             <span id="/2017/04/17/scientific Internet access/" class="leancloud_visitors" data-flag-title="使用虚拟机实现灵活的科学上网">
+             <span id="/2017/04/14/spring-boot-javaconfig-dubbo/" class="leancloud_visitors" data-flag-title="spring-boot 使用JavaConfig方式配置Dubbo">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -424,7 +416,7 @@
                    <span class="post-meta-item-text">字数统计</span>
                  
                    <span title="字数统计" }}">
-                     937 字  <!-- 我在这里加了一个单位上去 -->
+                     433 字  <!-- 我在这里加了一个单位上去 -->
                    </span>
              
              
@@ -438,7 +430,7 @@
                    <span class="post-meta-item-text">阅读时长</span>
                  
                    <span title="阅读时长" }}">
-                     3 分钟   <!-- 我在这里加了一个单位上去 -->
+                     2 分钟   <!-- 我在这里加了一个单位上去 -->
                    </span>
              
            </div>
@@ -457,34 +449,9 @@
       
 
       
-        <h2 id="缘由"><a href="#缘由" class="headerlink" title="缘由"></a>缘由</h2><p>笔者一直使用<a href="https://www.expressvpn.com/" target="_blank" rel="external">ExpressVPN</a>作为梯子，ExpressVPN是国外的收费VPN工具，最近官网不是很稳定，可能要翻墙才能登上。ExpressVPN有windows下的管理工具，一键链接，方便快捷，且速度在同类工具中算得上突出，但是美中不足的是，跟很多VPN工具一样，ExpressVPN只支持全局代理，没有提供浏览器插件之类的东西。然而在平常的使用当中只是上google等一些国外网站才需要vpn，频繁的开关代理显得格外的麻烦和耗时，因此便萌生一种实现灵活可切换的科学上网方式的想法。</p>
-<p><em>windows下的ExpressVPN工具：</em><br><img src="http://ww4.sinaimg.cn/large/698f7fe7gy1fepfqray3pj20am0go75q.jpg" alt="windows下的ExpressVPN工具"></p>
-<h2 id="实现思路"><a href="#实现思路" class="headerlink" title="实现思路"></a>实现思路</h2><p>在宿主机（windows10）下安装虚拟机（ubuntu），在虚拟机中安装ExpressVPN对应的安装包，这里是expressvpn_1.2.0_amd64.deb，这样虚拟机即可连接vpn实现科学上网。要让外部的宿主机也能使用vpn，就要在虚拟机中搭建一个http代理服务器，这里使用squid，并开启代理服务。最后，在宿主机的chrome浏览器中安装SwitchyOmega插件，把代理地址指向虚拟机的ip和squid监听的端口，当我们需要访问国外网站时，只需切换插件的代理模式即可。</p>
-<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><ul>
-<li>宿主机：Windows10 64位</li>
-<li>虚拟机：Ubuntu-16.04.1-server-amd64</li>
-<li>浏览器：Chrome</li>
-<li>vpn工具：ExpressVPN</li>
-</ul>
-<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>笔者的虚拟机是使用win10自带的Hyper-V虚拟机工具安装的，虚拟机与宿主机可以互相ping通，并可访问外网。本文使用的vpn工具是ExpressVPN，其他vpn工具只要支持linux环境，实现方式也是一样的。</p>
-<h2 id="实现步骤"><a href="#实现步骤" class="headerlink" title="实现步骤"></a>实现步骤</h2><h3 id="安装VPN软件"><a href="#安装VPN软件" class="headerlink" title="安装VPN软件"></a>安装VPN软件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo dpkg -i expressvpn_1.2.0_amd64.deb</div></pre></td></tr></table></figure>
-<p><img src="https://2y0ge4lrxiko1n2r1be9ibxk-wpengine.netdna-ssl.com/wp-content/uploads/2016/03/installer-command.png" alt="此处输入图片的描述"></p>
-<p>ExpressVPN需要填写激活码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">expressvpn activate</div></pre></td></tr></table></figure></p>
-<p><img src="https://2y0ge4lrxiko1n2r1be9ibxk-wpengine.netdna-ssl.com/wp-content/uploads/2016/03/activate-expressvpn.png" alt="此处输入图片的描述"></p>
-<p>输入n，不向ExpressVPN分享信息：<br><img src="https://2y0ge4lrxiko1n2r1be9ibxk-wpengine.netdna-ssl.com/wp-content/uploads/2016/03/sharing-information.png" alt="此处输入图片的描述"></p>
-<p>连接国外节点：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">expressvpn connect</div></pre></td></tr></table></figure></p>
-<p>这样即可使用ExpressVPN，可以ping一下www.google.com验证能否ping通。更多ExpressVPN相关的命令可以查看<a href="www.expressvpn.com">官网</a>，这里就不多做介绍了，毕竟不是所有人都是用ExpressVPN。</p>
-<h3 id="安装Squid"><a href="#安装Squid" class="headerlink" title="安装Squid"></a>安装Squid</h3><p><a href="http://baike.baidu.com/link?url=Zxt1x4-IkZNBUndGuz6gMDqSZM3REYRHdwk-6zd5rQn8XggYMCIuAvwqGWLBAQhOVOqKsf9ZsjfPGMGyzaB3sq" target="_blank" rel="external">Squid</a>是一个高性能的代理缓存服务器，Squid支持FTP、gopher和HTTP协议。这里即是使用它的Http代理功能。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">apt-get install squid</div></pre></td></tr></table></figure>
-<h3 id="配置Squid"><a href="#配置Squid" class="headerlink" title="配置Squid"></a>配置Squid</h3><p>修改/etc/squid/squid.conf<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim /etc/squid/squid.conf</div></pre></td></tr></table></figure></p>
-<p>找到 http_access deny all ，将 deny 改成 allow 。意思是允许任何IP使用这个代理。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">http_access allow all</div></pre></td></tr></table></figure></p>
-<p>配置端口，这是服务器的监听端口，也就是客户端连接服务器时配置的端口，这里保持默认。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">http_port 3128</div></pre></td></tr></table></figure></p>
-<p>重启squid<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">service squid restart</div></pre></td></tr></table></figure></p>
-<h3 id="安装Chrome插件：SwitchyOmega"><a href="#安装Chrome插件：SwitchyOmega" class="headerlink" title="安装Chrome插件：SwitchyOmega"></a>安装Chrome插件：SwitchyOmega</h3><p><img src="http://ww4.sinaimg.cn/large/698f7fe7gy1fepfqrf9rmj20mx05a3ym.jpg" alt="此处输入图片的描述"></p>
-<h3 id="配置代理方式"><a href="#配置代理方式" class="headerlink" title="配置代理方式"></a>配置代理方式</h3><p>代理服务器为虚拟机的ip地址，代理端口为squid配置的监听端口<br><img src="http://ww4.sinaimg.cn/large/698f7fe7gy1fepfqrl54yj218g0leab5.jpg" alt="此处输入图片的描述"></p>
-<h3 id="开始使用"><a href="#开始使用" class="headerlink" title="开始使用"></a>开始使用</h3><p>安装配置完SwitchyOmega，会在浏览器的右上角出现SwitchyOmega的图标，里面有刚刚配置的代理方式【ExpressVPN】。在需要翻墙的时候，点击【ExpressVPN】即可。或者可以指定某些url使用代理方式，其他使用直连的方式，这样选择当【auto switch】方式时，即可根据不同的访问地址，自动选择对应的代理方式。<br><img src="http://ww4.sinaimg.cn/large/698f7fe7gy1fepfqscytzj204o05ta9y.jpg" alt="此处输入图片的描述"></p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>由于虚拟机是一直运行着的，使用SwitchyOmega插件仅仅是切换浏览器连接的代理方式，这样便省去了在全局代理时每次都要重新连接vpn节点的时间。经过上文的描述，我们实际上是搭建了一台内网的vpn服务器，如果内网中有多台电脑或其他设备，只需安装类似SwitchyOmega的代理插件连接到这台vpn服务器，就可以实现科学上网了。</p>
-
+        <p>Spring Boot提倡以JavaConfig的方式进行配置，就是使用注释来描述Bean配置的组件，从而取代让许多开发者诟病已久的xml配置方式。Spring Boot官方也提供了很多相关的JavaConfig例子，例如数据库配置，消息队列配置等。本文将提供一个JavaConfig配置Dubbo的例子。</p>
+<a id="more"></a>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Value;</div><div class="line"><span class="keyword">import</span> org.springframework.context.annotation.Bean;</div><div class="line"><span class="keyword">import</span> org.springframework.context.annotation.Configuration;</div><div class="line"><span class="keyword">import</span> com.alibaba.dubbo.config.ApplicationConfig;</div><div class="line"><span class="keyword">import</span> com.alibaba.dubbo.config.MonitorConfig;</div><div class="line"><span class="keyword">import</span> com.alibaba.dubbo.config.ProtocolConfig;</div><div class="line"><span class="keyword">import</span> com.alibaba.dubbo.config.ProviderConfig;</div><div class="line"><span class="keyword">import</span> com.alibaba.dubbo.config.RegistryConfig;</div><div class="line"><span class="keyword">import</span> com.alibaba.dubbo.config.spring.AnnotationBean;</div><div class="line"></div><div class="line"><span class="meta">@Configuration</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DubboConfig</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="comment">// 应用名称</span></div><div class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String APPLICATION_NAME = <span class="string">"spring-boot-demo"</span>;</div><div class="line">	<span class="comment">// 扫描service包路径</span></div><div class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String ANNOTATION_PACKAGE = <span class="string">"com.cipher.springboot.service"</span>;</div><div class="line">    </div><div class="line">    <span class="comment">// 以下信息将从配置文件application.properties中读取                          </span></div><div class="line">	<span class="meta">@Value</span>(<span class="string">"$&#123;dubbo_registry_address&#125;"</span>)</div><div class="line">    <span class="keyword">private</span> String registryAddress;</div><div class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;dubbo_port&#125;"</span>)</div><div class="line">	<span class="keyword">private</span> <span class="keyword">int</span> dubboPort;</div><div class="line">	<span class="meta">@Value</span>(<span class="string">"$&#123;dubbo_register&#125;"</span>)</div><div class="line">	<span class="keyword">private</span> <span class="keyword">boolean</span> dubboRegister;</div><div class="line">	</div><div class="line">	<span class="comment">/**</span></div><div class="line">	 * 提供方应用信息，用于计算依赖关系</div><div class="line">	 * </div><div class="line">	 * <span class="doctag">@return</span></div><div class="line">	 */</div><div class="line">	<span class="meta">@Bean</span></div><div class="line">	<span class="function"><span class="keyword">public</span> ApplicationConfig <span class="title">applicationConfig</span><span class="params">()</span> </span>&#123;</div><div class="line">		ApplicationConfig applicationConfig = <span class="keyword">new</span> ApplicationConfig();</div><div class="line">		applicationConfig.setName(APPLICATION_NAME);</div><div class="line">		<span class="keyword">return</span> applicationConfig;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">/**</span></div><div class="line">	 * 与&lt;dubbo:annotation/&gt;相当.</div><div class="line">     * 提供方扫描带有<span class="doctag">@com</span>.alibaba.dubbo.config.annotation.</div><div class="line">	 * Service的注解类</div><div class="line">	 * </div><div class="line">	 * <span class="doctag">@return</span></div><div class="line">	 */</div><div class="line">	<span class="meta">@Bean</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> AnnotationBean <span class="title">annotationBean</span><span class="params">()</span> </span>&#123;</div><div class="line">		AnnotationBean annotationBean = <span class="keyword">new</span> AnnotationBean();</div><div class="line">		annotationBean.setPackage(ANNOTATION_PACKAGE);</div><div class="line">		<span class="keyword">return</span> annotationBean;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">/**</span></div><div class="line">	 * 使用zookeeper注册中心暴露服务地址</div><div class="line">	 * </div><div class="line">	 * <span class="doctag">@return</span></div><div class="line">	 */</div><div class="line">	<span class="meta">@Bean</span></div><div class="line">	<span class="function"><span class="keyword">public</span> RegistryConfig <span class="title">registryConfig</span><span class="params">()</span> </span>&#123;</div><div class="line">		RegistryConfig registryConfig = <span class="keyword">new</span> RegistryConfig();</div><div class="line">		registryConfig.setAddress(registryAddress);</div><div class="line">		registryConfig.setRegister(dubboRegister);</div><div class="line">		<span class="keyword">return</span> registryConfig;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">/**</span></div><div class="line">	 * 用dubbo协议在指定端口暴露服务</div><div class="line">	 * </div><div class="line">	 * <span class="doctag">@return</span></div><div class="line">	 */</div><div class="line">	<span class="meta">@Bean</span></div><div class="line">	<span class="function"><span class="keyword">public</span> ProtocolConfig <span class="title">protocolConfig</span><span class="params">()</span> </span>&#123;</div><div class="line">		ProtocolConfig protocolConfig = <span class="keyword">new</span> ProtocolConfig(<span class="string">"dubbo"</span>, dubboPort);</div><div class="line">		<span class="comment">// 默认为hessian2,但不支持无参构造函数类,而这种方式的效率很低</span></div><div class="line">		protocolConfig.setSerialization(<span class="string">"java"</span>);</div><div class="line">		<span class="keyword">return</span> protocolConfig;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">/**</span></div><div class="line">	 * 监控中心配置，protocol="registry"，表示从注册中心发现监控中心地址</div><div class="line">	 * </div><div class="line">	 * <span class="doctag">@return</span></div><div class="line">	 */</div><div class="line">	<span class="meta">@Bean</span></div><div class="line">	<span class="function"><span class="keyword">public</span> MonitorConfig <span class="title">monitorConfig</span><span class="params">()</span> </span>&#123;</div><div class="line">		MonitorConfig monitorConfig = <span class="keyword">new</span> MonitorConfig();</div><div class="line">		monitorConfig.setProtocol(<span class="string">"registry"</span>);</div><div class="line">		<span class="keyword">return</span> monitorConfig;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">/**</span></div><div class="line">	 * 当ProtocolConfig和ServiceConfig某属性没有配置时,采用此缺省值</div><div class="line">	 * </div><div class="line">	 * <span class="doctag">@return</span></div><div class="line">	 */</div><div class="line">	<span class="meta">@Bean</span></div><div class="line">	<span class="function"><span class="keyword">public</span> ProviderConfig <span class="title">providerConfig</span><span class="params">()</span> </span>&#123;</div><div class="line">		ProviderConfig providerConfig = <span class="keyword">new</span> ProviderConfig();</div><div class="line">		providerConfig.setTimeout(<span class="number">10000</span>);</div><div class="line">		providerConfig.setThreadpool(<span class="string">"fixed"</span>);</div><div class="line">		providerConfig.setThreads(<span class="number">100</span>);</div><div class="line">		providerConfig.setAccepts(<span class="number">1000</span>);</div><div class="line">		<span class="keyword">return</span> providerConfig;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -513,7 +480,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/科学上网/" rel="tag"># 科学上网</a>
+            <a href="/tags/java/" rel="tag"># java</a>
+          
+            <a href="/tags/spring-boot/" rel="tag"># spring-boot</a>
           
         </div>
       
@@ -526,14 +495,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/04/14/spring-cloud-service-release-and-consumption/" rel="next" title="Spring Cloud 服务发布与消费">
+                <i class="fa fa-chevron-left"></i> Spring Cloud 服务发布与消费
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/04/14/spring-cloud Service release and consumption/" rel="prev" title="Spring Cloud 服务发布与消费">
-                Spring Cloud 服务发布与消费 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/04/13/uml/" rel="prev" title="UML类图">
+                UML类图 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -621,17 +594,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/cipher.jpeg"
@@ -713,22 +677,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#缘由"><span class="nav-number">1.</span> <span class="nav-text">缘由</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现思路"><span class="nav-number">2.</span> <span class="nav-text">实现思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#环境"><span class="nav-number">3.</span> <span class="nav-text">环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#说明"><span class="nav-number">4.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现步骤"><span class="nav-number">5.</span> <span class="nav-text">实现步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装VPN软件"><span class="nav-number">5.1.</span> <span class="nav-text">安装VPN软件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Squid"><span class="nav-number">5.2.</span> <span class="nav-text">安装Squid</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置Squid"><span class="nav-number">5.3.</span> <span class="nav-text">配置Squid</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Chrome插件：SwitchyOmega"><span class="nav-number">5.4.</span> <span class="nav-text">安装Chrome插件：SwitchyOmega</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置代理方式"><span class="nav-number">5.5.</span> <span class="nav-text">配置代理方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开始使用"><span class="nav-number">5.6.</span> <span class="nav-text">开始使用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">6.</span> <span class="nav-text">总结</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
