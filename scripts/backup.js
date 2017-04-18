@@ -5,7 +5,6 @@ try {
 	});
 } catch (e) {
 	console.log("产生了一个错误<(￣3￣)> !，错误详情为：" + e.toString());
-	echo("==================Auto Backup End============================")
 }
 function run() {
 	if (!which('git')) {
