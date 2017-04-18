@@ -74,7 +74,7 @@ baidusitemap:
   path: baidusitemap.xml
 
 baidu_url_submit:
-  count: 20
+  count: 1
   host: ciphermagic.win
   token: p6qbcha97ptt9OH1
   path: baidu_urls.txt
