@@ -71,12 +71,19 @@ search:
 sitemap:
   path: sitemap.xml
 baidusitemap:
-  path: baidusitemap.xml  
+  path: baidusitemap.xml
+
+baidu_url_submit:
+  count: 20
+  host: ciphermagic.win
+  token: p6qbcha97ptt9OH1
+  path: baidu_urls.txt
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: git
+- type: git
   repo: 
     github: http://github.com/ciphermagic/ciphermagic.github.io.git,master
     coding: http://git.coding.net/ciphermagic/ciphermagic.git,master
+- type: baidu_url_submitter  
