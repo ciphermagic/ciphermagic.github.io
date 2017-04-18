@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ciphermagic.win/2017/04/18/test/</loc>
+    
+    <lastmod>2017-04-18T06:01:23.801Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ciphermagic.win/2016/01/19/spring-mvc-cors/</loc>
     
     <lastmod>2017-04-17T03:46:31.711Z</lastmod>

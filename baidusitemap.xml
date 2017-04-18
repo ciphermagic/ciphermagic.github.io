@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://ciphermagic.win/2017/04/18/test/</loc>
+    <lastmod>2017-04-18T06:01:23.801Z</lastmod>
+    <data>
+        <display>
+        <title>Test</title>
+        <pubTime>2017-04-17T16:00:00.000Z</pubTime>
+        
+        <tag>maven</tag>
+         
+         
+           
+             
+              <breadCrumb title="blog" url="http://ciphermagic.win/categories/blog/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://ciphermagic.win/2016/01/19/spring-mvc-cors/</loc>
     <lastmod>2017-04-17T03:46:31.711Z</lastmod>
     <data>
