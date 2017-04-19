@@ -1,0 +1,3 @@
+call generate.bat
+
+pause
