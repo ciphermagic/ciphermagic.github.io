@@ -1,1 +1,2 @@
 hexo g -d
+pause
