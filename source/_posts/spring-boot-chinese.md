@@ -1,6 +1,6 @@
 ---
 title: spring-boot 中文乱码解决拾遗
-date: 2016-7-17
+date: 2016-07-17
 categories: blog
 tags: [spring-boot,java] 
 ---

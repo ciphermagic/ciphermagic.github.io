@@ -1,6 +1,6 @@
 ---
 title: Mybatis分页方案
-date: 2015-9-10
+date: 2015-09-10
 tag: [mybatis]
 categories: blog
 ---

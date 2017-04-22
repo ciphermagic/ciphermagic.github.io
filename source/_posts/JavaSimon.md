@@ -1,6 +1,6 @@
 ---
 title: JavaSimon
-date: 2015-6-8
+date: 2015-06-08
 tag: java
 categories: blog
 ---

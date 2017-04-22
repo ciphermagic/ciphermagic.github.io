@@ -1,6 +1,6 @@
 ---
 title: Spring Cloud 服务发布与消费
-date: 2017-4-14 11:16:00
+date: 2017-04-14 11:16:00
 categories: blog
 tags: [spring-cloud,java]
 ---
