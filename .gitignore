@@ -4,3 +4,4 @@ db.json
 public
 next
 _config.yml
+*.bak
