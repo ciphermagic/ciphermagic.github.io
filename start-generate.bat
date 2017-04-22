@@ -1,3 +1,3 @@
-call generate.bat
+call bat/generate.bat
 
 pause
