@@ -1,4 +1,4 @@
-java -jar hexo.jar en
+java -jar ../hexo.jar en
 
 git add --all
 
