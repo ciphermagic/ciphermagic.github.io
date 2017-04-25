@@ -4,8 +4,26 @@
 
     
   <url>
+    <loc>http://ciphermagic.win/2017/04/13/uml/</loc>
+    <lastmod>2017-04-25T02:19:53.114Z</lastmod>
+    <data>
+        <display>
+        <title>UML类图</title>
+        <pubTime>2017-04-13T05:44:00.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="技术" url="http://ciphermagic.win/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://ciphermagic.win/2016/01/19/spring-mvc-cors/</loc>
-    <lastmod>2017-04-25T01:52:01.867Z</lastmod>
+    <lastmod>2017-04-25T02:19:45.630Z</lastmod>
     <data>
         <display>
         <title>spring-mvc 解决跨域问题</title>
@@ -18,7 +36,7 @@
          
            
              
-              <breadCrumb title="blog" url="http://ciphermagic.win/categories/blog/"/>
+              <breadCrumb title="技术" url="http://ciphermagic.win/categories/%E6%8A%80%E6%9C%AF/"/>
           
         </display>
     </data>
@@ -27,7 +45,7 @@
     
   <url>
     <loc>http://ciphermagic.win/2017/04/14/spring-cloud-service-release-and-consumption/</loc>
-    <lastmod>2017-04-25T01:51:49.557Z</lastmod>
+    <lastmod>2017-04-25T02:19:41.974Z</lastmod>
     <data>
         <display>
         <title>Spring Cloud 服务发布与消费</title>
@@ -40,7 +58,7 @@
          
            
              
-              <breadCrumb title="blog" url="http://ciphermagic.win/categories/blog/"/>
+              <breadCrumb title="技术" url="http://ciphermagic.win/categories/%E6%8A%80%E6%9C%AF/"/>
           
         </display>
     </data>
@@ -49,7 +67,7 @@
     
   <url>
     <loc>http://ciphermagic.win/2016/05/21/spring-boot-upload/</loc>
-    <lastmod>2017-04-25T01:51:37.517Z</lastmod>
+    <lastmod>2017-04-25T02:19:37.718Z</lastmod>
     <data>
         <display>
         <title>spring-boot 实现文件上传</title>
@@ -62,7 +80,7 @@
          
            
              
-              <breadCrumb title="blog" url="http://ciphermagic.win/categories/blog/"/>
+              <breadCrumb title="技术" url="http://ciphermagic.win/categories/%E6%8A%80%E6%9C%AF/"/>
           
         </display>
     </data>
@@ -71,7 +89,7 @@
     
   <url>
     <loc>http://ciphermagic.win/2016/05/27/spring-boot-tomcat/</loc>
-    <lastmod>2017-04-25T01:51:22.740Z</lastmod>
+    <lastmod>2017-04-25T02:19:33.116Z</lastmod>
     <data>
         <display>
         <title>spring-boot 替换内嵌tomcat版本</title>
@@ -86,7 +104,7 @@
          
            
              
-              <breadCrumb title="blog" url="http://ciphermagic.win/categories/blog/"/>
+              <breadCrumb title="技术" url="http://ciphermagic.win/categories/%E6%8A%80%E6%9C%AF/"/>
           
         </display>
     </data>
@@ -95,7 +113,7 @@
     
   <url>
     <loc>http://ciphermagic.win/2016/05/16/spring-boot-mysql-druid/</loc>
-    <lastmod>2017-04-25T01:51:11.211Z</lastmod>
+    <lastmod>2017-04-25T02:19:27.824Z</lastmod>
     <data>
         <display>
         <title>spring-boot 集成Mysql和Druid连接池</title>
@@ -112,7 +130,29 @@
          
            
              
-              <breadCrumb title="blog" url="http://ciphermagic.win/categories/blog/"/>
+              <breadCrumb title="技术" url="http://ciphermagic.win/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ciphermagic.win/2017/04/14/spring-boot-javaconfig-dubbo/</loc>
+    <lastmod>2017-04-25T02:19:22.478Z</lastmod>
+    <data>
+        <display>
+        <title>spring-boot 使用JavaConfig方式配置Dubbo</title>
+        <pubTime>2017-04-14T02:49:00.000Z</pubTime>
+        
+        <tag>java</tag>
+         
+        <tag>spring-boot</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ciphermagic.win/categories/%E6%8A%80%E6%9C%AF/"/>
           
         </display>
     </data>
@@ -121,7 +161,7 @@
     
   <url>
     <loc>http://ciphermagic.win/2016/05/18/spring-boot-exception/</loc>
-    <lastmod>2017-04-25T01:50:14.117Z</lastmod>
+    <lastmod>2017-04-25T02:19:18.350Z</lastmod>
     <data>
         <display>
         <title>spring-boot 集中处理异常</title>
@@ -134,7 +174,7 @@
          
            
              
-              <breadCrumb title="blog" url="http://ciphermagic.win/categories/blog/"/>
+              <breadCrumb title="技术" url="http://ciphermagic.win/categories/%E6%8A%80%E6%9C%AF/"/>
           
         </display>
     </data>
@@ -143,7 +183,7 @@
     
   <url>
     <loc>http://ciphermagic.win/2016/07/17/spring-boot-chinese/</loc>
-    <lastmod>2017-04-25T01:50:06.740Z</lastmod>
+    <lastmod>2017-04-25T02:19:14.311Z</lastmod>
     <data>
         <display>
         <title>spring-boot 中文乱码解决拾遗</title>
@@ -156,7 +196,7 @@
          
            
              
-              <breadCrumb title="blog" url="http://ciphermagic.win/categories/blog/"/>
+              <breadCrumb title="技术" url="http://ciphermagic.win/categories/%E6%8A%80%E6%9C%AF/"/>
           
         </display>
     </data>
@@ -165,7 +205,7 @@
     
   <url>
     <loc>http://ciphermagic.win/2015/12/22/sonar-issue/</loc>
-    <lastmod>2017-04-25T01:49:56.302Z</lastmod>
+    <lastmod>2017-04-25T02:19:10.752Z</lastmod>
     <data>
         <display>
         <title>sonar质量分析 Tabulation characters should not be used 原因与解决</title>
@@ -176,7 +216,7 @@
          
            
              
-              <breadCrumb title="blog" url="http://ciphermagic.win/categories/blog/"/>
+              <breadCrumb title="技术" url="http://ciphermagic.win/categories/%E6%8A%80%E6%9C%AF/"/>
           
         </display>
     </data>
@@ -185,7 +225,7 @@
     
   <url>
     <loc>http://ciphermagic.win/2015/09/26/mybatis-redis/</loc>
-    <lastmod>2017-04-25T01:49:39.321Z</lastmod>
+    <lastmod>2017-04-25T02:19:04.807Z</lastmod>
     <data>
         <display>
         <title>Mybatis整合redis实现缓存</title>
@@ -198,7 +238,7 @@
          
            
              
-              <breadCrumb title="blog" url="http://ciphermagic.win/categories/blog/"/>
+              <breadCrumb title="技术" url="http://ciphermagic.win/categories/%E6%8A%80%E6%9C%AF/"/>
           
         </display>
     </data>
@@ -207,7 +247,7 @@
     
   <url>
     <loc>http://ciphermagic.win/2015/09/10/mybatis-page/</loc>
-    <lastmod>2017-04-25T01:49:28.160Z</lastmod>
+    <lastmod>2017-04-25T02:19:00.830Z</lastmod>
     <data>
         <display>
         <title>Mybatis分页方案</title>
@@ -218,7 +258,7 @@
          
            
              
-              <breadCrumb title="blog" url="http://ciphermagic.win/categories/blog/"/>
+              <breadCrumb title="技术" url="http://ciphermagic.win/categories/%E6%8A%80%E6%9C%AF/"/>
           
         </display>
     </data>
@@ -227,7 +267,7 @@
     
   <url>
     <loc>http://ciphermagic.win/2014/11/13/maven/</loc>
-    <lastmod>2017-04-25T01:49:19.771Z</lastmod>
+    <lastmod>2017-04-25T02:18:55.964Z</lastmod>
     <data>
         <display>
         <title>Maven初探</title>
@@ -238,7 +278,7 @@
          
            
              
-              <breadCrumb title="blog" url="http://ciphermagic.win/categories/blog/"/>
+              <breadCrumb title="技术" url="http://ciphermagic.win/categories/%E6%8A%80%E6%9C%AF/"/>
           
         </display>
     </data>
@@ -247,7 +287,7 @@
     
   <url>
     <loc>http://ciphermagic.win/2015/08/25/logstash-elasticsearch-kibana/</loc>
-    <lastmod>2017-04-25T01:49:08.249Z</lastmod>
+    <lastmod>2017-04-25T02:18:52.401Z</lastmod>
     <data>
         <display>
         <title>Logstash + Elasticsearch + Kibana 搭建日志平台</title>
@@ -262,7 +302,7 @@
          
            
              
-              <breadCrumb title="blog" url="http://ciphermagic.win/categories/blog/"/>
+              <breadCrumb title="技术" url="http://ciphermagic.win/categories/%E6%8A%80%E6%9C%AF/"/>
           
         </display>
     </data>
@@ -271,7 +311,7 @@
     
   <url>
     <loc>http://ciphermagic.win/2015/06/08/JavaSimon/</loc>
-    <lastmod>2017-04-25T01:48:53.645Z</lastmod>
+    <lastmod>2017-04-25T02:18:48.119Z</lastmod>
     <data>
         <display>
         <title>JavaSimon</title>
@@ -282,7 +322,69 @@
          
            
              
-              <breadCrumb title="blog" url="http://ciphermagic.win/categories/blog/"/>
+              <breadCrumb title="技术" url="http://ciphermagic.win/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ciphermagic.win/2017/04/12/idea-spring-xsd/</loc>
+    <lastmod>2017-04-25T02:18:42.783Z</lastmod>
+    <data>
+        <display>
+        <title>IDEA中忽略spring配置文件无法识别xsd的错误</title>
+        <pubTime>2017-04-12T13:23:20.000Z</pubTime>
+        
+        <tag>idea</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ciphermagic.win/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ciphermagic.win/2017/04/11/dubbo-proguard/</loc>
+    <lastmod>2017-04-25T02:18:29.999Z</lastmod>
+    <data>
+        <display>
+        <title>Dubbo服务提供者使用ProGuard实现代码混淆</title>
+        <pubTime>2017-04-11T13:23:24.000Z</pubTime>
+        
+        <tag>dubbo</tag>
+         
+        <tag>proguard</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ciphermagic.win/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ciphermagic.win/2017/04/17/chrome-scientific-internet-access/</loc>
+    <lastmod>2017-04-25T02:17:20.295Z</lastmod>
+    <data>
+        <display>
+        <title>使用虚拟机实现灵活的科学上网</title>
+        <pubTime>2017-04-17T03:37:00.000Z</pubTime>
+        
+        <tag>科学上网</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ciphermagic.win/categories/%E6%8A%80%E6%9C%AF/"/>
           
         </display>
     </data>
@@ -308,24 +410,6 @@
 
     
   <url>
-    <loc>http://ciphermagic.win/2017/04/13/uml/</loc>
-    <lastmod>2017-04-25T01:25:29.731Z</lastmod>
-    <data>
-        <display>
-        <title>UML类图</title>
-        <pubTime>2017-04-13T05:44:00.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="blog" url="http://ciphermagic.win/categories/blog/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://ciphermagic.win/2015/02/14/taobao-technology-this-decade/</loc>
     <lastmod>2017-04-25T01:25:29.717Z</lastmod>
     <data>
@@ -337,28 +421,6 @@
            
              
               <breadCrumb title="生活" url="http://ciphermagic.win/categories/%E7%94%9F%E6%B4%BB/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ciphermagic.win/2017/04/14/spring-boot-javaconfig-dubbo/</loc>
-    <lastmod>2017-04-25T01:25:29.577Z</lastmod>
-    <data>
-        <display>
-        <title>spring-boot 使用JavaConfig方式配置Dubbo</title>
-        <pubTime>2017-04-14T02:49:00.000Z</pubTime>
-        
-        <tag>java</tag>
-         
-        <tag>spring-boot</tag>
-         
-         
-           
-             
-              <breadCrumb title="blog" url="http://ciphermagic.win/categories/blog/"/>
           
         </display>
     </data>
@@ -379,68 +441,6 @@
            
              
               <breadCrumb title="生活" url="http://ciphermagic.win/categories/%E7%94%9F%E6%B4%BB/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ciphermagic.win/2017/04/12/idea-spring-xsd/</loc>
-    <lastmod>2017-04-25T01:25:29.392Z</lastmod>
-    <data>
-        <display>
-        <title>IDEA中忽略spring配置文件无法识别xsd的错误</title>
-        <pubTime>2017-04-12T13:23:20.000Z</pubTime>
-        
-        <tag>idea</tag>
-         
-         
-           
-             
-              <breadCrumb title="blog" url="http://ciphermagic.win/categories/blog/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ciphermagic.win/2017/04/11/dubbo-proguard/</loc>
-    <lastmod>2017-04-25T01:25:29.381Z</lastmod>
-    <data>
-        <display>
-        <title>Dubbo服务提供者使用ProGuard实现代码混淆</title>
-        <pubTime>2017-04-11T13:23:24.000Z</pubTime>
-        
-        <tag>dubbo</tag>
-         
-        <tag>proguard</tag>
-         
-         
-           
-             
-              <breadCrumb title="blog" url="http://ciphermagic.win/categories/blog/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ciphermagic.win/2017/04/17/chrome-scientific-internet-access/</loc>
-    <lastmod>2017-04-25T01:25:29.372Z</lastmod>
-    <data>
-        <display>
-        <title>使用虚拟机实现灵活的科学上网</title>
-        <pubTime>2017-04-17T03:37:00.000Z</pubTime>
-        
-        <tag>科学上网</tag>
-         
-         
-           
-             
-              <breadCrumb title="blog" url="http://ciphermagic.win/categories/blog/"/>
           
         </display>
     </data>
