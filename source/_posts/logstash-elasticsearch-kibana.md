@@ -1,7 +1,7 @@
 ---
 title: Logstash + Elasticsearch + Kibana 搭建日志平台
 date: 2015-08-25 17:42
-categories: blog
+categories: 技术
 tags: [logstash,elasticsearch,kibana] 
 ---
 

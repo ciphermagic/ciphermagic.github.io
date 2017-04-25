@@ -1,7 +1,7 @@
 ---
 title: UML类图
 date: 2017-04-13 13:44:00
-categories: blog
+categories: 技术
 ---
 
 ![此处输入图片的描述][1]

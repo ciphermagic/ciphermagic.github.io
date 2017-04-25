@@ -1,7 +1,7 @@
 ---
 title: spring-boot 替换内嵌tomcat版本
 date: 2016-05-27 13:30
-categories: blog
+categories: 技术
 tags: [spring-boot,tomcat,java] 
 ---
 

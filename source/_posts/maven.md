@@ -1,7 +1,7 @@
 ---
 title: Maven初探
 date: 2014-11-13 14:22
-categories: blog
+categories: 技术
 tags: [maven] 
 ---
 最近刚接触了Maven，就根据自己的理解介绍一下Maven在开发中怎么用，顺便巩固一下知识。

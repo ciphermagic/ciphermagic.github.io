@@ -1,7 +1,7 @@
 ---
 title: 使用虚拟机实现灵活的科学上网
 date: 2017-04-17 11:37
-categories: blog
+categories: 技术
 tags: [科学上网] 
 ---
 

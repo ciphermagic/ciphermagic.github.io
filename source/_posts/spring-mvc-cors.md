@@ -1,7 +1,7 @@
 ---
 title: spring-mvc 解决跨域问题
 date: 2016-01-19 09:57
-categories: blog
+categories: 技术
 tags: [spring-mvc,java] 
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: sonar质量分析 Tabulation characters should not be used 原因与解决
 date: 2015-12-22 15:48
-categories: blog
+categories: 技术
 tags: [sonar] 
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: spring-boot 实现文件上传
 date: 2016-05-21 17:09
-categories: blog
+categories: 技术
 tags: [spring-boot,java] 
 ---
 
