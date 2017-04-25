@@ -1,6 +1,6 @@
 ---
 title: Maven初探
-date: 2014-11-13
+date: 2014-11-13 14:22
 categories: blog
 tags: [maven] 
 ---

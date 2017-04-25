@@ -1,6 +1,6 @@
 ---
 title: Mybatis整合redis实现缓存
-date: 2015-09-26
+date: 2015-09-26 11:32
 categories: blog
 tags: [mybatis,redis] 
 ---
