@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://ciphermagic.win/2017/05/03/ubuntu-hadoop-single/</loc>
+    <lastmod>2017-05-03T06:17:33.132Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu 16.04单机模式安装Hadoop 2.6.0</title>
+        <pubTime>2017-05-03T06:16:00.000Z</pubTime>
+        
+        <tag>hadoop</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://ciphermagic.win/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://ciphermagic.win/2017/04/13/uml/</loc>
     <lastmod>2017-04-25T02:19:53.114Z</lastmod>
     <data>
@@ -73,9 +93,9 @@
         <title>spring-boot 实现文件上传</title>
         <pubTime>2016-05-21T09:09:00.000Z</pubTime>
         
-        <tag>java</tag>
-         
         <tag>spring-boot</tag>
+         
+        <tag>java</tag>
          
          
            
@@ -95,9 +115,9 @@
         <title>spring-boot 替换内嵌tomcat版本</title>
         <pubTime>2016-05-27T05:30:00.000Z</pubTime>
         
-        <tag>java</tag>
-         
         <tag>spring-boot</tag>
+         
+        <tag>java</tag>
          
         <tag>tomcat</tag>
          
@@ -119,9 +139,9 @@
         <title>spring-boot 集成Mysql和Druid连接池</title>
         <pubTime>2016-05-16T08:29:00.000Z</pubTime>
         
-        <tag>java</tag>
-         
         <tag>spring-boot</tag>
+         
+        <tag>java</tag>
          
         <tag>druid</tag>
          
@@ -145,9 +165,9 @@
         <title>spring-boot 使用JavaConfig方式配置Dubbo</title>
         <pubTime>2017-04-14T02:49:00.000Z</pubTime>
         
-        <tag>java</tag>
-         
         <tag>spring-boot</tag>
+         
+        <tag>java</tag>
          
          
            
@@ -167,9 +187,9 @@
         <title>spring-boot 集中处理异常</title>
         <pubTime>2016-05-18T02:11:00.000Z</pubTime>
         
-        <tag>java</tag>
-         
         <tag>spring-boot</tag>
+         
+        <tag>java</tag>
          
          
            
@@ -189,9 +209,9 @@
         <title>spring-boot 中文乱码解决拾遗</title>
         <pubTime>2016-07-17T10:21:00.000Z</pubTime>
         
-        <tag>java</tag>
-         
         <tag>spring-boot</tag>
+         
+        <tag>java</tag>
          
          
            

@@ -73,7 +73,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="spring-boot,java,tomcat," />
+  <meta name="keywords" content="hadoop," />
 
 
 
@@ -89,17 +89,17 @@
 
 
 
-<meta name="description" content="spring-boot中的内嵌tomcat有默认的指定版本，若想修改为其他版本，有以下两种途径：">
-<meta name="keywords" content="spring-boot,java,tomcat">
+<meta name="description" content="前言Hadoop是一个分布式计算框架，整套部署起来并非那么简单。但是Hadoop提供单机模式的安装，适合新手尝个鲜，感性的体验一下Hadoop究竟是什么。纸上得来终觉浅，动手实践才是唯一真理。 环境说明本文系统是ubuntu-16.04.1-server-amd64，安装在Win10自带的虚拟机管理系统Hyper-V之上。为了提高下载速度，apt-get源换成了阿里的源。由于是虚拟机，为了方便，以">
+<meta name="keywords" content="hadoop">
 <meta property="og:type" content="article">
-<meta property="og:title" content="spring-boot 替换内嵌tomcat版本">
-<meta property="og:url" content="http://ciphermagic.win/2016/05/27/spring-boot-tomcat/index.html">
+<meta property="og:title" content="Ubuntu 16.04单机模式安装Hadoop 2.6.0">
+<meta property="og:url" content="http://ciphermagic.win/2017/05/03/ubuntu-hadoop-single/index.html">
 <meta property="og:site_name" content="$t/^Cipher's Blog_?\n">
-<meta property="og:description" content="spring-boot中的内嵌tomcat有默认的指定版本，若想修改为其他版本，有以下两种途径：">
-<meta property="og:updated_time" content="2017-04-25T02:19:33.116Z">
+<meta property="og:description" content="前言Hadoop是一个分布式计算框架，整套部署起来并非那么简单。但是Hadoop提供单机模式的安装，适合新手尝个鲜，感性的体验一下Hadoop究竟是什么。纸上得来终觉浅，动手实践才是唯一真理。 环境说明本文系统是ubuntu-16.04.1-server-amd64，安装在Win10自带的虚拟机管理系统Hyper-V之上。为了提高下载速度，apt-get源换成了阿里的源。由于是虚拟机，为了方便，以">
+<meta property="og:updated_time" content="2017-05-03T06:17:33.132Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="spring-boot 替换内嵌tomcat版本">
-<meta name="twitter:description" content="spring-boot中的内嵌tomcat有默认的指定版本，若想修改为其他版本，有以下两种途径：">
+<meta name="twitter:title" content="Ubuntu 16.04单机模式安装Hadoop 2.6.0">
+<meta name="twitter:description" content="前言Hadoop是一个分布式计算框架，整套部署起来并非那么简单。但是Hadoop提供单机模式的安装，适合新手尝个鲜，感性的体验一下Hadoop究竟是什么。纸上得来终觉浅，动手实践才是唯一真理。 环境说明本文系统是ubuntu-16.04.1-server-amd64，安装在Win10自带的虚拟机管理系统Hyper-V之上。为了提高下载速度，apt-get源换成了阿里的源。由于是虚拟机，为了方便，以">
 
 
 
@@ -127,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://ciphermagic.win/2016/05/27/spring-boot-tomcat/"/>
+  <link rel="canonical" href="http://ciphermagic.win/2017/05/03/ubuntu-hadoop-single/"/>
 
 
 
 
 
-  <title> spring-boot 替换内嵌tomcat版本 | $t/^Cipher's Blog_?\n </title>
+  <title> Ubuntu 16.04单机模式安装Hadoop 2.6.0 | $t/^Cipher's Blog_?\n </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -315,7 +315,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://ciphermagic.win/2016/05/27/spring-boot-tomcat/">
+    <link itemprop="mainEntityOfPage" href="http://ciphermagic.win/2017/05/03/ubuntu-hadoop-single/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="cipher">
@@ -336,7 +336,7 @@
             
             
               
-                spring-boot 替换内嵌tomcat版本
+                Ubuntu 16.04单机模式安装Hadoop 2.6.0
               
             
           </h2>
@@ -351,8 +351,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-05-27T13:30:00+08:00">
-                2016-05-27
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-03T14:16:00+08:00">
+                2017-05-03
               </time>
             
 
@@ -392,7 +392,7 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a class="cloud-tie-join-count" href="/2016/05/27/spring-boot-tomcat/#comments" itemprop="discussionUrl">
+                <a class="cloud-tie-join-count" href="/2017/05/03/ubuntu-hadoop-single/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count join-count" itemprop="commentCount"></span>
                 </a>
               </span>
@@ -401,7 +401,7 @@
 
           
           
-             <span id="/2016/05/27/spring-boot-tomcat/" class="leancloud_visitors" data-flag-title="spring-boot 替换内嵌tomcat版本">
+             <span id="/2017/05/03/ubuntu-hadoop-single/" class="leancloud_visitors" data-flag-title="Ubuntu 16.04单机模式安装Hadoop 2.6.0">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -425,7 +425,7 @@
                    <span class="post-meta-item-text">字数统计</span>
                  
                    <span title="字数统计" }}">
-                     394 字  <!-- 我在这里加了一个单位上去 -->
+                     532 字  <!-- 我在这里加了一个单位上去 -->
                    </span>
              
              
@@ -458,18 +458,20 @@
       
 
       
-        <p>spring-boot中的内嵌tomcat有默认的指定版本，若想修改为其他版本，有以下两种途径：</p>
-<a id="more"></a>
-<h2 id="使用parent的方式"><a href="#使用parent的方式" class="headerlink" title="使用parent的方式"></a>使用parent的方式</h2><p>若引入spring-boot的方式为加入&lt;parent&gt;：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Inherit defaults from Spring Boot --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">parent</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-parent<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.3.0.BUILD-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">parent</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>则只需在properties中指定tomcat版本即可：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">properties</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">tomcat.version</span>&gt;</span>7.0.59<span class="tag">&lt;/<span class="name">tomcat.version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">properties</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>这种方式比较简单，官方文档中也有<a href="http://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#_use_tomcat_7_with_maven" target="_blank" rel="external">说明</a></p>
-<h2 id="使用dependencyManagement的方式"><a href="#使用dependencyManagement的方式" class="headerlink" title="使用dependencyManagement的方式"></a>使用dependencyManagement的方式</h2><p>有时我们的项目中有自己的parent，则需要使用&lt;dependencyManagement&gt;的方式引入spring-boot：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">properties</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">tomcat.version</span>&gt;</span>7.0.59<span class="tag">&lt;/<span class="name">tomcat.version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">properties</span>&gt;</span></div><div class="line">...</div><div class="line"><span class="tag">&lt;<span class="name">dependencyManagement</span>&gt;</span></div><div class="line">     <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">            <span class="comment">&lt;!-- Import dependency management from Spring Boot --&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-dependencies<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.3.0.BUILD-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">type</span>&gt;</span>pom<span class="tag">&lt;/<span class="name">type</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">scope</span>&gt;</span>import<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependencyManagement</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>此时修改内嵌tomcat的版本则需要在&lt;dependencyManagement&gt;中加入内嵌tomcat的所有依赖，以替换默认的tomcat：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dependencyManagement</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></div><div class="line">		<span class="comment">&lt;!-- 替换spring-boot内嵌tomcat --&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.tomcat.embed<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>tomcat-embed-core<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;tomcat.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.tomcat.embed<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>tomcat-embed-el<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;tomcat.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.tomcat.embed<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>tomcat-embed-logging-juli<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;tomcat.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.tomcat.embed<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>tomcat-embed-jasper<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;tomcat.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.tomcat.embed<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>tomcat-embed-websocket<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;tomcat.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.tomcat<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>tomcat-jdbc<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;tomcat.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.tomcat<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>tomcat-jsp-api<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;tomcat.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependencyManagement</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>这种方式比较麻烦，但在不能引入parent和需要修改tomcat版本的情况下，也是无赖之举。</p>
-<blockquote>
-<p>参考<a href="http://stackoverflow.com/questions/24124193/how-to-use-tomcat-8-spring-boot-maven" target="_blank" rel="external">How to use Tomcat 8 + Spring Boot + Maven</a></p>
-</blockquote>
-<p>-END-</p>
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Hadoop是一个分布式计算框架，整套部署起来并非那么简单。但是Hadoop提供单机模式的安装，适合新手尝个鲜，感性的体验一下Hadoop究竟是什么。纸上得来终觉浅，动手实践才是唯一真理。</p>
+<h3 id="环境说明"><a href="#环境说明" class="headerlink" title="环境说明"></a>环境说明</h3><p>本文系统是ubuntu-16.04.1-server-amd64，安装在Win10自带的虚拟机管理系统Hyper-V之上。为了提高下载速度，apt-get源换成了阿里的源。由于是虚拟机，为了方便，以下所有的操作都是在root账号下操作。</p>
+<h3 id="安装JDK"><a href="#安装JDK" class="headerlink" title="安装JDK"></a>安装JDK</h3><p>Hadoop依赖jdk环境，所以必须先安装jdk，本文以jdk8为例：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">apt-get install openjdk-8-jdk</div></pre></td></tr></table></figure></p>
+<p>等下载安装Hadoop后统一修改环境变量。</p>
+<h3 id="安装Hadoop2-6-0"><a href="#安装Hadoop2-6-0" class="headerlink" title="安装Hadoop2.6.0"></a>安装Hadoop2.6.0</h3><p>下载：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">wget http://archive.apache.org/dist/hadoop/core/hadoop-2.6.0/hadoop-2.6.0.tar.gz</div></pre></td></tr></table></figure></p>
+<p>解压并拷贝到<code>usr/local</code>目录下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">tar zxvf hadoop-2.6.0.tar.gz</div><div class="line">mv hadoop-2.6.0 /usr/<span class="built_in">local</span>/hadoop</div></pre></td></tr></table></figure></p>
+<h3 id="修改环境变量"><a href="#修改环境变量" class="headerlink" title="修改环境变量"></a>修改环境变量</h3><p>打开<code>/root/.bashrc</code>：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim /root/.bashrc</div></pre></td></tr></table></figure></p>
+<p>在文件末尾添加：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">export</span> JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64</div><div class="line"><span class="built_in">export</span> HADOOP_INSTALL=/usr/<span class="built_in">local</span>/hadoop</div><div class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$HADOOP_INSTALL</span>/bin</div><div class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$HADOOP_INSTALL</span>/sbin</div><div class="line"><span class="built_in">export</span> HADOOP_MAPRED_HOME=<span class="variable">$HADOOP_INSTALL</span></div><div class="line"><span class="built_in">export</span> HADOOP_COMMON_HOME=<span class="variable">$HADOOP_INSTALL</span></div><div class="line"><span class="built_in">export</span> HADOOP_HDFS_HOME=<span class="variable">$HADOOP_INSTALL</span></div><div class="line"><span class="built_in">export</span> YARN_HOME=<span class="variable">$HADOOP_INSTALL</span></div><div class="line"><span class="built_in">export</span> HADOOP_COMMON_LIB_NATIVE_DIR=<span class="variable">$HADOOP_INSTALL</span>/lib/native</div><div class="line"><span class="built_in">export</span> HADOOP_OPTS=<span class="string">"-Djava.library.path=<span class="variable">$HADOOP_INSTALL</span>/lib"</span></div></pre></td></tr></table></figure></p>
+<p>保存退出，激活环境变量：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">source</span> /root/.bashrc</div></pre></td></tr></table></figure></p>
+<p>测试是否成功：<br>依次执行<code>java -version</code>，<code>hadoop version</code>。如果没有报错，则表示安装成功。</p>
+<h3 id="使用Hadoop"><a href="#使用Hadoop" class="headerlink" title="使用Hadoop"></a>使用Hadoop</h3><p>这里使用Hadoop提供的例子，计算文本的单词数量，以<code>/var/log/dpkg.log</code>为例。<br>首先到hadoop目录下（<code>/usr/local/hadoop</code>）,复制<code>dpkg.log</code>到input目录：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cp /var/<span class="built_in">log</span>/dpkg.log ./input/</div></pre></td></tr></table></figure></p>
+<p>最重要的一步，执行Hadoop，并指定类文件：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">bin/hadoop jar share/hadoop/mapreduce/sources/hadoop-mapreduce-examples-2.6.0-sources.jar org.apache.hadoop.examples.WordCount input output</div></pre></td></tr></table></figure></p>
+<p>可以看到，这里指定了<code>WordCount</code>类来统计单词数量，指定<code>input</code>为输入文件夹，<code>output</code>为输出文件夹。<br>如果以上命名执行后没有报错，则表示计算成功，可以查看结果：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat output/*</div></pre></td></tr></table></figure></p>
+<h3 id="完结"><a href="#完结" class="headerlink" title="完结"></a>完结</h3><p>至此，单机安装Hadoop成功，并且成功运行了一个mapreduce的任务。<br>ʅ（´◔౪◔）ʃ   沉淀一下吧~</p>
 
       
     </div>
@@ -501,7 +503,7 @@
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="http://ciphermagic.win/2016/05/27/spring-boot-tomcat/" title="spring-boot 替换内嵌tomcat版本">http://ciphermagic.win/2016/05/27/spring-boot-tomcat/</a>
+      <a href="http://ciphermagic.win/2017/05/03/ubuntu-hadoop-single/" title="Ubuntu 16.04单机模式安装Hadoop 2.6.0">http://ciphermagic.win/2017/05/03/ubuntu-hadoop-single/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -517,11 +519,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/spring-boot/" rel="tag"># spring-boot</a>
-          
-            <a href="/tags/java/" rel="tag"># java</a>
-          
-            <a href="/tags/tomcat/" rel="tag"># tomcat</a>
+            <a href="/tags/hadoop/" rel="tag"># hadoop</a>
           
         </div>
       
@@ -534,18 +532,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/07/17/spring-boot-chinese/" rel="next" title="spring-boot 中文乱码解决拾遗">
-                <i class="fa fa-chevron-left"></i> spring-boot 中文乱码解决拾遗
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/05/21/spring-boot-upload/" rel="prev" title="spring-boot 实现文件上传">
-                spring-boot 实现文件上传 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/04/25/hope/" rel="prev" title="Hope">
+                Hope <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -735,7 +729,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用parent的方式"><span class="nav-number">1.</span> <span class="nav-text">使用parent的方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用dependencyManagement的方式"><span class="nav-number">2.</span> <span class="nav-text">使用dependencyManagement的方式</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#环境说明"><span class="nav-number">2.</span> <span class="nav-text">环境说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装JDK"><span class="nav-number">3.</span> <span class="nav-text">安装JDK</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Hadoop2-6-0"><span class="nav-number">4.</span> <span class="nav-text">安装Hadoop2.6.0</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改环境变量"><span class="nav-number">5.</span> <span class="nav-text">修改环境变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用Hadoop"><span class="nav-number">6.</span> <span class="nav-text">使用Hadoop</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#完结"><span class="nav-number">7.</span> <span class="nav-text">完结</span></a></li></ol></div>
             
 
           </div>
