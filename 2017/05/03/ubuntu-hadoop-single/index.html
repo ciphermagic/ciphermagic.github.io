@@ -96,7 +96,7 @@
 <meta property="og:url" content="http://ciphermagic.win/2017/05/03/ubuntu-hadoop-single/index.html">
 <meta property="og:site_name" content="$t/^Cipher's Blog_?\n">
 <meta property="og:description" content="前言Hadoop是一个分布式计算框架，整套部署起来并非那么简单。但是Hadoop提供单机模式的安装，适合新手尝个鲜，感性的体验一下Hadoop究竟是什么。纸上得来终觉浅，动手实践才是唯一真理。 环境说明本文系统是ubuntu-16.04.1-server-amd64，安装在Win10自带的虚拟机管理系统Hyper-V之上。为了提高下载速度，apt-get源换成了阿里的源。由于是虚拟机，为了方便，以">
-<meta property="og:updated_time" content="2017-05-03T06:17:33.132Z">
+<meta property="og:updated_time" content="2017-05-03T06:21:36.379Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu 16.04单机模式安装Hadoop 2.6.0">
 <meta name="twitter:description" content="前言Hadoop是一个分布式计算框架，整套部署起来并非那么简单。但是Hadoop提供单机模式的安装，适合新手尝个鲜，感性的体验一下Hadoop究竟是什么。纸上得来终觉浅，动手实践才是唯一真理。 环境说明本文系统是ubuntu-16.04.1-server-amd64，安装在Win10自带的虚拟机管理系统Hyper-V之上。为了提高下载速度，apt-get源换成了阿里的源。由于是虚拟机，为了方便，以">
@@ -470,7 +470,7 @@
 <p>测试是否成功：<br>依次执行<code>java -version</code>，<code>hadoop version</code>。如果没有报错，则表示安装成功。</p>
 <h3 id="使用Hadoop"><a href="#使用Hadoop" class="headerlink" title="使用Hadoop"></a>使用Hadoop</h3><p>这里使用Hadoop提供的例子，计算文本的单词数量，以<code>/var/log/dpkg.log</code>为例。<br>首先到hadoop目录下（<code>/usr/local/hadoop</code>）,复制<code>dpkg.log</code>到input目录：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cp /var/<span class="built_in">log</span>/dpkg.log ./input/</div></pre></td></tr></table></figure></p>
 <p>最重要的一步，执行Hadoop，并指定类文件：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">bin/hadoop jar share/hadoop/mapreduce/sources/hadoop-mapreduce-examples-2.6.0-sources.jar org.apache.hadoop.examples.WordCount input output</div></pre></td></tr></table></figure></p>
-<p>可以看到，这里指定了<code>WordCount</code>类来统计单词数量，指定<code>input</code>为输入文件夹，<code>output</code>为输出文件夹。<br>如果以上命名执行后没有报错，则表示计算成功，可以查看结果：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat output/*</div></pre></td></tr></table></figure></p>
+<p>可以看到，这里指定了<code>WordCount</code>类来统计单词数量，指定<code>input</code>为输入文件夹，<code>output</code>为输出文件夹。<br>如果以上命令执行后没有报错，则表示计算成功，可以查看结果：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat output/*</div></pre></td></tr></table></figure></p>
 <h3 id="完结"><a href="#完结" class="headerlink" title="完结"></a>完结</h3><p>至此，单机安装Hadoop成功，并且成功运行了一个mapreduce的任务。<br>ʅ（´◔౪◔）ʃ   沉淀一下吧~</p>
 
       
