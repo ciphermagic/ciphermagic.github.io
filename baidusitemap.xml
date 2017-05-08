@@ -4,8 +4,25 @@
 
     
   <url>
+    <loc>http://ciphermagic.win/2017/05/08/%E6%B5%8B%E8%AF%95/</loc>
+    <lastmod>2017-05-08T01:49:23.997Z</lastmod>
+    <data>
+        <display>
+        <title>测试</title>
+        <pubTime>2017-05-08T01:49:15.000Z</pubTime>
+        
+        <tag>test</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://ciphermagic.win/2017/05/08/spring-boot-auto-stop/</loc>
-    <lastmod>2017-05-08T01:19:25.813Z</lastmod>
+    <lastmod>2017-05-08T01:24:36.618Z</lastmod>
     <data>
         <display>
         <title>Spring Boot启动后执行特定操作，然后自动停止</title>
