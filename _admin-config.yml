@@ -1,0 +1,5 @@
+options:
+  imagePath: images
+  lineNumbers: false
+editor:
+  lineNumbers: false
