@@ -7,3 +7,4 @@ _config.yml
 *.bak
 hexo.jar
 qrsbox
+qrsboxcli
