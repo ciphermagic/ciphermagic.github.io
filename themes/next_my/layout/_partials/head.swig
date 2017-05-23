@@ -1,5 +1,5 @@
-<meta name="baidu-site-verification" content="5eTcSnrdTa" />
-<meta name="google-site-verification" content="mkKz5oAq4S3Ve3hnBHkhAUK51pgPbdCJd4vCsGvJCnM" />
+<meta name="baidu-site-verification" content="52tQTBQrMf" />
+<meta name="google-site-verification" content="0YANJRGbT7YCeYtAcziBKRi4Vuk7AJLQpdUGAFiat4o" />
 <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>

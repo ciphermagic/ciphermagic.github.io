@@ -8,4 +8,4 @@ _config.yml
 hexo.jar
 qrsbox
 qrsboxcli
-hexo.py
+hexo-helper.py

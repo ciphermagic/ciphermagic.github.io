@@ -12,5 +12,5 @@ Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
 
-Sitemap: http://ciphermagic.win/sitemap.xml
-Sitemap: http://ciphermagic.win/baidusitemap.xml
+Sitemap: http://www.ciphermagic.cn/sitemap.xml
+Sitemap: http://www.ciphermagic.cn/baidusitemap.xml
