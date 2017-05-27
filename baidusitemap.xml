@@ -4,7 +4,69 @@
 
     
   <url>
-    <loc>http://ciphermagic.win/spring-boot-auto-stop.html</loc>
+    <loc>http://www.ciphermagic.cn/python-helper-4-hexo.html</loc>
+    <lastmod>2017-05-27T06:21:08.194Z</lastmod>
+    <data>
+        <display>
+        <title>Python3实现Hexo小助手</title>
+        <pubTime>2017-05-27T06:05:00.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://www.ciphermagic.cn/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.ciphermagic.cn/test.html</loc>
+    <lastmod>2017-05-25T00:31:13.642Z</lastmod>
+    <data>
+        <display>
+        <title>测试七牛缓存时间</title>
+        <pubTime>2017-05-25T00:30:00.000Z</pubTime>
+        
+        <tag>test</tag>
+         
+         
+           
+             
+              <breadCrumb title="测试" url="http://www.ciphermagic.cn/categories/%E6%B5%8B%E8%AF%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.ciphermagic.cn/chrome-scientific-internet-access.html</loc>
+    <lastmod>2017-05-15T00:32:41.714Z</lastmod>
+    <data>
+        <display>
+        <title>使用虚拟机实现灵活的科学上网</title>
+        <pubTime>2017-04-17T03:37:00.000Z</pubTime>
+        
+        <tag>科学上网</tag>
+         
+        <tag>vpn</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://www.ciphermagic.cn/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.ciphermagic.cn/spring-boot-auto-stop.html</loc>
     <lastmod>2017-05-11T07:18:50.196Z</lastmod>
     <data>
         <display>
@@ -16,7 +78,7 @@
          
            
              
-              <breadCrumb title="技术" url="http://ciphermagic.win/categories/%E6%8A%80%E6%9C%AF/"/>
+              <breadCrumb title="技术" url="http://www.ciphermagic.cn/categories/%E6%8A%80%E6%9C%AF/"/>
           
         </display>
     </data>
@@ -24,7 +86,7 @@
 
     
   <url>
-    <loc>http://ciphermagic.win/ubuntu-hadoop-single.html</loc>
+    <loc>http://www.ciphermagic.cn/ubuntu-hadoop-single.html</loc>
     <lastmod>2017-05-03T06:21:36.379Z</lastmod>
     <data>
         <display>
@@ -36,7 +98,7 @@
          
            
              
-              <breadCrumb title="技术" url="http://ciphermagic.win/categories/%E6%8A%80%E6%9C%AF/"/>
+              <breadCrumb title="技术" url="http://www.ciphermagic.cn/categories/%E6%8A%80%E6%9C%AF/"/>
           
         </display>
     </data>
@@ -44,7 +106,7 @@
 
     
   <url>
-    <loc>http://ciphermagic.win/uml.html</loc>
+    <loc>http://www.ciphermagic.cn/uml.html</loc>
     <lastmod>2017-04-25T02:19:53.114Z</lastmod>
     <data>
         <display>
@@ -54,7 +116,7 @@
          
            
              
-              <breadCrumb title="技术" url="http://ciphermagic.win/categories/%E6%8A%80%E6%9C%AF/"/>
+              <breadCrumb title="技术" url="http://www.ciphermagic.cn/categories/%E6%8A%80%E6%9C%AF/"/>
           
         </display>
     </data>
@@ -62,7 +124,7 @@
 
     
   <url>
-    <loc>http://ciphermagic.win/spring-mvc-cors.html</loc>
+    <loc>http://www.ciphermagic.cn/spring-mvc-cors.html</loc>
     <lastmod>2017-04-25T02:19:45.630Z</lastmod>
     <data>
         <display>
@@ -76,7 +138,7 @@
          
            
              
-              <breadCrumb title="技术" url="http://ciphermagic.win/categories/%E6%8A%80%E6%9C%AF/"/>
+              <breadCrumb title="技术" url="http://www.ciphermagic.cn/categories/%E6%8A%80%E6%9C%AF/"/>
           
         </display>
     </data>
@@ -84,7 +146,7 @@
 
     
   <url>
-    <loc>http://ciphermagic.win/spring-cloud-service-release-and-consumption.html</loc>
+    <loc>http://www.ciphermagic.cn/spring-cloud-service-release-and-consumption.html</loc>
     <lastmod>2017-04-25T02:19:41.974Z</lastmod>
     <data>
         <display>
@@ -98,7 +160,7 @@
          
            
              
-              <breadCrumb title="技术" url="http://ciphermagic.win/categories/%E6%8A%80%E6%9C%AF/"/>
+              <breadCrumb title="技术" url="http://www.ciphermagic.cn/categories/%E6%8A%80%E6%9C%AF/"/>
           
         </display>
     </data>
@@ -106,7 +168,7 @@
 
     
   <url>
-    <loc>http://ciphermagic.win/spring-boot-upload.html</loc>
+    <loc>http://www.ciphermagic.cn/spring-boot-upload.html</loc>
     <lastmod>2017-04-25T02:19:37.718Z</lastmod>
     <data>
         <display>
@@ -120,7 +182,7 @@
          
            
              
-              <breadCrumb title="技术" url="http://ciphermagic.win/categories/%E6%8A%80%E6%9C%AF/"/>
+              <breadCrumb title="技术" url="http://www.ciphermagic.cn/categories/%E6%8A%80%E6%9C%AF/"/>
           
         </display>
     </data>
@@ -128,7 +190,7 @@
 
     
   <url>
-    <loc>http://ciphermagic.win/spring-boot-tomcat.html</loc>
+    <loc>http://www.ciphermagic.cn/spring-boot-tomcat.html</loc>
     <lastmod>2017-04-25T02:19:33.116Z</lastmod>
     <data>
         <display>
@@ -144,7 +206,7 @@
          
            
              
-              <breadCrumb title="技术" url="http://ciphermagic.win/categories/%E6%8A%80%E6%9C%AF/"/>
+              <breadCrumb title="技术" url="http://www.ciphermagic.cn/categories/%E6%8A%80%E6%9C%AF/"/>
           
         </display>
     </data>
@@ -152,7 +214,7 @@
 
     
   <url>
-    <loc>http://ciphermagic.win/spring-boot-mysql-druid.html</loc>
+    <loc>http://www.ciphermagic.cn/spring-boot-mysql-druid.html</loc>
     <lastmod>2017-04-25T02:19:27.824Z</lastmod>
     <data>
         <display>
@@ -170,7 +232,7 @@
          
            
              
-              <breadCrumb title="技术" url="http://ciphermagic.win/categories/%E6%8A%80%E6%9C%AF/"/>
+              <breadCrumb title="技术" url="http://www.ciphermagic.cn/categories/%E6%8A%80%E6%9C%AF/"/>
           
         </display>
     </data>
@@ -178,7 +240,7 @@
 
     
   <url>
-    <loc>http://ciphermagic.win/spring-boot-javaconfig-dubbo.html</loc>
+    <loc>http://www.ciphermagic.cn/spring-boot-javaconfig-dubbo.html</loc>
     <lastmod>2017-04-25T02:19:22.478Z</lastmod>
     <data>
         <display>
@@ -192,7 +254,7 @@
          
            
              
-              <breadCrumb title="技术" url="http://ciphermagic.win/categories/%E6%8A%80%E6%9C%AF/"/>
+              <breadCrumb title="技术" url="http://www.ciphermagic.cn/categories/%E6%8A%80%E6%9C%AF/"/>
           
         </display>
     </data>
@@ -200,7 +262,7 @@
 
     
   <url>
-    <loc>http://ciphermagic.win/spring-boot-exception.html</loc>
+    <loc>http://www.ciphermagic.cn/spring-boot-exception.html</loc>
     <lastmod>2017-04-25T02:19:18.350Z</lastmod>
     <data>
         <display>
@@ -214,7 +276,7 @@
          
            
              
-              <breadCrumb title="技术" url="http://ciphermagic.win/categories/%E6%8A%80%E6%9C%AF/"/>
+              <breadCrumb title="技术" url="http://www.ciphermagic.cn/categories/%E6%8A%80%E6%9C%AF/"/>
           
         </display>
     </data>
@@ -222,7 +284,7 @@
 
     
   <url>
-    <loc>http://ciphermagic.win/spring-boot-chinese.html</loc>
+    <loc>http://www.ciphermagic.cn/spring-boot-chinese.html</loc>
     <lastmod>2017-04-25T02:19:14.311Z</lastmod>
     <data>
         <display>
@@ -236,7 +298,7 @@
          
            
              
-              <breadCrumb title="技术" url="http://ciphermagic.win/categories/%E6%8A%80%E6%9C%AF/"/>
+              <breadCrumb title="技术" url="http://www.ciphermagic.cn/categories/%E6%8A%80%E6%9C%AF/"/>
           
         </display>
     </data>
@@ -244,7 +306,7 @@
 
     
   <url>
-    <loc>http://ciphermagic.win/sonar-issue.html</loc>
+    <loc>http://www.ciphermagic.cn/sonar-issue.html</loc>
     <lastmod>2017-04-25T02:19:10.752Z</lastmod>
     <data>
         <display>
@@ -256,7 +318,7 @@
          
            
              
-              <breadCrumb title="技术" url="http://ciphermagic.win/categories/%E6%8A%80%E6%9C%AF/"/>
+              <breadCrumb title="技术" url="http://www.ciphermagic.cn/categories/%E6%8A%80%E6%9C%AF/"/>
           
         </display>
     </data>
@@ -264,7 +326,7 @@
 
     
   <url>
-    <loc>http://ciphermagic.win/mybatis-redis.html</loc>
+    <loc>http://www.ciphermagic.cn/mybatis-redis.html</loc>
     <lastmod>2017-04-25T02:19:04.807Z</lastmod>
     <data>
         <display>
@@ -278,7 +340,7 @@
          
            
              
-              <breadCrumb title="技术" url="http://ciphermagic.win/categories/%E6%8A%80%E6%9C%AF/"/>
+              <breadCrumb title="技术" url="http://www.ciphermagic.cn/categories/%E6%8A%80%E6%9C%AF/"/>
           
         </display>
     </data>
@@ -286,7 +348,7 @@
 
     
   <url>
-    <loc>http://ciphermagic.win/mybatis-page.html</loc>
+    <loc>http://www.ciphermagic.cn/mybatis-page.html</loc>
     <lastmod>2017-04-25T02:19:00.830Z</lastmod>
     <data>
         <display>
@@ -298,7 +360,7 @@
          
            
              
-              <breadCrumb title="技术" url="http://ciphermagic.win/categories/%E6%8A%80%E6%9C%AF/"/>
+              <breadCrumb title="技术" url="http://www.ciphermagic.cn/categories/%E6%8A%80%E6%9C%AF/"/>
           
         </display>
     </data>
@@ -306,7 +368,7 @@
 
     
   <url>
-    <loc>http://ciphermagic.win/maven.html</loc>
+    <loc>http://www.ciphermagic.cn/maven.html</loc>
     <lastmod>2017-04-25T02:18:55.964Z</lastmod>
     <data>
         <display>
@@ -318,7 +380,7 @@
          
            
              
-              <breadCrumb title="技术" url="http://ciphermagic.win/categories/%E6%8A%80%E6%9C%AF/"/>
+              <breadCrumb title="技术" url="http://www.ciphermagic.cn/categories/%E6%8A%80%E6%9C%AF/"/>
           
         </display>
     </data>
@@ -326,7 +388,7 @@
 
     
   <url>
-    <loc>http://ciphermagic.win/logstash-elasticsearch-kibana.html</loc>
+    <loc>http://www.ciphermagic.cn/logstash-elasticsearch-kibana.html</loc>
     <lastmod>2017-04-25T02:18:52.401Z</lastmod>
     <data>
         <display>
@@ -342,7 +404,7 @@
          
            
              
-              <breadCrumb title="技术" url="http://ciphermagic.win/categories/%E6%8A%80%E6%9C%AF/"/>
+              <breadCrumb title="技术" url="http://www.ciphermagic.cn/categories/%E6%8A%80%E6%9C%AF/"/>
           
         </display>
     </data>
@@ -350,7 +412,7 @@
 
     
   <url>
-    <loc>http://ciphermagic.win/JavaSimon.html</loc>
+    <loc>http://www.ciphermagic.cn/JavaSimon.html</loc>
     <lastmod>2017-04-25T02:18:48.119Z</lastmod>
     <data>
         <display>
@@ -362,7 +424,7 @@
          
            
              
-              <breadCrumb title="技术" url="http://ciphermagic.win/categories/%E6%8A%80%E6%9C%AF/"/>
+              <breadCrumb title="技术" url="http://www.ciphermagic.cn/categories/%E6%8A%80%E6%9C%AF/"/>
           
         </display>
     </data>
@@ -370,7 +432,7 @@
 
     
   <url>
-    <loc>http://ciphermagic.win/idea-spring-xsd.html</loc>
+    <loc>http://www.ciphermagic.cn/idea-spring-xsd.html</loc>
     <lastmod>2017-04-25T02:18:42.783Z</lastmod>
     <data>
         <display>
@@ -382,7 +444,7 @@
          
            
              
-              <breadCrumb title="技术" url="http://ciphermagic.win/categories/%E6%8A%80%E6%9C%AF/"/>
+              <breadCrumb title="技术" url="http://www.ciphermagic.cn/categories/%E6%8A%80%E6%9C%AF/"/>
           
         </display>
     </data>
@@ -390,7 +452,7 @@
 
     
   <url>
-    <loc>http://ciphermagic.win/dubbo-proguard.html</loc>
+    <loc>http://www.ciphermagic.cn/dubbo-proguard.html</loc>
     <lastmod>2017-04-25T02:18:29.999Z</lastmod>
     <data>
         <display>
@@ -404,7 +466,7 @@
          
            
              
-              <breadCrumb title="技术" url="http://ciphermagic.win/categories/%E6%8A%80%E6%9C%AF/"/>
+              <breadCrumb title="技术" url="http://www.ciphermagic.cn/categories/%E6%8A%80%E6%9C%AF/"/>
           
         </display>
     </data>
@@ -412,27 +474,7 @@
 
     
   <url>
-    <loc>http://ciphermagic.win/chrome-scientific-internet-access.html</loc>
-    <lastmod>2017-04-25T02:17:20.295Z</lastmod>
-    <data>
-        <display>
-        <title>使用虚拟机实现灵活的科学上网</title>
-        <pubTime>2017-04-17T03:37:00.000Z</pubTime>
-        
-        <tag>科学上网</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="http://ciphermagic.win/categories/%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ciphermagic.win/hope.html</loc>
+    <loc>http://www.ciphermagic.cn/hope.html</loc>
     <lastmod>2017-04-25T01:45:47.350Z</lastmod>
     <data>
         <display>
@@ -442,7 +484,7 @@
          
            
              
-              <breadCrumb title="生活" url="http://ciphermagic.win/categories/%E7%94%9F%E6%B4%BB/"/>
+              <breadCrumb title="生活" url="http://www.ciphermagic.cn/categories/%E7%94%9F%E6%B4%BB/"/>
           
         </display>
     </data>
@@ -450,7 +492,7 @@
 
     
   <url>
-    <loc>http://ciphermagic.win/taobao-technology-this-decade.html</loc>
+    <loc>http://www.ciphermagic.cn/taobao-technology-this-decade.html</loc>
     <lastmod>2017-04-25T01:25:29.717Z</lastmod>
     <data>
         <display>
@@ -460,7 +502,7 @@
          
            
              
-              <breadCrumb title="生活" url="http://ciphermagic.win/categories/%E7%94%9F%E6%B4%BB/"/>
+              <breadCrumb title="生活" url="http://www.ciphermagic.cn/categories/%E7%94%9F%E6%B4%BB/"/>
           
         </display>
     </data>
@@ -468,7 +510,7 @@
 
     
   <url>
-    <loc>http://ciphermagic.win/recharge-a-wave-of-faith.html</loc>
+    <loc>http://www.ciphermagic.cn/recharge-a-wave-of-faith.html</loc>
     <lastmod>2017-04-25T01:25:29.485Z</lastmod>
     <data>
         <display>
@@ -480,7 +522,7 @@
          
            
              
-              <breadCrumb title="生活" url="http://ciphermagic.win/categories/%E7%94%9F%E6%B4%BB/"/>
+              <breadCrumb title="生活" url="http://www.ciphermagic.cn/categories/%E7%94%9F%E6%B4%BB/"/>
           
         </display>
     </data>
