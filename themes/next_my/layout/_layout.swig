@@ -44,8 +44,8 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        {% include '_partials/footer.swig' %}
         {% include '_third-party/analytics/busuanzi-counter.swig' %}
+        {% include '_partials/footer.swig' %}
         {% block footer %}{% endblock %}
       </div>
     </footer>
