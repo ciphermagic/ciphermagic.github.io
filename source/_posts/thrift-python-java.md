@@ -2,7 +2,7 @@
 title: Thrift 连接 Java 与 Python，附 Java 通用工厂方法
 date: 2017-09-22 10:51
 categories: 技术
-tags: [thrift,java,pyhon] 
+tags: [thrift,java,python] 
 ---
 
 Python 作为服务端，Java 作为客户端调用 Python 提供的接口。本文主要按照[这篇文章][1]的思路连通 Python 与 Java，下面简单介绍一下如何使用，具体可参看原文章。最后重点提供一个 Java 的通用工厂方法，用来调用 Thrift 提供的接口。
