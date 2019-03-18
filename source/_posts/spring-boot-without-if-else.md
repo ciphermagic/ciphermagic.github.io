@@ -234,6 +234,8 @@ public class HandlerContext {
 
 全部示例代码请查看：[handler_demo][4]
 
+阅读原文：[http://www.ciphermagic.cn][5]
+
 希望对你有所帮助：）
 
 
@@ -241,3 +243,5 @@ public class HandlerContext {
   [2]: https://github.com/ciphermagic/java-learn/blob/master/sandbox/src/main/java/com/cipher/handler_demo/util/ClassScaner.java
   [3]: https://github.com/ciphermagic/java-learn/blob/master/sandbox/src/main/java/com/cipher/handler_demo/util/BeanTool.java
   [4]: https://github.com/ciphermagic/java-learn/tree/master/sandbox/src/main/java/com/cipher/handler_demo
+  [5]: http://www.ciphermagic.cn/spring-boot-without-if-else.html
+  [6]: https://github.com/ciphermagic/java-learn/blob/master/sandbox/src/main/java/com/cipher/handler_demo/handler/HandlerProcessorV2.java
