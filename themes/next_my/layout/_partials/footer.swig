@@ -1,6 +1,6 @@
 <div class="copyright" >
   <span class="author" itemprop="copyrightHolder">
-	<a href="http://www.miitbeian.gov.cn/" target="_blank">粤ICP备18089856号-1</a>
+	<a href="http://www.beian.miit.gov.cn" target="_blank">粤ICP备18089856号-1</a>
   </span>
   <span class="with-love">
 	<img src="http://www.uuu9.com/skin2016/images/beian.png">
