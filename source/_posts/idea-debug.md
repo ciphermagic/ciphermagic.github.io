@@ -21,7 +21,7 @@ categories: 技术
 以上就是IntelliJ IDEA的调试技巧，使用一个IDE就可以开发和调试前后端代码，是不是很方便呢：）
 
 
-  [1]: http://images.ciphermagic.cn/n-dubug-js-1.png-blog
-  [2]: http://images.ciphermagic.cn/n-dubug-js-2.png-blog
-  [3]: http://images.ciphermagic.cn/n-rest-1.png-blog
-  [4]: http://images.ciphermagic.cn/n-rest-2.png-blog
+  [1]: http://images.ciphermagic.cn/n-dubug-js-1.png-pic
+  [2]: http://images.ciphermagic.cn/n-dubug-js-2.png-pic
+  [3]: http://images.ciphermagic.cn/n-rest-1.png-pic
+  [4]: http://images.ciphermagic.cn/n-rest-2.png-pic
