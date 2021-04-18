@@ -95,9 +95,9 @@ public class Person {
 ![此处输入图片的描述][6]
 
 
-  [1]: http://pic002.cnblogs.com/images/2012/457289/2012101817534290.jpg
-  [2]: http://ww4.sinaimg.cn/large/698f7fe7gy1fel05wul86j20s5098gm9.jpg
-  [3]: http://ww4.sinaimg.cn/large/698f7fe7gy1fel05vvsecj20q20973yy.jpg
-  [4]: http://ww4.sinaimg.cn/large/698f7fe7gy1fel05wmwdcj20q20br0tq.jpg
-  [5]: http://ww4.sinaimg.cn/large/698f7fe7gy1fel05wr3ysj20q20f3758.jpg
-  [6]: http://ww4.sinaimg.cn/large/698f7fe7gy1fel05w7b5bj20q30eq757.jpg
+  [1]: https://files.ciphermagic.cn/uml1.jpg
+  [2]: https://files.ciphermagic.cn/uml2.jpg
+  [3]: https://files.ciphermagic.cn/uml3.jpg
+  [4]: https://files.ciphermagic.cn/uml4.jpg
+  [5]: https://files.ciphermagic.cn/uml5.jpg
+  [6]: https://files.ciphermagic.cn/uml6.jpg

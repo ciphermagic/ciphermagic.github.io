@@ -29,7 +29,7 @@
     {% elseif theme.livere_uid %}
       <div id="lv-container" data-id="city" data-uid="{{ theme.livere_uid }}"></div>
     {% elseif theme.changyan.appid and theme.changyan.appkey %}
-      <div id="SOHUCS"></div>
+      <div id="SOHUCS" sid="{{ page.title }}"></div>
     {% endif %}
   </div>
 {% endif %}

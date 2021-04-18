@@ -221,6 +221,6 @@ enum Operator {
 感谢大家的阅读，喜欢的朋友可以在[github][3]上点个赞，有任何问题或者建议请在下方留言，期待你的回复。
 
 
-  [1]: http://images.ciphermagic.cn/param-check.jpg-pic
+  [1]: https://files.ciphermagic.cn/check1.jpeg
   [2]: https://github.com/ciphermagic/java-learn/tree/master/sandbox/src/main/java/com/cipher/checker
   [3]: https://github.com/ciphermagic/java-learn

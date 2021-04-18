@@ -328,5 +328,5 @@ public class ConsumerController {
 
 
 
-  [1]: http://ww4.sinaimg.cn/large/698f7fe7gy1fem1qcgo69j211i0epq3n.jpg
-  [2]: http://ww4.sinaimg.cn/large/698f7fe7gy1fem1qcdwz6j20xm0g2dgo.jpg
+  [1]: https://files.ciphermagic.cn/spring-cloud-service-release-and-consumption1.jpg
+  [2]: https://files.ciphermagic.cn/spring-cloud-service-release-and-consumption2.jpg

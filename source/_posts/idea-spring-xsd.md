@@ -23,7 +23,7 @@ tags: [idea]
 ![此处输入图片的描述][4]
 
 
-  [1]: http://ww4.sinaimg.cn/large/698f7fe7gy1fejvcnjlyuj20v20ckdhj.jpg
-  [2]: http://ww4.sinaimg.cn/large/698f7fe7gy1fejvf7mdcrj20x30kn75j.jpg
-  [3]: http://ww4.sinaimg.cn/large/698f7fe7gy1fejvf7yeykj20x30knjsd.jpg
-  [4]: http://ww4.sinaimg.cn/large/698f7fe7gy1fejvf8spy1j20v20clq4f.jpg
+  [1]: https://files.ciphermagic.cn/xsd1.jpg
+  [2]: https://files.ciphermagic.cn/xsd2.jpg
+  [3]: https://files.ciphermagic.cn/xsd3.jpg
+  [4]: https://files.ciphermagic.cn/xsd4.jpg

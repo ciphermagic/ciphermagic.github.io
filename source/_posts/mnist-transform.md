@@ -171,10 +171,10 @@ if __name__ == '__main__':
 ```
 
 
-  [1]: http://images.ciphermagic.cn/MNIST.png-pic
+  [1]: https://files.ciphermagic.cn/mnist1.png
   [2]: http://yann.lecun.com/exdb/mnist/
-  [3]: http://images.ciphermagic.cn/MNIST-Matrix.png-pic
-  [4]: http://images.ciphermagic.cn/dataset.png-pic
-  [5]: http://images.ciphermagic.cn/train.png-pic
-  [6]: http://images.ciphermagic.cn/label.png-pic
+  [3]: https://files.ciphermagic.cn/mnist3.png
+  [4]: https://files.ciphermagic.cn/mnist4.png
+  [5]: https://files.ciphermagic.cn/mnist5.png
+  [6]: https://files.ciphermagic.cn/mnist6.png
   [7]: https://github.com/ciphermagic/python-learn/blob/master/tensorflow_learn/mnist/transform.py

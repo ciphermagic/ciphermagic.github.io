@@ -20,7 +20,7 @@ tags: [logstash,elasticsearch,kibana]
 
 
 ---
-![](http://img0.ph.126.net/ycmJtSvQLMqqBIhCHxnRRg==/3303108851799736440.png)
+![](https://files.ciphermagic.cn/elk1.jpeg)
 
 
 ---
@@ -146,4 +146,4 @@ Kibana是一个webapp，把他放在web容器（如tomcat）中即可。
  5. 启动tomcat容器
  6. 打开Kibanna页面：http://localhost:8080/kibana
  
-![](http://img2.ph.126.net/ZZ_s9EHgJmLCrNoDeG7hxg==/6608407930561742180.png)
+![](https://files.ciphermagic.cn/elk2.jpeg)

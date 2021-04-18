@@ -18,9 +18,9 @@ tags: [maven]
 依次选择菜单```Windows——Preferences——Maven——Installations```，然后在界面中点击```Add```，选择本地Maven的根目录，这样我们就设置好Maven插件了。
 ## Eclipse创建Maven项目
 新建项目选择```Maven Project```，勾选```Use default Workspace location```使用默认的Workspace路径，点```Next```，一般的Web项目我们选择webapp
-![](http://ww3.sinaimg.cn/large/698f7fe7gw1elwuvq2saxj20i20ga43m.jpg)
+![](https://files.ciphermagic.cn/maven1.jpg)
 点```Next```，输入工程信息， ```Group Id```类似一个包名，```Artifact Id```类似类名。其它默认即可。
-![](http://ww4.sinaimg.cn/large/698f7fe7gw1elwv0l1a2kj20i20gadii.jpg)
+![](https://files.ciphermagic.cn/maven1.jpg)
 点```Finish```就完成创建了。完成后我们能在项目中找到一个```pom.xml```文件，里面就可以配置我们项目中所需的依赖jar包了。
 ## 最后
 以上就是我最近初学Maven的一点认识，Maven确实是一个很好的构建工具，而也不仅仅是一个构建工具。更深的了解还要在以后的学习当中去探索。

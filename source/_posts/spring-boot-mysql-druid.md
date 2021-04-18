@@ -164,6 +164,6 @@ public class DataSourceConfig {
 ### 访问druid监控页面
 启动应用，我tomcat的端口是8089，没有设置项目名称，因此我访问的是`http://localhost:8089/druid/login.html`。一般而言，druid监控登录页面的入口为：`http://{IP地址}:{端口}/{项目名}/druid/login.html`
 
-![](http://ww3.sinaimg.cn/large/6af06d97gw1es4xfagntaj20v40dgq36.jpg)
+![](https://files.ciphermagic.cn/druid1.jpg)
 
-![](http://ww3.sinaimg.cn/large/6af06d97gw1es4xfb7e2aj218d0l7wjc.jpg)
+![](https://files.ciphermagic.cn/druid2.jpg)

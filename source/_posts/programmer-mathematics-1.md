@@ -234,17 +234,17 @@ tags: [阅读]
 **答：** 42种。
 
 
-  [1]: http://static.zybuluo.com/ciphermagic/471eh2ihvcky583ff4ushp6g/Snipaste_2018-07-25_17-17-15.png
+  [1]: https://files.ciphermagic.cn/mathematics1.png
   [2]: https://book.douban.com/subject/19949020/ "程序员的数学"
-  [3]: http://static.zybuluo.com/ciphermagic/f0m411sz653h2svtjv3ck64i/image.png
-  [4]: http://static.zybuluo.com/ciphermagic/g1qm9oyz02uk0mbfr7eohia5/image.png
-  [5]: http://static.zybuluo.com/ciphermagic/ox1b03fxmp7ggseg1ivf6zmz/image.png
-  [6]: http://static.zybuluo.com/ciphermagic/1xsv8ot5kvqam8p9t14sk1hy/image.png
-  [7]: http://static.zybuluo.com/ciphermagic/eakne4q6871oa96v1spt3k1m/image.png
-  [8]: http://static.zybuluo.com/ciphermagic/g4dccmo5ik48p3f80t9yeon9/image.png
-  [9]: http://static.zybuluo.com/ciphermagic/7hfx0w28mc0yl528kos6dhfr/image.png
-  [10]: http://static.zybuluo.com/ciphermagic/4dwyxl0pp8s86ei8g908e3ae/image.png
-  [11]: http://static.zybuluo.com/ciphermagic/8vvi0jme0z4rhbscni7p8rrc/Snipaste_2018-07-25_16-11-08.png
-  [12]: http://static.zybuluo.com/ciphermagic/m3qa1oundbznqf063s74ml5g/image.png
-  [13]: http://static.zybuluo.com/ciphermagic/vx6ckt7gru7svgltggssrczh/Snipaste_2018-07-25_16-25-28.png
-  [14]: http://static.zybuluo.com/ciphermagic/4kthvpkrr3ntrdli2bnyw4da/Snipaste_2018-07-25_16-35-22.png
+  [3]: https://files.ciphermagic.cn/mathematics3.png
+  [4]: https://files.ciphermagic.cn/mathematics4.png
+  [5]: https://files.ciphermagic.cn/mathematics5.png
+  [6]: https://files.ciphermagic.cn/mathematics6.png
+  [7]: https://files.ciphermagic.cn/mathematics7.png
+  [8]: https://files.ciphermagic.cn/mathematics8.png
+  [9]: https://files.ciphermagic.cn/mathematics9.png
+  [10]: https://files.ciphermagic.cn/mathematics10.png
+  [11]: https://files.ciphermagic.cn/mathematics11.png
+  [12]: https://files.ciphermagic.cn/mathematics12.png
+  [13]: https://files.ciphermagic.cn/mathematics13.png
+  [14]: https://files.ciphermagic.cn/mathematics14.png
