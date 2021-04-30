@@ -1,9 +1,9 @@
 <div class="copyright" >
   <span class="author" itemprop="copyrightHolder">
-	<a href="http://beian.miit.gov.cn" target="_blank">粤ICP备18089856号-1</a>
+	<a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">粤ICP备18089856号-1</a>
   </span>
   <span class="with-love">
-	<img src="http://www.uuu9.com/skin2016/images/beian.png">
+	<img src="https://www.uuu9.com/skin2016/images/beian.png">
   </span>
   <span class="author" itemprop="copyrightHolder">
 	<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44010302000471" target="_blank">粤公网安备 44010302000471号</a>
