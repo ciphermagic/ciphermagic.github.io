@@ -1,0 +1,12 @@
+# 阅读时间
+readingTime:
+  other: "{{ .ReadingTime }} 分钟"
+
+# 字数统计
+wordCount:
+  one: "{{ .WordCount }} 字"
+  other: "{{ .WordCount }} 字"
+
+# 日期格式（可选，强化中文显示）
+dateFormat:
+  other: "2006年1月2日"

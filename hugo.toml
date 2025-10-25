@@ -1,0 +1,70 @@
+baseURL = "https://www.ciphermagic.cn/"
+title = "Cipher's Blog"
+languageCode = "zh-cn"
+defaultContentLanguage = "zh"
+theme = "PaperMod"
+contentDir = "content"
+publishDir = "public"
+hasCJKLanguage = true
+
+[pagination]
+  pagerSize = 10 
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "首页"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    identifier = "about"
+    name = "关于"
+    url = "/about/"
+    weight = 2
+  [[menu.main]]
+    identifier = "archives"
+    name = "归档"
+    url = "/archives/"
+    weight = 3
+  [[menu.main]]
+    identifier = "categories"
+    name = "分类"
+    url = "/categories/"
+    weight = 4
+  [[menu.main]]
+    identifier = "tags"
+    name = "标签"
+    url = "/tags/"
+    weight = 5
+
+[params]
+  defaultTheme = "auto"
+  showShareButtons = false
+  showReadingTime = true
+  showWordCount = true
+  dateFormat = "2006年1月2日"
+  ShowPostOnHomePage = "list"
+  ShowCodeCopyButtons = true
+  ShowSocialIcons = true
+  SocialIconPosition = "footer"
+
+[[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/ciphermagic"
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[permalinks]
+  posts = "/:year/:month/:title/"
+
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
