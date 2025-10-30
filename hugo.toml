@@ -6,6 +6,7 @@ theme = "PaperMod"
 contentDir = "content"
 publishDir = "public"
 hasCJKLanguage = true
+IsProduction = false
 
 [pagination]
   pagerSize = 10 
@@ -47,6 +48,7 @@ hasCJKLanguage = true
   ShowCodeCopyButtons = true
   ShowSocialIcons = true
   SocialIconPosition = "footer"
+  googleAnalytics = ""
 
 [[params.socialIcons]]
   name = "github"
