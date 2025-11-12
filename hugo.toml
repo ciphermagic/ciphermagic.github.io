@@ -7,9 +7,13 @@ contentDir = "content"
 publishDir = "public"
 hasCJKLanguage = true
 IsProduction = false
+uglyURLs = true
 
 [pagination]
-  pagerSize = 10 
+  pagerSize = 10
+
+[permalinks]
+  posts = "/:contentbasename"
 
 [menu]
   [[menu.main]]
@@ -57,9 +61,6 @@ IsProduction = false
 [taxonomies]
   category = "categories"
   tag = "tags"
-
-[permalinks]
-  posts = "/:year/:month/:title/"
 
 [sitemap]
   changefreq = "weekly"
