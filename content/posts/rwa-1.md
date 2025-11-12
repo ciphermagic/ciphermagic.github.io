@@ -1,6 +1,6 @@
 ---
 title: RWA实操指南（一）：从资产筛选到SPV设立，构建通证化基础
-date: 2025-11-03T09:15:00+08:00
+date: 2025-11-13T09:15:00+08:00
 categories: ["技术", "web3"]
 tags: ["go", "web3", "rwa", "solidity"] 
 ---
