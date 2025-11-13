@@ -5,7 +5,7 @@ categories: ["技术", "web3"]
 tags: ["go", "web3", "rwa", "solidity"] 
 ---
 
-在上篇中，我们讨论了RWA的基础构建，包括资产筛选评估和SPV设立。这些步骤确保了资产的合法性和风险隔离。本篇将延续这一逻辑，聚焦第三步和第四步：数据合规上链处理，以及收益分配机制的设计。这两个环节是RWA从静态资产转向动态通证化的关键，帮助实现数据的可追溯性和投资者的收益兑现。
+在上篇中，我们讨论了RWA的基础构建，包括资产筛选评估和SPV设立。这些步骤确保了资产的合法性和风险隔离。本篇将延续这一逻辑，聚焦第三步和第四步：数据合规上链处理，以及收益分配机制的设计。这两个环节是**RWA从静态资产转向动态通证化**的关键，帮助实现数据的可追溯性和投资者的收益兑现。
 
 ### 第三步：数据合规上链处理  
 根据中国相关法规要求，涉及个人信息和商业敏感数据的原始信息（如租金流水、租户合同）需留存境内。区块链上链数据应采用数据脱敏与哈希化处理方案，通过国密SM3算法对原始数据生成32字节哈希摘要，仅将摘要信息上链存储。采用联盟链架构，由授权节点共同验证数据一致性，确保数据合规性与可追溯性。
@@ -266,7 +266,7 @@ import "@openzeppelin/contracts/utils/math/SafeMath.sol";
 
 /**
  * @title RWA-REPO: 中关村科技地产回购销毁合约
- * @dev 实现专业的代币回购销毁机制，支持多来源资金、价格保护和市场稳定
+ * @dev 实现代币回购销毁机制，支持多来源资金、价格保护和市场稳定
  */
 contract RWABuybackBurn is AccessControl, Pausable {
     using SafeERC20 for IERC20;
@@ -423,7 +423,7 @@ contract RWABuybackBurn is AccessControl, Pausable {
      * @return 当前市场价格
      */
     function getCurrentPrice() public view returns (uint256) {
-        // 示例实现，实际应用中应使用Chainlink等预言机
+        // 模拟实现，实际应用中应使用Chainlink等预言机
         // 此处返回10.00作为示例价格
         return 1000 * 10**16;
     }
