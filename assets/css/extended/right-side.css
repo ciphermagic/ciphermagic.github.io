@@ -82,3 +82,10 @@
       #e0e0e0 100%
     );
   }
+
+/* 移动端隐藏右侧侧边栏 */
+@media (max-width: 992px) {
+    .right-side {
+        display: none !important;
+    }
+}  
