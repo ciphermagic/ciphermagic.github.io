@@ -53,7 +53,9 @@ uglyURLs = true
   ShowSocialIcons = true
   SocialIconPosition = "footer"
   googleAnalytics = ""
-  TocOpen = true
+  ShowToc = true          
+  TocOpen = false        
+  TocSide = "right"
 
 [[params.socialIcons]]
   name = "github"
