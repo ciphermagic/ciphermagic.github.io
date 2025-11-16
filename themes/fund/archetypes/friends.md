@@ -1,6 +1,0 @@
----
-name: ''
-slug: ""
-summary: ''
-linkTo: ""
----

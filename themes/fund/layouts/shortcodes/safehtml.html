@@ -1,8 +1,0 @@
-{{/* 检查命名参数和位置参数 */}}
-{{ $content := .Get "content" }}
-{{ if .IsNamedParams }}
-  {{ $content = .Inner }}
-{{ end }}
-
-{{/* 将内容标记为safeHTML，防止被转义 */}}
-{{ $content | safeHTML }}
