@@ -73,7 +73,7 @@ uglyURLs = true
       unsafe = true
   [markup.highlight]
     codeFences = true           
-    guessSyntax = true          
+    guessSyntax = false          
     lineNos = true              
     lineNumbersInTable = false 
     noClasses = false          
