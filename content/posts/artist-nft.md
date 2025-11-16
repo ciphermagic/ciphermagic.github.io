@@ -1,8 +1,9 @@
-# NFT艺术品交易平台的技术架构解析
-
-**日期：2025-11-16**
-**类别：技术、区块链、Web3**
-**标签：Ethereum、NFT、Solidity、React、IPFS、Arweave**
+---
+title: NFT艺术品交易平台技术架构解析
+date: 2025-11-16T10:00:00+08:00
+categories: ["技术", "区块链", "Web3"]
+tags: ["ethereum", "nft", "solidity", "react", "ipfs", "arweave"]
+---
 
 ## 前言
 
