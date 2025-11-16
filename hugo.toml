@@ -53,7 +53,7 @@ uglyURLs = true
   ShowSocialIcons = true
   SocialIconPosition = "footer"
   googleAnalytics = ""
-  ShowToc = true          
+  ShowToc = false          
   TocOpen = false        
 
 [[params.socialIcons]]
