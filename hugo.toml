@@ -77,4 +77,4 @@ uglyURLs = true
     lineNos = true              
     lineNumbersInTable = false 
     noClasses = false          
-    style = "monokai"
+    style = "catppuccin-mocha"
