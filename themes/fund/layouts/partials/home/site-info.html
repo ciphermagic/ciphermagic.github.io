@@ -1,0 +1,45 @@
+<div class="fund-block fund-border" id="site-info">
+    <div class="site-info-title">
+        <div class="fund-divider fund-title">
+            <span>⚓️ 站点信息</span>
+        </div>
+    </div>
+    <div class="site-info-items">
+        {{$scratch := newScratch}}
+        {{ range (where .Site.RegularPages "Section" "posts" )}}
+        {{$scratch.Add "total" .WordCount}}
+        {{ end }}
+        <div class="site-info-item">
+            <span class="title">📚 {{i18n "article-count"}} </span>
+            <span class="count">{{ len (where .Site.RegularPages "Section" "posts") }}</span>
+        </div>
+        {{ $categories := .Site.Taxonomies.categories }}
+        {{ $categoryCount := len $categories }}
+        <div class="site-info-item">
+            <span class="title">🏆 {{i18n "category-count"}} </span>
+            <span class="count">{{ $categoryCount }}</span>
+        </div>
+        {{- $tags := .Site.Taxonomies.tags -}}
+        {{- $tagCount := len $tags -}}
+        <div class="site-info-item">
+            <span class="title">🏷️ {{i18n "tag-count"}}</span>
+            <span class="count">{{ $tagCount }}</span>
+        </div>
+        <!-- 总字数 -->
+        {{ if .Site.Params.feature.wordCount }}
+        <div class="site-info-item">
+            <span class="title">🔠 {{i18n "word-count"}}</span>
+            <span class="count">{{ div ($scratch.Get "total") 1000.0 | lang.FormatNumber 2 }}K</span>
+        </div>
+        {{- end }}
+        <!-- PV/UV -->
+        {{ if .Site.Params.feature.metrics }}
+        <div class="site-info-item">
+            {{ partial "home/metrics-pv.html" . }}
+        </div>
+        <div class="site-info-item">
+            {{ partial "home/metrics-uv.html" . }}
+        </div>
+        {{- end }}
+    </div>
+</div>

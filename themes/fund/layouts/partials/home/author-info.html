@@ -1,0 +1,72 @@
+<div class="author-info fund-border">
+    <div class="swiper" id="author-info-swiper">
+        <div class="swiper-wrapper">
+            <!-- 预设作者 -->
+            {{- $authorsMap := newScratch -}}
+            {{- range .Site.Params.authorInfo -}}
+            {{- $authorsMap.Set .name (dict "avatar" .avatar "summary" .summary) -}}
+            {{- end -}}
+
+            {{ if and (eq .Section "posts") (eq .Kind "page") }}
+                {{- range .Params.author -}}
+                    {{- $authorInfo := $authorsMap.Get . -}}
+                    {{- $avatar := default "/images/default/avatar.jpg" $authorInfo.avatar -}}
+                    {{- $name := . -}}
+                    {{- $summary := default (i18n "default-summary") ($authorInfo.summary) -}}
+                    <div class="swiper-slide">
+                        <div class="one-author-container">
+                            <a class="avatar" href="/about">
+                                <img  src="{{$avatar}}">
+                            </a>
+                            <div class="author-name fund-title">{{$name}}</div>
+                            <div class="author-summary">{{$summary}}</div>
+                            {{ partial "social.html" $authorInfo }}
+                        </div>
+                    </div>
+                {{- end}}
+            {{ else }}
+                {{- range .Site.Params.authorInfo -}}
+                {{- $avatar := .avatar | default "/images/default/avatar.jpg"  -}}
+                {{- $summary := .summary | default (i18n "default-summary")  -}}
+                    <div class="swiper-slide">
+                        <div class="one-author-container">
+                            <a class="avatar" href="/about">
+                                <img src="{{$avatar}}">
+                            </a>
+                            <div class="author-name fund-title">{{.name}}</div>
+                            <div class="author-summary">{{$summary}}</div>
+                            {{ partial "social.html" . }}
+                        </div>
+                    </div>
+                {{- end}}
+            {{- end }}
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        new Swiper('#author-info-swiper', {
+            direction: 'horizontal',
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            autoplay: {
+                delay: 3000, // 自动播放间隔时间，单位为毫秒
+            },
+            observer: true, // 监听 Swiper 父元素的变化
+            observeParents: true, // 监听 Swiper 父元素的变化
+            on: {
+                touchEnd: function () {
+                    setTimeout(() => {
+                        this.autoplay.start();
+                    }, 500);
+                },
+            },
+        });
+    });
+</script>

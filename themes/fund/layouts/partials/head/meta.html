@@ -1,0 +1,12 @@
+{{- $startTime := .Site.Params.feature.runningTime.startTime | default "2024-02-16 00:00:00" -}}
+<meta name="start-time" content="{{ $startTime }}">
+
+<link rel="shortcut icon" href="{{ .Params.icon }}" type="image/x-icon">
+<link rel="icon" href="{{ .Params.icon }}" type="image/x-icon">
+
+{{- if .Site.Params.feature.comments -}}
+    {{- if .Site.Params.comments.twikoo.enable -}}
+    {{- $twikooEnvId := .Site.Params.comments.twikoo.envId | default "2024-02-16 00:00:00" -}}
+    <meta name="twikoo-env-id" content="{{ $twikooEnvId }}">
+    {{- end }}
+{{- end }}

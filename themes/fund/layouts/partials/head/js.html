@@ -1,0 +1,15 @@
+{{- $jsFiles := (resources.Match "js/*.js") -}}
+{{- $thirdPartyJsFiles := (resources.Match "js/third-party/*.js") -}}
+{{- $allJsFiles := $jsFiles | append $thirdPartyJsFiles -}}
+
+{{- if eq hugo.Environment "development" }}
+{{- range $allJsFiles }}
+{{- with . | js.Build }}
+<script src="{{ .RelPermalink }}"></script>
+{{- end }}
+{{- end }}
+{{- else }}
+{{- $opts := dict "minify" true -}}
+{{- $combinedJs := $allJsFiles | resources.Concat "js/bundle.js" | js.Build $opts | fingerprint -}}
+<script src="{{ $combinedJs.RelPermalink }}" integrity="{{- $combinedJs.Data.Integrity }}" crossorigin="anonymous"></script>
+{{- end }}

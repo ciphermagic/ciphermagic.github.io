@@ -1,0 +1,16 @@
+{{ if isset .Params "author" }}
+<div class="authors">
+    <span>{{- partial "icon.html" "author" -}} {{ i18n "author" }}: </span>
+    <div>
+        {{ $temp := .Params.author }}
+        {{ $len := (len $temp) }}
+        {{- $lastIndex := math.Sub $len 1 -}}
+        {{- range $index, $item := $temp -}}
+            <span>{{ $item }}</span>
+            {{- if ne $index $lastIndex -}}
+            <span> & </span>
+            {{- end -}}
+        {{- end }}
+    </div>
+</div>
+{{- end }}

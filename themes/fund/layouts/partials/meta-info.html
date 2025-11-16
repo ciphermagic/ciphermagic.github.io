@@ -1,0 +1,68 @@
+<!-- 发布时间 -->
+<div class="post-meta-item" id="publish-date">
+    <div class="post-meta-item-header" id="update-date">
+        {{- partial "icon.html" "publish" -}}
+        {{ i18n "publish" }}:
+    </div>
+    <span>
+        {{ .Date.Format "2006-01-02" }}
+    </span>
+</div>
+<!-- 更新时间 -->
+<div class="post-meta-item">
+    <div class="post-meta-item-header">
+        {{- partial "icon.html" "update" -}}
+        {{ i18n "update" }}:
+    </div>
+    {{- if isset .Params "lastmod" -}}
+    <span>
+        {{ .Lastmod.Format "2006-01-02" }}
+    </span>
+    {{- else -}}
+    <span></span>
+    {{- end }}
+</div>
+
+{{ if .Site.Params.feature.detailInList }}
+<!-- 字数统计 -->
+{{ if .Site.Params.feature.articleWordCount }}
+<div class="post-meta-item">
+    <div class="post-meta-item-header">
+        {{- partial "icon.html" "word-count" -}}
+        {{ i18n "article-word-count" }}:
+    </div>
+    <span>
+        {{ .WordCount }}
+    </span>
+</div>
+
+<div class="post-meta-item">
+    <div class="post-meta-item-header">
+        {{- partial "icon.html" "read-time" -}}
+        {{ i18n "read-time" }}:
+    </div>
+    <span>
+        {{ math.Add (math.Div .WordCount 200) 1 }} {{ i18n "minute" }}
+    </span>
+</div>
+{{- end }}
+
+<!-- 访问量 -->
+{{ if .Site.Params.feature.articleMetrics }}
+<div class="post-meta-item">
+    <div class="post-meta-item-header">
+        {{- partial "icon.html" "page-view" -}}
+        PV:
+    </div>
+    <span id="busuanzi_value_page_pv"></span>
+</div>
+
+<div class="post-meta-item">
+    <div class="post-meta-item-header">
+        {{- partial "icon.html" "user-view" -}}
+        UV:
+    </div>
+    <span id="busuanzi_value_site_uv"></span>
+</div>
+{{- end }}
+{{- end }}

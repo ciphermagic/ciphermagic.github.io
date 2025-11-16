@@ -1,0 +1,86 @@
+{{ $length := len .Paginator.Pagers }}
+{{ if gt $length 1 }}
+<div aria-label="Page navigation" class="pagination-nav">
+    <div class="pagination">
+        {{ if .Paginator.HasPrev }}
+        <div class="page-item">
+            <a class="page-link" href="{{ .Paginator.Prev.URL }}" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+        </div>
+        {{ end }}
+
+        {{ $length := len .Paginator.Pagers }}
+        {{ if lt $length 5 }}
+            <!-- 小于5页全量显示 -->
+            {{ range .Paginator.Pagers }}
+            <div class="page-item {{ if eq . $.Paginator }}active{{ end }}">
+                <a class="page-link" href="{{ .URL }}">{{ .PageNumber }}</a>
+            </div>
+            {{ end }}
+        {{ else }}
+            <!-- 大于5个，显示第一页，最后一页，当前页及当前的前后页，如果有没显示的，则用...代替 -->
+            <!-- 第一页 -->
+            {{ with .Paginator.First }}
+            <div class="page-item {{ if eq . $.Paginator }}active{{ end }}">
+                <a class="page-link" href="{{ .URL }}">{{ .PageNumber }}</a>
+            </div>
+            {{- end }}
+
+            {{ if gt .Paginator.PageNumber 3 }}
+            <div class="page-item">
+                <span>...</span>
+            </div>
+            {{- end }}
+
+            <!-- 前一页 -->
+            {{ if gt .Paginator.PageNumber 2 }}
+            {{ with .Paginator.Prev }}
+            <div class="page-item {{ if eq . $.Paginator }}active{{ end }}">
+                <a class="page-link" href="{{ .URL }}">{{ .PageNumber }}</a>
+            </div>
+            {{- end }}
+            {{- end }}
+
+            <!-- 当前页 -->
+            {{ if and (gt .Paginator.PageNumber 1) (lt .Paginator.PageNumber .Paginator.TotalPages) }}
+            {{ with $.Paginator }}
+            <div class="page-item {{ if eq . $.Paginator }}active{{ end }}">
+                <a class="page-link" href="{{ .URL }}">{{ .PageNumber }}</a>
+            </div>
+            {{- end }}
+            {{- end }}
+
+            <!-- 后一页 -->
+            {{ if lt .Paginator.PageNumber (sub .Paginator.TotalPages 1) }}
+            {{ with .Paginator.Next }}
+            <div class="page-item {{ if eq . $.Paginator }}active{{ end }}">
+                <a class="page-link" href="{{ .URL }}">{{ .PageNumber }}</a>
+            </div>
+            {{- end }}
+            {{- end }}
+
+            {{ if lt .Paginator.PageNumber (sub .Paginator.TotalPages 2) }}
+            <div class="page-item">
+                <span>...</span>
+            </div>
+            {{- end }}
+
+            <!-- 最后一页 -->
+            {{ with .Paginator.Last }}
+            <div class="page-item {{ if eq . $.Paginator }}active{{ end }}">
+                <a class="page-link" href="{{ .URL }}">{{ .PageNumber }}</a>
+            </div>
+            {{- end }}
+        {{- end }}
+
+        {{ if .Paginator.HasNext }}
+        <div class="page-item">
+            <a class="page-link" href="{{ .Paginator.Next.URL }}" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+        </div>
+        {{ end }}
+    </div>
+</div>
+{{- end }}

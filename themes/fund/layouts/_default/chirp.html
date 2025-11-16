@@ -1,0 +1,56 @@
+{{ define "main" }}
+<!-- 预设作者 -->
+{{- $authorsMap := newScratch -}}
+{{- range .Site.Params.authorInfo -}}
+{{- $authorsMap.Set .name (dict "avatar" .avatar "summary" .summary "social" .social) -}}
+{{- end -}}
+<div class="single-container fund-padding-top ">
+    <div class="main-container">
+        <div class="left-container fund-border chirp-group-container">
+            {{- $paginator := .Paginate .Pages 10 }}
+            {{- range $index, $chirp := $paginator.Pages.ByWeight.Reverse.ByDate.Reverse }}
+            {{- $slug := .Params.slug }}
+            <div class="chirp-container" x-slug="{{ $slug }}">
+                <div class="avatar-container">
+                    {{- $authorInfo := $authorsMap.Get .Params.author -}}
+                    {{- $avatar := default "/images/default/avatar.jpg" $authorInfo.avatar -}}
+                    <img src="{{ $avatar }}">
+                </div>
+                <div class="chirp-info">
+                    <div class="chirp-content post-container">
+                        {{ .Content }}
+                    </div>
+                    <div class="chirp-imgs-container">
+                        {{- range .Params.Images -}}
+                        <a href="{{ . }}" data-fancybox="gallery">
+                            <img src="{{ . }}">
+                        </a>
+                        {{- end }}
+                    </div>
+                    <div class="chirp-footer fund-secondary">
+                        <div>
+                            {{ .Params.Date | time.Format "2006-01-02 15:04:05" }}
+                        </div>
+                        <div class="chirp-comments-btn">
+                            评论
+                        </div>
+                    </div>
+                    <div class="chirp-comments">
+                        <div id="comments-{{ $slug }}"></div>
+                    </div>
+                </div>
+            </div>
+            {{- end }}
+            <div>
+                {{ partial "pagination.html" . }}
+            </div>
+        </div>
+
+        <div class="right-container">
+            {{ partial "right-side" . }}
+        </div>
+    </div>
+
+</div>
+
+{{ end }}

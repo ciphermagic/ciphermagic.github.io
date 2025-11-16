@@ -1,0 +1,9 @@
+<div class="post-list-container">
+    {{ $pageSize := .Site.Params.paginator.perPage | default 8 }}
+    {{ $paginator := .Paginate (where .Site.RegularPages "Type" "posts") $pageSize }}
+    {{ range $paginator.Pages }}
+    {{ partial "post-card.html" . }}
+    {{- end }}
+</div>
+
+{{ partial "pagination.html" . }}

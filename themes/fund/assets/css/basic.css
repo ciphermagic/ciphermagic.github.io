@@ -1,0 +1,140 @@
+.fund-title {
+    color: var(--primary);
+    font-size: var(--title-font-size);
+    font-weight: bold;
+}
+
+.fund-block-title {
+    height: 2rem;
+    margin-top: 0.5rem;
+    width: 100%;
+}
+
+.fund-block {
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.fund-secondary {
+    color: var(--secondary);
+    font-size: var(--secondary-font-size);
+}
+
+.fund-border {
+    border: 1px solid var(--board-color);
+    border-radius: 1rem;
+    background-color: var(--background-color);
+}
+
+.fund-divider {
+    position: relative;
+    text-align: center;
+    margin: 0;
+}
+
+.fund-divider span {
+    position: relative;
+    background-color: var(--background-color); /* 与背景色相同，使文本显示在分割线上方 */
+    padding: 0 10px;
+    z-index: 1; /* 确保文本在分割线上方 */
+}
+
+.fund-divider::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 45%; /* 每侧各占45% */
+    left: 0;
+    border-top: 1px solid var(--primary); /* 分割线样式 */
+    transform: translateY(-50%); /* 垂直居中 */
+}
+
+.fund-divider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 45%; /* 每侧各占45% */
+    right: 0;
+    border-top: 1px solid var(--primary); /* 分割线样式 */
+    transform: translateY(-50%); /* 垂直居中 */
+}
+
+/* 在你的CSS文件中添加 */
+.fund-divider-vertical {
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    margin: 0 10px;
+}
+
+.fund-divider-vertical span {
+    position: relative;
+    background-color: #fff; /* 与背景色相同，使文本显示在分割线上方 */
+    padding: 10px 0;
+    display: block;
+    z-index: 1; /* 确保文本在分割线上方 */
+}
+
+.fund-divider-vertical::before,
+.fund-divider-vertical::after {
+    content: '';
+    position: absolute;
+    height: 50%;
+    border-left: 1px solid var(--primary);
+}
+
+.fund-divider-vertical::after {
+    bottom: 0;
+}
+
+.fund-padding-top {
+    padding-top: calc(var(--header-height) + 1rem);
+}
+
+.pinned {
+    position: sticky;
+    top: calc(var(--header-height) + 0.3rem);
+}
+
+.button-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+
+    button {
+        border: none;
+        font-size: 1rem;
+        padding: 0.5rem;
+        background-color: var(--background-color);
+    }
+
+    button:hover,
+    button.active {
+        color: var(--link-hover-color);
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+    button:hover {
+        transform: translateY(-0.3rem);
+        transition: 0.3s ease-in-out;
+    }
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: flex;
+}
+
+.inline-svg svg path {
+    fill: var(--fill-color);
+    stroke: var(--stroke-color);
+}

@@ -1,0 +1,55 @@
+<div>
+    <div id="git-code-cal-heatmap-1"></div>
+    <div id="git-code-cal-heatmap-2"></div>
+    <div id="git-code-cal-heatmap-3"></div>
+    <div id="git-code-cal-heatmap-4"></div>
+    <div id="git-code-cal-heatmap-5"></div>
+    <div id="git-code-cal-heatmap-6"></div>
+</div>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const options = {
+            range: 6,
+            data: {
+                source: '/data/git-contribute.csv',
+                type: 'csv',
+                x: 'date',
+                y: 'value'
+            },
+            domain: {
+                type: "month",
+                gutter: 8,
+            },
+            subDomain: {
+                type: "day",
+            },
+            locale: {
+                weekStart: 1
+            },
+            scale: {
+                color: {
+                    scheme: 'Greens',
+                    type: 'linear',
+                    domain: [0, 30],
+                }
+            },
+        }
+
+        const now = new Date();
+        now.setDate(1);
+        for (let i = 0; i < 6; i++) {
+            const startDate = now.setMonth(now.getMonth() - i);
+            const cal = new CalHeatmap();
+            cal.paint({
+                ...options,
+                itemSelector: '#git-code-cal-heatmap-1',
+                date: {
+                    unit: 'day',
+                    start: startDate
+                },
+            });
+        }
+    });
+</script>

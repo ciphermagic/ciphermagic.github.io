@@ -1,0 +1,31 @@
+<div class="author-info-container">
+    {{ partial "home/author-info" . }}
+</div>
+<div class="announcements-container">
+    {{ partial "home/announcement" . }}
+</div>
+
+{{ if and (eq .Section "posts") (eq .Kind "page") }}
+    <div class="toc-container pinned">
+        {{ partial "post/toc" . }}
+    </div>
+{{- else }}
+    <div class="site-info-container">
+        {{ partial "home/site-info" . }}
+    </div>
+    {{ if .Site.Params.feature.runningTime.enabled }}
+    <div class="running-time-container">
+        {{ partial "home/running-time" . }}
+    </div>
+    {{- end }}
+    <div class="tags-container">
+        <div class="terms-tags fund-border fund-block">
+            <div class="site-info-title">
+                <div class="fund-divider fund-title">
+                    <span>🏷️ 标签</span>
+                </div>
+            </div>
+                {{ partial "tags" . }}
+        </div>
+    </div>
+{{- end }}

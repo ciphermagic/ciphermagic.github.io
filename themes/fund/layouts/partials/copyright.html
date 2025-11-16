@@ -1,0 +1,9 @@
+<div class="copyright">
+    <hr>
+    <blockquote>
+        <p>本文为原创内容，版权归作者所有。如需转载，请在文章中声明本文标题及链接。</p>
+        <p>文章标题：{{ .Title }} —— {{ .Param "author" }}</p>
+        <p>文章链接：<a href="{{ .Permalink }}" target="_blank">{{ .Permalink }}</a></p>
+        <p>许可协议：<a href="{{- .Param "license.url" -}}" target="_blank">{{- .Param "license.name" -}}</a></p>
+    </blockquote>
+</div>

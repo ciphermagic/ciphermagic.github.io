@@ -1,0 +1,9 @@
+{{- if .social }}
+<div class="social">
+{{- range .social }}
+    <div class="social-item">
+        {{- partial "icon.html" .name -}}
+    </div>
+{{- end }}
+</div>
+{{- end }}

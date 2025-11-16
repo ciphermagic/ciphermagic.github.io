@@ -1,0 +1,62 @@
+{{ define "main" }}
+
+<!-- 预设作者 -->
+{{- $authorsMap := newScratch -}}
+{{- range .Site.Params.authorInfo -}}
+{{- $authorsMap.Set .name (dict "avatar" .avatar "summary" .summary "social" .social) -}}
+{{- end -}}
+
+{{- $paginator := .Paginate .Pages }}
+<div class="main-container fund-padding-top">
+    <div class="left-container fund-border" style="min-height: 84vh">
+        <div id="about-title" class="title-container fund-title">
+            {{ .Title }}
+        </div>
+        <div class="tabs">
+            <div class="button-group">
+            {{- range $index, $authorPage := $paginator.Pages.ByWeight.Reverse.ByDate.Reverse }}
+                <button class="tab-item {{- if (eq $index 0) }} active {{- end }}"
+                        tab-id="{{ .Params.slug }}">{{ .Params.name }}</button>
+            {{- end }}
+            </div>
+        </div>
+        <div class="tab-container">
+            {{- range $index,$authorPage := $paginator.Pages }}
+                {{- $authorInfo := $authorsMap.Get .Params.name -}}
+                {{- $avatar := default "/images/default/avatar.jpg" $authorInfo.avatar -}}
+                {{- $summary := default (i18n "default-summary") ($authorInfo.summary) -}}
+                <div class="tab-content tab-pane {{- if (eq $index 0) }} active {{- end }} " id = "{{ .Params.slug }}" >
+                    <div class="about-meta">
+                        <div>
+                            <img src="{{ $avatar }}">
+                        </div>
+                        <div> {{ .Params.name }} </div>
+                        <div> {{ $summary }} </div>
+                        {{ partial "social.html" $authorInfo }}
+                    </div>
+                    <div class="fund-divider-vertical">
+                        <span class="fund-divider-line" style="height: 90%"></span>
+                    </div>
+                    <div class="about-info">
+                        {{ .Content }}
+                    </div>
+                </div>
+            {{- end }}
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll('.tab-item').forEach(tab => {
+        tab.addEventListener('click', function() {
+            const tabId = this.getAttribute('tab-id');
+            document.querySelectorAll('.tab-item').forEach(item => item.classList.remove('active'));
+            document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.remove('active'));
+            this.classList.add('active');
+            document.querySelector(`#${tabId}`).classList.add('active');
+        });
+    });
+});
+</script>
+{{ end }}

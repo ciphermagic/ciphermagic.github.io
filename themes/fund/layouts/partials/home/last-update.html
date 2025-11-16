@@ -1,0 +1,85 @@
+<div class="last-update fund-border shadow-a">
+    <div class="swiper last-update" id="last-update-swiper">
+        <div class="swiper-wrapper">
+            {{- $pages := where .Site.RegularPages "Type" "in" (slice "post" "posts") -}}
+            {{- $recentlyUpdated := $pages.ByLastmod.Reverse | first 5 -}}
+            {{- range $recentlyUpdated -}}
+            <div class="swiper-slide">
+                <a class="top-post-meta" href="{{ .Permalink }}">
+                    <!-- 封面图 -->
+                    {{- if .Site.Params.feature.cover }}
+                    {{- if .Params.image }}
+                    <div class="top-post-cover">
+                        <img src="{{ .Params.image }}" alt="post-cover">
+                    </div>
+                    {{- end }}
+                    {{- end }}
+                    <div class="top-post-meta-info-container">
+                        <div class="top-post-title fund-title"> {{ .Title }}</div>
+                        {{- $summary := .Summary | plainify -}}
+                        {{- $truncated := $summary | truncate 200 -}}
+                        <div class="top-post-summary"> {{ $truncated }}{{ if ne $truncated $summary }}...{{ end }}</div>
+                        <div class="top-post-meta-other-container fund-secondary">
+                            <div class="top-post-meta-item-group">
+                                <div class="top-post-meta-item">
+                                    <div class="top-post-meta-item-header">
+                                        {{- partial "icon.html" "publish" -}}
+                                        {{ i18n "publish" }}:
+                                    </div>
+                                    <span>
+                    {{ .Date.Format "2006-01-02" }}
+                    </span>
+                                </div>
+                                <div class="top-post-meta-item">
+                                    <div class="top-post-meta-item-header">
+                                        {{- partial "icon.html" "update" -}}
+                                        {{ i18n "update" }}:
+                                    </div>
+                                    {{- if isset .Params "lastmod" -}}
+                                    <span>
+                    {{ .Lastmod.Format "2006-01-02" }}
+                    </span>
+                                    {{- else -}}
+                                    <span></span>
+                                    {{- end }}
+                                </div>
+                            </div>
+                            <div class="top-post-authors">
+                                {{ partial "authors.html" . }}
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {{- end }}
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        new Swiper('#last-update-swiper', {
+            direction: 'vertical',
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            autoplay: {
+                delay: 5000, // 自动播放间隔时间，单位为毫秒
+            },
+            observer: true, // 监听 Swiper 父元素的变化
+            observeParents: true, // 监听 Swiper 父元素的变化
+            on: {
+                touchEnd: function () {
+                    setTimeout(() => {
+                        this.autoplay.start();
+                    }, 500);
+                },
+            },
+        });
+    });
+</script>

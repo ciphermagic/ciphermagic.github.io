@@ -1,0 +1,35 @@
+<!--{{- $cssFiles := (resources.Match "css/third-party/*.css") -}}-->
+<!--{{- range $cssFiles -}}-->
+<!--<link rel="stylesheet" href="{{ .RelPermalink }}">-->
+<!--{{- end }}-->
+
+<!--{{- $jsFiles := (resources.Match "js/third-party/*.js") -}}-->
+<!--{{- range $jsFiles -}}-->
+<!--<script src="{{ .RelPermalink }}"></script>-->
+<!--{{- end }}-->
+<!-- swiper 轮播图 -->
+<link rel="stylesheet" href="/css/third-party/swiper-bundle.min.css" />
+<script src="/js/third-party/swiper-bundle.min.js"></script>
+
+<!-- cal-heatmap 热力图 -->
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://unpkg.com/cal-heatmap/dist/cal-heatmap.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/cal-heatmap/dist/cal-heatmap.css" />
+
+<!-- WordCloud -->
+{{ if .Site.Params.feature.wordcloud }}
+<script src="/js/optional/wordcloud2.js"></script>
+{{- end }}
+
+<!-- busuanzi -->
+{{ if .Site.Params.feature.metrics }}
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+{{- end }}
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+{{- if .Site.Params.feature.comments -}}
+<script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.40/dist/twikoo.all.min.js"></script>
+{{- end }}

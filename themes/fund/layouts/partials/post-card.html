@@ -1,0 +1,25 @@
+<div class="post-card fund-border">
+    {{- if .Site.Params.feature.cover }}
+    <a href="{{ .Permalink }}" style="width: 100%;height: 100%;">
+        {{ $imageUrl := .Params.Image | default "/images/default/cover.png" }}
+        <img class="list-post-cover-img" src="{{ $imageUrl }}" alt="post-cover">
+    </a>
+    {{- end }}
+    <div class="list-post-item-container fund-border">
+        <div class="list-post-item">
+            <div class="list-post-summary">
+                <div class="fund-title"> {{ .Title }}</div>
+                {{- $summary := .Summary | plainify -}}
+                {{- $truncated := $summary | truncate 100 -}}
+                <div class="post-summary">
+                    {{ $truncated }}{{ if ne $truncated $summary }}...{{ end }}
+                </div>
+            </div>
+            {{ partial "post-meta" . }}
+        </div>
+    </div>
+
+    <div class="read-more">
+        <a href="{{ .Permalink }}" class="read-more-link"> {{ i18n "read-more"}} </a>
+    </div>
+</div>

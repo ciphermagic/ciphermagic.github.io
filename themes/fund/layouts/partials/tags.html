@@ -1,0 +1,5 @@
+<div class="tags-page-container">
+    {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+    <a href="/tags/{{ $name | urlize }}">#{{ $name | humanize }} ({{ $taxonomy.Count }})</a>
+    {{ end }}
+</div>

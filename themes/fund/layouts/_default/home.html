@@ -1,0 +1,16 @@
+{{ define "main" }}
+<div class="main-container fund-padding-top">
+    <div class="left-container" style="min-height: 90vh">
+        <div class="article-recommend-container">
+            {{ partial "home/last-update" . }}
+        </div>
+        <div class="article-list-container">
+            {{ partial "home/list-posts" . }}
+        </div>
+    </div>
+
+    <div class="right-container">
+        {{ partial "right-side" . }}
+    </div>
+</div>
+{{ end }}

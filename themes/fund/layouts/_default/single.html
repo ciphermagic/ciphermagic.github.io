@@ -1,0 +1,86 @@
+{{ define "main" }}
+<!--  <h1>{{ .Title }}</h1>-->
+
+<!--  {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}-->
+<!--  {{ $dateHuman := .Date | time.Format ":date_long" }}-->
+<!--  <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>-->
+
+<div class="single-container fund-padding-top">
+    {{- if .Site.Params.feature.cover }}
+    {{ $imageUrl := .Params.Image | default "/images/default/cover.png" }}
+    <div class="single-cover-bg" style="
+        background:
+        linear-gradient(to bottom, var(--backgroud--mask-alpha80), var(--backgroud--mask-alpha20)),
+        url({{ $imageUrl }});
+        background-repeat: no-repeat;
+        background-size: 100% 100%, cover;
+        background-position: center, center;">
+    </div>
+    {{- end }}
+    <div class="post-header">
+        <div class="over-title-container">
+            {{ $original := .Params.original | default true }}
+            <div>{{- if $original }} 原创 {{- else }} 转载 {{- end }}</div>
+            {{- if .Params.category }}
+            <div>{{ .Params.category }}</div>
+            {{- end }}
+            {{- if .Params.series }}
+            <div>{{ .Params.series }}</div>
+            {{- end }}
+        </div>
+        <div class="title">
+            {{.Title}}
+        </div>
+        <div class="meta fund-secondary">
+            <div class="meta-info">
+                {{ partial "meta-info.html" . }}
+            </div>
+            {{ partial "authors.html" . }}
+            <div class="meta-info">
+                {{ range .Params.tags }}
+                <a href="/tags/{{ . | urlize }}">#{{ . | humanize }}</a>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="left-container fund-border">
+            <div class="post-container" id="md-container">
+                <div class="post-content">
+                    {{- $lastmod := .Lastmod }}
+                    {{- $now := now }}
+                    {{- $duration := $now.Sub $lastmod }}
+                    {{- $daysAgo := $duration.Hours }}
+                    {{- if ge $daysAgo (math.Mul 180 24) }}
+                    <blockquote id="expiration-reminder">
+                        <span style="font-size: 1.2rem">⚠️</span>
+                         这篇文章最后更新已经超过180天了，内容可能已经过时，如有想法请留言或通过其它方法与我交流。
+                    </blockquote>
+                    {{- end }}
+
+                    {{ .Content }}
+
+                    {{- partial "copyright.html" . -}}
+                </div>
+                <div class="post-footer">
+                    <div class="comments">
+                        {{- if .Site.Params.feature.comments }}
+                            {{ $commentsEnable := .Site.Params.comments.defaultInPost | default false }}
+                            {{ $commentsInPost := .Params.comments | default false }}
+                            {{- if or $commentsEnable $commentsInPost }}
+                                {{- partial "comments.html" . }}
+                            {{- end }}
+                        {{- end }}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-container">
+            {{ partial "right-side" . }}
+        </div>
+    </div>
+
+</div>
+
+{{ end }}

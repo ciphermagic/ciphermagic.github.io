@@ -1,0 +1,35 @@
+.announcement {
+    width: 100%;
+    display: flex;
+}
+
+.announcement-content-container {
+    height: 10rem;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.announcement-time {
+    width: 100%;
+    display: flex;
+    align-items: center; /* 垂直居中 */
+    justify-content: center;
+    gap: 0.3rem;/* 水平居中（可选） */
+}
+
+.announcement-time .inline-svg svg {
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+    vertical-align: middle;
+}
+
+.announcement-content {
+    margin-top: 1rem;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+    text-align: left;
+}

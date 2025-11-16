@@ -1,0 +1,23 @@
+{{ define "main" }}
+<div class="main-container fund-padding-top">
+    <div class="left-container fund-border" style="min-height: 84vh">
+        <div id="about-title" class="title-container fund-title">
+            {{- $tagTitle := .Site.Params.tagsTitle | default .Title -}}
+            {{- $categoriesTitle := .Site.Params.categoriesTitle | default .Title -}}
+            {{ if eq .Type "tags" }}
+                {{ $tagTitle }}
+            {{- else if eq .Type "categories" }}
+                {{ $categoriesTitle }}
+            {{- else }}
+                {{  .Title }}
+            {{- end }}
+        </div>
+        {{ if eq .Type "tags" }}
+            {{ partial "tags.html" . }}
+        {{- else if eq .Type "categories" }}
+            {{ partial "categories.html" . }}
+        {{- else }}
+        {{- end }}
+    </div>
+</div>
+{{ end }}

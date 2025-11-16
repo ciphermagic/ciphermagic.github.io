@@ -1,0 +1,55 @@
+<div class="fund-block fund-border">
+    <div class="fund-title block-title">
+        <div class="fund-divider">
+            <span>📢 公告</span>
+        </div>
+    </div>
+    <div class="swiper announcement" id="announcement-swiper">
+        <div class="swiper-wrapper">
+            {{- if .Site.Data.announcement }}
+            {{- range first 3 (sort .Site.Data.announcement "date" "desc") -}}
+            <div class="swiper-slide">
+                <div class="announcement-content-container">
+                    <div class="announcement-time fund-secondary">
+                        {{ partial "icon.html" "publish"}}
+                        <span>
+                            {{ i18n "publish"}} {{ .date | time.Format "2006-01-02 15:04:05" }}
+                        </span>
+                    </div>
+                    <div class="announcement-content">
+                        {{ .content }}
+                    </div>
+                </div>
+            </div>
+            {{- end}}
+            {{- end}}
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        new Swiper('#announcement-swiper', {
+            direction: 'horizontal',
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            autoplay: {
+                delay: 5000, // 自动播放间隔时间，单位为毫秒
+            },
+            observer: true, // 监听 Swiper 父元素的变化
+            observeParents: true, // 监听 Swiper 父元素的变化
+            on: {
+                touchEnd: function () {
+                    setTimeout(() => {
+                        this.autoplay.start();
+                    }, 500);
+                },
+            },
+        });
+    });
+</script>

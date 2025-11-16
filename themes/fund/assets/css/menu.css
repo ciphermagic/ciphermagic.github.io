@@ -1,0 +1,104 @@
+.nav-container {
+    /* 一级菜单 */
+    nav > ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    /* 二级菜单 */
+    ul > li > ul {
+        list-style: none;
+        padding: 0.2rem;
+        top: 2rem;
+        display: none; /* 默认不显示子菜单 */
+        position: absolute; /* 绝对定位，使其垂直展现 */
+        border-radius: 0.5rem;
+        border: 1px solid var(--board-color);
+        background: var(--background-color);
+    }
+
+    /* 当鼠标移动到顶级菜单项上时显示子菜单 */
+    nav > ul > li:hover > ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center; /* 垂直排列 */
+        transition-delay: 0s;
+    }
+
+    /*nav ul li:hover {*/
+    /*    background-color: var(--menu-hover-bg-color);*/
+    /*}*/
+
+    nav ul li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative; /* 相对定位，使子菜单能够相对于此定位 */
+    }
+
+    li {
+        padding-left: 0.2rem;
+        padding-right: 0.2rem;
+        height: 2rem;
+        border-radius: 0.5rem;
+        white-space: nowrap;
+    }
+
+    a {
+        position: relative;
+        color: var(--primary);
+        padding: 0.1rem;
+    }
+
+    a::before {
+        content: "";
+        position: absolute;
+        right: 50%;
+        bottom: 0;
+        width: 0; /* 初始宽度为0 */
+        height: 0.1rem; /* 下划线高度 */
+        background: var(--link-hover-color); /* 下划线颜色 */
+        transition: width 0.3s ease; /* 动画效果 */
+    }
+
+    a::after {
+        content: "";
+        position: absolute;
+        left: 50%; /* 从中间开始 */
+        bottom: 0;
+        width: 0; /* 初始宽度为0 */
+        height: 0.1rem; /* 下划线高度 */
+        background: var(--link-hover-color); /* 下划线颜色 */
+        transition: width 0.3s ease; /* 动画效果 */
+    }
+
+
+    a:hover,
+    a.active,
+    a.child-active {
+        font-weight: bold;
+        /*font-size: 1.2rem;*/
+        color: var(--link-hover-color);
+        transition: font-size 0.3s ease;
+    }
+
+    a:hover::after,
+    a.active::after,
+    a.child-active::after {
+        width: 45%; /* 鼠标悬停时宽度变为100% */
+        left: 50%; /* 从左边开始 */
+    }
+
+    a:hover::before,
+    a.active::before,
+    a.child-active::before {
+        width: 45%; /* 鼠标悬停时宽度变为100% */
+        right: 50%; /* 从左边开始 */
+    }
+}
+
