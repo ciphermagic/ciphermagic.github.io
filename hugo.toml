@@ -71,3 +71,10 @@ uglyURLs = true
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+  [markup.highlight]
+    codeFences = true           
+    guessSyntax = true          
+    lineNos = true              
+    lineNumbersInTable = false 
+    noClasses = false          
+    style = "monokai"
