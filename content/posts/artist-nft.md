@@ -116,8 +116,6 @@ function withdraw() external {
 
 ### 2. `ArtistCoin`：高精度自动分红 ERC20
 
-根据项目实际代码(/Users/cipher/web3/workspace/artist-nft/contracts/ArtistCoin.sol)，合约定义如下：
-
 ```solidity
 contract ArtistCoin is ERC20, Ownable, ReentrancyGuard {
 
@@ -365,7 +363,7 @@ export interface ArtistNFT extends BaseContract {
 - 通过编译时生成类型定义，避免参数错误。
 - 支持向Viem等库的迁移。
 
-### 实际NFT服务实现
+### 智能合约交互服务
 
 src/service/nft-service.ts:
 
@@ -419,47 +417,6 @@ export const getTokenRoyaltyInfo = async (
 };
 ```
 
-### 智能合约交互服务
-
-src/service/nft-service.ts:
-
-```typescript
-// 获取用户拥有的NFT
-export const ownedNft = async (): Promise<{
-  success: boolean;
-  data: Nft[];
-}> => {
-  const { success, signer } = await trying(false);
-  if (!success || !signer) {
-    return { success: false, data: [] };
-  }
-  const address: string = await signer.getAddress();
-  const contract: ArtistNFT = getContract(signer);
-  const count: bigint = await contract.balanceOf(address);
-  const number: number = Number(count);
-  const result: Nft[] = await Promise.all(
-    Array.from({ length: number }, async (_, i: number): Promise<Nft> => {
-      const tokenId: string = await contract.tokenOfOwnerByIndex(address, i).then(i => i.toString());
-      const tokenUri: string = await contract.tokenURI(tokenId);
-      const meta: AxiosResponse<NftMeta> = await axios.get(tokenUri);
-      const royaltyInfoResult = await getTokenRoyaltyInfo(tokenId);
-      return {
-        ...meta.data,
-        tokenId: tokenId,
-        tokenUri: tokenUri,
-        royaltyInfo: royaltyInfoResult.success
-          ? {
-              receiver: royaltyInfoResult.receiver,
-              royaltyAmount: royaltyInfoResult.royaltyAmount,
-            }
-          : undefined,
-      };
-    }),
-  );
-  return { success: true, data: result };
-};
-```
-
 > 通过TypeChain类型定义确保合约交互的类型安全，使用Ethers.js实现完整的区块链交互功能。
 
 ---
@@ -484,8 +441,6 @@ graph TD
 ```
 
 ### 实际经济模型实现
-
-根据项目代码实现，经济模型通过以下方式实现：
 
 1. **铸造费用**：在ArtistNFT合约中设置，用于平台运营
    ```solidity
