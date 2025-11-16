@@ -1,0 +1,32 @@
+    <div class="author-info">
+        <!-- 头像 -->
+        <img src="/author.jpeg" class="author-avatar" />
+        <!-- 社交信息 -->
+        <div>
+            <div class="social-icons">
+                {{- range site.Params.socialIcons }}
+                <a href="{{ trim .url " " | safeURL }}" target="_blank" rel="noopener noreferrer me"
+                    title="{{ (.title | default .name) | title }}">
+                    {{ partial "svg.html" . }}
+                </a>
+                {{- end }}
+            </div>
+         </div>
+        <!-- 最近更新的文章 -->
+        <div class="last-mod">
+            <div>
+                <div class="custom-divider"></div>
+                <div class="last-mod-title">最近更新</div>
+                <div class="custom-divider"></div>
+            </div>
+            <div class="last-mod-table">
+                {{ range first 5 (where .Site.RegularPages "Section" "posts").ByDate.Reverse }}
+                <a class="last-mod-item" href="{{ .RelPermalink }}">
+                    <div class="last-mod-item-tile">{{ .Title }} </div>
+                    <div class="last-mod-item-time"> ----- 于 {{.Lastmod.Format (default "January 2, 2006"
+                        site.Params.DateFormat)}} 由 {{ .Params.author }} 更新</div>
+                </a>
+                {{ end }}
+            </div>
+        </div>
+    </div>

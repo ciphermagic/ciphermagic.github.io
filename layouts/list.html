@@ -93,6 +93,12 @@
 </article>
 {{- end }}
 
+{{- if not (.Param "hideAuthorSidebar") }}
+  <div class="right-side">
+    {{- partial "right-side.html" . }}
+  </div>
+{{- end }}
+
 {{- if gt $paginator.TotalPages 1 }}
 <footer class="page-footer">
   <nav class="pagination">

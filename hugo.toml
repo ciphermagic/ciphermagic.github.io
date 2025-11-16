@@ -59,6 +59,15 @@ uglyURLs = true
 [[params.socialIcons]]
   name = "github"
   url = "https://github.com/ciphermagic"
+[[params.socialIcons]]
+  name = "twitter"
+  url  = "https://x.com/0xCipherMagic"
+[[params.socialIcons]]
+  name = "telegram"
+  url  = "https://t.me/ciphermagic"
+[[params.socialIcons]]
+  name = "email"
+  url  = "mailto:ciphermagic@gmail.com"  
 
 [taxonomies]
   category = "categories"
