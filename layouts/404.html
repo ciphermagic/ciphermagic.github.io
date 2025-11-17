@@ -1,14 +1,16 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-    <title>404</title>
-    <meta name="description" content="404">
-    <meta http-equiv="content-type" content="text/html;charset=utf-8;"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="robots" content="all" />
-    <meta name="robots" content="index,follow"/>
-</head>
-<body>
-    <script type="text/javascript" src="//qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js" charset="utf-8" homePageUrl="https://www.ciphermagic.cn/" homePageName="回到我的主页"></script>
-</body>
-</html>
+{{ define "main" }}
+<article class="post-single">
+  <div class="post-content">
+    <!-- 腾讯公益 404 开始 -->
+    <script type="text/plain"
+            src="//qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js"
+            charset="utf-8"
+            homePageUrl="{{ "" | absURL }}"
+            homePageName="回到首页">
+    </script>
+    <script src="//qzone.qq.com/gy/404/data.js" charset="utf-8"></script>
+    <script src="//qzone.qq.com/gy/404/page.js"  charset="utf-8"></script>
+    <!-- 腾讯公益 404 结束 -->
+  </div>
+</article>
+{{ end }}

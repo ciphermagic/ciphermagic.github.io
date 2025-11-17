@@ -11,6 +11,66 @@
 </header>
 {{- end }}
 
+{{- if (eq .Title "标签") }}
+<link rel="preload" href="/fonts/fingerpaint/FingerPaint-Regular.woff2" as="font" type="font/woff2" crossorigin>
+{{ $fontCSS := resources.Get "css/fonts/fingerpaint.css" }}
+<link rel="stylesheet" href="{{ $fontCSS.RelPermalink }}">
+<ul class="terms-tags">
+    <div id="tag-cloud-container" style="width:100%; min-height: 500px; position: relative;">
+        <!-- 词云将在这里生成真实 DOM -->
+    </div>
+
+    <script src="/js/wordcloud2.js"></script>
+
+    <!-- 收集标签数据 -->
+    {{- $.Scratch.Set "tagsMap" slice }}
+    {{- range .Data.Terms.ByCount }}
+        {{- $.Scratch.Add "tagsMap" (slice (dict .Name .Count)) }}
+    {{- end }}
+    {{- $result := $.Scratch.Get "tagsMap" }}
+    <span id="tag-temp" style="display:none">{{$result | jsonify }}</span>
+    <script>
+        var wordFreqData = document.querySelector("#tag-temp").innerHTML;
+        var jsonObj = JSON.parse(wordFreqData);
+        var arr = []
+        jsonObj.forEach(element => {
+            var key = Object.keys(element);
+            var itemArr = [key[0], element[key]];
+            arr.push(itemArr);
+        });
+
+        const isDark = document.body.classList.contains("dark");
+
+        // 使用 HTML 模式生成真实 DOM
+        WordCloud(document.getElementById('tag-cloud-container'), {
+            list: arr,
+            shape: 'rectangle',
+            gridSize: 28,
+            weightFactor: 16,
+            fontFamily: 'Finger Paint, cursive, sans-serif',
+            color: isDark ? 'random-light' : 'random-dark',
+            backgroundColor: 'transparent',
+            draw: 'html',
+            click: function(item) {
+                window.location.href = `/tags/${encodeURIComponent(item[0])}.html`;
+            }
+        });
+    </script>
+</ul>
+<div id="tag-cloud-gap"></div>
+<ul class="terms-tags">
+    {{- $type := .Type }}
+    {{- range $key, $value := .Data.Terms.ByCount }}
+    {{- $name := .Name }}
+    {{- $count := .Count }}
+    {{- with site.GetPage (printf "/%s/%s" $type $name) }}
+    <li>
+        <a href="{{ .Permalink }}">{{ .Name }} <sup><strong><sup>{{ $count }}</sup></strong></sup> </a>
+    </li>
+    {{- end }}
+    {{- end }}
+</ul>
+{{- else }}
 <ul class="terms-tags">
     {{- $type := .Type }}
     {{- range $key, $value := .Data.Terms.Alphabetical }}
@@ -23,6 +83,7 @@
     {{- end }}
     {{- end }}
 </ul>
+{{- end }}
 
 {{- if not (.Param "hideAuthorSidebar") }}
 <div class="right-side">

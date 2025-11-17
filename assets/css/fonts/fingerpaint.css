@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'Finger Paint';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/fingerpaint/FingerPaint-Regular.woff2') format('woff2');
+}

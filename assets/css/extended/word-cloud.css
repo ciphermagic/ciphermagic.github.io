@@ -1,0 +1,37 @@
+#tag-cloud-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 2rem 0;
+}
+
+#tag-cloud-container > span {
+    display: inline-block;
+    padding: 4px 8px;
+    margin: 2px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    text-decoration: none !important;
+    font-weight: 500;
+}
+
+#tag-cloud-container > span:hover {
+    transform: scale(1.15) !important;
+    z-index: 10;
+    cursor: pointer;
+}
+
+#tag-cloud-gap {
+    margin-top: 4rem;
+}
+
+@media (max-width: 992px) {
+    #tag-cloud-container {
+        display: none;
+    }
+    #tag-cloud-gap {
+        display: none;
+    }
+}
