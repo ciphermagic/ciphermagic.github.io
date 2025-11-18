@@ -7,8 +7,6 @@ categories: ["技术"]
 
 JavaSimon，是Java Simple Monitoring的意思，是Java性能监控的一个开源方案（[官方说明](https://code.google.com/p/javasimon/wiki/JavaEE)）。本文介绍它在项目中的用法：
 
-<!-- more -->
-
 ### pom.xml，加入core与dashboard的依赖
 ``` xml
     <dependency>
