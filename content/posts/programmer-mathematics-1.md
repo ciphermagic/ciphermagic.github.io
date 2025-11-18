@@ -2,7 +2,7 @@
 title: 《程序员的数学》思考题（一）
 date: 2018-07-25T17:09:00+08:00
 categories: ["生活"]
-tags: ["阅读"] 
+tags: ["reading"] 
 ---
 
 ![Snipaste_2018-07-25_17-17-15.png-56.3kB][1]
