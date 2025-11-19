@@ -25,33 +25,52 @@
     <!-- 收集标签数据 -->
     {{- $.Scratch.Set "tagsMap" slice }}
     {{- range .Data.Terms.ByCount }}
-        {{- $.Scratch.Add "tagsMap" (slice (dict .Name .Count)) }}
+    {{- $.Scratch.Add "tagsMap" (slice (dict .Name .Count)) }}
     {{- end }}
     {{- $result := $.Scratch.Get "tagsMap" }}
     <span id="tag-temp" style="display:none">{{$result | jsonify }}</span>
     <script>
         var wordFreqData = document.querySelector("#tag-temp").innerHTML;
         var jsonObj = JSON.parse(wordFreqData);
-        var arr = []
-        jsonObj.forEach(element => {
-            var key = Object.keys(element);
-            var itemArr = [key[0], element[key]];
-            arr.push(itemArr);
+        var rawData = jsonObj.map(element => {
+            var key = Object.keys(element)[0];
+            return [key, element[key]];
+        });
+
+        const counts = rawData.map(d => d[1]).sort((a, b) => a - b);
+        const maxCount = counts[counts.length - 1];
+        const p95Index = Math.floor(counts.length * 0.95);
+        const p95 = counts[Math.max(p95Index, 0)] || maxCount;
+
+        function normalizeWeight(count) {
+            const capped = Math.min(count, p95 * 1.8);
+            const logScaled = Math.log(capped + 1) / Math.log(maxCount + 1);
+            const sqrtScaled = Math.sqrt(logScaled);
+            const baseMin = 14;
+            const baseMax = rawData.length > 80 ? 78 : 68;
+            const minWeight = baseMin;
+            const maxWeight = baseMax;
+            const weight = minWeight + sqrtScaled * (maxWeight - minWeight);
+            return Math.round(Math.max(weight, minWeight));
+        }
+
+        const wordList = rawData.map(([word, count]) => {
+            return [word, normalizeWeight(count)];
         });
 
         const isDark = document.body.classList.contains("dark");
-
         // 使用 HTML 模式生成真实 DOM
         WordCloud(document.getElementById('tag-cloud-container'), {
-            list: arr,
+            list: wordList,
             shape: 'rectangle',
-            gridSize: 28,
-            weightFactor: 16,
+            gridSize: 16,
+            weightFactor: 1,
+            shuffle: true,
             fontFamily: 'Finger Paint, cursive, sans-serif',
             color: isDark ? 'random-light' : 'random-dark',
             backgroundColor: 'transparent',
             draw: 'html',
-            click: function(item) {
+            click: function (item) {
                 window.location.href = `/tags/${encodeURIComponent(item[0])}.html`;
             }
         });
@@ -87,7 +106,7 @@
 
 {{- if not (.Param "hideAuthorSidebar") }}
 <div class="right-side">
-{{- partial "right-side.html" . }}
+    {{- partial "right-side.html" . }}
 </div>
 {{- end }}
 
