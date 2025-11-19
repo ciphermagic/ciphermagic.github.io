@@ -11,3 +11,4 @@ qrsboxcli
 hexo-helper.py
 ._config.yml.swp
 .spec-workflow/
+draft/
