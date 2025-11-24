@@ -78,3 +78,4 @@ The site uses the PaperMod theme with customizations in:
 3. The .gitignore excludes build artifacts and some development files
 4. Recent activity shows focus on RWA (Real World Assets) content
 5. The site was migrated from Hexo to Hugo (as evidenced by branch name and .gitignore entries)
+6. When creating new articles, follow the writing guidelines in write-guide.md to ensure consistent content structure, style, and code formatting
