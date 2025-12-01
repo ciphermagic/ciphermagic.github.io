@@ -297,6 +297,7 @@ sequenceDiagram
     participant MetaMask as MetaMask 钱包
     participant Node as 节点 (Infura/Alchemy/Anvil)
     participant Chain as 区块链
+    participant publicClient as publicClient 
 
     User->>Page: 点击 “+1” 按钮
     Page->>Page: 调用 handleIncrement()
@@ -326,7 +327,7 @@ sequenceDiagram
     publicClient-->>Page: 返回新值
     Page->>Page: setCount(新值) → 页面更新
 
-    Note over User,Chain: 整个过程用户只点了一次确认<br/>所有状态自动同步
+    Note over User,Chain: 整个过程用户只点了一次确认, 所有状态自动同步
 ```
 
 #### 断开连接
