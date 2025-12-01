@@ -849,7 +849,7 @@ C4Deployment
     Rel(ViemClient, TestContract, "读写调用", "HTTP")
 ```
 
-## 6. 交互时序图 (Sequence Diagram)
+### 6. 交互时序图 (Sequence Diagram)
 
 ```mermaid
 sequenceDiagram
