@@ -724,9 +724,7 @@ C4Context
 
     Rel(user, mm, "使用", "浏览器扩展")
     Rel(mm, s1, "连接", "JSON-RPC")
-    Rel(s1, eth, "读写合约", "JSON-RPC")
-    Rel(s1, eth, "查询账户", "JSON-RPC")
-    Rel(s1, eth, "发送交易", "JSON-RPC")
+    Rel(s1, eth, "读写合约 | 查询账户 | 发送交易", "JSON-RPC")
 ```
 
 ### 2. 容器图 (Container Diagram)
