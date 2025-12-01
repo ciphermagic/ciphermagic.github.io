@@ -1,0 +1,16 @@
+.entry-cover img {
+  max-height: 200px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.post-content-main .entry-cover img {
+  max-height: 100%;
+  width: 100%;
+  object-position: center;
+}
+
+@media (max-width: 576px) {
+  .entry-cover img { display: none; }
+}

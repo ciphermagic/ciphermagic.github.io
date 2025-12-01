@@ -3,6 +3,8 @@ title: "删库之夜·Ω诡计"
 date: 2025-11-24T22:00:00+08:00
 categories: ["生活"]
 tags: ["story"]
+cover:
+  image: "/images/night-of-db-deletion.jpg" 
 ---
 
 你加班到凌晨，工位只剩你一个人，空调把脚踝吹得发麻。  

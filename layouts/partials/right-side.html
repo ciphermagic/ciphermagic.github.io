@@ -23,8 +23,8 @@
                 {{ range first 5 (where .Site.RegularPages "Section" "posts").ByDate.Reverse }}
                 <a class="last-mod-item" href="{{ .RelPermalink }}">
                     <div class="last-mod-item-tile">{{ .Title }} </div>
-                    <div class="last-mod-item-time"> ----- 于 {{.Lastmod.Format (default "January 2, 2006"
-                        site.Params.DateFormat)}} 由 {{ .Params.author }} 更新</div>
+                    <div class="last-mod-item-time"> ----- {{.Lastmod.Format (default "January 2, 2006"
+                        site.Params.DateFormat)}} 更新</div>
                 </a>
                 {{ end }}
             </div>

@@ -55,6 +55,7 @@ uglyURLs = true
   googleAnalytics = ""
   ShowToc = true          
   TocOpen = true
+  disableSpecial1stPost = true
 
 [[params.socialIcons]]
   name = "github"

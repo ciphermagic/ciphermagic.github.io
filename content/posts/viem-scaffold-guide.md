@@ -3,6 +3,8 @@ title: "纯 Viem 脚手架：最干净的链上交互方式"
 date: 2025-12-01T10:00:00+08:00
 categories: ["技术", "Web3"]
 tags: ["viem", "ethereum", "metamask", "web3"]
+cover:
+  image: "/images/viem-scaffold-guide.jpg" 
 ---
 
 ## 前言
