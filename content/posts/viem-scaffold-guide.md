@@ -708,3 +708,168 @@ export default function Home() {
 - [MetaMask EIP-1193 标准](https://eips.ethereum.org/EIPS/eip-1193)
 - [Foundry 文档](https://book.getfoundry.sh/)
 - [Next.js App Router](https://nextjs.org/docs/app)
+
+## 附录 - C4 架构模型
+
+### 1. 系统上下文图 (System Context Diagram)
+
+```mermaid
+C4Context
+    Boundary(b0, "Simple Viem 应用", "Web3 DApp 应用") {
+        System(s1, "Web3 DApp 前端", "基于 Next.js 的 Web3 应用", "React + Next.js + Viem")
+    }
+    System_Ext(eth, "以太坊网络", "Ethereum Blockchain", "Ethereum Mainnet/Sepolia")
+    System_Ext(user, "用户", "MetaMask 钱包用户", "DApp 用户")
+    System_Ext(mm, "MetaMask", "浏览器钱包扩展", "钱包和交易签名")
+
+    Rel(user, mm, "使用", "浏览器扩展")
+    Rel(mm, s1, "连接", "JSON-RPC")
+    Rel(s1, eth, "读写合约", "JSON-RPC")
+    Rel(s1, eth, "查询账户", "JSON-RPC")
+    Rel(s1, eth, "发送交易", "JSON-RPC")
+```
+
+### 2. 容器图 (Container Diagram)
+
+```mermaid
+C4Container
+    Boundary(b0, "Simple Viem 系统", "Web3 DApp 系统") {
+        Container(web, "Next.js Web 应用", "React/Next.js", "提供 Web3 DApp 用户界面", "Web 应用")
+        Container(ant, "Ant Design UI", "UI 组件库", "提供现代化 UI 组件", "UI 框架")
+        Container(viem, "Viem 客户端", "Viem", "Ethereum 客户端库", "区块链交互")
+    }
+    Boundary(b1, "Ethereum 网络", "区块链基础设施") {
+        Container(contract, "Counter 智能合约", "Solidity", "简单的计数器合约", "EVM 合约")
+        Container(eth_node, "Ethereum 节点", "JSON-RPC 节点", "提供区块链数据访问", "区块链节点")
+    }
+    System_Ext(user, "用户", "MetaMask 钱包用户", "DApp 用户")
+    System_Ext(mm, "MetaMask", "浏览器钱包扩展", "钱包和交易签名")
+
+    Rel(user, web, "使用", "HTTPS")
+    Rel(web, ant, "使用", "React 组件")
+    Rel(web, viem, "使用", "Viem API")
+    Rel(viem, mm, "连接", "JSON-RPC")
+    Rel(viem, eth_node, "查询/交易", "JSON-RPC")
+    Rel(eth_node, contract, "执行", "EVM")
+    Rel(contract, eth_node, "依赖", "区块链状态")
+```
+
+### 3. 组件图 (Component Diagram)
+
+```mermaid
+C4Component
+    Boundary(b0, "Next.js Web 应用", "前端应用") {
+        Component(layout, "Root Layout", "React Component", "应用根布局", "Next.js Layout")
+        Component(home, "Home Component", "React Component", "主页面组件", "Next.js Page")
+        Component(providers, "Providers", "React Component", "应用上下文提供者", "React Context")
+        Component(viem_api, "Viem API 集成", "React Hooks", "区块链交互逻辑", "Viem 库")
+        Component(contract_api, "合约接口", "ABI", "合约接口定义", "JSON ABI")
+    }
+    Boundary(b1, "Viem 客户端", "区块链交互层") {
+        Component(pub_client, "Public Client", "Viem Client", "用于读取操作", "Viem")
+        Component(wal_client, "Wallet Client", "Viem Client", "用于写入操作", "Viem")
+        Component(contract_inst, "合约实例", "Viem Contract", "合约交互封装", "Viem")
+    }
+    Boundary(b2, "智能合约", "EVM 合约") {
+        Component(counter, "Counter 合约", "Solidity Contract", "计数器功能", "Solidity")
+    }
+
+    Rel(home, layout, "使用", "React 组合")
+    Rel(home, providers, "使用", "React Context")
+    Rel(home, viem_api, "调用", "React Hooks")
+    Rel(viem_api, pub_client, "创建", "Viem API")
+    Rel(viem_api, wal_client, "创建", "Viem API")
+    Rel(viem_api, contract_inst, "使用", "合约 ABI")
+    Rel(contract_api, contract_inst, "定义", "ABI")
+    Rel(contract_inst, counter, "交互", "Ethereum 调用")
+    Rel(pub_client, counter, "读取", "Ethereum 调用")
+    Rel(wal_client, counter, "写入", "Ethereum 调用")
+```
+
+### 4. 代码图 (Code Diagram)
+
+```mermaid
+C4Component
+    Container_Boundary(NextjsApp, "Next.js 应用") {
+        Container(app, "app 目录", "Next.js App Router")
+        Container_Boundary(appAbis, "abis") {
+            Component(counterAbi, "Counter.json", "ABI 文件")
+        }
+        Container_Boundary(appTypes, "types") {
+            Component(ethD, "ethereum.d.ts", "类型定义")
+        }
+        Component(layout, "layout.tsx", "根布局")
+        Component(page, "page.tsx", "主页组件")
+        Component(providers, "providers.tsx", "提供者")
+        Component(pkg, "package.json", "项目依赖")
+    }
+
+    Container_Boundary(Contracts, "智能合约") {
+        Container(contracts, "contracts 目录", "Foundry")
+        Container_Boundary(src, "src") {
+            Component(counterSol, "Counter.sol", "计数器合约")
+        }
+        Component(foundryToml, "foundry.toml", "Foundry 配置")
+    }
+
+    Rel(page, counterAbi, "导入", "ABI")
+    Rel(page, counterSol, "对应", "合约接口")
+    Rel(pkg, page, "包含", "React 组件")
+    Rel(foundryToml, counterSol, "编译", "Foundry")
+```
+
+### 5. 部署图 (Deployment Diagram)
+
+```mermaid
+C4Deployment
+    Deployment_Node(DevEnv, "开发环境") {
+        Deployment_Node(Browser, "浏览器") {
+            Deployment_Node(NextApp, "Next.js 应用") {
+                Container(NextjsApp, "Next.js Web 应用", "React & Next.js", "提供 Web3 DApp 用户界面")
+                Container(AntDesign, "Ant Design UI", "UI 组件库", "提供现代化 UI 组件")
+                Container(ViemClient, "Viem 客户端", "Viem", "Ethereum 客户端库")
+            }
+            Deployment_Node(Wallet, "MetaMask 钱包") {
+                Container(MetaMask, "MetaMask", "钱包扩展", "提供账户管理")
+            }
+        }
+
+        Deployment_Node(Blockchain, "区块链网络") {
+            Deployment_Node(LocalNode, "本地节点 [Foundry]", "Anvil", "本地开发链") {
+                Container(LocalContract, "Counter 合约", "Solidity", "Foundry 本地合约")
+            }
+            Deployment_Node(TestNode, "测试节点 [Sepolia]", "RPC", "Sepolia 测试网") {
+                Container(TestContract, "Counter 合约", "Solidity", "Sepolia 合约")
+            }
+        }
+    }
+
+    Rel(NextjsApp, MetaMask, "JSON-RPC 调用", "EIP-1193")
+    Rel(ViemClient, LocalContract, "读写调用", "HTTP")
+    Rel(ViemClient, TestContract, "读写调用", "HTTP")
+```
+
+## 6. 交互时序图 (Sequence Diagram)
+
+```mermaid
+sequenceDiagram
+    participant U as 用户
+    participant W as MetaMask
+    participant A as Next.js 应用
+    participant V as Viem 客户端
+    participant C as Counter 合约
+
+    U->>+A: 访问 DApp
+    A->>+W: 请求连接钱包
+    W->>-A: 返回账户地址
+    A->>-U: 显示连接状态
+
+    U->>+A: 点击"增加计数"
+    A->>+V: 创建 walletClient
+    V->>+W: 请求交易签名
+    W->>-V: 返回签名
+    V->>+C: 发送 increment 交易
+    C-->>-V: 交易确认
+    V-->>-A: 交易完成
+    A->>-U: 更新计数值显示
+```
