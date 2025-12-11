@@ -1,10 +1,10 @@
 ---
-title: "删库之夜V2·天网恢恢"
+title: "【无聊写小说系列】删库之夜V2·天网恢恢"
 date: 2025-12-01T22:00:00+08:00
 categories: ["生活"]
 tags: ["story"]
 cover:
-  image: "/images/night-of-db-deletion-v2.jpg" 
+  image: "https://files.ciphermagic.cn/night-of-db-deletion-v2.jpg" 
 ---
 
 ## 天网之下

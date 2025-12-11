@@ -4,7 +4,7 @@ date: 2025-11-25T12:00:00+08:00
 categories: ["web3"]
 tags: ["DeFi", "AMM", "Uniswap"]
 cover:
-  image: "/images/impermanent-loss.jpg" 
+  image: "https://files.ciphermagic.cn/impermanent-loss.jpg"
 ---
 
 ## 前言

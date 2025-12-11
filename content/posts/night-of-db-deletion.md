@@ -1,10 +1,10 @@
 ---
-title: "删库之夜·Ω诡计"
+title: "【无聊写小说系列】删库之夜·Ω诡计"
 date: 2025-11-24T22:00:00+08:00
 categories: ["生活"]
 tags: ["story"]
 cover:
-  image: "/images/night-of-db-deletion.jpg" 
+  image: "https://files.ciphermagic.cn/night-of-db-deletion.jpg" 
 ---
 
 ## 00:23，老张从离职群里复活

@@ -1,5 +1,5 @@
 ---
-title: 深入剖析基于回调机制的NFT市场智能合约
+title: 深度解析NFT市场智能合约：基于回调机制的原子化实现
 date: 2025-11-18T22:00:00+08:00
 categories: ["技术", "Web3"]
 tags: ["ethereum", "nft", "solidity"]
