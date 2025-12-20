@@ -3,6 +3,8 @@ title: 图解 HD 钱包：从助记词到多币种地址生成的完整流程
 date: 2025-12-20T20:00:00+08:00
 categories: ["Web3"]
 tags: ["HD钱包", "助记词", "web3"]
+cover:
+  image: https://files.ciphermagic.cn/hd-wallet-cover.jpg
 ---
 
 ![HD钱包推导链路](https://files.ciphermagic.cn/hd-wallet.png)
