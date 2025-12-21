@@ -7,7 +7,7 @@ cover:
   image: https://files.ciphermagic.cn/hd-wallet-cover.jpg
 ---
 
-![HD钱包推导链路](https://files.ciphermagic.cn/hd-wallet.png)
+![HD钱包推导链路](https://files.ciphermagic.cn/%E5%9B%BE%E8%A7%A3HD%E9%92%B1%E5%8C%85.svg)
 
 ## 前言
 
