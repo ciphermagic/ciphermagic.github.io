@@ -154,25 +154,68 @@ sequenceDiagram
 
 #### 3.1 购买入口函数
 
-```solidity
-function buyNFTWithCallback(uint256 _listingId) external {
-    // 获取指定listingId的上架信息
-    Listing storage listing = listings[_listingId];
-    require(listing.isActive, "NFTMarket: listing is not active");  // 验证上架是否仍处于活跃状态
+``` typescript
+import { useWalletClient, usePublicClient } from 'wagmi';
+import { encodeAbiParameters, parseEther } from 'viem';
 
-    // 检查买家是否有足够的代币余额用于支付
-    require(paymentToken.balanceOf(msg.sender) >= listing.price, "NFTMarket: insufficient token balance");
+function BuyButton({ listingId, price }: { listingId: bigint; price: bigint }) {
+  // 获取钱包客户端（用于签名和发送交易）
+  const { data: walletClient } = useWalletClient();
+  
+  // 获取公共客户端（用于读取链上数据和等待交易确认）
+  const publicClient = usePublicClient();
 
-    // 将listingId编码为字节数据，用于在回调中识别此次购买交易
-    bytes memory data = abi.encode(_listingId);
+  const handleBuy = async () => {
+    // 如果没有连接钱包，直接返回
+    if (!walletClient) {
+      alert('请先连接钱包');
+      return;
+    }
 
-    // 调用扩展ERC20合约的transferWithCallbackAndData函数
-    // 此操作将执行两个步骤：
-    // 1. 将指定数量的代币从买家账户转移到市场合约
-    // 2. 自动调用市场合约的tokensReceived回调函数处理后续逻辑
-    bool success = paymentToken.transferWithCallbackAndData(address(this), listing.price, data);
-    require(success, "NFTMarket: token transfer with callback failed");  // 验证代币转移和回调调用是否成功
+    // 将 listingId 编码为 bytes 数据（对应 Solidity 中的 abi.encode(uint256)）
+    // 这是为了在代币转账回调中让市场合约知道要购买哪个 NFT 上架项
+    const data = encodeAbiParameters(
+      [{ type: 'uint256' }],
+      [listingId]
+    );
+
+    try {
+      // 调用支付代币合约的 transferWithCallbackAndData 函数
+      // 参数：
+      //   - nftMarketAddress：收款地址（市场合约地址）
+      //   - price：支付金额（已转为 bigint，通常由后端或合约查询得到）
+      //   - data：附加数据，包含 listingId
+      // 该调用会：
+      // 1. 从用户钱包直接转账指定金额到市场合约
+      // 2. 自动触发市场合约的 tokensReceived 回调完成 NFT 转移
+      const hash = await walletClient.writeContract({
+        address: paymentTokenAddress,   // 支付代币合约地址
+        abi: paymentTokenAbi,           // 代币合约的 ABI（需包含 transferWithCallbackAndData）
+        functionName: 'transferWithCallbackAndData',
+        args: [nftMarketAddress, price, data],
+      });
+
+      console.log('交易已提交，hash:', hash);
+
+      // 等待交易上链确认
+      await publicClient.waitForTransactionReceipt({ hash });
+
+      // 交易成功提示
+      alert('购买成功！NFT 已转入你的钱包');
+    } catch (error: any) {
+      console.error('购买失败:', error);
+      alert('购买失败：' + (error?.shortMessage || error?.message || '未知错误'));
+    }
+  };
+
+  return (
+    <button onClick={handleBuy}>
+      一键购买
+    </button>
+  );
 }
+
+export default BuyButton;
 ```
 
 #### 3.2 回调处理函数（核心业务逻辑）
@@ -220,8 +263,7 @@ sequenceDiagram
     participant NFT as ERC721
     participant Seller
 
-    Buyer->>Market: buyNFTWithCallback(listingId)
-    Market->>Token: transferWithCallbackAndData(Market, price, encode(listingId))
+    Buyer->>Token: transferWithCallbackAndData(Market, price, encode(listingId))
     Token-->>Market: 转入代币
     Token->>Market: 回调: tokensReceived(buyer, price, data)
     Market->>Market: 验证 listingId、金额、状态
