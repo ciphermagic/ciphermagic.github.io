@@ -81,6 +81,12 @@
 {{- end }}
 
 {{- if not (.Param "hideAuthorSidebar") }}
+<div class="left-side">
+{{- partial "left-side.html" . }}
+</div>
+{{- end }}
+
+{{- if not (.Param "hideAuthorSidebar") }}
 <div class="right-side">
 {{- partial "right-side.html" . }}
 </div>

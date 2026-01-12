@@ -3,6 +3,8 @@ title: "Foundry：Solidity 智能合约本地开发、测试与部署指南"
 date: 2025-11-19T08:30:00+08:00
 categories: ["技术", "web3"]
 tags: ["foundry", "solidity", "ethereum", "web3", "blockchain"]
+cover:
+  image: "https://files.ciphermagic.cn/foundry.png"
 ---
 
 ## 前言

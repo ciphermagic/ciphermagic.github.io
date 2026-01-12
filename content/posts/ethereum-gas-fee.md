@@ -4,7 +4,7 @@ date: 2026-01-12T00:00:00+08:00
 categories: ["技术", "Web3"]
 tags: ["ethereum", "gas-fee", "eip-1559"]
 cover:
-  image: https://files.ciphermagic.cn/ethereum-gas-fee.jpg
+  image: https://files.ciphermagic.cn/ethereum-gas-fee.png
 ---
 
 ## 前言

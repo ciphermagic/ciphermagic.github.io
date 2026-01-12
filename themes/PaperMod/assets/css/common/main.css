@@ -6,12 +6,12 @@
     padding: var(--gap);
 }
 
-.main:has(> .post-entry:first-child),
+/* .main:has(> .post-entry:first-child),
 .main:has(> .page-header:first-child) {
     max-width: calc(var(--main-width) + var(--gap) * 15) !important;
     margin-left: calc(var(--gap) * 2) !important;
     margin-right: calc(var(--gap) * 2) !important;
-}
+} */
 
 .page-header h1 {
     font-size: 40px;
