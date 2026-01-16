@@ -1,9 +1,8 @@
 .right-side {
     position: absolute;
     height: 100%;
-    width: 25%;
     border-left: 1px solid var(--border);
-    right: calc((var(--toc-width) + var(--gap)) * -1);
+    right: calc((var(--toc-width) + var(--gap)) * -0.8);
     top: calc(var(--gap) * 2);
     width: var(--toc-width);
 }
@@ -89,3 +88,9 @@
         display: none !important;
     }
 }  
+
+@media (min-width: 1401px) {
+    .right-side {
+        right: calc((var(--toc-width) + var(--gap)) * -1);
+    }
+}

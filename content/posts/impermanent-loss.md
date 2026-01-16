@@ -3,6 +3,7 @@ title: 深度解析DeFi中的无常损失：为什么LP取出的币变少了？
 date: 2025-11-25T12:00:00+08:00
 categories: ["web3"]
 tags: ["DeFi", "AMM", "Uniswap"]
+math: true
 cover:
   image: "https://files.ciphermagic.cn/impermanent-loss.jpg"
 ---
@@ -157,7 +158,7 @@ xychart-beta
     title "无常损失率曲线 (Impermanent Loss)"
     x-axis [r = -1, -0.5, 0, 0.25, 0.5, 1, 1.5, 2, 3, 4]
     y-axis "损失率 (%)" -100 --> 10
-    line [ -93.68, -25.0, 0, -0.62, -2.02, -5.72, -9.5, -13.4, -20.0, -25.46 ]
+    line [ -100, -25.0, 0, -0.62, -2.02, -5.72, -9.5, -13.4, -20.0, -25.46 ]
     line [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]  %% 参考零线
 ```
 

@@ -1,9 +1,8 @@
 .left-side {
     position: absolute;
     height: 100%;
-    width: 25%;
-    border-right: 1px solid var(--border);;
-    left: calc((var(--toc-width) + var(--gap)) * -1);;
+    border-right: 1px solid var(--border);
+    left: calc((var(--toc-width) + var(--gap)) * -0.8);
     top: calc(var(--gap) * 2);
     width: var(--toc-width);
 }
@@ -83,9 +82,14 @@
     );
   }
 
-/* 移动端隐藏右侧侧边栏 */
-@media (max-width: 992px) {
-    .right-side {
+@media (max-width: 1280px) {
+    .left-side {
         display: none !important;
     }
-}  
+}
+
+@media (min-width: 1401px) {
+    .left-side {
+        left: calc((var(--toc-width) + var(--gap)) * -1);
+    }
+}
