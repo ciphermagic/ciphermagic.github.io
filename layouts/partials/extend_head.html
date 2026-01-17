@@ -10,11 +10,21 @@
       },
       svg: {
         fontCache: 'global'
-      }
+      },
+      options: {
+        ignoreHtmlClass: 'tex2jax_ignore', // 忽略带有此类的元素
+        processHtmlClass: 'tex2jax_process' // 只处理带有此类的元素（通常不设）
+      },
     };
     </script>
     <script type="text/javascript" id="MathJax-script" async
       src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
     </script>
   {{- end -}}
-{{- end -}}
+  {{ if .Store.Get "hasMermaid" }}
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+      mermaid.initialize({ startOnLoad: true });
+    </script>
+  {{ end }}
+{{- end -}}  
