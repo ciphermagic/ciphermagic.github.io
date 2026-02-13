@@ -3,6 +3,8 @@ title: Claude-Mem 自定义API支持：突破速率限制的解决方案
 date: 2026-02-13T15:30:00+08:00
 categories: ["技术", "AI"]
 tags: ["claude-code", "typescript"]
+cover:
+  image: "https://files.ciphermagic.cn/1.png"
 ---
 
 ## 前言
