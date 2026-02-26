@@ -2,7 +2,7 @@
 title: CentOS 7 防范暴力破解
 date: 2017-12-07T09:03:00+08:00
 categories: ["技术"]
-tags: ["centos"] 
+tags: [] 
 ---
 
 前段时间在国外的服务器上搭建了CentOS，没想到过了几天上去一看，有2万多次的尝试登陆记录：

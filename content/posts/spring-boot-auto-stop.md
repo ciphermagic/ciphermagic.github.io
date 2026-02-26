@@ -2,7 +2,7 @@
 title: Spring Boot启动后执行特定操作，然后自动停止
 date: 2017-05-24T21:16:00+08:00
 categories: ["技术"]
-tags: ["spring-boot"]
+tags: ["spring"]
 ---
 
 ## 前言

@@ -2,7 +2,7 @@
 title: spring-boot 实现文件上传
 date: 2016-05-21T17:09:00+08:00
 categories: ["技术"]
-tags: ["spring-boot","java"] 
+tags: ["spring","java"] 
 ---
 
 ### 错误信息: Corrupt form data: premature ending

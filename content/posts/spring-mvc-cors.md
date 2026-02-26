@@ -2,7 +2,7 @@
 title: spring-mvc 解决跨域问题
 date: 2016-01-19T09:57:00+08:00
 categories: ["技术"]
-tags: ["spring-mvc","java"] 
+tags: ["spring","java"] 
 ---
 
 解决跨域访问问题，只需在被访问的应用中加入一个请求过滤器：

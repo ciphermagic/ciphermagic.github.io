@@ -15,3 +15,4 @@ hexo-helper.py
 .DS_Store
 **/.DS_Store
 CLAUDE.md
+.playwright-mcp/

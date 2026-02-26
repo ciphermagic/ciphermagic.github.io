@@ -2,7 +2,7 @@
 title: 基于Uniswap V2的闪电贷套利合约实现与分析
 date: 2026-01-27T11:30:00+08:00
 categories: ["web3"]
-tags: ["flashloan", "uniswap", "defi"]
+tags: ["defi"]
 cover:
   image: "https://files.ciphermagic.cn/flash-swap.png"
 ---

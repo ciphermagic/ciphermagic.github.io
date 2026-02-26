@@ -2,7 +2,7 @@
 title: 深入解析RebaseToken：基于Ampleforth机制的通缩型代币设计与实现
 date: 2026-02-04T10:00:00+08:00
 categories: ["技术", "Web3"]
-tags: ["solidity", "rebase-token", "deflation", "ampleforth", "defi"]
+tags: ["solidity", "defi"]
 cover:
   image: "https://files.ciphermagic.cn/RebaseToken.png"
 ---

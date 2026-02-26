@@ -2,7 +2,7 @@
 title: 聊聊我的 Polymarket 套利机器人：用 Go 找预测市场的赚钱机会！
 date: 2025-10-24T21:16:00+08:00
 categories: ["技术", "web3"]
-tags: ["go", "web3", "arbitrage"] 
+tags: ["go", "web3"] 
 ---
 
 最近我在搞一个好玩的项目，用 Go 写了个程序来监控 Polymarket 上的套利机会。Polymarket 是个基于区块链的预测市场，里面有各种事件的结果可以交易，比如“某件事会不会发生”之类的。这篇文章我就来聊聊这个程序（`polymarket_arbitrage.go`）的代码和设计，带你看看它是怎么帮我发现潜在赚钱机会的！

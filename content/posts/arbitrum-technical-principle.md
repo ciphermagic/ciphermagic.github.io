@@ -2,7 +2,7 @@
 title: "Arbitrum技术原理解析：深入探索Optimistic Rollup的创新机制"
 date: 2026-02-09T10:00:00+08:00
 categories: ["web3"]
-tags: ["arbitrum", "layer2", "optimistic-rollup", "ethereum", "defi"]
+tags: ["ethereum", "defi"]
 cover:
   image: "https://files.ciphermagic.cn/arbitrum-cover.png"
 ---

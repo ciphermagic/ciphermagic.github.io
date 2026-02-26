@@ -2,7 +2,7 @@
 title: Dubbo服务提供者使用ProGuard实现代码混淆
 date: 2017-04-11T21:23:24+08:00
 categories: ["技术"]
-tags: ["dubbo","proguard"] 
+tags: ["dubbo"] 
 ---
 
 ProGuard能够作为maven的插件使用，让我们在原来的项目结构中，能够方便的实现代码混淆。但是网上ProGuard的资料通常都是单应用的实现，因此本文基于dubbo分布式项目，简单描述一下如何实现服务提供者的代码混淆。

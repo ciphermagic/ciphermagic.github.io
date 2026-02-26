@@ -2,7 +2,7 @@
 title: spring-boot 使用JavaConfig方式配置Dubbo
 date: 2017-04-14T10:49:00+08:00
 categories: ["技术"]
-tags: ["spring-boot","java"]
+tags: ["spring","java"]
 ---
 
 Spring Boot提倡以JavaConfig的方式进行配置，就是使用注释来描述Bean配置的组件，从而取代让许多开发者诟病已久的xml配置方式。Spring Boot官方也提供了很多相关的JavaConfig例子，例如数据库配置，消息队列配置等。本文将提供一个JavaConfig配置Dubbo的例子。

@@ -2,7 +2,7 @@
 title: spring-boot 替换内嵌tomcat版本
 date: 2016-05-27T13:30:00+08:00
 categories: ["技术"]
-tags: ["spring-boot","tomcat","java"] 
+tags: ["spring","java"] 
 ---
 
 spring-boot中的内嵌tomcat有默认的指定版本，若想修改为其他版本，有以下两种途径：

@@ -2,7 +2,7 @@
 title: 深度解析DeFi中的无常损失：为什么LP取出的币变少了？
 date: 2025-11-25T12:00:00+08:00
 categories: ["web3"]
-tags: ["DeFi", "AMM", "Uniswap"]
+tags: ["defi"]
 math: true
 cover:
   image: "https://files.ciphermagic.cn/impermanent-loss.jpg"

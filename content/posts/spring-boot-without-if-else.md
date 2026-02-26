@@ -2,7 +2,7 @@
 title: Spring Boot中如何干掉if else
 date: 2019-02-02T11:25:00+08:00
 categories: ["技术"]
-tags: ["java","spring-boot","spring-cloud"] 
+tags: ["java","spring","spring-cloud"] 
 ---
 
 ### 前言
