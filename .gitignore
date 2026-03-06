@@ -16,3 +16,4 @@ hexo-helper.py
 **/.DS_Store
 CLAUDE.md
 .playwright-mcp/
+.playwright-cli/
