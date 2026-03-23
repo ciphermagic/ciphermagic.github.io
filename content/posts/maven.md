@@ -1,5 +1,5 @@
 ---
-title: Maven初探
+title: Maven 初探
 date: 2014-11-13T14:22:00+08:00
 categories: ["技术"]
 tags: [] 

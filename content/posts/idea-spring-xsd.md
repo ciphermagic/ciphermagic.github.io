@@ -1,5 +1,5 @@
 ---
-title: IDEA中忽略spring配置文件无法识别xsd的错误
+title: IDEA 中忽略 Spring 配置文件无法识别 xsd 的错误
 date: 2017-04-12T21:23:20+08:00
 categories: ["技术"]
 tags: ["idea"] 

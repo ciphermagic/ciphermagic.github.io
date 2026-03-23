@@ -1,5 +1,5 @@
 ---
-title: 深入解析RebaseToken：基于Ampleforth机制的通缩型代币设计与实现
+title: 深入解析 RebaseToken：基于 Ampleforth 机制的通缩型代币设计与实现
 date: 2026-02-04T10:00:00+08:00
 categories: ["技术", "Web3"]
 tags: ["solidity", "defi"]

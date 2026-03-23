@@ -1,5 +1,5 @@
 ---
-title: Spring Aop中解析spel表达式，实现更灵活的功能
+title: Spring Aop 中解析 spel 表达式，实现更灵活的功能
 date: 2019-02-25T17:11:00+08:00
 categories: ["技术"]
 tags: ["spring"]

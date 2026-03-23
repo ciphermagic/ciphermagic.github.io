@@ -1,5 +1,5 @@
 ---
-title: Python3实现Hexo小助手
+title: Python3 实现 Hexo 小助手
 date: 2017-05-27T14:05:00+08:00
 categories: ["技术"]
 tags: ["python"] 

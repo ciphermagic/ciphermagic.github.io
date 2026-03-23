@@ -1,5 +1,5 @@
 ---
-title: spring-boot 替换内嵌tomcat版本
+title: Spring Boot 替换内嵌 tomcat 版本
 date: 2016-05-27T13:30:00+08:00
 categories: ["技术"]
 tags: ["spring","java"] 

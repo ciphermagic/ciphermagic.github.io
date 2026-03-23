@@ -1,5 +1,5 @@
 ---
-title: spring-boot 使用JavaConfig方式配置Dubbo
+title: Spring Boot 使用 JavaConfig 方式配置 Dubbo
 date: 2017-04-14T10:49:00+08:00
 categories: ["技术"]
 tags: ["spring","java"]

@@ -1,5 +1,5 @@
 ---
-title: Ubuntu 16.04单机模式安装Hadoop 2.6.0
+title: Ubuntu 16.04单机模式安装 Hadoop 2.6.0
 date: 2017-05-03T14:16:00+08:00
 categories: ["技术"]
 tags: [] 

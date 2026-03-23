@@ -1,5 +1,5 @@
 ---
-title: 【Java】使用位运算(&)代替取模运算(%)
+title: Java 使用位运算(&)代替取模运算(%)
 date: 2018-10-11T16:43:00+08:00
 categories: ["技术"]
 tags: ["java"] 

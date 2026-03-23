@@ -1,5 +1,5 @@
 ---
-title: Mybatis整合redis实现缓存
+title: Mybatis 整合 redis 实现缓存
 date: 2015-09-26T11:32:00+08:00
 categories: ["技术"]
 tags: ["mybatis","redis"] 

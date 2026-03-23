@@ -1,5 +1,5 @@
 ---
-title: 轻松搞定增删改查 - Mybatis通用Mapper介绍与使用
+title: 轻松搞定增删改查 - Mybatis 通用 Mapper 介绍与使用
 date: 2017-12-21T14:22:00+08:00
 categories: ["技术"]
 tags: ["mybatis"] 

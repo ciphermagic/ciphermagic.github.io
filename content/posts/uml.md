@@ -1,5 +1,5 @@
 ---
-title: UML类图
+title: UML 类图
 date: 2017-04-13T13:44:00+08:00
 categories: ["技术"]
 ---

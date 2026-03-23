@@ -1,5 +1,5 @@
 ---
-title: 你还在new对象吗？Java8通用Builder了解一下？
+title: 你还在 new 对象吗？Java8 通用 Builder 了解一下？
 date: 2019-08-30T11:27:00+08:00
 categories: ["技术"]
 tags: ["java"] 

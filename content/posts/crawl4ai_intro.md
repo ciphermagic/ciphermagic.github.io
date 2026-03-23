@@ -1,5 +1,5 @@
 ---
-title: "crawl4ai：AI时代的数据采集利器——从入门到实战"
+title: "Crawl4AI：AI时代的数据采集利器——从入门到实战"
 date: 2026-02-25T23:30:00+08:00
 categories: ["技术", "AI"]
 tags: ["python"]

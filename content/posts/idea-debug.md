@@ -1,5 +1,5 @@
 ---
-title: IntelliJ IDEA前后端调试技巧
+title: IntelliJ IDEA 前后端调试技巧
 date: 2017-08-25T15:02:32+08:00
 tags: ["idea"]
 categories: ["技术"]

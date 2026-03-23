@@ -1,5 +1,5 @@
 ---
-title: "以太坊Gas费用机制深度解析：从EIP-1559看交易费用优化"
+title: "以太坊 Gas 费用机制深度解析：从 EIP-1559 看交易费用优化"
 date: 2026-01-12T00:00:00+08:00
 categories: ["技术", "Web3"]
 tags: ["ethereum"]

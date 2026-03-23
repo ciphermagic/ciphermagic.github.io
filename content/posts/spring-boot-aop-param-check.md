@@ -1,5 +1,5 @@
 ---
-title: Spring Boot实现通用的接口参数校验
+title: Spring Boot 实现通用的接口参数校验
 date: 2018-05-10T11:10:00+08:00
 categories: ["技术"]
 tags: ["spring","java"] 

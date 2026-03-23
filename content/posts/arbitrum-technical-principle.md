@@ -1,5 +1,5 @@
 ---
-title: "Arbitrum技术原理解析：深入探索Optimistic Rollup的创新机制"
+title: "Arbitrum 技术原理解析：深入探索 Optimistic Rollup 的创新机制"
 date: 2026-02-09T10:00:00+08:00
 categories: ["web3"]
 tags: ["ethereum", "defi"]

@@ -1,5 +1,5 @@
 ---
-title: Mybatis分页方案
+title: Mybatis 分页方案
 date: 2015-09-10T10:17:00+08:00
 tag: ["mybatis"]
 categories: ["技术"]

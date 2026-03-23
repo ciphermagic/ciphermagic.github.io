@@ -1,5 +1,5 @@
 ---
-title: MyBatis分页插件(PageHelper)介绍与集成SpringMVC
+title: MyBatis 分页插件 PageHelper 介绍与集成 SpringMVC
 date: 2017-12-15T10:56:00+08:00
 categories: ["技术"]
 tags: ["mybatis"] 

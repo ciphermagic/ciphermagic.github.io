@@ -1,5 +1,5 @@
 ---
-title: HAPI + 设备指纹认证：打造更安全的远程编程体验
+title: HAPI + 设备指纹认证：打造更安全的远程 Vibe Coding
 date: 2026-03-06T13:53:14+08:00
 categories: ["技术", "AI"]
 tags: ["claude-code", "TypeScript"]

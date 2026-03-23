@@ -1,5 +1,5 @@
 ---
-title: RWA实操指南（二）：数据上链与收益分配，保障合规与收益流转
+title: RWA 实操指南（二）：数据上链与收益分配，保障合规与收益流转
 date: 2025-11-12T10:58:00+08:00
 categories: ["技术", "web3"]
 tags: ["go", "web3", "rwa", "solidity"] 

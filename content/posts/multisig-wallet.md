@@ -1,5 +1,5 @@
 ---
-title: 深度解析Solidity多签钱包合约：构建安全的多方资产管理方案
+title: 深度解析 Solidity 多签钱包合约：构建安全的多方资产管理方案
 date: 2025-12-11T10:00:00+08:00
 categories: ["技术", "Web3"]
 tags: ["ethereum", "solidity"]
