@@ -17,3 +17,4 @@ hexo-helper.py
 CLAUDE.md
 .playwright-mcp/
 .playwright-cli/
+.history/
